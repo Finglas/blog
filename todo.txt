@@ -1,6 +1,10 @@
 TODO:
 
-4. Move content into year categories.
-    I hve set slug to include the old style format, but this doesn't put the content in the category folder. I should be able to adjust how the category folder affects the path to the file. As long as it resolves to yyyy/mm/slug.html it will work.
-5. Setup archives "/archive.html" by default.
-6. Reduce tags to minimal, see output tag folder for all.
+1. Move content into year categories.
+1.1 Second pass, make sure year categories match what is live on the blog. Post 2014 will be wrong.
+2. Reduce tags to minimal, see output tag folder for all.
+3. Set each post slug to use yyyy/mm/slug format.
+4. Setup archives "/archive.html" by default.
+5. Default category is "misc", can we default this to something better?
+6. Theme selection, something modern, clean and mobile friendly.
+    - Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
