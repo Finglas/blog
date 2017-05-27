@@ -1,8 +1,5 @@
 TODO:
 
-1. Get full atom feed export.
-2. Convert into md format, check and test parameters for the conversion. Is there anything else I can do to simplify the import?
-3. Rename Shaun Finglas (noreply@blogger.com) in all md files to just "Shaun Finglas".
 4. Move content into year categories.
     I hve set slug to include the old style format, but this doesn't put the content in the category folder. I should be able to adjust how the category folder affects the path to the file. As long as it resolves to yyyy/mm/slug.html it will work.
 5. Setup archives "/archive.html" by default.
