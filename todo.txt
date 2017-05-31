@@ -1,7 +1,6 @@
 TODO:
 
 1.1 Second pass, make sure year categories match what is live on the blog. Post 2014 will be wrong.
-    2. 2011
     3. 2012
     4. 2013
     5. 2014
