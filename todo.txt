@@ -1,8 +1,8 @@
 TODO:
 
 1.1 Second pass, make sure year categories match what is live on the blog. Post 2014 will be wrong.
-    6. 2015
-    7. 2016
+    2. 2015
+    3. 2016
 2. Reduce tags to minimal, see output tag folder for all.
 3. Set each post slug to use yyyy/mm/slug format and set tags, and dates for older categories (2014 and less).
 4. Setup archives "/archive.html" by default.
