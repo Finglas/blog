@@ -1,8 +1,8 @@
 Title: Lists or Objects
-Date: 2015-05-02 15:38
+Date: 2010-12-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, oop, programming
-Slug: lists-or-objects
+Tags: code-quality, programming
+Slug: 2010/12/lists-or-objects
 
 > "Our rule of thumb is that we try to limit passing around types with
 > generics (the types closed in angle brackets). Particularly when
@@ -10,7 +10,7 @@ Slug: lists-or-objects
 > hint that there's a domain concept that should be extracted into a
 > type." [[Growing Object-Oriented Software, Guided by
 > Tests](http://www.growing-object-oriented-software.com/) - Steve
-> Freeman, Nat Pryce, page 136)]{.quoteSource}
+> Freeman, Nat Pryce, page 136)]
 
 ### Example
 
@@ -63,6 +63,3 @@ StackOverflow](http://stackoverflow.com/questions/21715/listbusinessobject-or-bu
 - I and others will sure agree that the answer(s) provided are well off
 the mark. Encapsulate your public collections - do not treat them as
 primitives!
-
-</p>
-
