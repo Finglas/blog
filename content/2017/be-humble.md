@@ -1,8 +1,8 @@
 Title: Be Humble
-Date: 2017-01-18 07:58
+Date: 2017-01-18
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, soft-skills, retro
-Slug: be-humble
+Tags: retro
+Slug: 2017/01/be-humble
 
 Some of the best developers I know treat everyone with mutual respect.
 Not only this they are open about what they do know and what they don't
@@ -44,6 +44,3 @@ humble about it.
 -   Ask for help.
 -   Treat everyone equally, as you would like to be treated yourself.
 -   Admit it when you are wrong.
-
-</p>
-

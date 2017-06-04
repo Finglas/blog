@@ -1,8 +1,8 @@
 Title: Logging vs Auditing
-Date: 2017-05-02 07:11
+Date: 2017-05-02
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, summary
-Slug: logging-vs-auditing
+Tags: summary
+Slug: 2017/05/logging-vs-auditing
 
 The difference between logging and auditing is a subtle yet important
 distinction.
@@ -52,6 +52,3 @@ what potentially sensitive data can be stored?
 
 The key lesson here is that logging and auditing are two very distinct
 concepts and should be treated as such.
-
-</p>
-

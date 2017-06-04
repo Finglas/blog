@@ -1,8 +1,8 @@
 Title: Finance For Software Developers
-Date: 2017-01-04 07:49
+Date: 2017-01-04
 Author: Shaun Finglas
-Tags: tutorial, http://schemas.google.com/blogger/2008/kind#post, soft-skills
-Slug: finance-for-software-developers
+Tags: tutorial
+Slug: 2017/01/finance-for-software-developers
 
 Back at the start of 2016 I set about sorting my personal finances out,
 inspired by [Soft
@@ -118,6 +118,3 @@ possible.
 -   Retirement isn't a thirty or forty year process.
 -   No one will teach you personal finance, it's up to yourself to get
     to grips with it.
-
-</p>
-

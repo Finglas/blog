@@ -27,7 +27,6 @@ TODO:
     5. 2014
     6. 2015
     7. 2016
-    8. 2017
 4. Setup archives "/archive.html" by default.
 5. Default category is "misc", can we default this to something better?
 6. Theme selection, something modern, clean and mobile friendly.

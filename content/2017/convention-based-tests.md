@@ -1,8 +1,8 @@
 Title: Convention Based Tests
-Date: 2017-01-11 07:47
+Date: 2017-01-11
 Author: Shaun Finglas
-Tags: tutorial, testing, http://schemas.google.com/blogger/2008/kind#post
-Slug: convention-based-tests
+Tags: tutorial, testing
+Slug: 2017/01/convention-based-tests
 
 Most projects have some form of convention. Examples would include:
 
@@ -82,6 +82,3 @@ peer review is required.
     areas.
 -   If a CBT is hard to write, use a test to prompt you to add further
     tests in the future.
-
-</p>
-

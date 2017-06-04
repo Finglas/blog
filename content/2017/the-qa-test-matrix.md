@@ -1,8 +1,8 @@
 Title: The QA Test Matrix
-Date: 2017-04-03 06:55
+Date: 2017-04-03
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post
-Slug: the-qa-test-matrix
+Tags: testing
+Slug: 2017/04/the-qa-test-matrix
 
 Historically teams I've worked with have taken a few varying approaches
 when designing tests against acceptance criteria. One is to have the
@@ -67,6 +67,3 @@ form contract for signing off functionality. Once the feature is
 complete it is simply a case of finding the corresponding tests,
 confirming their existence and making a note of the commit that included
 them.
-
-</p>
-
