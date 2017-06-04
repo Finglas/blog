@@ -1,8 +1,8 @@
 Title: The Best Code is Written Twice
-Date: 2014-08-17 15:35
+Date: 2011-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, retro
-Slug: the-best-code-is-written-twice
+Tags: programming, retro
+Slug: 2011/10/the-best-code-is-written-twice
 
 Recently myself and two colleges completed a new feature in an
 afternoon's programming session. Despite this we ended up binning the
@@ -50,6 +50,3 @@ solutions](http://www.extremeprogramming.org/rules/spike.html) are often
 a more suitable process to ease the development process, but in certain
 cases practice makes perfect, even if it means you wait that little bit
 longer for the perfect ceiling.
-
-</p>
-

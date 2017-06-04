@@ -1,8 +1,8 @@
 Title: MBUnit to NUnit
-Date: 2014-08-17 15:13
+Date: 2011-03-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: mbunit-to-nunit
+Tags: testing, programming
+Slug: 2011/03/mbunit-to-nunit
 
 Over the last few weeks we've ported our tests from
 [MBUnit](http://www.mbunit.com/) to [NUnit](http://www.nunit.org/). This
@@ -65,6 +65,3 @@ overkill for most projects? Most likely, but it was something to
 consider especially for large applications. As who knows, maybe there
 will be an even faster framework out there that we can upgrade to again,
 next year...
-
-</p>
-

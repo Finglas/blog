@@ -1,8 +1,8 @@
 Title: 6 Ways to Speed Up Selenium Tests
-Date: 2015-03-31 18:12
+Date: 2011-12-01
 Author: Shaun Finglas
-Tags: best-practices, selenium, http://schemas.google.com/blogger/2008/kind#post
-Slug: 6-ways-to-speed-up-selenium-tests
+Tags: tutorial, testing
+Slug: 2011/12/6-ways-to-speed-up-selenium-tests
 
 [Having finally achieved more stable end to end
 tests](http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html)
@@ -70,6 +70,3 @@ Having done these at some point over the past few months we're starting
 to get to a more stable point with our Selenium tests. We'll be looking
 to take this forward with future tests and hope to enjoy continued
 stability.
-
-</p>
-

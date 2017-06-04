@@ -18,10 +18,10 @@ TODO:
     retro
     summary
     testing
+    tutorial
     unit-testing
 
 3. Set each post slug to use yyyy/mm/slug format and set tags, and dates for older categories (2014 and less).
-    2. 2011
     3. 2012
     4. 2013
     5. 2014

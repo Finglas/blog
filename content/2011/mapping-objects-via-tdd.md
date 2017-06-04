@@ -1,8 +1,8 @@
 Title: Mapping Objects via TDD
-Date: 2014-08-17 15:24
+Date: 2011-06-01
 Author: Shaun Finglas
-Tags: mapping, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: mapping-objects-via-tdd
+Tags: programming
+Slug: 2011/06/mapping-objects-via-tdd
 
 ### Why we map?
 
@@ -25,8 +25,6 @@ much [DRYer](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
     most of the time when writing a property per test is spent sliding
     the keyboard to the other developer.
 
-<!-- -->
-
 -   Another approach we have tried on occasion is to have one developer
     write one test for the whole class, while the second developer will
     write the mapping code to make this test pass. We may or may not
@@ -37,8 +35,6 @@ much [DRYer](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
     approach" is the developer writing the code to make the tests pass
     may miss something. If this happens, finding out what is wrong is
     much harder as the code was written in one big go.
-
-<!-- -->
 
 -   The final approach we have attempted is to not test mapping code,
     after all what could go wrong? It turns out a lot. Mapping often
@@ -112,6 +108,3 @@ outstanding. Each failed test will indicate in plain English what is
 wrong, and better yet how to solve it. A few of us are pretty excited
 about AutoMapper and I look forward to mapping again in the future,
 something I feel odd stating. Yes, this tool is that good.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Smalltalk Conversion mapped to C#
-Date: 2015-05-02 15:33
+Date: 2011-10-01
 Author: Shaun Finglas
-Tags: mapping, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: smalltalk-conversion-mapped-to-c
+Tags: programming
+Slug: 2011/10/smalltalk-conversion-mapped-to-c
 
 Lately the team has been making some rather drastic changes and
 re-designs to our codebase in an attempt to minimise friction to change.
@@ -111,6 +111,3 @@ new property to our `QuoteRecord`.
 I'll admit to having only used this technique for a week or so, though
 so far it has worked a treat and I expect it to continue working
 considering these techniques have stood the test of time.
-
-</p>
-

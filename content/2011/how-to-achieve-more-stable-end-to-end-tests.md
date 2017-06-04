@@ -1,8 +1,8 @@
 Title: How to Achieve More Stable End to End Tests
-Date: 2014-08-17 15:37
+Date: 2011-12-01
 Author: Shaun Finglas
-Tags: best-practices, testing, http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: how-to-achieve-more-stable-end-to-end-tests
+Tags: tutorial, testing
+Slug: 2011/12/how-to-achieve-more-stable-end-to-end
 
 Recently myself and another colleague wrote an [acceptance
 test](http://en.wikipedia.org/wiki/Acceptance_testing) for a feature
@@ -76,6 +76,3 @@ valid.
 *For the technical low down on some of the ways we are achieving more
 stable end to end tests, check out [six tips to speed up Selenium
 tests](6-ways-to-speed-up-selenium-tests.html).*
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Ten Things a graduate will experience during their first year at Codeweavers
-Date: 2014-08-17 15:26
+Date: 2011-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: ten-things-a-graduate-will-experience-during-their-first-year-at-codeweavers
+Tags: retro
+Slug: 2011/08/ten-things-graduate-will-experience
 
 1.  **Kanban**
 
@@ -144,6 +144,3 @@ Slug: ten-things-a-graduate-will-experience-during-their-first-year-at-codeweave
     day software development. For this very reason I'm grateful, but
     this rule bears repeating and I look forward to another year of
     practice and improvement.
-
-</p>
-

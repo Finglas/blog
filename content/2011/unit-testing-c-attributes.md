@@ -1,8 +1,8 @@
 Title: Unit Testing C# attributes
-Date: 2014-08-17 15:19
+Date: 2011-05-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post
-Slug: unit-testing-c-attributes
+Tags: testing
+Slug: 2011/05/unit-testing-c-attributes
 
 For a recent coding session I needed to handle an exception being thrown
 when some Json was incorrectly bound to a view model. With the framework
@@ -40,6 +40,3 @@ Plus being unit tests they execute in the blink of an eye, no need to
 write a regression test to check the redirection has been carried out.
 These tests are therefore more "documentation" of how the system should
 behave.
-
-</p>
-

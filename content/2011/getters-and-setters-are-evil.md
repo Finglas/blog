@@ -1,8 +1,8 @@
 Title: Getters and Setters are Evil
-Date: 2015-07-26 08:50
+Date: 2011-04-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: getters-and-setters-are-evil
+Tags: programming
+Slug: 2011/04/getters-and-setters-are-evil
 
 **Update**: There is a [new
 version](http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html)
@@ -76,6 +76,3 @@ for input/output the use of accessors is not required. As usual the
 Codeweavers saying of "*if it feels wrong, it probably is*" still holds
 true and on that I'm off to try and write some proper OO code for the
 first time in six years...
-
-</p>
-

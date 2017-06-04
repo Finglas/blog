@@ -1,8 +1,8 @@
 Title: Mock Roles not Types
-Date: 2014-08-17 15:15
+Date: 2011-03-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, programming, mocking
-Slug: mock-roles-not-types
+Tags: testing, programming
+Slug: 2011/03/mock-roles-not-types
 
 > "if it feels wrong, it probably is" - numerous Codeweavers' developers
 
@@ -76,6 +76,3 @@ became so much clearer. This is yet one more revelation to add to the
 list. Every time I write `Mock<name>`, stop and think. Do I own the
 type? If not then maybe there is an abstraction waiting to escape, after
 all it will save a lot of pain.
-
-</p>
-
