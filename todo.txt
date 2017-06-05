@@ -22,7 +22,6 @@ TODO:
     unit-testing
 
 3. Set each post slug to use yyyy/mm/slug format and set tags, and dates for older categories (2014 and less).
-    4. 2013
     5. 2014
     6. 2015
     7. 2016

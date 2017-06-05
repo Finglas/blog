@@ -1,8 +1,8 @@
 Title: The Anti If Campaign
-Date: 2015-04-23 18:53
+Date: 2013-05-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: the-anti-if-campaign
+Tags: programming
+Slug: 2013/05/the-anti-if-campaign
 
 Firstly if you are unaware of what the [Anti If
 Campaign](http://www.antiifcampaign.com/) is, I advise you to take look
@@ -57,6 +57,3 @@ if we wish to extend the lookup of existing quotes, I can confidently
 change the code without the fear of breaking the retrieval of new
 quotes. The other side effect is that I can easily reason about and test
 the code in question.
-
-</p>
-

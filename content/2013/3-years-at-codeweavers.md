@@ -1,8 +1,8 @@
 Title: 3 Years at Codeweavers
-Date: 2014-10-30 18:29
+Date: 2013-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: 3-years-at-codeweavers
+Tags: retro
+Slug: 2013/04/3-years-at-codeweavers
 
 Having wrote about the [top ten things I discovered in my first year at
 Codeweavers](http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html),
@@ -32,6 +32,3 @@ experienced.
     Practice](http://blog.shaunfinglas.co.uk/2014/10/practice-practice-practice.html)
 
 I'll expand on these topics over time in future posts.
-
-</p>
-

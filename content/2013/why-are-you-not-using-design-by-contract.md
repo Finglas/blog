@@ -1,8 +1,8 @@
 Title: Why are you not using Design by Contract?
-Date: 2014-07-22 19:31
+Date: 2013-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, dbc, design-by-contract, contracts
-Slug: why-are-you-not-using-design-by-contract
+Tags: programming
+Slug: 2013/04/why-are-you-not-using-design-by-contract
 
 When learning to program I distinctly remember coming across the concept
 of placing asserts within your code. Assert statements are primarily
@@ -75,6 +75,3 @@ Hand in hand with our automated test suite, **code contracts make a
 great companion**. Never alone will one suffice, but when used in
 conjunction they can be extremely powerful. So the question is, why
 aren't you using them?
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Object Calisthenics
-Date: 2014-08-26 19:47
+Date: 2013-01-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, kata
-Slug: object-calisthenics
+Tags: programming
+Slug: 2013/01/object-calisthenics
 
 Recently I ran a session on [Object
 Calisthenics](http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/).
@@ -93,6 +93,3 @@ backdrop for this session. The teams feedback is as follows.
     getters/setters are the easiest, cleanest solutions. Each team found
     this requirement the hardest to work with, which mimics my first
     expose to the object calisthenics challenge.
-
-</p>
-
