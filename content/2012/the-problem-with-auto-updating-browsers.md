@@ -1,8 +1,8 @@
 Title: The Problem with Auto Updating Browsers
-Date: 2015-05-02 15:28
+Date: 2012-06-01
 Author: Shaun Finglas
-Tags: selenium, testing, http://schemas.google.com/blogger/2008/kind#post, browsers
-Slug: the-problem-with-auto-updating-browsers
+Tags: testing
+Slug: 2012/06/the-problem-with-auto-updating-browsers
 
 At the time of writing the latest version of Firefox (version 13) has
 just been released. Bear in mind that a week ago I updated our Selenium
@@ -42,6 +42,3 @@ Tools -&gt; Options -&gt; Advanced -&gt; Update Tab
 
 So if you use Selenium and Firefox - ditch the auto updating. Manually
 update your bindings and check compatability for now...
-
-</p>
-

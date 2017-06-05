@@ -1,8 +1,8 @@
 Title: Achieving more Isolated Unit Testing
-Date: 2014-08-10 14:13
+Date: 2012-05-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, tdd, unit-testing
-Slug: achieving-more-isolated-unit-testing
+Tags: tdd, unit-testing
+Slug: 2012/05/achieving-more-isolated-unit-testing
 
 *Good* unit tests should be:
 
@@ -62,6 +62,3 @@ locally even if our CI server is not present.
 
 So take the experiment. Unplug your computer from the network. How many
 of your "unit tests" fail?
-
-</p>
-

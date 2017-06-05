@@ -1,8 +1,8 @@
 Title: Recursively Building a Web Service using the same Web Service
-Date: 2014-08-10 14:11
+Date: 2012-03-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, web-services
-Slug: recursively-building-a-web-service-using-the-same-web-service
+Tags: testing
+Slug: 2012/03/recursively-building-web-service-using
 
 Back during the later part of 2011 there was a common theme occurring in
 our retrospectives each week. How can we replicate our live environment
@@ -61,6 +61,3 @@ deploy experimental or new features and changes to the demo environment
 and check them under real load, with real time data. If all goes well
 after a period of time we can deploy to our live service, if not we roll
 back and no one is the wiser.
-
-</p>
-

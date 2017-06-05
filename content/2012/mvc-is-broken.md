@@ -1,8 +1,8 @@
 Title: MVC is Broken
-Date: 2014-08-10 14:29
+Date: 2012-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, mvc
-Slug: mvc-is-broken
+Tags: retro
+Slug: 2012/10/mvc-is-broken
 
 If you look up the definition of [MVC or Model View
 Controller](http://en.wikipedia.org/wiki/Model_view_controller), it will
@@ -75,6 +75,3 @@ thing*" will be on the horizon. The great thing by taking the approach
 discussed previously is that Codeweavers will be in the position to
 change either the front end or back end of our codebase at any time.
 Precisely what the MVC pattern has failed to deliver.
-
-</p>
-

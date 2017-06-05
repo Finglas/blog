@@ -1,8 +1,8 @@
 Title: Log Everything
-Date: 2014-08-10 14:04
+Date: 2012-01-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: log-everything
+Tags: programming
+Slug: 2012/01/log-everything
 
 *This post was originally conceived back in mid 2011, starting a new
 project made me think back to this event, hence the post.*
@@ -51,6 +51,3 @@ application? In the first iteration(s) make sure some form of logging is
 in place. I believe by following this simple rule any future issues can
 be handled easier. Logging should be a first class citizen regardless of
 purpose.
-
-</p>
-

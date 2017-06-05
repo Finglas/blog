@@ -1,8 +1,8 @@
 Title: Warnings as Errors
-Date: 2014-08-10 14:09
+Date: 2012-02-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: warnings-as-errors
+Tags: programming
+Slug: 2012/02/warnings-as-errors
 
 One thing that annoyed me when starting at Codeweavers was the amounts
 of warnings that would occur during a build of any of our projects.
@@ -62,6 +62,3 @@ dependencies all thanks to treating warnings as errors.
 applies to all languages. For your compiler/interpreter etc... there
 will be an option to apply warnings. This is not a specific language
 feature.*
-
-</p>
-

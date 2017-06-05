@@ -1,8 +1,8 @@
 Title: Codeweavers Code Retreat
-Date: 2014-08-10 14:27
+Date: 2012-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, code-retreat
-Slug: codeweavers-code-retreat
+Tags: programming
+Slug: 2012/10/codeweavers-code-retreat
 
 Last week we had [@kevinrutherford](https://twitter.com/kevinrutherford)
 in to run a coderetreat. It was the first retreat I've taken part in
@@ -138,6 +138,3 @@ conclusion it would appear that as a collective we need to spend more
 time each week carrying out deliberate practice. For new starters this
 is essential training, while for more seasoned developers this is a
 useful way to keep our skillset up to date.
-
-</p>
-

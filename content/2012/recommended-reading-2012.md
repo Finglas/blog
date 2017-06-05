@@ -1,8 +1,8 @@
 Title: Recommended Reading 2012
-Date: 2014-08-10 14:31
+Date: 2012-10-01
 Author: Shaun Finglas
-Tags: reading, http://schemas.google.com/blogger/2008/kind#post
-Slug: recommended-reading-2012
+Tags: reading
+Slug: 2012/10/recommended-reading-2012
 
 Here is my updated reading list for 2012. We might have missed something
 so if you think we should be reading it, let us know.
@@ -56,6 +56,3 @@ Code
 -   [Framework Design
     Guidelines](http://www.amazon.co.uk/Framework-Design-Guidelines-Conventions-ebook/dp/B0017SWPNO) -
     Brad Abrams and Krzysztof Cwalina
-
-</p>
-

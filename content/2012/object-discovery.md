@@ -1,8 +1,8 @@
 Title: Object Discovery
-Date: 2015-05-02 15:26
+Date: 2012-12-01
 Author: Shaun Finglas
-Tags: practice, best-practices, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: object-discovery
+Tags: programming
+Slug: 2012/12/object-discovery
 
 Recently we had [@kevinrutherford](https://twitter.com/kevinrutherford)
 in to talk about object discovery. While TDD is a great tool, it is no
@@ -75,6 +75,3 @@ that when actually trying to implement these ideas in code, it is
 actually quite difficult due to my current thinking. The plan for the
 next month will be to explore these ideas in more detail and see what
 affect it has on my day to day development.
-
-</p>
-

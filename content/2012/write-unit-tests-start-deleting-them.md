@@ -1,8 +1,8 @@
 Title: Write Unit Tests? Start deleting them
-Date: 2015-03-31 18:09
+Date: 2012-01-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, tdd, unit-testing
-Slug: write-unit-tests-start-deleting-them
+Tags: programming, tdd, unit-testing
+Slug: 2012/01/write-unit-tests-start-deleting-them
 
 A recent [blog post by Steve
 Klabnik](http://blog.steveklabnik.com/posts/2011-09-22-extracting-domain-models-a-practical-example)
@@ -82,6 +82,3 @@ saying bin tests as part of a refactoring session as long as you have
 test coverage higher up. If you don't have test coverage such as
 acceptance tests, you cannot be sure you have not broke anything after
 the refactor.
-
-</p>
-
