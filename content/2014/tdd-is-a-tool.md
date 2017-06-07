@@ -1,8 +1,8 @@
 Title: TDD is a Tool
-Date: 2014-07-22 19:21
+Date: 2014-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, design, tdd
-Slug: tdd-is-a-tool
+Tags: programming, tdd
+Slug: 2014/02/tdd-is-tool
 
 I remember being introduced to Test Driven Development (TDD) very well.
 This is because it had such an **overwhelming change on how I write code
@@ -98,6 +98,3 @@ should be restricted to where and when it makes sense. As for when and
 where, this is up for the developer to decide. Using some of the
 findings above allow me to be pragmatic, yet still have confidence in
 the quality of my code.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Three Steps to Code Quality via TDD
-Date: 2015-01-30 18:59
+Date: 2014-12-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, 3-steps-code-quality, tdd
-Slug: three-steps-to-code-quality-via-tdd
+Tags: 3-steps-code-quality, tdd
+Slug: 2014/12/three-steps-to-code-quality-via-tdd
 
 Common complaints and problems that I've both encountered and hear other
 developers raise when it comes to the practice of Test Driven
@@ -31,6 +31,3 @@ Code quality is a tricky subject and highly subjective, however if you
 follow the three guidelines above you should have the ability to
 radically change implementation details and therefore improve code
 quality when needed.
-
-</p>
-

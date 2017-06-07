@@ -1,8 +1,8 @@
 Title: Learning Tests
-Date: 2014-07-22 19:19
+Date: 2014-05-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, tdd
-Slug: learning-tests
+Tags: testing, tdd
+Slug: 2014/05/learning-tests
 
 At the last [Agile Staffordshire](http://www.agilestaffordshire.org/) I
 attended [the task was to complete the string calculator with
@@ -60,6 +60,3 @@ to spin up a new project in languages such as C\# or Java to just try
 something out.
 
 Next time you're stuck, try writing a test.
-
-</p>
-

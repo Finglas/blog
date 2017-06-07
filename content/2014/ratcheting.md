@@ -1,8 +1,8 @@
 Title: Ratcheting
-Date: 2014-11-18 18:41
+Date: 2014-11-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, programming, CI, build
-Slug: ratcheting
+Tags: testing, programming
+Slug: 2014/11/ratcheting
 
 Some tasks in software development are mundane such as formatting and
 code conventions. Where possible tooling should take away some of this
@@ -43,6 +43,3 @@ It turns out this has been documented before - its called
 [Ratcheting](http://martinfowler.com/articles/useOfMetrics.html#MetricsAsARatchet).
 While I didn't know it at the time its nice to have a name to use when
 [describing this technique](http://bugroll.com/ratcheting.html).
-
-</p>
-

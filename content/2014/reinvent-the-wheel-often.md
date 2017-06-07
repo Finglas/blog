@@ -1,8 +1,8 @@
 Title: Reinvent the Wheel, Often
-Date: 2014-10-04 11:15
+Date: 2014-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, learning, retro
-Slug: reinvent-the-wheel-often
+Tags: retro
+Slug: 2014/10/reinvent-wheel-often
 
 We are often never told to reinvent the wheel. In other words, if your
 job is solve problems within Domain X you shouldn't spend your time
@@ -47,6 +47,3 @@ other users that will have debugged and improved the solution going
 forwards. By not reinventing wheels you get as much time as possible to
 focus on delivering your solution to the domain problem in question,
 which after all is your job.
-
-</p>
-

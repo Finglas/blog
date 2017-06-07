@@ -1,8 +1,8 @@
 Title: Stop Making Everything Public
-Date: 2015-02-10 20:12
+Date: 2014-08-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, 3-steps-code-quality, tdd
-Slug: stop-making-everything-public
+Tags: 3-steps-code-quality, tdd
+Slug: 2014/08/stopmockingeverything
 
 Part one of my [Three Steps to Code Quality via TDD
 series](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
@@ -69,6 +69,3 @@ The ability to switch implementation details without breaking public
 functionality. A whole world of refactoring options are available,
 inline method, extract method, extract class, inline class, replace with
 library and so forth. As long as the tests pass, you can be confident.
-
-</p>
-

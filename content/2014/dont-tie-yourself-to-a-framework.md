@@ -1,8 +1,8 @@
 Title: Dont Tie Yourself to a Framework
 Date: 2014-07-22 19:19
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, design, hexagonal-architecture
-Slug: dont-tie-yourself-to-a-framework
+Tags: programming
+Slug: 2014/07/dont-tie-yourself-to-framework
 
 <ul>
 <li>
@@ -109,6 +109,3 @@ Easier to change
 -   Lightweight projects might not need hexagonal architecture
 -   SOA or Microservices could mean hexagonal architecture actually
     introduces overhead or complexity - judge on context.
-
-</p>
-

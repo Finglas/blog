@@ -1,8 +1,8 @@
 Title: Do it right - violate YAGNI
-Date: 2014-10-30 17:45
+Date: 2014-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: do-it-right-violate-yagni
+Tags: retro
+Slug: 2014/10/do-it-right-violate-yagni
 
 You Ain't Gonna Need It or YAGNI is about not writing code that is not
 needed. I've gone on to realise how important this is when it comes to
@@ -23,6 +23,3 @@ of doing this yourself.
 
 My discover here was simple. Don't skip the refactor part of TDD. Don't
 allow someone to play the YAGNI card. Do it right.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Acceptance Testing need not use the Full Stack
 Date: 2015-02-10 20:15
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, acceptance-testing, retro
-Slug: acceptance-testing-need-not-use-the-full-stack
+Tags: testing, retro
+Slug: 2014/08/acceptance-testing-need-not-use-full
 
 -   Joined a team with thousands of unit tests (\~10k)
 -   But bugs still got through our QA process
@@ -56,6 +56,3 @@ fact be swapped out thanks to the [Liskov Substitution Principle
 running the same suite of tests against your fakes!
 
 I'll be expanding on how and what contract testing is in a future post.
-
-</p>
-

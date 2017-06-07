@@ -1,8 +1,8 @@
 Title: Top Down vs Bottom Up
-Date: 2015-03-29 10:13
+Date: 2014-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, design, agile, development
-Slug: top-down-vs-bottom-up
+Tags: retro, tutorial
+Slug: 2014/02/top-down-vs-bottom-up
 
 **Top down development** has you starting at the highest point in the
 application that you can. From here you code down until there is nothing
@@ -73,6 +73,3 @@ about as long as the workflow is not broken.
 This approach to top down development isn't new, though many don't
 appreciate its benefits. I plan on expanding on this style of pragmatic
 TDD in the coming months.
-
-</p>
-

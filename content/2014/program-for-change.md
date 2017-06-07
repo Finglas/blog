@@ -1,8 +1,8 @@
 Title: Program for Change
-Date: 2014-08-21 19:22
+Date: 2014-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: program-for-change
+Tags: retro
+Slug: 2014/08/program-for-change
 
 We should program for change AKA the [Open/Closed
 Principle](http://en.wikipedia.org/wiki/Open/closed_principle). In my
@@ -55,6 +55,3 @@ for "free".
 
 I still regret this mistake, but this lesson has lived with for some
 time and has proved to be a valuable experience.
-
-</p>
-

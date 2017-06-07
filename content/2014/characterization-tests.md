@@ -1,8 +1,8 @@
 Title: Characterization Tests
-Date: 2014-10-13 17:41
+Date: 2014-10-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: characterization-tests
+Tags: testing, programming
+Slug: 2014/10/characterization-tests
 
 Having worked with some truly awful codebases a common problem tends to
 arise every now and then. You need to make a change within some legacy
@@ -55,6 +55,3 @@ Examples
 -   [Working Effectively with Legacy
     Code](http://www.amazon.co.uk/Working-Effectively-Legacy-Robert-Martin/dp/0131177052) -
     a must read book for anyone working with legacy code.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Dependency Injection (DI) Containers
-Date: 2014-11-06 19:07
+Date: 2014-11-01
 Author: Shaun Finglas
-Tags: DI, http://schemas.google.com/blogger/2008/kind#post, programming, c#
-Slug: dependency-injection-di-containers
+Tags: programming
+Slug: 2014/11/dependency-injection-di-containers
 
 Strengths
 ---------
@@ -78,6 +78,3 @@ Refacator
 :   As always you can [refactor towards an DI
     container](http://blog.thecodewhisperer.com/2011/12/07/refactor-your-way-to-a-dependency-injection-container/)
     if you feel the need to use one.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Flexible Selenium Tests via Page Objects
-Date: 2015-03-29 10:01
+Date: 2014-05-01
 Author: Shaun Finglas
-Tags: selenium, testing, http://schemas.google.com/blogger/2008/kind#post
-Slug: flexible-selenium-tests-via-page-objects
+Tags: testing
+Slug: 2014/05/flexible-selenium-tests-via-page-objects
 
 A fast, automated suite of unit and integration tests are not enough. At
 some point you'll need to test your presentation logic. Ideally your
@@ -75,6 +75,3 @@ Choose a style based on context. Given more than a handful of tests then
 page objects are worth the extra cost, the ability to evolve your UI
 while maintaining end to end tests is worth some additional complexity
 at first.
-
-</p>
-

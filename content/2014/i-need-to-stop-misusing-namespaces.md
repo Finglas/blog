@@ -1,8 +1,8 @@
 Title: I Need to Stop Misusing Namespaces
-Date: 2015-04-23 18:51
+Date: 2014-07-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming, development
-Slug: i-need-to-stop-misusing-namespaces
+Tags: programming, tutorial
+Slug: 2014/07/i-need-to-stop-misusing-namespaces
 
 At the recent [NSBCon](https://skillsmatter.com/conferences/6198-nsbcon)
 one interesting question that came about was how to structure a project.
@@ -53,6 +53,3 @@ always possible. Some coding conventions actually encourage the first
 example, and depending on the configurability of certain frameworks this
 may prove difficult. That aside, I'll be making a strong push towards
 structuring my projects correctly going forwards.
-
-</p>
-

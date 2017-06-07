@@ -1,8 +1,8 @@
 Title: Design is Important
-Date: 2014-07-22 19:20
+Date: 2014-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, design
-Slug: design-is-important
+Tags: programming
+Slug: 2014/04/design-is-important
 
 When I was a student I used to cheat. Not in exams or practical
 assignments, but I used to cheat when it came to my process to develop
@@ -139,6 +139,3 @@ There are a few ways to overcome the previous problems.
 
 None of these are ground breaking ideas, but combined these approaches
 have served me well both personally and professionally.
-
-</p>
-

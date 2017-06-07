@@ -1,8 +1,8 @@
 Title: DDD Validation
-Date: 2016-01-05 07:59
+Date: 2014-09-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, DDD, validaton
-Slug: ddd-validation
+Tags: programming, tutorial
+Slug: 2014/09/ddd-validation
 
 Validation within an application (specifically in terms of [Domain
 Driven Design - DDD](http://en.wikipedia.org/wiki/Domain-driven_design))
@@ -52,6 +52,3 @@ future changes are easier.
 The beauty here is that each validator (a simple function in this case)
 can be used in the correct context. E.g. when the PersonController POST
 handler is invoked, we use the person saving validator.
-
-</p>
-

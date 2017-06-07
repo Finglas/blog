@@ -1,8 +1,8 @@
 Title: The Importance of Tools
-Date: 2014-07-22 19:19
+Date: 2014-07-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, tools
-Slug: the-importance-of-tools
+Tags: retro
+Slug: 2014/07/the-importance-of-tools-one-of-most
 
 One of the most influential books I've read on software development has
 been [The Pragmatic
@@ -33,6 +33,3 @@ rather than something that must be configured via a GUI, opt for
 something that can be automated. Also ensure that you are not
 re-inventing the wheel unnecessarily. Save your time and energy on
 creating the custom tooling you can't get "off the shelf".
-
-</p>
-

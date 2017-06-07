@@ -1,8 +1,8 @@
 Title: Factory Obsession
-Date: 2014-12-13 18:14
+Date: 2014-12-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, DDD, unit-testing
-Slug: factory-obsession
+Tags: unit-testing, tutorial
+Slug: 2014/12/factory-obsession
 
 I have noticed a pattern over the years with developers of which I will
 refer to as factory obsession. Everything is a factory or builder
@@ -50,6 +50,3 @@ should be introduced as part of the refactor step in most cases. Hiding
 the new keyword is not a goal. The fact that mocking frameworks default
 to reference equality shouldn't force you to make a more complicated or
 coupled solution to a problem.
-
-</p>
-

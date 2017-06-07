@@ -1,8 +1,8 @@
 Title: Limit the Amount of Dependencies you Use
-Date: 2015-01-30 19:09
+Date: 2014-12-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, 3-steps-code-quality, tdd
-Slug: limit-the-amount-of-dependencies-you-use
+Tags: 3-steps-code-quality, tdd
+Slug: 2014/12/limit-amount-of-dependencies-you-use
 
 Part two of my [Three Steps to Code Quality via
 TDD](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html)
@@ -56,6 +56,3 @@ sorts of dependencies, don't isolate your code from itself.
 
 No. As step one detailed - small, well focused classes are a good thing.
 They just should remain as implementation details.
-
-</p>
-

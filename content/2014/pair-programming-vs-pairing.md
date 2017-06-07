@@ -1,8 +1,8 @@
 Title: Pair Programming vs Pairing
-Date: 2014-12-27 11:48
+Date: 2014-12-01
 Author: Shaun Finglas
-Tags: pairing, http://schemas.google.com/blogger/2008/kind#post, pair-programming, team
-Slug: pair-programming-vs-pairing
+Tags: developers, retro
+Slug: 2014/12/pair-programming-vs-pairing
 
 I'm a fan of pair programming. I owe a lot of this practice to my
 improvement early on in my career. I define pair programming as two
@@ -32,6 +32,3 @@ have two developers working on the same part of a task at all times.
 The key takeaway here is to know when to use pairing over pair
 programming and vice versa. Both have their merits and should be applied
 in the correct context.
-
-</p>
-

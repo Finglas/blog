@@ -1,8 +1,8 @@
 Title: The Correct Way to use var in C#
-Date: 2015-03-29 10:05
+Date: 2014-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, c#
-Slug: the-correct-way-to-use-var-in-c
+Tags: programming, tutorial
+Slug: 2014/02/the-correct-way-to-use-var-in-c
 
 The .NET community is not widely controversial, though there is a strong
 topic that appears to come up time and time again when I pair with other
@@ -54,6 +54,3 @@ correct.
 Talking of Resharper, a quick `Alt+Enter` on a type/implicit declaration
 will allow you to switch between modes, meaning you can be lazy and have
 the IDE pull in the right type when required.
-
-</p>
-

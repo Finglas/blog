@@ -1,10 +1,8 @@
 Title: SOA Done Badly vs SOA Done Right
-Date: 2015-02-10 20:17
+Date: 2014-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, design, architecture, SOA
-Slug: soa-done-badly-vs-soa-done-right
-
-<div id="content">
+Tags: architecture, programming
+Slug: 2014/07/soa-done-badly-vs-soa-done-right
 
 I was under the assumption I had been doing SOA for over 3 years.
 Previously I have had services which did stuff, these talked to other
@@ -87,8 +85,3 @@ benefit. This enables so called "mashups".
 I'll expand on these topics over time, but I am certain this method of
 vertically slicing services based upon business capabilities will be my
 default approach going forward.
-
-</div>
-
-</p>
-

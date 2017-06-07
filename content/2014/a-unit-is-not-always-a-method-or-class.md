@@ -1,8 +1,8 @@
 Title: A Unit is Not Always a Method or Class
-Date: 2015-01-30 19:07
+Date: 2014-12-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, 3-steps-code-quality, tdd
-Slug: a-unit-is-not-always-a-method-or-class
+Tags: 3-steps-code-quality, tdd
+Slug: 2014/12/a-unit-is-not-always-method-or-class
 
 Part three of my [Three Steps to Code Quality via TDD
 series](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
@@ -94,6 +94,3 @@ test setup and in most cases improve readability. Worrying about large
 tests shouldn't be a problem with this style of testing. You will not
 reduce the amount of tests required, however you will find them to be
 much more stable and resilient than before.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Developer Diaries
-Date: 2016-02-23 07:16
+Date: 2014-09-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: developer-diaries
+Tags: retro, tutorial
+Slug: 2014/09/developer-diaries
 
 A few weeks back I stumbled across a tweet which I unfortunately cannot
 find to give credit to. It talked about the benefit of keeping a
@@ -41,6 +41,3 @@ I'm alarmed at the stuff that I would have forgotten had I not taken a
 note. It's quite possible that I would remember some of this information
 in the long term, but regular skim readings of the diary is proving very
 helpful.
-
-</p>
-
