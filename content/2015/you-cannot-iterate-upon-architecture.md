@@ -1,8 +1,8 @@
 Title: You Cannot Iterate upon Architecture
-Date: 2015-11-24 08:12
+Date: 2015-11-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, agile, architecture, agile-architecture-series
-Slug: you-cannot-iterate-upon-architecture
+Tags: architecture, agile-architecture-series
+Slug: 2015/11/you-cannot-iterate-upon-architecture
 
 This is the first part of a series of posts as to why gradual iteration,
 doing the simplest thing that can possibly work over a software project
@@ -23,7 +23,7 @@ some great insights and advice. As part of this an incredibly effective
 image is used. This shows the production of a form of transport to
 travel from A to B.
 
-![](http://3.bp.blogspot.com/-GIv_yj7SN08/VkDhOX_5DoI/AAAAAAAAAIo/12OKoGVoCvY/s1600/images.duckduckgo.com.png)
+![Building a car from a skateboard.](http://3.bp.blogspot.com/-GIv_yj7SN08/VkDhOX_5DoI/AAAAAAAAAIo/12OKoGVoCvY/s1600/images.duckduckgo.com.png)
 
 In the first half of the image, the product is built in iterations. Each
 step adds to the next. It is not until the fourth step that the product
@@ -95,6 +95,3 @@ implementation issue.
 The second solution is turn an unknown project into a known project.
 This sounds difficult but there is a remarkable easy way to achieve this
 - the subject of the next post.
-
-</p>
-

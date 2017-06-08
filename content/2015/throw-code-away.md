@@ -1,8 +1,8 @@
 Title: Throw Code Away
-Date: 2015-11-24 08:11
+Date: 2015-11-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, architecture, agile-architecture-series
-Slug: throw-code-away
+Tags: architecture, agile-architecture-series
+Slug: 2015/11/throw-code-away
 
 The third and final part of my agile architecture series.
 
@@ -74,6 +74,3 @@ architecture you are not refactoring.
 The biggest objector you will likely find is yourself. Having become
 invested in a task it can be hard to try again. Fight the urge to resist
 and throw code away. You may be pleasantly surprised by the results.
-
-</p>
-

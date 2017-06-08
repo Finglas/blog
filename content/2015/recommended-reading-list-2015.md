@@ -1,8 +1,8 @@
 Title: Recommended Reading List 2015
-Date: 2015-12-22 07:58
+Date: 2015-12-01
 Author: Shaun Finglas
-Tags: reading, http://schemas.google.com/blogger/2008/kind#post, programming, process, books
-Slug: recommended-reading-list-2015
+Tags: reading
+Slug: 2015/12/recommended-reading-list-2015
 
 In a similar manner to
 [previous](http://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html)
@@ -79,6 +79,3 @@ highlights for various reasons.
     beginning a startup. Interestingly much of the advice can be applied
     to individuals working within larger organizations on smaller
     projects.
-
-</p>
-

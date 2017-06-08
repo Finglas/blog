@@ -1,8 +1,8 @@
 Title: ReactJS and JSHint
-Date: 2015-12-01 07:48
+Date: 2015-12-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, tools, javascript, reactjs
-Slug: reactjs-and-jshint
+Tags: programming, tutorial
+Slug: 2015/12/reactjs-and-jshint
 
 The [ReactJS Getting Started
 Guide](http://facebook.github.io/react/docs/getting-started.html) states
@@ -32,6 +32,3 @@ file with React, or you simply include the standalone JS scripts in your
 html. This can be done after the fact. JSHint can then play nicely with
 your React apps without the need for other tooling such as wrappers or
 text editor extensions.
-
-</p>
-

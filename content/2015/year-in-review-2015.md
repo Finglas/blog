@@ -1,8 +1,8 @@
 Title: Year in Review 2015
-Date: 2015-12-31 15:53
+Date: 2015-12-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: year-in-review-2015
+Tags: year-in-review, retro
+Slug: 2015/12/year-in-review-2015
 
 #### January
 
@@ -137,6 +137,3 @@ Slug: year-in-review-2015
 -   The month ended with a round up of some of my [best reads of the
     last twelve
     months](http://blog.shaunfinglas.co.uk/2015/12/recommended-reading-list-2015.html).
-
-</p>
-

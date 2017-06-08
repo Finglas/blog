@@ -1,8 +1,8 @@
 Title: Coding In the Real World
-Date: 2015-10-27 13:12
+Date: 2015-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro, coding
-Slug: coding-in-the-real-world
+Tags: retro
+Slug: 2015/10/coding-in-real-world
 
 As a student when confronted with a problem, I would end up coding it
 and thinking - *how do the professionals do this?*
@@ -38,5 +38,3 @@ The best way to summarise my feelings would be this image courtesy of
 > [View post on imgur.com](//imgur.com/L0VoWT9)
 
 <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-</p>
-

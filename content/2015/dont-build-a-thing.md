@@ -1,8 +1,8 @@
 Title: Don't Build a Thing
-Date: 2015-11-24 08:12
+Date: 2015-11-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, lean, architecture, agile-architecture-series
-Slug: dont-build-a-thing
+Tags: architecture, agile-architecture-series
+Slug: 2015/11/dont-build-thing
 
 Part two of my agile architecture series.
 
@@ -95,6 +95,3 @@ first solution. The second solution however could be chopped, changed or
 thrown away with no protest. The act of throwing code away is so
 important, yet so rarely practised it will be the subject of the third
 part of this series.
-
-</p>
-

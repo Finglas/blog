@@ -1,8 +1,8 @@
 Title: Pre Computation
-Date: 2015-11-03 07:53
+Date: 2015-11-01
 Author: Shaun Finglas
-Tags: release-it, http://schemas.google.com/blogger/2008/kind#post, books, architecture
-Slug: pre-computation
+Tags: architecture
+Slug: 2015/11/pre-computation
 
 [Caching is a common
 technique](http://blog.shaunfinglas.co.uk/2015/01/caching.html),
@@ -55,6 +55,3 @@ possible. Additionally adjusting a system to handle content deploys is
 not something that can be achieved lightly. As the build and deploy
 process must accommodate these changes, pre computation is usually
 required to be thought of up front or require some rework to introduce.
-
-</p>
-

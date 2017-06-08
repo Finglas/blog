@@ -1,8 +1,8 @@
 Title: Reducing Conditional Logic to a Single Location
-Date: 2015-12-15 13:00
+Date: 2015-12-01
 Author: Shaun Finglas
-Tags: refactoring, http://schemas.google.com/blogger/2008/kind#post, programming, anti-if
-Slug: reducing-conditional-logic-to-a-single-location
+Tags: programming, tutorial
+Slug: 2015/12/reducing-conditional-logic-to-single
 
 [My Anti If Campaign
 post](http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html)
@@ -82,6 +82,3 @@ boolean flags usually indicates at least two hidden types.
 
 The anti if campaign is not the removal of all conditional checks. They
 need to happen somewhere. Just try to limit them.
-
-</p>
-
