@@ -1,8 +1,8 @@
 Title: Best of Breed
-Date: 2016-03-22 07:53
+Date: 2016-03-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, design, agile, retro
-Slug: best-of-breed
+Tags: retro
+Slug: 2016/03/best-of-breed
 
 Spikes are one of the best ways to aid the design of software. In some
 cases spike solutions can open more questions than they solve. The use
@@ -45,6 +45,3 @@ developers may prefer to evolve a single spike during various phases.
 
 The term *Best of Breed* was introduced to myself by [Paul
 Shannon](https://twitter.com/BlueReZZ).
-
-</p>
-

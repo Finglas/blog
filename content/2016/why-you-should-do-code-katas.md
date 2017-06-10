@@ -1,8 +1,8 @@
 Title: Why You Should Do Code Katas
-Date: 2016-08-04 07:01
+Date: 2016-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, kata, retro
-Slug: why-you-should-do-code-katas
+Tags: programming, retro
+Slug: 2016/08/why-you-should-do-code-katas
 
 [Code katas](http://codekata.com/) are simple exercises that are meant
 to be repeated. They are great for learning a new language or tool. The
@@ -31,6 +31,3 @@ regardless of level. Katas alone are not enough to support personal
 development. Experience, reading and practical development are all still
 required. However when code katas are combined they are an excellent
 aid.
-
-</p>
-

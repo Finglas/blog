@@ -1,8 +1,8 @@
 Title: Project Setup Tax
-Date: 2016-04-08 10:44
+Date: 2016-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, design, microservices
-Slug: project-setup-tax
+Tags: microservices, retro
+Slug: 2016/04/project-setup-tax
 
 With microservices gaining popularity, one consideration prior to
 adoption is new project setup. In fact this statement holds true for any
@@ -32,6 +32,3 @@ The lesson here is to never underestimate the time and effort required
 in starting a new project. Always allocate more time. Better yet,
 [question if the introduction of a new project is even
 required](http://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html).
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: A Lotta Architecture - A Reply to "A Little Architecture"
-Date: 2016-01-19 07:58
+Date: 2016-01-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, reply, retro, architecture
-Slug: a-lotta-architecture-a-reply-to-a-little-architecture
+Tags: reply, retro, architecture
+Slug: 2016/01/a-lotta-architecture-reply-to-little
 
 A recent post about [architecture from Uncle
 Bob](http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html)
@@ -59,6 +59,3 @@ Deferring decisions is a sign of good architecture, but the act of
 deferral or hiding behind interfaces only gets you so far. The sad state
 of affairs is that any implementation detail left unchecked can swallow
 applications in complexity.
-
-</p>
-

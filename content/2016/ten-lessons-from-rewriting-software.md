@@ -1,8 +1,8 @@
 Title: Ten Lessons from Rewriting Software
-Date: 2016-07-10 14:27
+Date: 2016-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro, ten-lessons
-Slug: ten-lessons-from-rewriting-software
+Tags: retro
+Slug: 2016/06/ten-lessons-from-rewriting-software
 
 1.  #### It Will Take A Lot Longer Than Estimated
 
@@ -111,6 +111,3 @@ Slug: ten-lessons-from-rewriting-software
         adopt a rewrite, but this varies case by case.
     -   If business agility is suffering such rewrites can be beneficial
         when using some of the techniques above.
-
-</p>
-

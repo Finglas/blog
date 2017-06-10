@@ -1,8 +1,8 @@
 Title: Given When Then Scenarios vs Test Fixtures
-Date: 2016-06-07 06:49
+Date: 2016-06-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, unit-testing
-Slug: given-when-then-scenarios-vs-test-fixtures
+Tags: testing, unit-testing, tutorial
+Slug: 2016/06/given-when-then-scenarios-vs-test
 
 There are two common ways of writing automated tests which apply from
 unit to acceptance tests. These are typically known as test fixtures and
@@ -57,6 +57,3 @@ Given-When-Then scenarios.
 -   The core of your tests can use GWT style.
 -   Mix and match where appropriate however.
 -   Your choice of tooling and language may influence your approach.
-
-</p>
-

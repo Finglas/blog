@@ -1,8 +1,8 @@
 Title: Anaemic Domain Models and Code Smells
-Date: 2016-07-19 07:13
+Date: 2016-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, DDD, smells
-Slug: anaemic-domain-models-and-code-smells
+Tags: programming
+Slug: 2016/07/anaemic-domain-models-and-code-smells
 
 An anaemic domain model (ADM) is considered a code smell in many cases.
 An ADM is present when you have a entity representing your domain, but
@@ -65,6 +65,3 @@ towards them.
 -   The ADM is not a good example of SRP.
 -   Refactoring towards a rich domain model is easy and achievable at
     any stage.
-
-</p>
-

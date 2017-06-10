@@ -1,8 +1,8 @@
 Title: X% of Configuration is Never Used
-Date: 2016-04-26 07:08
+Date: 2016-04-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming, code-quality
-Slug: x-of-configuration-is-never-used
+Tags: programming, code-quality
+Slug: 2016/04/x-of-configuration-is-never-used
 
 Code configuration is essentially for the likes of URLs, credentials or
 other per deployable settings. Sadly configuration seems to fall into
@@ -70,6 +70,3 @@ root. Such solutions are easily testable and open to modification.
     technical task.
 -   Provide configurations values, not the means of obtaining them.
 -   Rely upon convention over configuration as much as possible.
-
-</p>
-

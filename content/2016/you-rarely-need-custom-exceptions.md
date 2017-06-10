@@ -1,8 +1,8 @@
 Title: You Rarely Need Custom Exceptions
-Date: 2016-05-07 10:48
+Date: 2016-05-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, exceptions, coding
-Slug: you-rarely-need-custom-exceptions
+Tags: programming, tutorial
+Slug: 2016/05/you-rarely-need-custom-exceptions
 
 Implementing custom exceptions usually gives a hint as to why you rarely
 need custom implementations. They are often nothing more than sub
@@ -82,6 +82,3 @@ does not matter in most cases.
     needs to be handled uniquely.
 -   Put effort into ensuring the message of an exception is useful -
     messages and the stack trace are the most important elements.
-
-</p>
-

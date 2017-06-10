@@ -1,8 +1,8 @@
 Title: POODR Highlights Part 1
-Date: 2016-10-27 07:07
+Date: 2016-10-01
 Author: Shaun Finglas
-Tags: highlight, series, http://schemas.google.com/blogger/2008/kind#post, code
-Slug: poodr-highlights-part-1
+Tags: highlight, code, programming
+Slug: 2016/10/poodr-highlights-part-1
 
 [Practical Object-Oriented Design in Ruby](http://www.poodr.com/) or
 POODR is clearly a book about Ruby development, however the odd aspect
@@ -65,6 +65,3 @@ safely be re-ordered without fear of compilation or runtime errors.
 -   Use named arguments for improved readability and the ability to
     reduce temporary variables. Named variables can be dropped if there
     is only one argument or the variable is well named.
-
-</p>
-

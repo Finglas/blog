@@ -1,8 +1,8 @@
 Title: Randomly Generated Values in Tests
-Date: 2015-04-09 19:20
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, tdd, unit-testing
-Slug: randomly-generated-values-in-tests
+Tags: testing, tdd, unit-testing, tutorial
+Slug: 2015/04/randomly-generated-values-in-tests
 
 The use of randomly generated test data seems like a good thing at first
 glance. Having worked with several teams that have used this concept I
@@ -90,6 +90,3 @@ times when duplication between tests is a bad thing. While this simple
 example doesn't suffer from this problem [I will expand on how to keep
 your tests expressive but DRY in a future
 post](http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html).
-
-</p>
-

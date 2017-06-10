@@ -1,8 +1,8 @@
 Title: Dependency Elimination Principle
-Date: 2015-03-11 22:19
+Date: 2015-03-01
 Author: Shaun Finglas
-Tags: abstractions, http://schemas.google.com/blogger/2008/kind#post, dependencies, abstractions-series
-Slug: dependency-elimination-principle
+Tags: abstractions-series, tutorial
+Slug: 2015/03/dependency-elimination-principle
 
 This is the third, and final part of my series on abstractions.
 
@@ -57,6 +57,3 @@ Try to apply the DEP where possible. Remove as many dependencies as
 possible for flexible, maintainable code. Not all dependencies can be
 eliminated, but unless the dependency is a valid abstraction it may be
 worth considering removing or reducing use.
-
-</p>
-

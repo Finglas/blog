@@ -1,8 +1,8 @@
 Title: Constant Object Anti Pattern
-Date: 2016-10-03 06:29
+Date: 2016-10-01
 Author: Shaun Finglas
-Tags: tutorial, http://schemas.google.com/blogger/2008/kind#post, code, anti-pattern
-Slug: constant-object-anti-pattern
+Tags: tutorial, programming
+Slug: 2016/10/constant-object-anti-pattern
 
 Most constants are used to remove magic numbers or variables that lack
 context. A classic example would be code littered with the number 7.
@@ -53,6 +53,3 @@ Lessons
 -   Only introduce configuration for aspects that need or will change.
     Defer second guessing.
 -   Use named arguments to add context for inline variables.
-
-</p>
-

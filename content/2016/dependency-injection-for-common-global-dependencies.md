@@ -1,8 +1,8 @@
 Title: Dependency Injection for Common Global Dependencies
 Date: 2016-04-13 07:09
 Author: Shaun Finglas
-Tags: DI, http://schemas.google.com/blogger/2008/kind#post, programming, dependencies
-Slug: dependency-injection-for-common-global-dependencies
+Tags: programming, tutorial
+Slug: 2016/04/dependency-injection-for-common-global
 
 The use of [singletons can often be replaced by simply adjusting scoping
 of
@@ -68,6 +68,3 @@ by traditional DI where possible. As always each dependency should be
 validated prior to introduction. It may be possible to either [eliminate
 or replace the component in
 question](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html).
-
-</p>
-

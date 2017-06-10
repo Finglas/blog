@@ -1,8 +1,8 @@
 Title: Past Mistakes - ORMs and Bounded Contexts
-Date: 2016-08-31 07:12
+Date: 2016-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro, past-mistakes-series
-Slug: past-mistakes-orms-and-bounded-contexts
+Tags: retro, past-mistakes-series
+Slug: 2016/08/past-mistakes-orms-and-bounded-contexts
 
 Sticking with the theme of documenting past mistakes, it's worth
 expanding a real life scenario where I was unaware of the use of bounded
@@ -54,6 +54,3 @@ than micro-ORMs is next to non existent at present.
 -   Anything shared must be deployed and tested as a single unit,
     otherwise remove the shared component.
 -   ORMs (or other tools) should be understand and respected.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: POODR Highlights Part 2
-Date: 2016-11-08 10:34
+Date: 2016-11-01
 Author: Shaun Finglas
-Tags: highlight, http://schemas.google.com/blogger/2008/kind#post, books
-Slug: poodr-highlights-part-2
+Tags: highlight
+Slug: 2016/11/poodr-highlights-part-2
 
 Two other stand out topics from POODR were the use of tests and
 inheritance. The first set of [higlights covered dependencies and
@@ -64,6 +64,3 @@ Three](http://wiki.c2.com/?RuleOfThree) can help here.
 -   Inheritance is not all bad.
 -   Defer or hold back using inheritance until you understand the
     problem.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Guard Clauses and Assertions
-Date: 2015-02-17 18:03
+Date: 2015-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, assertions, code-quality
-Slug: guard-clauses-and-assertions
+Tags: code-quality, tutorial
+Slug: 2015/02/guard-clauses-and-assertions
 
 Two simple techniques to increase code quality, resilience, and ease
 debugging scenarios is to use guard clauses effectively and ensure that
@@ -57,6 +57,3 @@ hidden in layers of exceptions caused by invalid state. While applying
 clauses and assertions increases lines of code, they are easy to
 implement, and the return on investment is high. There are no excuses
 not to use them.
-
-</p>
-

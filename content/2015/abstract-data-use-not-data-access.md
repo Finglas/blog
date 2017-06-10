@@ -1,8 +1,8 @@
 Title: Abstract Data Use Not Data Access
-Date: 2015-01-30 19:06
+Date: 2015-01-01
 Author: Shaun Finglas
-Tags: best-practices, data-access, http://schemas.google.com/blogger/2008/kind#post, programming
-Slug: abstract-data-use-not-data-access
+Tags: programming, tutorial
+Slug: 2015/01/abstract-data-use-not-data-access
 
 Common data access abstractions I've come across and been guilty of
 implementing myself are the likes of:
@@ -133,6 +133,3 @@ the benefits of this solution, so don't worry about it.
 For a great discussion on this topic, check out a talk by [Kijana
 Woodard](http://ayende.com/blog/166594/ravendb-conf-videos-abstracting-ravendb-dont-do-it)
 for more examples.
-
-</p>
-

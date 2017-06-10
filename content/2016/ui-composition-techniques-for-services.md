@@ -1,8 +1,8 @@
 Title: UI Composition Techniques for Services
-Date: 2016-07-17 11:10
+Date: 2016-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, microservices, SOA
-Slug: ui-composition-techniques-for-services
+Tags: microservices, SOA
+Slug: 2016/07/ui-composition-techniques-for-services
 
 When using services be it SOA, microservices or some other hybrid
 approach, at some point you will need to display an aggregation of data
@@ -180,6 +180,3 @@ the context of a full blown application.
 -   Default to using the services directly, only introducing a BFF if
     client requirements differ or client requirements are being forced
     upon the independent services.
-
-</p>
-

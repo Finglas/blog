@@ -1,8 +1,8 @@
 Title: The New Guy
-Date: 2016-10-11 06:48
+Date: 2016-10-01
 Author: Shaun Finglas
-Tags: people, http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: the-new-guy
+Tags: retro
+Slug: 2016/10/the-new-guy
 
 Everyone is new at some point. No matter your experience level. You're
 either new to the team or new to the business. Being the “new person” is
@@ -70,6 +70,3 @@ easier time suggesting and implementing change.
     instead of a big bang approach.
 -   Embrace new starters, use them to test your processes and
     documentation.
-
-</p>
-

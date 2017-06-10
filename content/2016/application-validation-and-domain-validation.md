@@ -1,8 +1,8 @@
 Title: Application Validation and Domain Validation
 Date: 2016-01-13 19:58
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, validation, DDD
-Slug: application-validation-and-domain-validation
+Tags: tutorial
+Slug: 2016/01/application-validation-and-domain
 
 There are two types of validation in an application - application
 validation and domain validation. This applies whether or not you
@@ -46,6 +46,3 @@ model or domain logic. If [value types are utilised you can safely omit
 additional application
 validation](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
 as each object would ensure consistency.
-
-</p>
-

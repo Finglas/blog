@@ -1,8 +1,8 @@
 Title: Notes on Building and Deploying Software
 Date: 2016-07-10 15:18
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, notes, build, deployment
-Slug: notes-on-building-and-deploying-software
+Tags: deployment
+Slug: 2016/07/notes-on-building-and-deploying-software
 
 #### Builds and Deploys
 
@@ -121,6 +121,3 @@ change the behaviour of the application.
 -   The use of views or stored procedures can add a layer of abstraction
     between applications and databases. This allows changes to the
     underlying DB to have a smaller, limited effect.
-
-</p>
-

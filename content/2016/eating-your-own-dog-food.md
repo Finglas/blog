@@ -1,8 +1,8 @@
 Title: Eating your own Dog Food
-Date: 2016-03-08 08:01
+Date: 2016-03-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, process, development
-Slug: eating-your-own-dog-food
+Tags: retro
+Slug: 2016/03/eating-your-own-dog-food
 
 Also known as *dog fooding*. It's an odd term, [with roots dating back
 to 70's adverts and the even more
@@ -44,6 +44,3 @@ Libraries that have not been built using dog fooding are often clunky,
 unintuitive and frustrating to use. Every developer could name numerous
 examples that would fit this criteria, but the opposite is also true.
 The use of dog fooding tends to force libraries into the later.
-
-</p>
-

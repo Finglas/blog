@@ -1,8 +1,8 @@
 Title: DRY vs DAMP in Tests
-Date: 2015-04-09 19:19
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, assertions, programming, unit-testing
-Slug: dry-vs-damp-in-tests
+Tags: programming, unit-testing, tutorial
+Slug: 2015/04/dry-vs-damp-in-tests
 
 In the [previous post I mentioned that duplication in tests is not
 always
@@ -60,6 +60,3 @@ applied where required rather than for every scenario. Tests for objects
 that are lower in the dependency graph tend to fit into the more
 traditional testing patterns, while higher up your stack DAMP tests can
 prove useful.
-
-</p>
-

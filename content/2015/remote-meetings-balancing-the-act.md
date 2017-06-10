@@ -1,8 +1,8 @@
 Title: Remote Meetings - Balancing the Act
-Date: 2015-03-18 23:04
+Date: 2015-03-01
 Author: Shaun Finglas
-Tags: working, http://schemas.google.com/blogger/2008/kind#post, remote
-Slug: remote-meetings-balancing-the-act
+Tags: retro
+Slug: 2015/03/remote-meetings-balancing-act
 
 Meetings are hard when some team members are remote and are physically
 based in the same location.
@@ -26,6 +26,3 @@ meeting**.
 This idea was taken from [Stack Exchange's
 post](http://blog.stackoverflow.com/2013/02/why-we-still-believe-in-working-remotely/)
 detailing why they still believe in remote working.
-
-</p>
-

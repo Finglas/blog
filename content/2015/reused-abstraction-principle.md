@@ -1,8 +1,8 @@
 Title: Reused Abstraction Principle
-Date: 2015-03-11 22:20
+Date: 2015-03-01
 Author: Shaun Finglas
-Tags: abstractions, http://schemas.google.com/blogger/2008/kind#post, abstractions-series, code-quality
-Slug: reused-abstraction-principle
+Tags: abstractions-series, code-quality, tutorial
+Slug: 2015/03/reused-abstraction-principle
 
 This is the second part of my series on abstractions.
 
@@ -64,6 +64,3 @@ The final point is to [remember what good dependencies
 are](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html),
 everything else can be an implementation detail leading to more flexible
 and resilient code.
-
-</p>
-

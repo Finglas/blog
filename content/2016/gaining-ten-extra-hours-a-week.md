@@ -1,8 +1,8 @@
 Title: Gaining Ten Extra Hours a Week
-Date: 2016-02-17 07:58
+Date: 2016-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, productivity, retro
-Slug: gaining-ten-extra-hours-a-week
+Tags: retro
+Slug: 2016/02/gaining-ten-extra-hours-week
 
 For a long time my work life balance has gone through phases. Some weeks
 I would spend hours after work writing code. This would exceed to well
@@ -63,6 +63,3 @@ I wrote back in 2015 when compared to 2014. I've read more books and
 watched more technical videos during this period than ever, while still
 maintaining a healthy balance in other areas of my life. Give it a go,
 become a morning person.
-
-</p>
-

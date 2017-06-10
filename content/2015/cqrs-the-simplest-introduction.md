@@ -1,8 +1,8 @@
 Title: CQRS - The Simplest Introduction
-Date: 2015-04-23 17:51
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, cqrs, programming, SOA
-Slug: cqrs-the-simplest-introduction
+Tags: programming, SOA, tutorial
+Slug: 2015/04/cqrs-simplest-introduction
 
 [CQRS or Command Query Responsibility
 Separation](http://martinfowler.com/bliki/CQRS.html) is easy to
@@ -70,6 +70,3 @@ implementation of this pattern can vary from simple, to complicated. The
 extent to which CQRS is implemented should be judged on a case by case
 basis. Many systems can get away without separating read and write
 stores, yet still enjoy the benefits that this pattern provides.
-
-</p>
-

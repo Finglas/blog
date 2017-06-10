@@ -1,8 +1,8 @@
 Title: Caching
-Date: 2015-01-06 19:04
+Date: 2015-01-01
 Author: Shaun Finglas
-Tags: best-practices, release-it, http://schemas.google.com/blogger/2008/kind#post
-Slug: caching
+Tags: programming
+Slug: 2015/01/caching
 
 The naive approach to implement caching is to just store everything in
 an in memory collection such as a hashtable. After all it works on my
@@ -80,6 +80,3 @@ pre-computation in a future post.
 
 More information can be found in the excellent book [Release
 It!](https://pragprog.com/book/mnee/release-it)
-
-</p>
-

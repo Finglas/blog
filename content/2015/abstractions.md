@@ -1,8 +1,8 @@
 Title: Abstractions
-Date: 2015-04-22 17:19
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, abstractions-series, code-quality
-Slug: abstractions
+Tags: abstractions-series, code-quality
+Slug: 2015/02/abstractions.html
 
 This is the first part of my series on abstractions.
 
@@ -71,6 +71,3 @@ choice is to use CQRS to simply read from the database and populate a
 view model. This limits abstractions and helps keep the code focused,
 flexible and open to change. [I will expand on CQRS in a future
 post](http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html).
-
-</p>
-

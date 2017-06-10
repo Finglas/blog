@@ -1,8 +1,8 @@
 Title: Validation is not a Cross Cutting Concern
-Date: 2016-01-13 20:00
+Date: 2016-01-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, validation
-Slug: validation-is-not-a-cross-cutting-concern
+Tags: programming, tutorial
+Slug: 2016/01/validation-is-not-cross-cutting-concern
 
 Attributes in C\# are also known as [decorators in
 Python](https://wiki.python.org/moin/PythonDecorators) or [annotations
@@ -77,6 +77,3 @@ failures. This could be extended or modified for further enhancements.
 -   Open to extension and additions such as third party code.
 -   Services never lose context which allows easy runtime decisions to
     be made.
-
-</p>
-

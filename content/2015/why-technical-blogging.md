@@ -1,8 +1,8 @@
 Title: Why Technical Blogging?
-Date: 2015-01-27 21:48
+Date: 2015-01-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, advice, blogging, writing
-Slug: why-technical-blogging
+Tags: blogging, retro
+Slug: 2015/01/why-technical-blogging
 
 Given this is my fifth year of blogging I figured it would be worth
 while answering "*Why bother with technical blogging?*".
@@ -93,6 +93,3 @@ The book [Techinical
 Blogging](https://pragprog.com/book/actb/technical-blogging) by
 [@acangiano](https://twitter.com/acangiano) is a great starting place
 for more information and advice.
-
-</p>
-

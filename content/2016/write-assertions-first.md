@@ -1,8 +1,8 @@
 Title: Write Assertions First
-Date: 2016-03-01 08:09
+Date: 2016-03-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, tdd, unit-testing
-Slug: write-assertions-first
+Tags: testing, tdd, unit-testing
+Slug: 2016/03/write-assertions-first
 
 Writing a test as part of the TDD process is simple.
 
@@ -41,6 +41,3 @@ assertion was to check if the total of an order was as expected.
 
 Writing assertions first can feel awkward but the benefits of this
 change are well worth the initial slowdown.
-
-</p>
-

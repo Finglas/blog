@@ -1,8 +1,8 @@
 Title: New and Shiny Things
-Date: 2016-09-12 07:05
+Date: 2016-09-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro
-Slug: new-and-shiny-things
+Tags: retro
+Slug: 2016/09/new-and-shiny-things
 
 There is risk with upgrading anything, be it language, framework,
 library, OS or third parties.
@@ -68,6 +68,3 @@ matches the delayed upgrade path above.
 -   Play and test new technology on the side, in low risk scenarios.
 -   What technology you use to build something actually doesn't matter
     in most cases.
-
-</p>
-

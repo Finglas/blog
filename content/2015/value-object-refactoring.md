@@ -1,8 +1,8 @@
 Title: Value Object Refactoring
 Date: 2015-02-03 20:36
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, DDD
-Slug: value-object-refactoring
+Tags:  programming, tutorial
+Slug: 2015/02/value-object-refactoring
 
 After extract method or extract class introducing a value object is one
 of the most powerful refactorings available. A value object encapsulates
@@ -84,6 +84,3 @@ needed, no need for injection or other patterns.
 -   The introduction of a value object plays nicely with my [three basic
     steps to code
     quality](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
-
-</p>
-

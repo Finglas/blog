@@ -1,8 +1,8 @@
 Title: I Need to Stop Misusing Divs
-Date: 2016-07-31 16:25
+Date: 2016-07-01
 Author: Shaun Finglas
-Tags: CSS, http://schemas.google.com/blogger/2008/kind#post, HTML, miuse
-Slug: i-need-to-stop-misusing-divs
+Tags: retro
+Slug: 2016/07/i-need-to-stop-misusing-divs
 
 I a certainly not a skilled or expert front end developer. While I'm
 more than capable of creating pages I lack any design magic to make them
@@ -49,6 +49,3 @@ still be used and accessible decades from now is incredible.
 The lesson here is an easy one. Every time you write a generic division
 element, stop and ask yourself is there an element with more semantic
 meaning that will do the same job?
-
-</p>
-

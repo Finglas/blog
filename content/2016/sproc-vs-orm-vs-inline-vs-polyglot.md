@@ -1,8 +1,8 @@
 Title: Sproc vs ORM vs Inline vs Polyglot
-Date: 2016-02-10 08:08
+Date: 2016-02-01
 Author: Shaun Finglas
-Tags: databases, data-access, http://schemas.google.com/blogger/2008/kind#post, peristence
-Slug: sproc-vs-orm-vs-inline-vs-polyglot
+Tags: retro
+Slug: 2016/02/sproc-vs-orm-vs-inline-vs-polyglot
 
 With relational databases the common data access patterns tend to fall
 into three core options.
@@ -55,6 +55,3 @@ data storage solutions are more appropriate.
 
 One common flaw that all these data access patterns can have is the [N+1
 problem](http://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html).
-
-</p>
-

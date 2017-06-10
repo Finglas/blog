@@ -1,8 +1,8 @@
 Title: DDD - Bounded Contexts
 Date: 2016-06-14 07:25
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, DDD, development
-Slug: ddd-bounded-contexts
+Tags: tutorial
+Slug: 2016/06/ddd-bounded-contexts
 
 A single domain can grow large when applying Domain Driven Design. It
 can become very hard to contain a single model when using ubiquitous
@@ -72,6 +72,3 @@ never be a case where this is problematic.
     further when these models are used.
 -   Ending up with multiple models per bounded context is likely going
     to happen, embrace it.
-
-</p>
-

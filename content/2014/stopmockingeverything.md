@@ -1,8 +1,8 @@
 Title: Stop.Mocking.EVERYTHING
-Date: 2015-03-09 20:27
+Date: 2014-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, tdd
-Slug: stopmockingeverything
+Tags: programming, retro, tdd
+Slug: 2014/08/stopmockingeverything
 
 I've flip flopped on how to use mock objects since 2008. It's took me
 nearly five years to finally claim to have a solid, practical answer on
@@ -57,6 +57,3 @@ rewriting tests.
 This approach has served me well for a while now, and in fact can be
 achieved even without the need to use a complicated mocking framework,
 though that will be the subject of a future post.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: The N+1 Problem
-Date: 2016-02-10 08:07
+Date: 2016-02-01
 Author: Shaun Finglas
-Tags: databases, data-access, http://schemas.google.com/blogger/2008/kind#post
-Slug: the-n1-problem
+Tags: tutorial
+Slug: 2016/02/the-n1-problem
 
 The N+1 problem is when multiple queries are executed against a
 persistent store when a reduced amount could serve the same purpose.
@@ -73,6 +73,3 @@ logging the underlying queries that are performed. Once an issue is
 discovered it is usually a case of consulting documentation on what the
 fix is - often configuration related. Due to this it is worth enabling
 logging during development so queries can be analysed.
-
-</p>
-

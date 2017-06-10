@@ -1,8 +1,8 @@
 Title: Singleton's and the Singleton Lifestyle
-Date: 2016-04-13 07:15
+Date: 2016-04-01
 Author: Shaun Finglas
-Tags: DI, http://schemas.google.com/blogger/2008/kind#post, programming, coding
-Slug: singletons-and-the-singleton-lifestyle
+Tags: programming, tutorial
+Slug: 2016/03/singletons-and-singleton-lifestyle
 
 [The death of testability and the lack of
 isolation](http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/)
@@ -57,6 +57,3 @@ global](http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-g
 The likes of date/time or logging spring to mind. In these cases
 [alternative solutions
 exist](http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html).
-
-</p>
-

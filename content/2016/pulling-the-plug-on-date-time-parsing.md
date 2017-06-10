@@ -1,8 +1,8 @@
 Title: Pulling the Plug on Date Time Parsing
 Date: 2016-03-30 06:49
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, programming, unit-testing
-Slug: pulling-the-plug-on-date-time-parsing
+Tags: testing, programming, unit-testing
+Slug: 2016/03/pulling-plug-on-date-time-parsing
 
 Date/time logic is hard. Throw in time zones along with daylight saving
 and it's even harder. Recently a suite of tests that had happily been
@@ -34,6 +34,3 @@ the cloud, relying on implicit configuration should be avoided where
 possible. In fact I would bet a large sum of money that many codebases
 out there would fail this temporary locale change. Give it a go - pull
 the plug.
-
-</p>
-

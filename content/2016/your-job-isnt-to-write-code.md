@@ -1,8 +1,8 @@
 Title: Your Job Isn't to Write Code
-Date: 2016-05-24 07:13
+Date: 2016-05-01
 Author: Shaun Finglas
-Tags: job, http://schemas.google.com/blogger/2008/kind#post, developers, retro
-Slug: your-job-isnt-to-write-code
+Tags: developers, retro
+Slug: 2016/05/your-job-isnt-to-write-code.html
 
 Solving problems is the role of software developers first and foremost.
 The most interesting aspect is that in many cases it is possible to
@@ -58,6 +58,3 @@ unfortunately a younger, naive version of myself ignored this advice.
 -   Not all solutions require code to complete.
 -   Focus on hitting goals, not the feeling of productivity writing code
     can give.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Past Mistakes - Out of Process Commands
-Date: 2016-05-10 18:21
+Date: 2016-05-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro, past-mistakes-series
-Slug: past-mistakes-out-of-process-commands
+Tags: retro, past-mistakes-series
+Slug: 2016/05/past-mistakes-out-of-process-commands
 
 Some of the best lessons you can learn are from failure. I figured a
 series on mistakes I've made in the past would highlight where I went
@@ -72,6 +72,3 @@ HTTP's excellent caching policies to reduce the affect on the system.
     to record the command prior to processing them.
 -   Rely on HTTP caching policies to reduce the effect of queries that
     cannot be avoided.
-
-</p>
-

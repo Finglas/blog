@@ -1,8 +1,8 @@
 Title: Cool URI's Don't Change
-Date: 2015-04-13 19:46
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, blogging, web
-Slug: cool-uris-dont-change
+Tags: blogging
+Slug: 2015/04/cool-uris-dont-change
 
 I switched domains back in June 2013. This was out of my control. A lot
 of links were lost despite an attempt to backlink in order to keep the
@@ -41,6 +41,3 @@ control, it's your duty to ensure you handle breaking changes.
 I debated the use of URL or URI for this post initially. For future
 reference, [URI's identify, URL's identify and
 locate](http://stackoverflow.com/questions/176264/what-is-the-difference-between-a-uri-a-url-and-a-urn).
-
-</p>
-

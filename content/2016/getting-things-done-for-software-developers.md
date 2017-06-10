@@ -1,8 +1,8 @@
 Title: Getting Things Done - For Software Developers
-Date: 2016-01-31 09:25
+Date: 2016-01-01
 Author: Shaun Finglas
-Tags: reading, http://schemas.google.com/blogger/2008/kind#post, GTD, retro
-Slug: getting-things-done-for-software-developers
+Tags: reading, retro
+Slug: 2016/01/getting-things-done-for-software
 
 I have been using the incredibly simple techniques within [Getting
 Things Done (GTD)](http://gettingthingsdone.com/) to good effect over
@@ -61,6 +61,3 @@ Instead you can focus on exactly what you need to be doing at the time.
 
 In part the use of GTD is partly responsible for the growth of this blog
 from 2014 to present.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Test Your Live System using Live Service Tests
-Date: 2016-08-24 06:56
+Date: 2016-08-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, productivity
-Slug: test-your-live-system-using-live-service-tests
+Tags: testing
+Slug: 2016/08/test-your-live-system-using-live
 
 Traditionally there are three categories of functional tests.
 
@@ -85,6 +85,3 @@ system is operating in a *good enough* state.
 -   Alter production code to introduce test functionality.
 -   Make use of test accounts and anything else that third parties may
     offer.
-
-</p>
-

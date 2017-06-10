@@ -1,8 +1,8 @@
 Title: Stop Making Everything Public
-Date: 2014-08-01
+Date: 2014-12-01
 Author: Shaun Finglas
 Tags: 3-steps-code-quality, tdd
-Slug: 2014/08/stopmockingeverything
+Slug: 2014/12/stop-making-everything-public
 
 Part one of my [Three Steps to Code Quality via TDD
 series](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).

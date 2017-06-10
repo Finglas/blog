@@ -1,8 +1,8 @@
 Title: Recommended Reading List 2014
-Date: 2015-01-12 19:28
+Date: 2015-01-01
 Author: Shaun Finglas
-Tags: reading, http://schemas.google.com/blogger/2008/kind#post
-Slug: recommended-reading-list-2014
+Tags: reading
+Slug: 2015/01/recommended-reading-list-2014
 
 I've read some great books in the last twelve months, here they are in
 no particular order.
@@ -32,6 +32,3 @@ no particular order.
     Services](http://www.amazon.co.uk/Building-Microservices-Sam-Newman/dp/1491950358)
 -   [Learning
     NServiceBus](http://www.amazon.co.uk/Learning-NServiceBus-David-Boike/dp/1782166343)
-
-</p>
-

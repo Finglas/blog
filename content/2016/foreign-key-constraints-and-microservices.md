@@ -1,8 +1,8 @@
 Title: Foreign Key Constraints and Microservices
-Date: 2016-05-20 07:02
+Date: 2016-05-01
 Author: Shaun Finglas
-Tags: databases, http://schemas.google.com/blogger/2008/kind#post, microservices
-Slug: foreign-key-constraints-and-microservices
+Tags: microservices, distributed-systems
+Slug: 2016/05/foreign-key-constraints-and
 
 Database constraints when used in relational databases are great. They
 ensure data integrity at the lowest level. No one would argue against
@@ -98,6 +98,3 @@ separated.
     integrity within service boundaries.
 -   Outside of service boundaries, use format checks to prevent errors.
 -   Rely on compensating actions or events for data management.
-
-</p>
-

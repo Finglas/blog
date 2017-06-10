@@ -1,8 +1,8 @@
 Title: Consistency
-Date: 2015-02-10 19:52
+Date: 2015-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, development, retro
-Slug: consistency
+Tags: retro
+Slug: 2015/02/consistency
 
 Striving for consistency within a codebase is a **good thing**. I'm very
 much someone who believes in applying a consistent formatting style,
@@ -37,6 +37,3 @@ bang implementation, you can perform larger, long term changes steadily.
 Remember; software development is like gardening, it takes time to see
 the results sometimes and blindly applying a coding convention to
 conform to consistency requires thought.
-
-</p>
-

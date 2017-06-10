@@ -1,8 +1,8 @@
 Title: Legacy Code is Just Code
 Date: 2016-04-19 16:23
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, legacy-code, coding
-Slug: legacy-code-is-just-code
+Tags: programming, retro
+Slug: 2016/04/legacy-code-is-just-code
 
 Try and define legacy code. [Working Effectively With Legacy
 Code](https://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052/275-5610177-1468962)
@@ -37,6 +37,3 @@ features live on.
 
 The lesson here is to simply treat all code as equal regardless of its
 status - legacy or not.
-
-</p>
-

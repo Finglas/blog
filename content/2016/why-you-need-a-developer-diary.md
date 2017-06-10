@@ -1,8 +1,8 @@
 Title: Why you need a Developer Diary
-Date: 2016-02-23 07:13
+Date: 2016-02-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, process, retro
-Slug: why-you-need-a-developer-diary
+Tags: retro
+Slug: 2016/02/why-you-need-developer-diary
 
 After eighteen months of use, I can safely claim [how useful a a
 developer diary is, and why you should start using
@@ -33,6 +33,3 @@ Keeping a developer diary is without doubt one of the most useful
 changes to my development process. Encouragingly others are doing
 similar things too, but [under slightly different
 names](https://github.com/jbranchaud/til).
-
-</p>
-
