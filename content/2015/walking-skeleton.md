@@ -1,8 +1,8 @@
 Title: Walking Skeleton
-Date: 2015-05-12 19:41
+Date: 2015-05-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, planning, development, tasking
-Slug: walking-skeleton
+Tags: development, team
+Slug: 2015/05/walking-skeleton
 
 [A Walking Skeleton is the thinnest possible slice of new functionality
 that can be delivered end to
@@ -53,6 +53,3 @@ they can be handled in a more controlled manner. Most issues relate to
 implementation details at lower levels, rather than integration or
 functional failures which are often symptoms of tasking before writing
 any code.
-
-</p>
-

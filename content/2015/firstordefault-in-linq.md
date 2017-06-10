@@ -1,8 +1,8 @@
 Title: FirstOrDefault in LINQ
-Date: 2015-06-23 20:54
+Date: 2015-06-01
 Author: Shaun Finglas
-Tags: null, http://schemas.google.com/blogger/2008/kind#post, programming, c#, linq
-Slug: firstordefault-in-linq
+Tags: programming, tutorial
+Slug: 2015/06/firstordefault-in-linq
 
 Explicit null checking is a code smell in most cases. It should be
 limited where possible, or pushed to the edge of the system. A common
@@ -33,6 +33,3 @@ are only ever dealing with one result `Single()` is more appropriate.
 This method will throw an exception if more than one result is found,
 acting as a form of assertion. Like `First()`, `Single()` offers
 `SingleOrDefault()` which would work in the same manner as above.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Testing Private Code
-Date: 2015-05-28 17:06
+Date: 2015-05-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, tdd, unit-testing
-Slug: testing-private-code
+Tags: testing, tdd, unit-testing
+Slug: 2015/05/testing-private-code
 
 A common problem many people ask is - should you test private code? In
 short, you shouldn't. You should always test the public api of your code
@@ -55,6 +55,3 @@ pubic, you simply need to verify the use of the class, rather than what
 it does. However [Value Objects can help limit the tests you need to
 write](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
 entirely and should be used whenever possible.
-
-</p>
-

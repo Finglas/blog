@@ -1,8 +1,8 @@
 Title: Waste: Write Less Code
-Date: 2015-09-22 06:43
+Date: 2015-09-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, lean, development, coding
-Slug: waste-write-less-code
+Tags: retro
+Slug: 2015/09/waste-write-less-code
 
 One of the biggest [forms of
 waste](https://en.wikipedia.org/wiki/Lean_manufacturing#Types_of_waste)
@@ -49,6 +49,3 @@ need to maintain and configure third party code however.
 Remember - code is a liability. The job of software developer is not to
 write code, it is to solve problems. Sometimes this takes thousands of
 lines of code, other times it can take a simple conversation.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Do you really need a Microservice?
-Date: 2015-06-17 18:44
+Date: 2015-06-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, DDD, microservices, namespaces
-Slug: do-you-really-need-a-microservice
+Tags: microservices, retro
+Slug: 2015/06/do-you-really-need-microservice
 
 Lately there has been two sets of advice around the use of
 Microservices. [Some advise that Microservices should be built after the
@@ -47,6 +47,3 @@ their answer on their needs which will most likely vary over time. As it
 has been said before - [if you can't structure a monolith what makes you
 think you can structure Microservices any
 better?](http://www.codingthearchitecture.com/2014/07/06/distributed_big_balls_of_mud.html)
-
-</p>
-

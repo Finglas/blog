@@ -1,8 +1,8 @@
 Title: Abstractions in Code, Details in Metadata
-Date: 2015-10-06 06:20
+Date: 2015-10-01
 Author: Shaun Finglas
-Tags: metadata, http://schemas.google.com/blogger/2008/kind#post, programming, games, learning
-Slug: abstractions-in-code-details-in-metadata
+Tags: programming, retro
+Slug: 2015/10/abstractions-in-code-details-in-metadata
 
 I've programmed many games - each one was special in its own way. One in
 particular stands out early in my university studies, a top down
@@ -53,6 +53,3 @@ Those of you with a keen sense for code smells may be thinking about
 another issue with this story, and yes, you're right. The base class
 caused issues. The use and misuse of inheritance will be the subject of
 a future post.
-
-</p>
-

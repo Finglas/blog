@@ -1,8 +1,8 @@
 Title: Mob Programming
-Date: 2015-05-20 17:11
+Date: 2015-05-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, development, tasking, team
-Slug: mob-programming
+Tags: development, team
+Slug: 2015/05/mob-programming
 
 I first saw this video of [Mob
 Programming](http://mobprogramming.org/mob-programming-time-lapse-video-a-day-of-mob-programming/)
@@ -42,6 +42,3 @@ skeleton Mob Programming solves some of the key [problems that
 traditional tasking and planning
 introduces](http://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html)
 and is well worth an experiment.
-
-</p>
-

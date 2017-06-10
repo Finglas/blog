@@ -1,8 +1,8 @@
 Title: Header Interfaces vs Role Interfaces
-Date: 2015-10-13 06:22
+Date: 2015-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, programming, code-quality
-Slug: header-interfaces-vs-role-interfaces
+Tags: programming, code-quality, tutorial
+Slug: 2015/10/header-interfaces-vs-role-interfaces
 
 In some languages such as C++ you must define header interfaces. These
 constructs define how a public type is exposed in terms of its public
@@ -49,6 +49,3 @@ concept from the rest of the object.
 -   <http://blog.ploeh.dk/2013/01/10/RoleInterfaceRoleHint>
 -   <http://www.pluralsight.com/courses/encapsulation-solid>
 -   <http://martinfowler.com/bliki/RoleInterface.html>
-
-</p>
-

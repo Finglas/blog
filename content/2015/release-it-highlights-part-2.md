@@ -1,8 +1,8 @@
 Title: Release It - Highlights Part 2
-Date: 2015-09-08 06:33
+Date: 2015-09-01
 Author: Shaun Finglas
-Tags: release-it, http://schemas.google.com/blogger/2008/kind#post, books, release-it-series
-Slug: release-it-highlights-part-2
+Tags: release-it-series
+Slug: 2015/09/release-it-highlights-part-2
 
 This is the second part of my collection of notes and snippets from
 [Release It!](https://pragprog.com/book/mnee/release-it)
@@ -82,6 +82,3 @@ This is the second part of my collection of notes and snippets from
     based on this info.
 -   Check the logs daily for stack traces that are suspicious. These
     could be common errors that are bugs/problems that need fixing.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: Getters and Setters are Evil - Redux
-Date: 2015-04-28 19:12
+Date: 2015-04-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, cqrs, programming, getters+setters
-Slug: getters-and-setters-are-evil-redux
+Tags: programming, tutorial
+Slug: 2015/04/getters-and-setters-are-evil-redux
 
 Back in early 2011 I wrote one of my [most viewed and commented posts at
 the time - Getters and Setters are
@@ -58,6 +58,3 @@ evil.
 The term Business Object is also known as Domain Object. The later being
 my preferred term now. I stuck with the original terminology to match
 the original post's code example.
-
-</p>
-

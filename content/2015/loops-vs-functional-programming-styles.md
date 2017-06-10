@@ -1,8 +1,8 @@
 Title: Loops vs Functional Programming Styles
-Date: 2015-08-11 20:31
+Date: 2015-08-01
 Author: Shaun Finglas
-Tags: functional, http://schemas.google.com/blogger/2008/kind#post, functional-programming, javascript
-Slug: loops-vs-functional-programming-styles
+Tags: javascript, programming, tutorial
+Slug: 2015/08/loops-vs-functional-programming-styles
 
 The following examples are four of the most common functional
 programming patterns that appear in mainstream languages though they may
@@ -54,5 +54,3 @@ Converts the array into a single value by taking the current index and
 the next index as parameters to be applied.
 
 <script src="https://gist.github.com/Finglas/41ebbc74a83232227db8.js"></script>
-</p>
-

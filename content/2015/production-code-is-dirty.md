@@ -1,8 +1,8 @@
 Title: Production Code is Dirty
-Date: 2015-08-25 23:34
+Date: 2015-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, retro, code-quality
-Slug: production-code-is-dirty
+Tags: retro, code-quality
+Slug: 2015/08/production-code-is-dirty
 
 Production code is dirty. *Dirty* may be the wrong word however. Complex
 could be more suitable. Unlike code that is not yet in production, it is
@@ -27,6 +27,3 @@ dependencies](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencie
 and get into production or the hands of the user as soon as possible.
 This may seem an obvious solution but sadly many software projects fall
 into this trap of dirty code after a handful of iterations.
-
-</p>
-

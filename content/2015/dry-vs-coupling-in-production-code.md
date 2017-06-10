@@ -1,8 +1,8 @@
 Title: DRY vs Coupling in Production Code
-Date: 2015-07-02 18:30
+Date: 2015-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, coupling, DDD, DRY
-Slug: dry-vs-coupling-in-production-code
+Tags: tutorial, programming
+Slug: 2015/06/dry-vs-coupling-in-production-code
 
 [Duplication in tests can be a good
 thing](http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
@@ -100,6 +100,3 @@ consumers to adopt a "*plug 'n play*" approach with which components
 they require. Even then, try to fight removing duplication unless you
 can be really sure there is a good reason to increase coupling. That
 reuse you are striving for might not even come to fruition.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: You Still Need Manual Tests
-Date: 2015-07-28 20:48
+Date: 2015-07-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, acceptance-testing, unit-testing
-Slug: you-still-need-manual-tests
+Tags: acceptance-testing, unit-testing
+Slug: 2015/07/you-still-need-manual-tests
 
 This blog has numerous examples of why unit,
 [integration](http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html)and
@@ -41,6 +41,3 @@ QA includes more than functional testing. Security, performance and
 usability to name a few are equally important. Do not avoid the manual
 test step. Automated tests are only as good as the tests themselves.
 Embrace manual and automated testing for the best of both worlds.
-
-</p>
-

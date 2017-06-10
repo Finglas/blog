@@ -1,8 +1,8 @@
 Title: Tasking in Software Development
-Date: 2015-05-20 17:12
+Date: 2015-05-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, planning, design, agile, tasking
-Slug: tasking-in-software-development
+Tags: retro, team
+Slug: 2015/05/tasking-in-software-development
 
 Tasking is core part of XP, Kanban, Scrum and other software development
 methodologies. It is required when more than one developer is working on
@@ -65,6 +65,3 @@ Skeleton](http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html)
 and try [Mob
 Programming](http://blog.shaunfinglas.co.uk/2015/05/mob-programming.html).
 Both of which will be detailed in future posts.
-
-</p>
-

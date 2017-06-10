@@ -1,8 +1,8 @@
 Title: Release It - Highlights Part 1
-Date: 2015-09-08 06:34
+Date: 2015-09-01
 Author: Shaun Finglas
-Tags: release-it, http://schemas.google.com/blogger/2008/kind#post, books, release-it-series
-Slug: release-it-highlights-part-1
+Tags: release-it-series
+Slug: 2015/09/release-it-highlights-part-1
 
 [Release It!](https://pragprog.com/book/mnee/release-it) is one of the
 most useful books I've read. The advice and suggestions inside certainly
@@ -96,6 +96,3 @@ the problem in the first place.
     during a cool off period. The circuit breaker will enable this.
 -   Popping a circuit breaker always indicates a serious problem - log
     it.
-
-</p>
-

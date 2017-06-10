@@ -1,8 +1,8 @@
 Title: Why I Don't Like Mocking Frameworks
-Date: 2015-08-04 20:39
+Date: 2015-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, tdd, mocking, unit-testing
-Slug: why-i-dont-like-mocking-frameworks
+Tags: tdd, unit-testing
+Slug: 2015/08/why-i-dont-like-mocking-frameworks
 
 Disclaimer: By *mocking* framework I generalize anything that includes
 support for stubs and mock objects.
@@ -56,6 +56,3 @@ non trivial examples the requirements to verify numerous parameters and
 configurations can be verbose to hand craft. However there are
 alternatives to hand crafted test doubles such as the self shunt pattern
 which will be expanded upon in a future post.
-
-</p>
-

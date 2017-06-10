@@ -1,8 +1,8 @@
 Title: Set Based Design
-Date: 2015-10-20 07:11
+Date: 2015-10-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, lean, architecture
-Slug: set-based-design
+Tags: architecture
+Slug: 2015/10/set-based-design
 
 Each morning newspapers hit the newstands without fail. Live broadcasts
 are the same. Come show time they hit the air without fail. You can
@@ -101,6 +101,3 @@ would suffice.
 Producing an architecture that allows replacement or changes easily is
 another alternative, though this has risks of its own. Changeable
 architecture will be covered in a future post.
-
-</p>
-

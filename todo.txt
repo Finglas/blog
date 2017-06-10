@@ -23,8 +23,6 @@ TODO:
     year-in-review
 
 3. Set each post slug to use yyyy/mm/slug format and set tags, and dates for older categories (2014 and less).
-    6. 2015
-        - Start at set based design.
     7. 2016
 
     - Search for ../../ and fix dodgy links?

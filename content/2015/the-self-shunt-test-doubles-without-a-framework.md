@@ -1,8 +1,8 @@
 Title: The Self Shunt - Test Doubles without a Framework
-Date: 2015-09-29 06:58
+Date: 2015-09-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, test-double, unit-testing
-Slug: the-self-shunt-test-doubles-without-a-framework
+Tags: testing, unit-testing, tutorial
+Slug: 2015/09/the-self-shunt-test-doubles-without
 
 Generally you should [favour hand crafted stubs without a framework by
 default](http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html).

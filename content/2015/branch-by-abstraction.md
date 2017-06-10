@@ -1,8 +1,8 @@
 Title: Branch by Abstraction
-Date: 2015-06-09 21:41
+Date: 2015-06-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, releasing, deployment
-Slug: branch-by-abstraction
+Tags: tutorial, programming
+Slug: 2015/06/branch-by-abstraction
 
 Feature toggles are great for new features or features that are either
 enabled or disabled. Branch by Abstraction offers the [same benefits as
@@ -45,6 +45,3 @@ Abstraction can be a valid alternate in most cases. [UI changes are
 better suited as Feature
 Toggles](http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html)
 due to the nature of the code.
-
-</p>
-

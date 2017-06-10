@@ -1,8 +1,8 @@
 Title: Queue Centric Work Pattern
-Date: 2015-08-18 19:39
+Date: 2015-08-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, microservices, distributed-systems, SOA
-Slug: queue-centric-work-pattern
+Tags: microservices, distributed-systems, SOA
+Slug: 2015/08/queue-centric-work-pattern
 
 The [Queue Centric Work Pattern
 (QCWP)](http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern)
@@ -73,6 +73,3 @@ QCWP was a real change in terms of how I think about two services
 communicating. This change in pattern is not hard, merely different.
 Once you adjust to the challenges, the benefits enable some truly
 resilient systems when communication must occur out of process.
-
-</p>
-

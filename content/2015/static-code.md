@@ -1,8 +1,8 @@
 Title: Static Code
-Date: 2015-07-07 20:40
+Date: 2015-07-01
 Author: Shaun Finglas
-Tags: best-practices, http://schemas.google.com/blogger/2008/kind#post, programming, code-quality
-Slug: static-code
+Tags: programming, code-quality
+Slug: 2015/07/static-code
 
 Static code is considered a bad thing by developers. This is especially
 true when working with legacy code. The use of static code is often seen
@@ -28,11 +28,9 @@ Without a PSM such refactoring is much more difficult. IDEs can automate
 this step and if in a dynamic language you can simply lean on the
 runtime to catch issues.
 
-<p>
 The steps to perform this refactor are easy. If at any stage this is not
 possible the method contains state.
 
-</li>
 1.  Make the method public.
 2.  Make the method static.
 3.  Move the public static method to the new class.
@@ -46,6 +44,3 @@ written in a strictly functional language. Small, focused classes that
 tend to be immutable. The use of PSM makes transition to this style of
 code easy. There is no reason to avoid the use of static code as an
 intermediate step to get to this position.
-
-</p>
-

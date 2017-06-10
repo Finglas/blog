@@ -1,8 +1,8 @@
 Title: Types of Test Doubles
-Date: 2015-09-15 07:06
+Date: 2015-09-01
 Author: Shaun Finglas
-Tags: testing, http://schemas.google.com/blogger/2008/kind#post, unit-testing
-Slug: types-of-test-doubles
+Tags: testing, unit-testing
+Slug: 2015/09/types-of-test-doubles
 
 *Mock* is an overloaded term in software development. Sadly this leads
 to developers answering with "*mock it*" when a mock object may not be
@@ -51,6 +51,3 @@ expectations are not met. Mocks natural partner is commands. Unlike
 spies Mocks can struggle to fit into the Arrange-Act-Assert pattern. Of
 all the test doubles Mocks are the most coupled to implementation
 details so their use should be limited.
-
-</p>
-

@@ -1,8 +1,8 @@
 Title: The Benefits of Contract Testing
-Date: 2015-07-21 18:21
+Date: 2015-07-01
 Author: Shaun Finglas
-Tags: integration-testing, http://schemas.google.com/blogger/2008/kind#post, contracts, unit-testing
-Slug: the-benefits-of-contract-testing
+Tags: testing, contracts, unit-testing
+Slug: 2015/07/the-benefits-of-contract-testing
 
 [I previously claimed that you need some integrated tests but as few as
 possible](http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html).
@@ -40,6 +40,3 @@ implementations.
     Tests](http://blog.thecodewhisperer.com/2009/10/08/who-tests-the-contract-tests/)
 -   [No Mocks
     Example](https://github.com/arlobelshee/ArsEditorExample/blob/master/SimulatableApi.Tests/FileSystemCanLocateFilesAndDirs.cs)
-
-</p>
-

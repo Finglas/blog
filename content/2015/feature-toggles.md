@@ -1,8 +1,8 @@
 Title: Feature Toggles
-Date: 2015-06-09 21:42
+Date: 2015-06-01
 Author: Shaun Finglas
-Tags: http://schemas.google.com/blogger/2008/kind#post, development, releasing, deployment
-Slug: feature-toggles
+Tags: tutorial, releasing
+Slug: 2015/06/feature-toggles
 
 I'm a fan of regular releasing. My background and experience leads me to
 release as regularly as possible. There are numerous benefits to regular
@@ -62,6 +62,3 @@ by
 Abstraction](http://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html).
 This works great when the toggles live in the composition root or the
 team have the ability to split work around features.
-
-</p>
-

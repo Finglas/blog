@@ -1,8 +1,8 @@
 Title: Integration Tests
-Date: 2015-07-21 18:22
+Date: 2015-07-01
 Author: Shaun Finglas
-Tags: integration-testing, testing, http://schemas.google.com/blogger/2008/kind#post, unit-testing
-Slug: integration-tests
+Tags: testing, unit-testing
+Slug: 2015/07/integration-tests
 
 It is well documented you need a balance between different categories of
 automated tests. The split is usually in the form.
@@ -60,6 +60,3 @@ process, how do you stop such tests falling out of sync with the real
 implementation? This is where [Contract
 Tests](http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html)
 come into play.
-
-</p>
-
