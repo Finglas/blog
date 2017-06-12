@@ -15,6 +15,8 @@ DEFAULT_LANG = 'English'
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
+DEFAULT_PAGINATION = 30
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
@@ -27,8 +29,6 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ShaunFinglas'),)
-
-DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
