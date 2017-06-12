@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2012</title><link href="/" rel="alternate"></link><link href="/feeds/2012.atom.xml" rel="self"></link><id>/</id><updated>2012-12-01T00:00:00+01:00</updated><entry><title>Object Discovery</title><link href="/2012/12/object-discovery.html" rel="alternate"></link><published>2012-12-01T00:00:00+01:00</published><updated>2012-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-12-01:/2012/12/object-discovery.html</id><summary type="html">&lt;p&gt;Recently we had &lt;a href="https://twitter.com/kevinrutherford"&gt;@kevinrutherford&lt;/a&gt;
+in to talk about object discovery. While TDD is a great tool, it is no
+excuse for some sort of design process. If you don't, you'll most
+&lt;a href="http://devgrind.com/2007/04/25/how-to-not-solve-a-sudoku/"&gt;likely end up with a
+mess&lt;/a&gt;. This
+session was based around this principle.&lt;/p&gt;
+&lt;p&gt;One point that was discussed what …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently we had &lt;a href="https://twitter.com/kevinrutherford"&gt;@kevinrutherford&lt;/a&gt;
+in to talk about object discovery. While TDD is a great tool, it is no
+excuse for some sort of design process. If you don't, you'll most
+&lt;a href="http://devgrind.com/2007/04/25/how-to-not-solve-a-sudoku/"&gt;likely end up with a
+mess&lt;/a&gt;. This
+session was based around this principle.&lt;/p&gt;
+&lt;p&gt;One point that was discussed what that the first few seconds of a test
+for a new class is the most important part of the TDD process. It is
+here where you will decide whether to take a state or interaction based
+approach to testing. This first test will dictate the structure of the
+new class. Once you start with tests, it becomes difficult to evolve or
+change the design of a class without friction.&lt;/p&gt;
+&lt;p&gt;There is generally two types of code at Codeweavers.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/4a9e9d35d64c150d6075.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;The trick comes from the fact that just because you use C#/Java/etc..
+most of the time you aren't actually writing OO code. You often end up
+writing procedural code in a rather obtuse manner. A takeaway from this
+afternoon was to try and perform more CRC
+&lt;a href="http://en.wikipedia.org/wiki/Class-responsibility-collaboration_card"&gt;(class-responsibility-collaborator)&lt;/a&gt;sessions.&lt;/p&gt;
+&lt;h3&gt;CRC (Object Cube)&lt;/h3&gt;
+&lt;p&gt;During this session we performed a modified version of a CRC. One thing
+I always find with CRC sessions is how useful they are. The problem I
+and others find is when it comes to day to day development, I'm too
+eager to start coding without performing some sort of up front design.&lt;/p&gt;
+&lt;h3&gt;Events&lt;/h3&gt;
+&lt;p&gt;In order to write flexible OO code, you need to hide as much state as
+possible. While this is great in practice it turns out to be very
+difficult to achieve in the real world. One method of getting around
+this is to make use of events aka the &lt;a href="http://en.wikipedia.org/wiki/Observer_pattern"&gt;observer
+pattern&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Kevin used a wiki as an example. Consider a page that is updated. If
+this page was to fire a changed event, then anything that is listening
+for these events would be notified. The observers could then react once
+the event was received. The nice thing about this approach is that the
+code obeys the &lt;a href="http://en.wikipedia.org/wiki/Open/closed_principle"&gt;open/closed
+principle&lt;/a&gt;. New
+features can be added without the need for the change to have a large,
+rippling effect.&lt;/p&gt;
+&lt;h3&gt;Nouns and Namespaces&lt;/h3&gt;
+&lt;p&gt;When I was first exposed to object oriented programming, apart from
+believing that inheritance was the coolest aspect of OO, I was also led
+to believe that using nouns when designing classes can be useful. It
+turned out that this was a fallacy. If you follow this advice you'll end
+up with a small collection of classes that do everything. The biggest
+revelation I had during the session came from the importance of
+namespaces. Using nouns for up front design can be extremely useful if
+you remember that the noun can potentially be a namespace. This means
+you'll end up with a handful of namespaces that are relevant to the
+domain in question. Inside these namespaces you will have one or more
+classes that do &lt;a href="http://en.wikipedia.org/wiki/Single_responsibility_principle"&gt;one thing, and one thing
+well.&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Closing&lt;/h3&gt;
+&lt;p&gt;At the end of the session I was left with many questions and new ideas
+to test and try out. Using events to hide state, yet allow other objects
+to interact when required was a real eye opener. However it turns out
+that when actually trying to implement these ideas in code, it is
+actually quite difficult due to my current thinking. The plan for the
+next month will be to explore these ideas in more detail and see what
+affect it has on my day to day development.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>Codeweavers Code Retreat</title><link href="/2012/10/codeweavers-code-retreat.html" rel="alternate"></link><published>2012-10-01T00:00:00+02:00</published><updated>2012-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-10-01:/2012/10/codeweavers-code-retreat.html</id><summary type="html">&lt;p&gt;Last week we had &lt;a href="https://twitter.com/kevinrutherford"&gt;@kevinrutherford&lt;/a&gt;
+in to run a coderetreat. It was the first retreat I've taken part in
+personally, the same applying to much of the team. The day was to focus
+on one challenge - &lt;strong&gt;&lt;a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"&gt;Conway's Game of
+Life&lt;/a&gt;&lt;/strong&gt; though
+each iteration would introduce new constraints.&lt;/p&gt;
+&lt;h2&gt;Iteration 1&lt;/h2&gt;
+&lt;p&gt;The …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Last week we had &lt;a href="https://twitter.com/kevinrutherford"&gt;@kevinrutherford&lt;/a&gt;
+in to run a coderetreat. It was the first retreat I've taken part in
+personally, the same applying to much of the team. The day was to focus
+on one challenge - &lt;strong&gt;&lt;a href="http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"&gt;Conway's Game of
+Life&lt;/a&gt;&lt;/strong&gt; though
+each iteration would introduce new constraints.&lt;/p&gt;
+&lt;h2&gt;Iteration 1&lt;/h2&gt;
+&lt;p&gt;The four &lt;a href="http://c2.com/cgi/wiki?XpSimplicityRules"&gt;rules of simple
+code&lt;/a&gt; were discussed, aka
+"Extreme Normal Form".&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Passes tests&lt;/li&gt;
+&lt;li&gt;Communicates intent&lt;/li&gt;
+&lt;li&gt;No duplication&lt;/li&gt;
+&lt;li&gt;Nothing unncessary&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Our first run through was somewhat of a disaster. We became too obsessed
+with how the grid was to be stored. This meant we spent a long time
+messing around with arrays and multidemionsal arrays in C#. Both are
+somewhat tedious and not something we use often, therefore we concluded
+a more "grid agnostic" approach would be needed. After all, there is
+nothing stating the grid need be a square, fixed layout.&lt;/p&gt;
+&lt;h2&gt;Iteration 2&lt;/h2&gt;
+&lt;p&gt;The concept of &lt;a href="http://c2.com/cgi/wiki?ArrangeActAssert"&gt;Arrange, Act,
+Assert&lt;/a&gt; or AAA was discussed.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Arrange - set up pre conditions&lt;/li&gt;
+&lt;li&gt;Act - do something on the subject under test&lt;/li&gt;
+&lt;li&gt;Assert - verify or check some result&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The constraint during this iteration was that all asserts were to be
+created first, and we would work backwards. Personally I found this
+difficult, both mentally and in terms of tooling. For the past four
+years I've rarely wrote an assert first, therefore this switch proved
+tricky.&lt;/p&gt;
+&lt;p&gt;Visual Studio and Resharper also tend to favour a top down approach. In
+other words, it's easier to stub out a class and add methods, rather
+than the inverse.&lt;/p&gt;
+&lt;p&gt;New members to the team found the act of writing the assert first much
+easier however, and they're looking to continue this in day to day
+development.&lt;/p&gt;
+&lt;p&gt;The point I took from here is that while I may personally know what I'm
+writing, my partner might not be aware of where we are heading. Starting
+with the assert first allows both developers to see the goal for that
+particular test.&lt;/p&gt;
+&lt;h2&gt;Iteration 3&lt;/h2&gt;
+&lt;p&gt;Our third iteration introduced the unrealistic concept of mute pairing.
+Only the code and tests can reveal our intent.&lt;/p&gt;
+&lt;p&gt;Using ping ponging (switching between developers who writes
+tests/production code) we managed to get a good chunk of functionality
+complete. Despite this the rest of the iteration was very difficult.
+Being unable to talk about design concepts was incredibly frustrating.&lt;/p&gt;
+&lt;p&gt;The most important concept we took away from here was that more than
+likely the developer working with your code tomorrow will not have
+worked with you previously. That means any conversations you've had to
+explain the code will be lost. The only thing left to communicate will
+be your tests or production code. Due to this observation, it is cruicly
+we name our tests and code in a manner that is cleary and
+understandable, whether six minutes or six months have passed.&lt;/p&gt;
+&lt;h2&gt;Iteration 4&lt;/h2&gt;
+&lt;p&gt;Our fourth iteration had a focus on OO concepts. Up until now, our code
+had exposed much of the state in various ways. The challenge was to
+focus on the messages that are exchanged between objects, rather the
+change in state.&lt;/p&gt;
+&lt;p&gt;This introduced a new problem. How do we test an object without exposing
+state? We talked about a couple of methods; mock objects or the &lt;a href="http://c2.com/cgi/wiki?SelfShuntPattern"&gt;self
+shunt pattern&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using the shelf shunt pattern was an enjoyable experience - we
+identified numerous violations of the &lt;a href="http://www.giorgiosironi.com/2009/09/solid-part-4-interface-segregation.html"&gt;interface segregation
+principle&lt;/a&gt;
+as it was actually painful to add to the interface in question. With
+mocking frameworks this pain is often lessened due to the dynamic and
+often "magic" constructs they employ.&lt;/p&gt;
+&lt;p&gt;Personally I found code writting using this pattern easier to
+understand. The plan will be to adopt this approach for a month or so
+and see how it effects day to day development.&lt;/p&gt;
+&lt;p&gt;Our code looked pretty good at this point, though we were struggling to
+replace a conditional statement. After a few minutes the idea seemed
+obvious once we recieved a hint -
+&lt;a href="http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming"&gt;polymorphism&lt;/a&gt;.
+This sparked a nice discussion about the "&lt;a href="http://www.antiifcampaign.com/"&gt;Anti
+If&lt;/a&gt;" campaign - another point I'm
+looking to take further. This iteration proved the most challenging for
+the whole team. A second run through allowed further progress.&lt;/p&gt;
+&lt;h2&gt;Iteration 5&lt;/h2&gt;
+&lt;p&gt;The final round had us regroup with our original partners. Here we could
+use any approach and see how far we could progress. Me and my partner
+opted for a failing acceptance test, from here we would implement the
+functionality top down until we had the components wired together. This
+worked well until we struggled to test how the cells were stored without
+exposing any state needlessly. The solution came from some discussion
+around &lt;a href="http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/"&gt;object
+calesethenics&lt;/a&gt;
+– first class collections.&lt;/p&gt;
+&lt;p&gt;One thing to note was how drastically different our code looked, when
+compared to the first iteration. During the course of the day we all
+noticed a difference in our overall approaches.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Overall I believe I speak for the whole team when I say how much we
+enjoyed the day. It was refreshing to spend a whole day coding, rather
+than being interuppted with other issues. Naturally this was quite
+tiring - though left lots energy for discussion afterwards. As a
+conclusion it would appear that as a collective we need to spend more
+time each week carrying out deliberate practice. For new starters this
+is essential training, while for more seasoned developers this is a
+useful way to keep our skillset up to date.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>MVC is Broken</title><link href="/2012/10/mvc-is-broken.html" rel="alternate"></link><published>2012-10-01T00:00:00+02:00</published><updated>2012-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-10-01:/2012/10/mvc-is-broken.html</id><summary type="html">&lt;p&gt;If you look up the definition of &lt;a href="http://en.wikipedia.org/wiki/Model_view_controller"&gt;MVC or Model View
+Controller&lt;/a&gt;, it will
+hail the definition as being able to change your front end without
+affecting other parts of the application and vice versa. This sounds
+great in theory, however this claim is nothing more than a &lt;em&gt;blatant
+lie …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you look up the definition of &lt;a href="http://en.wikipedia.org/wiki/Model_view_controller"&gt;MVC or Model View
+Controller&lt;/a&gt;, it will
+hail the definition as being able to change your front end without
+affecting other parts of the application and vice versa. This sounds
+great in theory, however this claim is nothing more than a &lt;em&gt;blatant
+lie&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A failing of the architectural pattern comes from the whole codebase
+being tied to a specific stack. Take ASP.NET MVC. The domain logic will
+most likely be in C#. Therefore your models will be in C#. Your
+controllers will be in C#. Your views will be a mixture of C# and some
+form of a templating language.&lt;/p&gt;
+&lt;p&gt;If you want to change your stack to the "next big thing" you are forced
+to take a big bang approach. ASP.NET MVC &lt;em&gt;won't be around forever&lt;/em&gt;.
+Being tied to a specific technology feels wrong. Therefore this coupling
+means your designers are forced to use the templating language that your
+framework supports. This should be a flexible option that should be easy
+to change, after all the MVC pattern states this as one of it's
+benefits.&lt;/p&gt;
+&lt;p&gt;Being tied to a specific technology leads onto our most recent project.
+One of our biggest and most important projects is a legacy Flash
+application. Back in the early 2000's it was a cutting edge application
+- consistent across all browsers, ajax style requests, responsive
+design, you name it.&lt;/p&gt;
+&lt;p&gt;That being said we all know Flash is on its way out, and there lies the
+problem. It took myself about two weeks to add a few text boxes to the
+app in my first year at Codeweavers, all because the UI code is so
+difficult to work with. The &lt;em&gt;logic is mixed within the UI&lt;/em&gt;. Had the app
+been developed in a MVC style we would be in a position to replace the
+legacy UI with a modern alternative.&lt;/p&gt;
+&lt;p&gt;We make use of &lt;a href="http://en.wikipedia.org/wiki/Service-oriented_architecture"&gt;SOA or Service Oriented
+Architecture&lt;/a&gt;
+at Codeweavers, therefore it seemed a natural fit to apply this to our
+rewrite of our legacy application. I proposed a theory:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;"for an application to be truly independent of the frontend and
+backend the code must be developed in different languages."&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For example, I taught myself enough PHP to make a JSON request, perform
+some conditional logic and loop over a collection. With this I was able
+to recreate one of our applications that was powered by our backend C#
+services. &lt;a href="http://www.codinghorror.com/blog/2012/06/the-php-singularity.html"&gt;I would not want to create an application in
+PHP&lt;/a&gt;,
+but using PHP as a templating language was a great fit. After all this
+is one of the intentions of the language. Limiting myself to just three
+simple PHP constructs I was &lt;em&gt;forced to put all logic on the service&lt;/em&gt; in
+question.&lt;/p&gt;
+&lt;p&gt;This complete separation of concerns is made possible due to the fact it
+is simply not possible for code to leak between the layers due to the
+different languages used in the implementation. This means I could
+easily spin up numerous front end views while the backend remains
+unchanged. Likewise we could change the back end implementation from C#
+to another language. Providing the endpoints and request/responses
+match, the front end will still be functional. This full separation of
+concerns is what MVC style frameworks have &lt;em&gt;failed to achieve&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In ten years from now it is hard to say what the web will look like.
+What I can guarantee is that the web will still be here. We'll still be
+making HTTP requests. We'll still be making back end services that
+powers much of the apps on the internet. One thing no one can really
+comment on is what the web will look like. One point we all could agree
+on is that HTML5 should be wide spread and no doubt "&lt;em&gt;the next big
+thing&lt;/em&gt;" will be on the horizon. The great thing by taking the approach
+discussed previously is that Codeweavers will be in the position to
+change either the front end or back end of our codebase at any time.
+Precisely what the MVC pattern has failed to deliver.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Recommended Reading 2012</title><link href="/2012/10/recommended-reading-2012.html" rel="alternate"></link><published>2012-10-01T00:00:00+02:00</published><updated>2012-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-10-01:/2012/10/recommended-reading-2012.html</id><summary type="html">&lt;p&gt;Here is my updated reading list for 2012. We might have missed something
+so if you think we should be reading it, let us know.&lt;/p&gt;
+&lt;h2&gt;Process&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0071392319?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0071392319"&gt;The Toyota
+    Way&lt;/a&gt; -
+    Jeffrey Liker&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0566086654?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0566086654"&gt;The
+    Goal&lt;/a&gt; -
+    Eli Goldratt&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321278658?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321278658"&gt;XP
+    Explained&lt;/a&gt;-
+    Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X"&gt;The Pragmatic
+    Programmer&lt;/a&gt;-
+    Andrew Hunt and David Thomas&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/The-Clean-Coder-Professional-ebook/dp/B0050JLC9Y"&gt;The Clean
+    Coder …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Here is my updated reading list for 2012. We might have missed something
+so if you think we should be reading it, let us know.&lt;/p&gt;
+&lt;h2&gt;Process&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0071392319?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0071392319"&gt;The Toyota
+    Way&lt;/a&gt; -
+    Jeffrey Liker&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0566086654?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0566086654"&gt;The
+    Goal&lt;/a&gt; -
+    Eli Goldratt&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321278658?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321278658"&gt;XP
+    Explained&lt;/a&gt;-
+    Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Pragmatic-Programmer-Andrew-Hunt/dp/020161622X"&gt;The Pragmatic
+    Programmer&lt;/a&gt;-
+    Andrew Hunt and David Thomas&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/The-Clean-Coder-Professional-ebook/dp/B0050JLC9Y"&gt;The Clean
+    Coder&lt;/a&gt; -
+    Robert C. Martin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0132350882?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0132350882"&gt;Clean Code - Robert C.
+    Martin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321146530?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321146530"&gt;Test-Driven
+    Development&lt;/a&gt;
+    by Kent Beck&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0201485672?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0201485672"&gt;Refactoring - Martin
+    Fowler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321109295?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321109295"&gt;Refactoring Workbook - William
+    Wake&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321127420?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321127420"&gt;Patterns of Enterprise Application
+    Architecture&lt;/a&gt; -
+    Martin Fowler&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0596007124?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0596007124"&gt;Head First Design
+    Patterns&lt;/a&gt; -
+    Freeman, et al&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321503627?ie=UTF8&amp;amp;tag=philipmead-21&amp;amp;linkCode=as2&amp;amp;camp=1634&amp;amp;creative=19450&amp;amp;creativeASIN=0321503627"&gt;Growing Object-Oriented Software, Guided by
+    Tests&lt;/a&gt; -
+    Steve Freeman and Nat Pryce&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Things-Every-Programmer-Should-Know/dp/0596809484"&gt;97 Things Every Programmer Should
+    Know&lt;/a&gt;-
+    Kevlin Henney&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Pro-ASP-NET-MVC-Framework-ebook/dp/B005PZ07US"&gt;Pro ASP.NET MVC
+    x+&lt;/a&gt; -
+    Steve Sanderson&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Framework-Design-Guidelines-Conventions-ebook/dp/B0017SWPNO"&gt;Framework Design
+    Guidelines&lt;/a&gt; -
+    Brad Abrams and Krzysztof Cwalina&lt;/li&gt;
+&lt;/ul&gt;</content><category term="reading"></category></entry><entry><title>The Problem with Auto Updating Browsers</title><link href="/2012/06/the-problem-with-auto-updating-browsers.html" rel="alternate"></link><published>2012-06-01T00:00:00+02:00</published><updated>2012-06-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-06-01:/2012/06/the-problem-with-auto-updating-browsers.html</id><summary type="html">&lt;p&gt;At the time of writing the latest version of Firefox (version 13) has
+just been released. Bear in mind that a week ago I updated our Selenium
+bindings so that we could use Firefox 9+ for running our browser tests.&lt;/p&gt;
+&lt;p&gt;The latest release is another great release for the Firefox …&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the time of writing the latest version of Firefox (version 13) has
+just been released. Bear in mind that a week ago I updated our Selenium
+bindings so that we could use Firefox 9+ for running our browser tests.&lt;/p&gt;
+&lt;p&gt;The latest release is another great release for the Firefox team, except
+there is software out there will be broken. The software in question I'm
+talking about is any code that uses &lt;a href="http://seleniumhq.org/download/"&gt;Selenium
+2.22.0&lt;/a&gt; that was released 2012-05-29.
+It turns out the bindings only work for Firefox 12 or less.&lt;/p&gt;
+&lt;p&gt;For whatever reason any tests that used Selenium this morning just
+stopped working for us - &lt;a href="http://groups.google.com/group/selenium-users/browse_thread/thread/83a7895693364c3a"&gt;and
+others&lt;/a&gt;.
+The tests in question caused the runner to hang as no window could be
+opened. I'm not sure what causes this, as the browser is essentially the
+same to the end user, bar some new features. Not being a Selenium
+developer I cannot comment how or why this has happened, nor can I
+suggest the Selenium team should be version agnostic.&lt;/p&gt;
+&lt;p&gt;Our solution in the end was simple. Turn off the auto updating and
+downgrade the browser. &lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;I've blogged about this in the
+past&lt;/a&gt;,
+but since Firefox 10 - the team are adopting a "silent" update process.
+This is great for end users. Imagine the countless man hours saved if
+IE6 had shipped with an auto update feature? The problem now seems to be
+in the hands of developers.&lt;/p&gt;
+&lt;p&gt;Another attempt to make this problem more obvious has been to add a
+check prior to our tests running to ensure that it can open a window. If
+this fails or hangs, we display a useful error message indicating that
+the browser in question is not compatible. This is due to the fact that
+it is not immediately obvious what the problem is. More confusion occurs
+when some machines will execute the tests with no problems at all.&lt;/p&gt;
+&lt;p&gt;Tools -&amp;gt; Options -&amp;gt; Advanced -&amp;gt; Update Tab&lt;/p&gt;
+&lt;p&gt;So if you use Selenium and Firefox - ditch the auto updating. Manually
+update your bindings and check compatability for now...&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Achieving more Isolated Unit Testing</title><link href="/2012/05/achieving-more-isolated-unit-testing.html" rel="alternate"></link><published>2012-05-01T00:00:00+02:00</published><updated>2012-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-05-01:/2012/05/achieving-more-isolated-unit-testing.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Good&lt;/em&gt; unit tests should be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fast&lt;/li&gt;
+&lt;li&gt;independent&lt;/li&gt;
+&lt;li&gt;well focused&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;isolated&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your unit tests are slow, you're not gonna run them as often as you
+should. Therefore one of the main benefits of unit testing is lost - the
+lack of instant feedback.&lt;/p&gt;
+&lt;p&gt;Each of your unit tests should be independent …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Good&lt;/em&gt; unit tests should be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;fast&lt;/li&gt;
+&lt;li&gt;independent&lt;/li&gt;
+&lt;li&gt;well focused&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;isolated&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If your unit tests are slow, you're not gonna run them as often as you
+should. Therefore one of the main benefits of unit testing is lost - the
+lack of instant feedback.&lt;/p&gt;
+&lt;p&gt;Each of your unit tests should be independent. The order in which you
+run your tests should not matter. By keeping your tests focused you
+should be able to refactor, add new code and not have the majority of
+your tests fail. If you change class A, you would expect class A's tests
+to fail at worst. If other tests outside of this scope fail, your tests
+are not focused enough. This lack of focus leads on to isolation.&lt;/p&gt;
+&lt;p&gt;Tests should be isolated from other dependencies. Dependencies such as
+other classes should not affect each other, providing the contract
+between the code is maintained. Likewise the file system, the web and
+databases should not be involved anywhere with your unit tests. If any
+of these dependencies come into play, you're not unit testing.&lt;/p&gt;
+&lt;p&gt;At Codeweavers we have around &lt;strong&gt;ten thousand tests&lt;/strong&gt;, with unit tests
+accounting for the majority of these tests. Naturally this means every
+now and then we take time to do a bit of house keeping regarding our
+tests.&lt;/p&gt;
+&lt;p&gt;One thing we noticed was that some of our tests were taking longer to
+run than other tests. They were taking anywhere from one to ten seconds.
+Ten seconds for a unit test is a huge time. During this period we could
+have run hundreds of other tests! As for why these tests took so long to
+run? Easy. They were not unit tests. Code had been added that broke that
+layer of isolation. Some tests were hitting real web services for
+example.&lt;/p&gt;
+&lt;p&gt;In order to be fully isolated I proposed a simply solution. &lt;strong&gt;Unplug the
+network cable&lt;/strong&gt;. Any tests that failed would not be unit tests. This
+gave us one of two options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refactor the code - remove or stub the dependencies&lt;/li&gt;
+&lt;li&gt;Promote the tests to integration/regression tests (only run prior to
+    check in)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can take this idea one step further. Next time you run your tests
+try running them from a different location. Any tests that fail are
+relying on relative/hardcoded paths and will need attention.&lt;/p&gt;
+&lt;p&gt;After performing this task on our codebase we had some failures. The
+nice thing about solving these failures is that our tests now run a lot
+faster. Our slowest tests are now end to end regression tests which are
+only run prior to check in or by our CI server. We've also made sure
+that from a disaster recover point of view, we can continue developing
+locally even if our CI server is not present.&lt;/p&gt;
+&lt;p&gt;So take the experiment. Unplug your computer from the network. How many
+of your "unit tests" fail?&lt;/p&gt;</content><category term="tdd"></category><category term="unit-testing"></category></entry><entry><title>Recursively Building a Web Service using the same Web Service</title><link href="/2012/03/recursively-building-web-service-using.html" rel="alternate"></link><published>2012-03-01T00:00:00+01:00</published><updated>2012-03-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-03-01:/2012/03/recursively-building-web-service-using.html</id><summary type="html">&lt;p&gt;Back during the later part of 2011 there was a common theme occurring in
+our retrospectives each week. How can we replicate our live environment
+as close as possible?&lt;/p&gt;
+&lt;p&gt;We took steps to achieve this goal by creating a single machine image to
+ensure all our machines were configured correctly …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Back during the later part of 2011 there was a common theme occurring in
+our retrospectives each week. How can we replicate our live environment
+as close as possible?&lt;/p&gt;
+&lt;p&gt;We took steps to achieve this goal by creating a single machine image to
+ensure all our machines were configured correctly. Another quick win was
+to ensure certain aspects of our live data was restored to our local
+development databases during the night. This enabled us to take stack
+traces from our logs, and quite literally paste them into our IDE and
+replicate the users problem instantly. Without the same data set we
+could have seen different results. Despite these positive steps, there
+was a missing link in our replication process. How do we simulate the
+traffic of our live environment? As an example, we average anywhere from
+four to five thousand calculations per minute with our current web
+services, with our local and demo environment no where near this figure.&lt;/p&gt;
+&lt;p&gt;During 2011 I found myself involved in many deployments in which despite
+heavy testing I was uneasy. On our demo environments we could throw the
+same amount of load against our services, yet sometime after deploying
+our service would fall over. We would quickly have to revert and go back
+to the drawing board. The problem we had despite our traffic being
+mimicked in terms of volume was the load was not real. Our customers
+however have many more variations of requests that we were simply not
+predicting. The other obvious issue was during local development, the
+service may well handle the same volume of traffic, yet once live and
+the process has been running for a few hours - things might go bump.
+Factors such as memory or timeouts being the culprits here.&lt;/p&gt;
+&lt;p&gt;Collectively we had a few ideas on how to solve this. We looked into low
+level solutions such as directing traffic from IIS/apache towards other
+servers. We examined other load testing tools, and we even contemplated
+creating our own load creator. This internal tool would go over our
+database and fire off a number of requests at our demo environment. I
+felt uneasy with all these solutions. They were not "real" enough. I
+wanted the real time traffic to be submitted to our demo services, only
+then could we have full confidence in our work.&lt;/p&gt;
+&lt;p&gt;My idea was rather radical in the sense it was so easy, yet dangerous
+enough that it might just work. I proposed we integrated our own
+service, into itself. In other words, just before our service returns
+the results of the calculation, it takes the users request and submits
+it again, against our demo environment. The same service would be
+recursively submitting into itself. In order to ensure we did not affect
+the speed of the service, the submission is performed via an async call,
+meaning if this second call was to die the live service would be
+unaffected. The obvious downside here was that in order to test this, we
+needed to deploy the changes to our live service. This was achieved via
+a &lt;a href="http://en.wikipedia.org/wiki/Feature_toggle"&gt;feature toggle&lt;/a&gt;, meaning
+at any time we could turn the feature on or off without affecting any
+customers.&lt;/p&gt;
+&lt;p&gt;The end result of this was that when the feature is enabled, the traffic
+on our live service is sent to our demo service. This allows us to
+deploy experimental or new features and changes to the demo environment
+and check them under real load, with real time data. If all goes well
+after a period of time we can deploy to our live service, if not we roll
+back and no one is the wiser.&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Warnings as Errors</title><link href="/2012/02/warnings-as-errors.html" rel="alternate"></link><published>2012-02-01T00:00:00+01:00</published><updated>2012-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-02-01:/2012/02/warnings-as-errors.html</id><summary type="html">&lt;p&gt;One thing that annoyed me when starting at Codeweavers was the amounts
+of warnings that would occur during a build of any of our projects.
+Seeing the build progress only to spew out a screenful of text was
+something that did not sit right with me. I was not the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One thing that annoyed me when starting at Codeweavers was the amounts
+of warnings that would occur during a build of any of our projects.
+Seeing the build progress only to spew out a screenful of text was
+something that did not sit right with me. I was not the only one who
+felt this was wrong, but as there was so many warnings in some cases, it
+was easier just to pretend they were not there. After all everything was
+working fine.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="http://www.codinghorror.com/blog/2005/06/the-broken-window-theory.html"&gt;broken window
+theory&lt;/a&gt;
+is very much in action here. During our last standards review we decided
+that there should ideally be zero warnings per project. It is worth
+mentioning that most of our warnings were just that, warnings about
+something that was not really a major issue. Warnings such as unused
+variables and so on fall into this area.&lt;/p&gt;
+&lt;p&gt;On the other hand, while 90% of our warnings were ignorable, there were
+a handful which were rather important. Examples such as referencing
+different versions of required .dlls. Warnings like this are extremely
+helpful. It would be wrong for these to be hidden among a block of less
+serious issues. Warnings such as these once visible, can save hours of
+painful debugging.&lt;/p&gt;
+&lt;p&gt;Some of our projects had a fair few warnings - in the region of fifty
+plus. In order to begin tackling these larger projects we started
+slowly. If in a single day I would have removed a batch of warnings,
+this was a step in the right direction. After a week or so all our
+projects were void of warnings.&lt;/p&gt;
+&lt;p&gt;The next step was to make sure we do not go back to having larger
+projects with warnings galore. To prevent this I enabled "&lt;strong&gt;Treat
+warnings as errors&lt;/strong&gt;" within Visual Studio. This is per project setting
+and can be found under the "&lt;strong&gt;Build&lt;/strong&gt;" tab. Do note that you must enable
+this for "&lt;strong&gt;All Configurations&lt;/strong&gt;" otherwise any settings you change will
+only apply to Debug/Release builds.&lt;/p&gt;
+&lt;p&gt;I like this feature of Visual Studio immensely. Having the compilier do
+as much work as possible - in this case check for warnings is similar to
+a tip found in &lt;a href="http://www.amazon.co.uk/Working-Effectively-Legacy-Code-ebook/dp/B0017DQ8KU/ref=sr_1_3?ie=UTF8&amp;amp;qid=1329313155&amp;amp;sr=8-3"&gt;Working Effectively with Legacy
+Code&lt;/a&gt;.
+Here the concept of "leaning on the compiler" is introduced. In other
+words you introduce an error in order to show you the usages of a piece
+of code - this is stark contrast to manually searching for the code in
+question.&lt;/p&gt;
+&lt;p&gt;The end result of this process is now during a build, if any warnings
+occur, the build will fail. The build will report where the warning is,
+along with why there is a problem. While this is great in theory it can
+cause some slight pain when developing, as you may comment out some code
+to experiment only to find the build failing due to unused variables.
+Despite this treating warnings as errors has been a great help. Recently
+we have solved some pretty serious issues with regards third party
+dependencies all thanks to treating warnings as errors.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The idea of allowing the computer to do as much work as possible
+applies to all languages. For your compiler/interpreter etc... there
+will be an option to apply warnings. This is not a specific language
+feature.&lt;/em&gt;&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>Log Everything</title><link href="/2012/01/log-everything.html" rel="alternate"></link><published>2012-01-01T00:00:00+01:00</published><updated>2012-01-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-01-01:/2012/01/log-everything.html</id><summary type="html">&lt;p&gt;&lt;em&gt;This post was originally conceived back in mid 2011, starting a new
+project made me think back to this event, hence the post.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Any developer worth their salt will know what logging is. You could
+argue there are two types of logging, either developer logging or
+auditing. Developer logging would …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;This post was originally conceived back in mid 2011, starting a new
+project made me think back to this event, hence the post.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Any developer worth their salt will know what logging is. You could
+argue there are two types of logging, either developer logging or
+auditing. Developer logging would be what we log when something goes
+wrong. Using the results of this logging we can track down what went
+wrong, and put fixes in place to stop this event from occurring again.
+If this logging fails, or logs the incorrect thing it is not the end of
+the world. Due to this, I generally do not care for testing such
+scenarios. The code should behave the same with our without this
+logging.&lt;/p&gt;
+&lt;p&gt;Auditing would come under logging which as part of the application needs
+to be carried out at all times. Consider visiting a cash machine. When
+withdrawing fifty pounds, you want to make sure your bank logs this in
+case anything goes wrong. This sort of logging is crucial, and must work
+and must log the correct data. This is considered a feature, therefore
+this should be tested as it is part of the behavior of the application.&lt;/p&gt;
+&lt;p&gt;When I think back to my first few years of programming my code was
+littered with logging. In the early days after each statement, variable
+and function I would print out what happened, along with any errors that
+happened. In fact I'd say that everyone starts out like this. The
+strange thing is as we get better, the logging becomes less and less.
+Rather than the first class citizen we relied on in the early days,
+logging is seen as boring. The problem with treating logging code as a
+second class citizen is that when things go wrong, it can be very
+difficult or near impossible to track down what has happened. When you
+realise you need logging, its often too late. You will need to redeploy
+the application and wait for the problem to expose itself again.&lt;/p&gt;
+&lt;p&gt;Back in 2011 we had a difficult problem to track down. The dreaded
+"&lt;code&gt;OutOfMemoryException&lt;/code&gt;". Being the cocky developers we were, we decided
+to add the logging last. After all, it was there for when things went
+wrong. We never planned things would go wrong, after all it "&lt;em&gt;worked on
+my machine&lt;/em&gt;". After redeploying the application with logging we managed
+to track down roughly what was going wrong, and in turn began to resolve
+the problem. Had we added this logging initially, we could have resolved
+this problem in half the time.&lt;/p&gt;
+&lt;p&gt;The lesson I learned here was simple. Any time you have an error, log
+it. If the logging is not in place, we add it. Creating a new
+application? In the first iteration(s) make sure some form of logging is
+in place. I believe by following this simple rule any future issues can
+be handled easier. Logging should be a first class citizen regardless of
+purpose.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>Write Unit Tests? Start deleting them</title><link href="/2012/01/write-unit-tests-start-deleting-them.html" rel="alternate"></link><published>2012-01-01T00:00:00+01:00</published><updated>2012-01-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2012-01-01:/2012/01/write-unit-tests-start-deleting-them.html</id><summary type="html">&lt;p&gt;A recent &lt;a href="http://blog.steveklabnik.com/posts/2011-09-22-extracting-domain-models-a-practical-example"&gt;blog post by Steve
+Klabnik&lt;/a&gt;
+concluded with a statement about tossing unit tests if you have end to
+end tests covering the code in question.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don't be afraid to change the tests! As soon as you've verified that
+you've transcribed the code correctly, don't be afraid to just …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;p&gt;A recent &lt;a href="http://blog.steveklabnik.com/posts/2011-09-22-extracting-domain-models-a-practical-example"&gt;blog post by Steve
+Klabnik&lt;/a&gt;
+concluded with a statement about tossing unit tests if you have end to
+end tests covering the code in question.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don't be afraid to change the tests! As soon as you've verified that
+you've transcribed the code correctly, don't be afraid to just nuke
+things and start again. Especially if you have integration level tests
+that confirm that your features actually work, your unit tests are
+expendable. If they're not useful, kill them!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A few people on Twitter found this odd, and I'd have included myself in
+this statement a while back.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/isaacsanders"&gt;@isaacsanders&lt;/a&gt;
+&lt;a href="https://twitter.com/avdi"&gt;@avdi&lt;/a&gt; seeing
+&lt;a href="https://twitter.com/KentBeck"&gt;@KentBeck&lt;/a&gt; delete unit tests during his
+screencasts changed my TDD process forever.&lt;/p&gt;
+&lt;p&gt;— Shaun Finglas (@F1nglas) &lt;a href="https://twitter.com/F1nglas/statuses/160776765353111552"&gt;January 21,
+2012&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href="http://pragprog.com/screencasts/v-kbtdd/test-driven-development"&gt;Kent Beck's TDD
+screencasts&lt;/a&gt;
+changed my view on deleting unit tests however. During the later videos,
+he actually deleted some tests. Pretty much all TDD resources don't
+really mention this. One of the key points beginners learn is that if
+you break any tests, you've introduced a regression. This is not always
+the case. If you follow the rule of never deleting ANY tests you
+encounter you are going to be stuck with someone else's implementation
+forever. Likewise unit tests are there to drive design, not enforce how
+something works. I remember discussing deleting unit tests with my work
+colleagues and finding Kent's videos pretty shocking at the time. I mean
+deleting unit tests!?&lt;/p&gt;
+&lt;p&gt;The more I do TDD, the less this statement becomes so jarring. For
+example.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/217feb75bc8facf38534.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Consider a test for the above behavior, such as we get the result back
+in a particular state. Pretend the logic is rather simple, and it does
+not warrant a separate object. Any other developer should be free to
+come along and change the internals of this method. As long as we get a
+result back in the correct state, the test should be valid. The test
+should not care that we are using strings, lists or whatever internally.&lt;/p&gt;
+&lt;p&gt;Occasionally I find tests like this hard to pass. In other words, I feel
+like the logic is correct yet the test fails. Maybe I'm using a new
+language feature, or a language feature that seems to be not working as
+I expected. If so I'll break out a new unit test that tests the
+implementation. Such tests are often refereed to as &lt;a href="http://blog.thecodewhisperer.com/2011/12/14/when-to-write-learning-tests/"&gt;learning
+tests&lt;/a&gt;.
+Here with a smaller focus I often become aware of what I'm doing wrong.
+Following Kent Becks example, I ditch the test after and move on.&lt;/p&gt;
+&lt;p&gt;I feel this sums up my feelings nicely.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/ELLIOTTCABLE"&gt;@elliottcable&lt;/a&gt;
+&lt;a href="https://twitter.com/F1nglas"&gt;@F1nglas&lt;/a&gt;
+&lt;a href="https://twitter.com/isaacsanders"&gt;@isaacsanders&lt;/a&gt;
+&lt;a href="https://twitter.com/KentBeck"&gt;@kentbeck&lt;/a&gt; let them [tests] guide you
+to a design but don't let them hold you to a design.&lt;/p&gt;
+&lt;p&gt;— Avdi Grimm (@avdi) &lt;a href="https://twitter.com/avdi/statuses/160780747827974145"&gt;January 21,
+2012&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script async src="//platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;
+
+&lt;p&gt;I and others are not saying bin every unit test you have that is covered
+by end to end tests. Unit tests are great, you can run hundreds in a
+matter of seconds. They have their place as part of the development
+process, but do not find yourself working against them. However I am
+saying you should delete any test which relies on implementation
+details. I am saying bin any test which does not make sense. I am also
+saying bin tests as part of a refactoring session as long as you have
+test coverage higher up. If you don't have test coverage such as
+acceptance tests, you cannot be sure you have not broke anything after
+the refactor.&lt;/p&gt;</content><category term="programming"></category><category term="tdd"></category><category term="unit-testing"></category></entry></feed>

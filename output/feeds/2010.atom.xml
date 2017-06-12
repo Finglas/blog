@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2010</title><link href="/" rel="alternate"></link><link href="/feeds/2010.atom.xml" rel="self"></link><id>/</id><updated>2010-12-01T00:00:00+01:00</updated><entry><title>Lists or Objects</title><link href="/2010/12/lists-or-objects.html" rel="alternate"></link><published>2010-12-01T00:00:00+01:00</published><updated>2010-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2010-12-01:/2010/12/lists-or-objects.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;"Our rule of thumb is that we try to limit passing around types with
+generics (the types closed in angle brackets). Particularly when
+applied to collections, we view it as a form of duplication. It's a
+hint that there's a domain concept that should be extracted into a
+type." [&lt;a href="http://www.growing-object-oriented-software.com/"&gt;Growing …&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;"Our rule of thumb is that we try to limit passing around types with
+generics (the types closed in angle brackets). Particularly when
+applied to collections, we view it as a form of duplication. It's a
+hint that there's a domain concept that should be extracted into a
+type." [&lt;a href="http://www.growing-object-oriented-software.com/"&gt;Growing Object-Oriented Software, Guided by
+Tests&lt;/a&gt; - Steve
+Freeman, Nat Pryce, page 136)]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Example&lt;/h3&gt;
+&lt;p&gt;Not ideal - business logic will leak.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/24ed5ead118ea8e2730c.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Better - quotes are now encapsulated.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/ed5e69d1e10925e7a4dd.js"&gt;&lt;/script&gt;
+
+&lt;h3&gt;Why?&lt;/h3&gt;
+&lt;p&gt;The benefit of the second approach is that you begin to force the
+collection to do the work. Consider a collection of quotes - using the
+first approach a developers' typical instinct would be to loop over the
+list and check each quote until the lowest quote was found. You could
+argue that this in turn violates the '&lt;a href="http://www.pragprog.com/articles/tell-dont-ask"&gt;Tell Don't
+Ask&lt;/a&gt;' principle because
+very quickly you can find yourself digging down into objects. We would
+not do this with standalone objects, so collections should not be any
+different. Yet as developers we often avoid creating objects to
+encapsulate collections, despite this principle being taught in the
+early chapters of any OO programming beginners book.&lt;/p&gt;
+&lt;p&gt;Another key point of encapsulating collections is that you reduce
+duplication. If another part of the application needs to perform a check
+for the lowest quote, you'd end up either duplicating the code to loop
+over the quotes, or creating a helper method to do the actual
+processing. Using the collection means such features are only a method
+call away at all times.&lt;/p&gt;
+&lt;p&gt;In a recent &lt;a href="http://codekata.com/kata/kata09-back-to-the-checkout/"&gt;code
+kata&lt;/a&gt; as well as
+a current set of work, we are applying some of the above concepts and
+finding a dramatic increase in the quality of our code. Those of you may
+have noticed that the above implementation inherits from a standard
+list, therefore it is indeed possible to still violate encapsulation and
+dig through the collection yourself. There are pros and cons to this
+approach, one benefit is all of the out of the box functionality you get
+for free - the ability to loop over the quotes (for displaying say) and
+return a count for example. The downside being developers can treat
+these collections as if they were a list.&lt;/p&gt;
+&lt;p&gt;In C# it is possible to use
+&lt;a href="http://msdn.microsoft.com/en-us/library/aa288465%28v=vs.71%29.aspx"&gt;indexers&lt;/a&gt;or
+interfaces to improve the above implementation, though we tend to agree
+that it's up to the developers to do the "right" thing - in other words,
+not dive down into the collection. Interesting this very topic has been
+&lt;a href="http://stackoverflow.com/questions/21715/listbusinessobject-or-businessobjectcollection"&gt;discussed on the excellent
+StackOverflow&lt;/a&gt;
+- I and others will sure agree that the answer(s) provided are well off
+the mark. Encapsulate your public collections - do not treat them as
+primitives!&lt;/p&gt;</content><category term="code-quality"></category><category term="programming"></category></entry></feed>

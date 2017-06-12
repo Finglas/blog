@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2011</title><link href="/" rel="alternate"></link><link href="/feeds/2011.atom.xml" rel="self"></link><id>/</id><updated>2011-12-01T00:00:00+01:00</updated><entry><title>6 Ways to Speed Up Selenium Tests</title><link href="/2011/12/6-ways-to-speed-up-selenium-tests.html" rel="alternate"></link><published>2011-12-01T00:00:00+01:00</published><updated>2011-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-12-01:/2011/12/6-ways-to-speed-up-selenium-tests.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
+tests&lt;/a&gt;
+via Selenium, we figured it would be worth while sharing how we achieved
+this. The following are six steps we've found that you can do to make
+Selenium tests more stable.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Turn off automatic updates for your browser/plugins&lt;/li&gt;
+&lt;li&gt;Set your …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
+tests&lt;/a&gt;
+via Selenium, we figured it would be worth while sharing how we achieved
+this. The following are six steps we've found that you can do to make
+Selenium tests more stable.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Turn off automatic updates for your browser/plugins&lt;/li&gt;
+&lt;li&gt;Set your IIS (or equivalent) app timeouts to zero&lt;/li&gt;
+&lt;li&gt;Create a base Selenium Fixture for use in your tests&lt;/li&gt;
+&lt;li&gt;Update to the latest version of Selenium&lt;/li&gt;
+&lt;li&gt;Warm up your apps prior to testing&lt;/li&gt;
+&lt;li&gt;Ditch Selenium - test at the API level&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Turning off automatic updates seems like a no brainer, but after a fresh
+install we forgot to do this once and spent some time figuring out why
+Firefox would not load on the CI server. It turns out that the "You've
+just updated" window was blocking the test from continuing as it had
+stole focus.&lt;/p&gt;
+&lt;p&gt;The second point is with regards caching and the general responsiveness
+of your application. We have a few applications that take about thirty
+seconds to fully warm up due to the huge data set they rely on. If we
+can build this cache once, then store it for as long as possible,
+subsequent hits to the app should be instant. In other words, we try to
+mirror our live environment as much as possible.&lt;/p&gt;
+&lt;p&gt;Our custom test fixture attribute enables the ability to modify all
+Selenium tests in one go. We found that from 3am to 5am our databases
+undergo maintenance, therefore we do not run our regression tests during
+this time. All this took was one change within the attribute to apply to
+all tests. For example:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/a23514ff0aecd9e496a6.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;We simply inherit from &lt;a href="http://www.nunit.org/index.php?p=testFixture&amp;amp;r=2.5.10"&gt;NUnit's
+TestFixtureAttribute&lt;/a&gt;
+and use this custom attribute rather than the standard TestFixture
+attribute. The inheritance is required to ensure that third party tools
+such as test runners still work as expected.&lt;/p&gt;
+&lt;p&gt;Previously we were using Selenium 1.x with Sauce RC. Having ditched this
+and &lt;a href="http://seleniumhq.org/docs/appendix_migrating_from_rc_to_webdriver.html#migrating-to-webdriver-reference"&gt;upgraded to Selenium
+2.x&lt;/a&gt;
+we've been able to update our browsers to the latest versions, in turn
+this allows improved speed and stability when running the tests.&lt;/p&gt;
+&lt;p&gt;On our local development machines the application you are working on is
+often in memory, meaning subsequent hits should be much faster after all
+dependencies are loaded and cached. The issue we discovered on our CI
+server was that after a fresh build of the whole codebase, the initial
+hits to the applications would be very slow. To combat this we added a
+warm up step to our build. Just before the tests are run we would
+perform a HTTP GET to invoke our applications start up processes. This
+added somewhere in the region of thirty seconds to the build, but the
+increase in stability is staggering. No longer will Selenium report
+timeouts.&lt;/p&gt;
+&lt;p&gt;Finally the fastest end to end tests come from not using Selenium.
+Ditching the browser completely and testing as high up in your API is
+the quickest, and most stable solution. Combining this thinking, with a
+handful of dumb Selenium tests that just check for the likes of 404s
+seems to be the most optimal solution currently.&lt;/p&gt;
+&lt;p&gt;Having done these at some point over the past few months we're starting
+to get to a more stable point with our Selenium tests. We'll be looking
+to take this forward with future tests and hope to enjoy continued
+stability.&lt;/p&gt;</content><category term="tutorial"></category><category term="testing"></category></entry><entry><title>How to Achieve More Stable End to End Tests</title><link href="/2011/12/how-to-achieve-more-stable-end-to-end.html" rel="alternate"></link><published>2011-12-01T00:00:00+01:00</published><updated>2011-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-12-01:/2011/12/how-to-achieve-more-stable-end-to-end.html</id><summary type="html">&lt;p&gt;Recently myself and another colleague wrote an &lt;a href="http://en.wikipedia.org/wiki/Acceptance_testing"&gt;acceptance
+test&lt;/a&gt; for a feature
+that had yet to be implemented. For this end to end test we used
+&lt;a href="http://seleniumhq.org/"&gt;Selenium&lt;/a&gt;, after all we wanted to test the
+whole feature so this made sense. Our test performed some simple user
+input, performed a calculation …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently myself and another colleague wrote an &lt;a href="http://en.wikipedia.org/wiki/Acceptance_testing"&gt;acceptance
+test&lt;/a&gt; for a feature
+that had yet to be implemented. For this end to end test we used
+&lt;a href="http://seleniumhq.org/"&gt;Selenium&lt;/a&gt;, after all we wanted to test the
+whole feature so this made sense. Our test performed some simple user
+input, performed a calculation and checked the response. The problem
+with the test was it was very brittle. If the application had not
+recently been used, the massive data set the application relied on would
+not be cached.&lt;/p&gt;
+&lt;p&gt;To get around this we added a few
+&lt;a href="http://msdn.microsoft.com/en-us/library/d00bd51t.aspx"&gt;Thread.Sleep()&lt;/a&gt;
+statements into the test. This worked rather well for the majority of
+test runs, but sometimes these pauses were not long enough. On the other
+hand sometimes the data was cached, meaning these sleeps would be
+unnecessary. One resource which has recently done the rounds was
+regarding useful &lt;a href="http://www.bonitasoft.org/blog/tutorial/how-to-get-faster-selenium-test-cases-execution/"&gt;advice about using WaitForPageLoad() and
+WaitForCondition()&lt;/a&gt;.
+WaitForCondition will only execute once a condition has been met, such
+as a element becoming visible. This meant that for the times when the
+dataset was in memory the test would be executed immediately, while the
+times when the data was being loaded, the test would simply wait until
+the test was ready to move on. This was a very simple, yet highly
+effective tweak to our tests. The execution time went from roughly
+thirty seconds, to just less than ten seconds in one case.&lt;/p&gt;
+&lt;p&gt;This was not the end of the battle to achieve more stable Selenium
+tests. Some of our tests were still rather flaky. Some mornings we would
+enter work, notice the red build and discover that the several failed
+tests were down to Selenium timeouts. During the daytime however, we
+rarely had these issues. In order to fix these problems I increased the
+frequency of builds. The idea being the more we run our builds the more
+chance we have of spotting the errors. After all, if something was to
+fail at 2am, I am unlikely to care. 2pm however, and the team will be
+all over it. By making the problem more visible, we would be forced to
+fix the outstanding issues.&lt;/p&gt;
+&lt;p&gt;The aim was to make the tests as fast as possible, while maintaining
+stability. One thing the excellent &lt;a href="http://www.amazon.co.uk/Growing-Object-Oriented-Software-Guided-Signature/dp/0321503627"&gt;Growing Object-Oriented Software
+(Goos)&lt;/a&gt;
+touches on is the aspect of not needing to perform end to end testing at
+the GUI all the time. The benefit of not touching the UI is huge. Your
+tests are faster, they're more stable and a heck of lot easier to write.
+The other nice benefit of testing from an API point of view, rather than
+the browser is it forces you to decouple your app from the views. If
+you're not writing &lt;a href="http://weblog.jamisbuck.org/2006/10/18/skinny-controller-fat-model"&gt;fat models and skinny
+controllers&lt;/a&gt;,
+you'll have adapt in order to test as much of your application as
+possible without hitting the UI.&lt;/p&gt;
+&lt;p&gt;What about the remaining part of your feature that is not covered by the
+application? I like to imagine this part as the tip of an iceberg. As
+this area is small enough the actual UI testing you need should be
+minimal. So here we can let Selenium do what it is good at. Click
+things. Selenium is great at this. All you need to do at this level is
+check for 404s, incorrect page titles and a few other mundane aspects of
+the UI. There should be no need to check if your actual application is
+correct at this level. For correctness, you should have a large suite of
+fast, isolated, unit tests.&lt;/p&gt;
+&lt;p&gt;Another point to consider is how often your view actually changes, in
+comparison to your actual underlying API. A designer should be free to
+move things, rename content, add images and so forth without breaking
+tests. As long as there is a calculate button somewhere on the page, and
+said button takes you to a result page, who cares about everything else?
+Likewise the code underneath can be consistently changing behind the
+scenes, as long as the API remains constant, our tests should always be
+valid.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For the technical low down on some of the ways we are achieving more
+stable end to end tests, check out &lt;a href="6-ways-to-speed-up-selenium-tests.html"&gt;six tips to speed up Selenium
+tests&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content><category term="tutorial"></category><category term="testing"></category></entry><entry><title>Smalltalk Conversion mapped to C#</title><link href="/2011/10/smalltalk-conversion-mapped-to-c.html" rel="alternate"></link><published>2011-10-01T00:00:00+02:00</published><updated>2011-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-10-01:/2011/10/smalltalk-conversion-mapped-to-c.html</id><summary type="html">&lt;p&gt;Lately the team has been making some rather drastic changes and
+re-designs to our codebase in an attempt to minimise friction to change.
+In other words, we've identified areas that are painful or tedious to
+work in and have hopefully rectified them by re-writing the code. The
+proof of this …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lately the team has been making some rather drastic changes and
+re-designs to our codebase in an attempt to minimise friction to change.
+In other words, we've identified areas that are painful or tedious to
+work in and have hopefully rectified them by re-writing the code. The
+proof of this should be felt as we begin adding new features, the newly
+improved code is certainly faster and more optimised.&lt;/p&gt;
+&lt;p&gt;Regardless, one area that remains troublesome in my opinion is object
+mapping (or the correct term of conversion) code. While I've not
+personally been involved with this reworking of the codebase, I have
+recently just finished reading Kent Beck's - &lt;a href="http://www.amazon.co.uk/Smalltalk-Best-Practice-Patterns-Kent/dp/013476904X"&gt;Smalltalk Best Practice
+Patterns&lt;/a&gt;.
+Many of the developers I follow on Twitter have been blogging about this
+book and I figured it was time to give it a go. After all it gets
+massive praise whether or not you use
+&lt;a href="http://en.wikipedia.org/wiki/Smalltalk"&gt;Smalltalk&lt;/a&gt;. While reading this
+book a few key points regarding object conversion are discussed and I
+found them incredibly relevant.&lt;/p&gt;
+&lt;p&gt;So should you read the book? I would say yes. I don't program in
+Smalltalk. I don't plan on programming Smalltalk. Nor had I read a line
+of Smalltalk before. But you should still read this book. The first half
+is incredibly relevant to any OO programming language. Granted I found
+the second half is less useful, but the gems I've picked up in the first
+half more than make up for this. In fact, pages 28 to 30 are so good I
+figured it would be worth sharing.&lt;/p&gt;
+&lt;p&gt;I've been convinced for a while that creating separate objects to
+convert objects is unnecessary, and in fact adds to the amount of code
+you need to write and maintain, thus increasing resistance for change.
+So if we remove this unecesary, intermediate object, how do we create a
+new object from another object? The answer is conversion. This answer
+strangely comes from a book all about Smalltalk. The answer also
+strangely comes from a book over ten years old. Pages 28 - 30 cover the
+topic of conversion. The following is quoted heavily from the book, but
+I recommend reading the pages in full.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Conversion&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt; - How do you convert information from one object's format
+to another's?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt; - Convert from one object to another rather than overwhelm
+any one object's protocol.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What this is getting at is we could using &lt;a href="http://msdn.microsoft.com/en-us/library/bb383977.aspx"&gt;C#
+extension&lt;/a&gt;
+methods do the following to the String class.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/1eb9482e9dfff30922bb.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;This would be abusing the String class. If we want a postcode from a
+string, we should have the Postcode object create us a Postcode from a
+string, not the other way around. There could be hundreds of conversions
+from strings to a new object, but we would violate the string class if
+we did this. In turn, Kent goes on to say "&lt;em&gt;Conversions that return
+similar responsibilities should use a Convert Method. To convert to an
+object with different protocol use a Converter Constructor Method&lt;/em&gt;".&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Converter Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt; - How do you represent simple conversion of an object to
+another object with the same protocol but different format?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt; - Provide a method in the object to be converted that
+converts to the new object. Name the method by pre-appending "as" to
+the class of the object returned.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In C# this would be:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/9c14d32dbf69e57f2ba0.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;In C# the convention is to use &lt;code&gt;To&lt;/code&gt; rather than &lt;code&gt;As&lt;/code&gt; for converter
+methods. For example we could do quotes.ToArray() on a List of Quotes.
+We still have the same protocol, a collection of quotes, we are just
+storing them in a different format. The rule for adding such methods is
+that there should only be one sensible way to perform this conversion,
+and the source and destination share the same protocol.&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;Converter Constructor Method&lt;/strong&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Question&lt;/strong&gt; - How do you represent the conversion of an object to
+another with different protocol?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer&lt;/strong&gt; - Make a constructor method that takes the object to be
+converted as an argument&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;script src="https://gist.github.com/Finglas/f5445a00b9bf8e8e14d0.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;In our codebase we have a &lt;code&gt;RegistrationDate&lt;/code&gt;object. We have a
+constructor that takes a string representation of the date (from the
+outside world) and constructs a &lt;code&gt;RegistrationDate&lt;/code&gt;. This very same
+principle can be applied to other, more complex objects. For example
+consider an active record style approach below. Here
+&lt;code&gt;QuoteRecord&lt;/code&gt;represents our database object, with &lt;code&gt;Quote&lt;/code&gt;representing
+a domain object. The following would be the converter constructor
+method. In other words, we create (or convert) our quote from the quote
+record. No separate mapper. No intermediate object. Less resistance for
+change.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/46bc94e12209385fc9ff.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;The benefit here is that we have minimised friction. If the requirements
+for this code changes we will need up to update at worst, the record and
+the domain object. Had we used a separate object to perform the mapping
+we would end up with a third place to maintain if we decided to add a
+new property to our &lt;code&gt;QuoteRecord&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I'll admit to having only used this technique for a week or so, though
+so far it has worked a treat and I expect it to continue working
+considering these techniques have stood the test of time.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>The Best Code is Written Twice</title><link href="/2011/10/the-best-code-is-written-twice.html" rel="alternate"></link><published>2011-10-01T00:00:00+02:00</published><updated>2011-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-10-01:/2011/10/the-best-code-is-written-twice.html</id><summary type="html">&lt;p&gt;Recently myself and two colleges completed a new feature in an
+afternoon's programming session. Despite this we ended up binning the
+feature after all agreeing it was horribly complicated and in turn would
+cause far more problems down the road than it would solve.&lt;/p&gt;
+&lt;p&gt;We decided to rewrite the feature …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently myself and two colleges completed a new feature in an
+afternoon's programming session. Despite this we ended up binning the
+feature after all agreeing it was horribly complicated and in turn would
+cause far more problems down the road than it would solve.&lt;/p&gt;
+&lt;p&gt;We decided to rewrite the feature again, but applying all the lessons we
+had learned from the first attempt. A recent &lt;a href="http://www.redcode.nl/blog/2011/10/great-code-is-written-twice-or-more/"&gt;blog post by
+royvanrijn&lt;/a&gt;
+on this very topic made me appreciate what we had done. He points out
+that the best code occurs from several attempts, and unlike what people
+may expect, the repeat attempts need not take the same amount of time to
+deliver as the initial attempt.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The second time you write the code, it'll only take a fraction of the
+time it took initially.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This principle of repeating a task made me think of when I was
+decorating my old bedroom. I helped partake in the difficult task of
+wallpapering the ceiling. Prior to this I had experience wallpapering
+before, and would have no trouble repeating this exercise again.
+However, wallpapering a ceiling was something completely new. Me and my
+dad were reluctant to start, until I had a rather devious plan. We would
+decorate my brothers room first, followed by mine. That way, if our
+first attempt was a disaster I would not be the one living with the
+dodgy ceiling.&lt;/p&gt;
+&lt;p&gt;It turned out that our first efforts were not too bad. Granted it took a
+while, there was the odd rough patch and several obscenities were used,
+but we got the job done. For the second room we completed the task much
+quicker and with practically no problems.&lt;/p&gt;
+&lt;p&gt;The process of wallpapering the second ceiling was the DIY equivalent of
+scrapping our feature and rewriting the code. We never stripped the
+first ceiling afterwards, we just took everything we learned from the
+first round and used it to make the process of papering the second
+ceiling much easier. The interesting point to bare in mind with
+scrapping code and rewriting is the rewrite will not take the same
+amount of time to get back up to speed. Just because it takes &lt;em&gt;n&lt;/em&gt; to
+implement a feature, the second time around you can often complete the
+feature in less time, at much higher quality.&lt;/p&gt;
+&lt;p&gt;I'm not suggesting all code should be rewritten multiple times. &lt;a href="http://www.extremeprogramming.org/rules/spike.html"&gt;Spike
+solutions&lt;/a&gt; are often
+a more suitable process to ease the development process, but in certain
+cases practice makes perfect, even if it means you wait that little bit
+longer for the perfect ceiling.&lt;/p&gt;</content><category term="programming"></category><category term="retro"></category></entry><entry><title>Ten Things a graduate will experience during their first year at Codeweavers</title><link href="/2011/08/ten-things-graduate-will-experience.html" rel="alternate"></link><published>2011-08-01T00:00:00+02:00</published><updated>2011-08-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-08-01:/2011/08/ten-things-graduate-will-experience.html</id><summary type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kanban&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The importance of value and flow are the heart of day to day running
+at Codeweavers. During my time I've read books such as &lt;a href="http://www.amazon.co.uk/Goal-Process-Ongoing-Improvement/dp/0566086654"&gt;The
+Goal&lt;/a&gt;
+and &lt;a href="http://www.amazon.co.uk/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319"&gt;The Toyota
+Way&lt;/a&gt;
+in which the likes of the &lt;a href="http://en.wikipedia.org/wiki/Theory_of_Constraints"&gt;Theory of
+Constraints&lt;/a&gt; and
+the &lt;a href="http://en.wikipedia.org/wiki/Toyota_Production_System"&gt;Toyota Production
+System&lt;/a&gt; are
+discussed. I was also …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Kanban&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The importance of value and flow are the heart of day to day running
+at Codeweavers. During my time I've read books such as &lt;a href="http://www.amazon.co.uk/Goal-Process-Ongoing-Improvement/dp/0566086654"&gt;The
+Goal&lt;/a&gt;
+and &lt;a href="http://www.amazon.co.uk/Toyota-Way-Management-Principles-Manufacturer/dp/0071392319"&gt;The Toyota
+Way&lt;/a&gt;
+in which the likes of the &lt;a href="http://en.wikipedia.org/wiki/Theory_of_Constraints"&gt;Theory of
+Constraints&lt;/a&gt; and
+the &lt;a href="http://en.wikipedia.org/wiki/Toyota_Production_System"&gt;Toyota Production
+System&lt;/a&gt; are
+discussed. I was also lucky enough to visit Toyota to see these
+practices in play.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pair Programming&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A big part of our day to day work is done via pair programming.
+There are huge benefits to pair programming, but being a graduate
+within an organisation where pair programming is the norm is a huge
+benefit. Graduates usually enter the workplace with no experience in
+the business domain and limited technical experience. Being set
+loose initially would be a disaster. Graduates therefore typically
+shadow other developers often spending anywhere from weeks to months
+until they able to commit any code without supervision. With
+Codeweavers this was not an issue. From day one I was committing
+code despite being the least knowledgeable member of the team. In
+fact, my earliest memory of my first day involved fixing a defect in
+a codebase of which I knew nothing about. Thanks to my partner, this
+lack of knowledge was not an issue.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Feature Toggles&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The concept of a &lt;a href="http://www.upstarthq.com/2010/04/introduction-to-minimum-marketable-features-mmf/"&gt;Minimal Marketable Feature
+(MMF)&lt;/a&gt;
+can be a catch 22 scenario. We want to develop tiny incremental
+features for rapid feedback, yet our customers want feature X in its
+entirety. In order to deliver features in this manner the concept of
+feature toggles are essential. Essentially code which will toggle a
+feature on or off is often deployed with any new features we
+provide. This means if something goes wrong we can instantly disable
+the feature without a new deployment being required. Likewise the
+ability to toggle features enables half finished features to be
+demoed to a customer within a live environment. Once a feature is
+deemed stable, these toggles can be removed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Work in Parallel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Somewhat tied to feature toggles is the concept of working in
+parallel or being "system green". In other words the mainline trunk
+from which we develop from should be deployable at any time. A
+benefit of working in this manner is if a feature needs disabling
+the old code is always ready to be enabled, likewise if an emergency
+fix needs deploying this can be delivered as soon as possible. There
+are day to day benefits from working in parallel as well. By making
+changes in parallel, at any one time the checked out code is only
+briefly in a state of being un-buildable, if we developed in a big
+bang approach, there could be hundreds upon hundreds of compiler
+errors to wade through. The important concept when working in
+parallel is to ensure the old code which is being extended, or
+replaced is cleared away once the new feature is live. The last
+thing we want is old code rotting with developers too afraid to
+delete it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Best Practices&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It is fair to say that all the developers at Codeweavers want to
+develop the best code they can. Due to this practices such as
+&lt;a href="http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29"&gt;SOLID&lt;/a&gt;and
+other best practices are discussed, carried out and encouraged.
+While I'd say that via books, the internet and other resources I
+have been exposed to these practices working in a industry scenario
+makes these concepts much more important and realistic. We all know
+what a "perfect" solution would be, however with deadlines and other
+limiting factors sometimes a more pragmatic solution is required,
+despite the inner perfectionists inside us all wanting to spend
+hours refactoring to a better solution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Failure&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There have been times when I have out rightly failed. One of my
+biggest regrets comes from a feature in which I let the database
+schema dictate the business logic. Needless to say as the business
+requirements evolved, the code which was so dependent on how the
+database persisted the data became near impossible to refactor
+without a rewrite. This rewrite never occurred due to deadlines
+meaning the feature had to go live despite myself feeling rather
+ashamed at how badly things had become. Despite this failure, it
+proved to be a huge learning experience and something I do not plan
+on repeating. Every time I have failed, it has helped.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Starting Again - "a graceful retreat"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Prior to Codeweavers had I been stuck on a particular task I would
+have slogged away at it until the problem was resolved. Often this
+would mean fighting my way through a task into the early hours of
+the morning. By applying the principle of a "graceful retreat" I can
+very easily delete code and start fresh. Very quickly you will be
+back where you were before but in a much better condition, having
+learned from past experiences.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Spike Solutions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A &lt;a href="http://www.extremeprogramming.org/rules/spike.html"&gt;spike
+solution&lt;/a&gt; is
+essentially a throw away prototype developed before we begin a MMF
+in order to learn more about the problem at hand, or to test various
+solutions. The name refers to the fact that if you were to plot your
+velocity on a graph, after having produced a prototype you should
+have reduced the risk to the project, thus implement the feature for
+real easier and quicker. Every time we have developed a spike
+solution prior to an MMF developers often comments on how it helped,
+either by providing a learning experience or simply enabling the
+feature to be split into further MMF's. It is because of these
+benefits I am becoming to the conclusion that every new feature
+should have a quick spike solution prior to production work
+beginning, after all it is not easy to write tests for code you are
+not quite sure you know how to implement. Spikes enable this
+confusion to be cleared away upfront, allowing the production
+implementation to run smoothly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Conferences&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;For the most part I enjoyed university immensely. With regards the
+educational aspects I would find that after an interesting lecture a
+huge sense of motivation and interest within the subject. Spending
+additional time outside of a lecture discussing concepts with others
+was both valuable and fun. Having finished university I am a strong
+believer that I should maintain this inspiration and motivation.
+Thankfully Codeweavers provides the ability to further ourselves,
+and I've been lucky to attend several conferences this past year.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Practice&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Having experienced one year of Codeweavers the old saying of
+"&lt;em&gt;Practice practice practice&lt;/em&gt;" still holds true. Whether it be from
+books, conferences or general day to day work. No one can stop
+learning or furthering themselves if they wish to continue day to
+day software development. For this very reason I'm grateful, but
+this rule bears repeating and I look forward to another year of
+practice and improvement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="retro"></category></entry><entry><title>Mapping Objects via TDD</title><link href="/2011/06/mapping-objects-via-tdd.html" rel="alternate"></link><published>2011-06-01T00:00:00+02:00</published><updated>2011-06-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-06-01:/2011/06/mapping-objects-via-tdd.html</id><summary type="html">&lt;h3&gt;Why we map?&lt;/h3&gt;
+&lt;p&gt;Many times at Codeweavers we often have tasks which involve mapping
+between various objects. It is no secret that I dislike such tasks. The
+reason we map between objects though is actually a good thing as pointed
+out by several developers. Mapping means our components are less …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Why we map?&lt;/h3&gt;
+&lt;p&gt;Many times at Codeweavers we often have tasks which involve mapping
+between various objects. It is no secret that I dislike such tasks. The
+reason we map between objects though is actually a good thing as pointed
+out by several developers. Mapping means our components are less
+coupled. For example, we can write one feature and then simply map
+different web services to use this feature. If we chose not to map to a
+common object we would need to re-implement this functionality for each
+service. Therefore not only do we decouple our code, but our codebase is
+much &lt;a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself"&gt;DRYer&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;What ways do we do it?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;One approach is a test per property. One developer will write a
+    failing test for a property (accessor), while the other developer
+    writes the code to make this test pass. During this process the
+    keyboard flicks back between each developer very rapidly, in fact
+    most of the time when writing a property per test is spent sliding
+    the keyboard to the other developer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another approach we have tried on occasion is to have one developer
+    write one test for the whole class, while the second developer will
+    write the mapping code to make this test pass. We may or may not
+    split each assert into separate tests. TDD purists will find this
+    odd, as it does indeed go against our normal work flow. On the other
+    hand, the reason we do this is the tests and code are virtually
+    identical; therefore it is quicker. The downside with this "big bang
+    approach" is the developer writing the code to make the tests pass
+    may miss something. If this happens, finding out what is wrong is
+    much harder as the code was written in one big go.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The final approach we have attempted is to not test mapping code,
+    after all what could go wrong? It turns out a lot. Mapping often
+    defaults values to specific values, or is subtly different to the
+    source object. Much time can be wasted when all your tests are
+    passing, yet the application is falling over because some data is
+    being set incorrectly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;What is wrong with this approach?&lt;/h3&gt;
+&lt;p&gt;My main gripes with mapping, albeit an integral part of our development
+process is how boring it is. Not to mention how slow mapping tests can
+be to write. After an hour to have successfully mapped an object you
+feel exhausted, not because of how challenging the process was, but how
+tedious the task was. I also cannot seem to shake the fact that after
+this process is complete you feel as if you are exactly the same
+distance away from your goal as you were before. For someone on the
+outside looking in, no "real" work has been done.&lt;/p&gt;
+&lt;h3&gt;Enter AutoMapper&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://automapper.codeplex.com/"&gt;AutoMapper&lt;/a&gt;is a project I wish I had
+created myself. AutoMapper as the name suggests will map objects to
+other objects on your behalf. For example, imagine a view model that
+needs mapping from a bog standard DTO. Providing the objects names
+follow the same conventions, auto mapper will automatically map these
+values for you. Currently we have only used this on an internal project,
+though based on the official website AutoMapper's &lt;a href="http://automapper.codeplex.com/wikipage/comments"&gt;usage is
+widespread&lt;/a&gt; with great
+success.&lt;/p&gt;
+&lt;p&gt;Not all mapping is straight property to property however. Sometimes the
+source or destination will be of a different type. AutoMapper can handle
+this. It is worth mentioning special flavours of mapping such as enums
+are supported straight out of the box too. Additionally not all mapping
+is one to one. Other times &lt;a href="http://automapper.codeplex.com/wikipage?title=Null%20Substitution&amp;amp;referringTitle=Home"&gt;default
+values&lt;/a&gt;
+may be required, but AutoMapper's fluent interface allows this to be
+achieved with limited fuss. AutoMapper can also handle more bespoke,
+advanced mapping scenarios. For example we mapped a raw string into a
+complete object with default values. This required a &lt;a href="http://automapper.codeplex.com/wikipage?title=Custom%20Value%20Resolvers&amp;amp;referringTitle=Home"&gt;custom value
+resolver&lt;/a&gt;
+to be wrote, which in turn defeats the purpose of using a tool like
+AutoMapper but as this scenario was a one off this was not a problem.
+All together we're becoming big fans of this tool, it is just a shame it
+has taken so long for us to discover it.&lt;/p&gt;
+&lt;h3&gt;Benefits&lt;/h3&gt;
+&lt;p&gt;There are huge benefits to using AutoMapper. After getting to grips with
+the tool we have been able to map a complete webservice within less than
+thirty minutes. The trick to creating a hierarchy (objects containing
+other objects) is to take a bottom up approach. By taking this approach
+each step is gradual and steady. You are not forced to implement a large
+chunk of functionality in one go. In combination the way to test this
+was to use the built in &lt;a href="http://automapper.codeplex.com/wikipage?title=Configuration%20Validation&amp;amp;referringTitle=Home"&gt;AutoMapper
+validation&lt;/a&gt;.
+This one assert will ensure that any mapping that has been written is
+indeed valid. This will cover all your standard scenarios. From here, we
+wrote one test per object to ensure that any defaulting we had set up
+was indeed performed. For the scenario discussed above the webservice
+response had around ten types, this meant ten, quick unit tests ensured
+the whole mapping functionality worked correctly. The built in testable
+assertion makes much of this process a joy to do. While the two main
+methods you use with AutoMapper are static, we simply wrapped these in
+instance methods that we use in our production code.&lt;/p&gt;
+&lt;p&gt;Like most open source projects, the documentation for AutoMapper is
+pretty weak, though the error output you receive when developing is
+outstanding. Each failed test will indicate in plain English what is
+wrong, and better yet how to solve it. A few of us are pretty excited
+about AutoMapper and I look forward to mapping again in the future,
+something I feel odd stating. Yes, this tool is that good.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>Unit Testing C# attributes</title><link href="/2011/05/unit-testing-c-attributes.html" rel="alternate"></link><published>2011-05-01T00:00:00+02:00</published><updated>2011-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-05-01:/2011/05/unit-testing-c-attributes.html</id><summary type="html">&lt;p&gt;For a recent coding session I needed to handle an exception being thrown
+when some Json was incorrectly bound to a view model. With the framework
+we were using (&lt;a href="http://www.asp.net/mvc" title="ASP.NET MVC2"&gt;ASP.NET&lt;/a&gt; MVC2) I
+was unable to handle the exception at the controller level, nor could I
+handle it at the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a recent coding session I needed to handle an exception being thrown
+when some Json was incorrectly bound to a view model. With the framework
+we were using (&lt;a href="http://www.asp.net/mvc" title="ASP.NET MVC2"&gt;ASP.NET&lt;/a&gt; MVC2) I
+was unable to handle the exception at the controller level, nor could I
+handle it at the "global" level when the framework carries out its
+bindings. Another way ASP.NET MVC handles &lt;a href="http://msdn.microsoft.com/en-us/library/system.web.mvc.handleerrorattribute.aspx"&gt;exceptions is via
+attributes&lt;/a&gt;
+to catch errors you specify. The resulting exception is strongly typed
+and then can be passed into a view, from which you have full control of
+what to do. Typically we would log the error, display a friendly message
+and so forth.&lt;/p&gt;
+&lt;p&gt;In the past these attributes have been simply applied without a test -
+the general consensus being this was a framework specific thing which
+had no value in being tested. I agreed with those statements up until
+several minutes ago. Having fixed a defect in which the user was not
+seeing a friendly error message I carried on with a new feature only to
+find somehow the error handling had broken. It turned out I had indeed
+broken the attribute by providing an incorrect parameter.&lt;/p&gt;
+&lt;p&gt;As luck would have it there is a very nice, quick way to &lt;a href="http://stackoverflow.com/questions/2007434/how-to-nunit-test-for-a-methods-attribute-existance"&gt;unit test
+attributes as discussed on
+StackOverflow&lt;/a&gt;.
+In the end I created several tests to check the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The type of the attribute is correct&lt;/li&gt;
+&lt;li&gt;The attributes properties were correctly set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The tests ended up ensuring that my action does indeed handle certain
+exceptions, redirecting the user to the correct view. The nice thing
+about these tests are they will only take minutes to write next time,
+yet save me a long time figuring out why the error handling has broken.
+Plus being unit tests they execute in the blink of an eye, no need to
+write a regression test to check the redirection has been carried out.
+These tests are therefore more "documentation" of how the system should
+behave.&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Getters and Setters are Evil</title><link href="/2011/04/getters-and-setters-are-evil.html" rel="alternate"></link><published>2011-04-01T00:00:00+02:00</published><updated>2011-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-04-01:/2011/04/getters-and-setters-are-evil.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
+version&lt;/a&gt;
+of this post.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I've been programming with OO languages since I was seventeen yet in the
+last week I've had what is without doubt one of the biggest learning
+experiences since I've started.&lt;/p&gt;
+&lt;p&gt;Numerous developers that I've worked with claimed that we aren't doing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
+version&lt;/a&gt;
+of this post.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I've been programming with OO languages since I was seventeen yet in the
+last week I've had what is without doubt one of the biggest learning
+experiences since I've started.&lt;/p&gt;
+&lt;p&gt;Numerous developers that I've worked with claimed that we aren't doing
+OO properly. By we I mean software developers as a whole. Their argument
+being having all your code defined in classes does not mean you are
+obeying OO principles. By this they are often referring to the "&lt;a href="http://pragprog.com/articles/tell-dont-ask"&gt;Tell
+Don't Ask&lt;/a&gt;" principle. One
+particular individual at Codeweavers introduced me to idea that getters
+and setters are evil. While not true at face value, this statement is to
+get you thinking about what you expose to the outside world. Consider
+one of the founding pillars of OO programming; encapsulation.&lt;/p&gt;
+&lt;p&gt;Encapsulation states that an objects internal state should be just that,
+internal. If we want a object to do something we should tell it. We
+shouldn't care how its done either. The more I begin to think about what
+I'm programming the more I begin to question myself. In a recent
+programming session this was even more apparent. I stumbled across a
+situation in which I wished to hide a objects internal state, and in
+turn tell the object to do stuff. The problem I encountered was how the
+hell do I display the state of this object to the user (say on a GUI)
+without adding a load of properties (getters/setters).&lt;/p&gt;
+&lt;p&gt;Had I added the properties to the object I could ignore the methods on
+the object and just dig down and fiddle the objects internal state from
+the outside. This was not right, alarms bells were going off yet I was
+unsure how to solve this. Thankfully some inspiration from a helpful
+&lt;a href="http://stackoverflow.com/questions/5573479/oo-encapsulation-object-conversion-to-get-to-innards"&gt;StackOverflow
+user&lt;/a&gt;
+and advice from a collegue pointed me in the right direction.&lt;/p&gt;
+&lt;p&gt;The solution was simple and can be summarised in the following pseudo
+code:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/c9e599dd3d133c60a6b2.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;A more encapsulated approach could be:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/cf632d3c42c1951ff144.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;A business object should property free, or at least only able to be
+updated from the outside world by asking it to do something. Its
+internal state may be internal to the class itself, or there may be a
+DTO passed in at construction it matters not. The Writer in this case is
+an abstraction around some form of output. We could have a console
+writer, HTML writer, Json writer and so on. By inverting the dependency
+we can avoid adding properties to the business object. Any consumer of
+this object must invoke the business object's methods - aka tell the
+object to do stuff. There is no way of the outside world modifying this
+objects internal state without abiding by the business rules. What's
+nice about this revelation?&lt;/p&gt;
+&lt;p&gt;There are many examples of this pattern at Codeweavers, yet I was
+unaware of the problem it was solving. By being burned by this issue
+personally the reason for patterns such as the one detailed above become
+much clearer and stand out. Whats better is when this problem crops up
+again I'll be able to handle it.&lt;/p&gt;
+&lt;p&gt;Properties or accessors have their place. They are required for DTOs,
+frameworks and certain language features, yet as with any tool their
+usage should always be considered. Blindly adding properties to a
+object, or worse, having the IDE auto generate accessors to an objects
+state is a clear problem. The biggest lesson I've took away is that even
+for input/output the use of accessors is not required. As usual the
+Codeweavers saying of "&lt;em&gt;if it feels wrong, it probably is&lt;/em&gt;" still holds
+true and on that I'm off to try and write some proper OO code for the
+first time in six years...&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>MBUnit to NUnit</title><link href="/2011/03/mbunit-to-nunit.html" rel="alternate"></link><published>2011-03-01T00:00:00+01:00</published><updated>2011-03-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-03-01:/2011/03/mbunit-to-nunit.html</id><summary type="html">&lt;p&gt;Over the last few weeks we've ported our tests from
+&lt;a href="http://www.mbunit.com/"&gt;MBUnit&lt;/a&gt; to &lt;a href="http://www.nunit.org/"&gt;NUnit&lt;/a&gt;. This
+was done as after a quick spike it was seen that NUnit tests run almost
+fifty percent quicker. For example our common projects' test time went
+from around &lt;strong&gt;40s&lt;/strong&gt; to around &lt;strong&gt;20s&lt;/strong&gt; on average.&lt;/p&gt;
+&lt;p&gt;This whole …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Over the last few weeks we've ported our tests from
+&lt;a href="http://www.mbunit.com/"&gt;MBUnit&lt;/a&gt; to &lt;a href="http://www.nunit.org/"&gt;NUnit&lt;/a&gt;. This
+was done as after a quick spike it was seen that NUnit tests run almost
+fifty percent quicker. For example our common projects' test time went
+from around &lt;strong&gt;40s&lt;/strong&gt; to around &lt;strong&gt;20s&lt;/strong&gt; on average.&lt;/p&gt;
+&lt;p&gt;This whole process was no easy task. Initially our largest project was
+converted by the whole team. We split into pairs/individuals and tackled
+a test project each. Working in this manner we could commit after each
+project, meaning at any one time the build was only fractionally broke,
+rather than completely unbuildable. Previously we tried a big bang
+approach but after several thousand errors, we quickly reverted. After
+each commit the tests were gradually moved over. This took around an
+hour or so, and therefore our allocated dojo/technical dojo time for
+that week was used. For the remaining projects an ad-hoc approach was
+taken. The first pairs to work on a project would be responsible for
+porting the tests over. Thankfull our other projects bar one were fairly
+straightforward to upgrade and were done as part of waste or kaizen.&lt;/p&gt;
+&lt;p&gt;Some of this process could be automated however things were not
+completely smooth. For example converting the MBUnit namespace over was
+achieved by project level find and replace. Other issues such as Asserts
+being slightly different required a manual fix. One example being
+asserting a exception is thrown. The MBUnit approach used attributes
+while in NUnit it is more preferable to use &lt;em&gt;Assert.Throws&lt;/em&gt;. The other
+issue we faced was porting over the relevant build scripts and Cruise
+Control configs. Again there was no easy way to do this. We had a fair
+few CI fails when this was done, but when editing the xml build files
+there is no real way to test what you've done without actual trying it!&lt;/p&gt;
+&lt;p&gt;Overall the whole episode was not as bad as I thought it would be. We
+seem pretty stable at time of writing, and the tests are definitely
+quicker to run locally. We still have slow tests, and as part of waste
+we'll be looking into whether these slow tests are needed. One
+interesting practice I've noticed over the upgrade is how many dodgy
+tests we've removed. Tests such as &lt;em&gt;Assert.IsNotNull&lt;/em&gt; after creating a
+new object - the sort of tests everyone writes when starting TDD have
+been removed. These legacy tests serve no purpose now, but were the key
+starting point of the TDD introduction to Codeweavers several years ago.
+Other tests which are covered else where or simply not needed were also
+removed. The final issue we are aiming to improve is that of our
+regression/acceptance tests, many of which are Selenium tests.&lt;/p&gt;
+&lt;p&gt;Would we recommend upgrading your test suite to the latest/next best
+thing? Not unless you can prove with figures that it has an actual
+benefit. We provided no value to the business by doing this, but by
+hopefully taking one step to increase our feedback cycle we'll see the
+benefit over time. If anything, we should be more likely to run our
+tests. As for why MBUnit was slower? It features a lot of stuff we
+simply don't need, while NUnit is more lightweight and just plain faster
+for our use. We could perhaps speed the tests even more by writing our
+own test runner, but the likes of Visual Studio integration are a must
+therefore this is no easy task.&lt;/p&gt;
+&lt;p&gt;One interesting point to conclude was that during this process there was
+talk about wrapping NUnit within a Codeweavers test framework,
+essentially meaning we could switch test frameworks whenever. Is this
+overkill for most projects? Most likely, but it was something to
+consider especially for large applications. As who knows, maybe there
+will be an even faster framework out there that we can upgrade to again,
+next year...&lt;/p&gt;</content><category term="testing"></category><category term="programming"></category></entry><entry><title>Mock Roles not Types</title><link href="/2011/03/mock-roles-not-types.html" rel="alternate"></link><published>2011-03-01T00:00:00+01:00</published><updated>2011-03-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-03-01:/2011/03/mock-roles-not-types.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;"if it feels wrong, it probably is" - numerous Codeweavers' developers&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The framework we use at Codeweavers is the excellent
+&lt;a href="http://code.google.com/p/moq/"&gt;Moq&lt;/a&gt;, therefore when something is
+difficult to mock we are forced by the framework to write an adapter. We
+use an interface for testing, then create a concrete type which simply …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;"if it feels wrong, it probably is" - numerous Codeweavers' developers&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The framework we use at Codeweavers is the excellent
+&lt;a href="http://code.google.com/p/moq/"&gt;Moq&lt;/a&gt;, therefore when something is
+difficult to mock we are forced by the framework to write an adapter. We
+use an interface for testing, then create a concrete type which simply
+invokes the hard to test code such as static code, third party libraries
+and resources that are expensive to set up. There are some ways ways in
+C# to get around this, but they involve black magic and should be
+avoided at all costs unless you are deeply entangled in legacy code. A
+refactoring would be preferable over hard to test code.&lt;/p&gt;
+&lt;p&gt;The process of writing an
+&lt;a href="http://en.wikipedia.org/wiki/Adapter_pattern"&gt;adapter&lt;/a&gt; around hard to
+test code is a standard practice, we do it all the time as we are forced
+to by the unit testing framework. Some frameworks we use at Codeweavers
+such as [&lt;a href="http://asp.net/mvc"&gt;ASP.NET
+MVC&lt;/a&gt;]{style="text-decoration:underline;"}are
+designed with testability in mind, so unlike scenarios where you cannot
+test code easily, the MVC framework makes it possible. In a recent
+feature myself and a fellow colleague wrote some code within a
+controller which relied on some of the controllers' (the MVC framework)
+internals.&lt;/p&gt;
+&lt;p&gt;Rather than abstracting this into a class which we inject to make
+testing easier we went the route of setting up a complex, messy and
+tedious routing test fixture. Why you ask? Maybe it was the fact it was
+possible to test. Had it been straight up impossible or much harder,
+then introducing an abstraction would have been the obvious solution.
+The code in question was a small method that depending on the somewhat
+complex and unique routing values performed on a certain response. Fast
+forward a week later and the feature is to be expanded.&lt;/p&gt;
+&lt;p&gt;We were back were we started, the new feature needed more setup that
+relied on the framework, and in turn once this production code was
+changed, the old test fixture would need updating. The very thought of
+this made me feel tired, fed up and generally annoyed that the test code
+was harder to write than the actual production code! While the code did
+not feel right, the actual process was a by the book approach, so it
+must have been right. Taking a step back myself and my new pairing
+partner decided for a different approach. Lets abstract the controller
+internals we need and inject this into the controller. In turn our code
+would read better and the tests would be easy to construct.&lt;/p&gt;
+&lt;p&gt;Having made this refactoring the tests were still green. The refactoring
+was a great success. Now the test fixture set up consisted of a few
+simple lines. All the complex framework specific nonsense had
+disappeared. Getting to this stage took a bit of thought with regards
+the implementation, but we got there non the less. Having made this
+change, we wrote the next tests with such ease and joy it actually felt
+fun, enjoyable and completely stress free. Just how programming should
+be.&lt;/p&gt;
+&lt;p&gt;For the production code, as the framework is test friendly we had some
+unit tests around the concrete object used in production. For scenarios
+where this is not possible, a high level acceptance test to ensure
+things are wired up correctly would suffice. Either way we should always
+be confident when using code we do not own that it is correct, providing
+we use it correctly. After all, this will be heavily tested by the third
+party or so we hope. Manual testing will catch any integration issues
+with third party code with any luck.&lt;/p&gt;
+&lt;p&gt;The whole process was staggering, I was blown away by my ignorance. I
+knew the best practices, yet I chose &lt;a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod"&gt;to depend on concrete
+implementations rather than
+abstractions&lt;/a&gt;.
+After this session the whole theory behind &lt;a href="http://www.mockobjects.com/files/mockrolesnotobjects.pdf"&gt;mocking roles and not
+types&lt;/a&gt; [pdf]
+became so much clearer. This is yet one more revelation to add to the
+list. Every time I write &lt;code&gt;Mock&amp;lt;name&amp;gt;&lt;/code&gt;, stop and think. Do I own the
+type? If not then maybe there is an abstraction waiting to escape, after
+all it will save a lot of pain.&lt;/p&gt;</content><category term="testing"></category><category term="programming"></category></entry></feed>

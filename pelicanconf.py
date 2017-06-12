@@ -18,14 +18,15 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DEFAULT_PAGINATION = 30
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+FEED_DOMAIN = SITEURL
+FEED_ALL_ATOM = 'feeds/posts/default.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Blogroll
 LINKS = ()
 
 # Social widget
-SOCIAL = (('Twitter', 'https://twitter.com/ShaunFinglas'),)
+SOCIAL = (('Twitter', 'https://twitter.com/ShaunFinglas'),
+          ('Github', 'https://github.com/Finglas'),
+          ('LinkedIn', 'https://www.linkedin.com/in/shaunfinglas/'),
+          ('StackOverflow', 'https://stackoverflow.com/users/102482/finglas'))

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2013</title><link href="/" rel="alternate"></link><link href="/feeds/2013.atom.xml" rel="self"></link><id>/</id><updated>2013-05-01T00:00:00+02:00</updated><entry><title>The Anti If Campaign</title><link href="/2013/05/the-anti-if-campaign.html" rel="alternate"></link><published>2013-05-01T00:00:00+02:00</published><updated>2013-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-05-01:/2013/05/the-anti-if-campaign.html</id><summary type="html">&lt;p&gt;Firstly if you are unaware of what the &lt;a href="http://www.antiifcampaign.com/"&gt;Anti If
+Campaign&lt;/a&gt; is, I advise you to take look
+before coming back. My first impression a few years ago was the site
+must have been some sort of spoof. Programming without "if" statements,
+this was crazy nonsense. After all the "if …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Firstly if you are unaware of what the &lt;a href="http://www.antiifcampaign.com/"&gt;Anti If
+Campaign&lt;/a&gt; is, I advise you to take look
+before coming back. My first impression a few years ago was the site
+must have been some sort of spoof. Programming without "if" statements,
+this was crazy nonsense. After all the "if" statement is one of the core
+constructs of any language. If you look deeper however the campaign is
+not advocating the abolition of "if" statements, it is simply
+encouraging cleaner code by removing the likes of type checking and
+control coupling. This can be achieved by the use of Polymorphism and
+abiding by the &lt;a href="http://en.wikipedia.org/wiki/Single_responsibility_principle"&gt;Single Responsibility
+Principle&lt;/a&gt;
+(SRP).&lt;/p&gt;
+&lt;p&gt;The Anti If Campaign is relevant as I have recently had first hand
+experience of what the supporters are campaigning against. I was working
+on one of our greenfield projects where I had violated SRP for an easy
+win. We had a class which would look up a quote based on some input
+criteria. I allowed this input to control how the lookup was performed.
+In some scenarios the input would be in a different form, meaning the
+lookup would need to be carried out in a different manner. An "if" check
+was introduced to handle this logic. In pseudo code:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/54c9876cd1510228b36e.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;The code in question had supporting methods for both paths.&lt;/p&gt;
+&lt;p&gt;Fast forward a few months and something terrible had happened. Like a
+plague, this simple conditional I had introduced was spreading. Code
+that was executed much later on was beginning to perform the same
+conditional check! At the same time I discovered this problem, I was
+asked to perform a trivial change as the requirements had evolved. What
+should have been a five minute job, turned into a few hours of paying
+back technical debt.&lt;/p&gt;
+&lt;p&gt;The fix was well overdue at this point. I had to push the conditional
+statements as high as I could. &lt;a href="http://silkandspinach.net/2011/09/19/conditionals-on-the-edge/"&gt;The closer they were to the edge of the
+system the
+better&lt;/a&gt;.
+The by product of this refactor is that the code is a lot clearer now.
+Each class and method did just one thing, and they did it well. It
+turned out I was actually able to push the conditional statement so far
+up that it effectively disappeared into the routing of the system. It
+was up to the caller to "&lt;em&gt;do the right thing&lt;/em&gt;".&lt;/p&gt;
+&lt;p&gt;After the refactor:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/e53f5a01135b8c1f7c1e.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;As each part of the code complies with SRP, I know exactly where to go
+if there is a problem. For example, if we have any problems with the
+retrieval of new quotes, I can easily debug and fix the issue. Likewise
+if we wish to extend the lookup of existing quotes, I can confidently
+change the code without the fear of breaking the retrieval of new
+quotes. The other side effect is that I can easily reason about and test
+the code in question.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>3 Years at Codeweavers</title><link href="/2013/04/3-years-at-codeweavers.html" rel="alternate"></link><published>2013-04-01T00:00:00+02:00</published><updated>2013-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-04-01:/2013/04/3-years-at-codeweavers.html</id><summary type="html">&lt;p&gt;Having wrote about the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
+Codeweavers&lt;/a&gt;,
+I figured it would be time for a follow up after the past two years. In
+no particular order, a collection of the biggest lessons I have
+experienced.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
+    Contract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Having wrote about the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
+Codeweavers&lt;/a&gt;,
+I figured it would be time for a follow up after the past two years. In
+no particular order, a collection of the biggest lessons I have
+experienced.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
+    Contract&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD) is a
+    Tool&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/04/design-is-important.html"&gt;Design is
+    Important&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/07/dont-tie-yourself-to-framework.html"&gt;Don't tie yourself to a
+    Framework&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/07/the-importance-of-tools-one-of-most.html"&gt;The Importance of
+    Tools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/acceptance-testing-need-not-use-full.html"&gt;Acceptance Testing need not use the Full
+    Stack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;Program for Change (Open/Closed
+    Principle)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/reinvent-wheel-often.html"&gt;Reinvent the Wheel,
+    Often&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/do-it-right-violate-yagni.html"&gt;Do it right - violate
+    YAGNI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/practice-practice-practice.html"&gt;Practice, Practice,
+    Practice&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll expand on these topics over time in future posts.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Why are you not using Design by Contract?</title><link href="/2013/04/why-are-you-not-using-design-by-contract.html" rel="alternate"></link><published>2013-04-01T00:00:00+02:00</published><updated>2013-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-04-01:/2013/04/why-are-you-not-using-design-by-contract.html</id><summary type="html">&lt;p&gt;When learning to program I distinctly remember coming across the concept
+of placing asserts within your code. Assert statements are primarily
+used for "&lt;em&gt;things that cannot happen&lt;/em&gt;", but in my early days I was too
+focused on the stuff that was supposed to happen!&lt;/p&gt;
+&lt;p&gt;"&lt;em&gt;Defensive programming&lt;/em&gt;" was also introduced. Principles …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When learning to program I distinctly remember coming across the concept
+of placing asserts within your code. Assert statements are primarily
+used for "&lt;em&gt;things that cannot happen&lt;/em&gt;", but in my early days I was too
+focused on the stuff that was supposed to happen!&lt;/p&gt;
+&lt;p&gt;"&lt;em&gt;Defensive programming&lt;/em&gt;" was also introduced. Principles such as "Never
+trust the user" and "&lt;em&gt;80% of your code will be validation and
+verification&lt;/em&gt;" were highlighted. Despite these introductions many years
+ago, the concept of asserts never stuck with me. Yet I program
+defensively like there is no tomorrow.&lt;/p&gt;
+&lt;p&gt;The use of asserts can be extended into "&lt;a href="http://en.wikipedia.org/wiki/Design_by_contract"&gt;Design by
+Contract&lt;/a&gt;" or DBC. In
+DBC the developer makes use of pre-conditions, post-conditions and
+invariants. Some languages such as
+&lt;a href="http://www.eiffel.com/developers/design_by_contract.html"&gt;Effiel&lt;/a&gt; have
+taken DBC as a core feature while other languages leave DBC up to
+libraries.&lt;/p&gt;
+&lt;p&gt;One of my favourite programming books is the &lt;a href="http://pragprog.com/book/tpp/the-pragmatic-programmer"&gt;Pragmatic
+Programmer&lt;/a&gt;.
+Having stood up to many re-reads I always found myself intrigued by the
+idea of DBC. Yet I never found myself following this interest through,
+at least in a production environment.&lt;/p&gt;
+&lt;p&gt;Our team recently came across a bug in which part of the system was
+using a component in a way which was deemed invalid. We had a suite of
+tests to accompany this feature, but these tests were unable to
+highlight the problem. When the object was sent across the wire, the
+Javascript front end was firing a null reference across, this was out of
+our control in the back end of the application. As the feature crossed a
+boundary and spoke to another system defensive programming would have
+been difficult. All we could do was error and inform the developer what
+was wrong. Even without defensive programming, the system was currently
+doing this anyway. We had little to gain.&lt;/p&gt;
+&lt;p&gt;Here I decided to experiment for the first time in my programming career
+with code contracts. A contract was applied that said the collection
+sent into the system must &lt;strong&gt;not be null&lt;/strong&gt; or &lt;strong&gt;empty&lt;/strong&gt;. If so, the
+second system would blow up informing the developer what was wrong. This
+contract was a very primitive example of a pre-condition - something
+that must be true in order for the rest of the following code to
+execute.&lt;/p&gt;
+&lt;p&gt;The benefit here came from just a few mere lines of code. Had we tried
+to program defensively the second systems' code base would have suffered
+for little gain. We would need to report the error, add error codes,
+introduce exception handling and so on, all for a simple defect that
+could be fixed immediately and potentially never occur again once the
+developer integrating has configured the components correctly.&lt;/p&gt;
+&lt;p&gt;One important factor to consider with DBC is the contract violations
+should &lt;strong&gt;never be caught or handled&lt;/strong&gt;. Every single contract that is
+violated is a bug. To stop the violation you need to fix the code that
+is breaking the contract. Likewise contracts make little sense when
+dealing with a public API. On the edge of the system you should presume
+your users will make mistakes and "&lt;em&gt;do the wrong thing&lt;/em&gt;", here you must
+use defensive programming.&lt;/p&gt;
+&lt;p&gt;Since this day I've liberally applied code contracts whenever we cross
+system boundaries or interact with the infrastructural aspects of our
+code, e.g. database helpers. This has increased my confidence that the
+system as a whole has been correctly "glued together". Another benefit
+is several bugs have been thwarted thanks to the contracts as unlike
+unit tests, contracts are always present when enabled, meaning missed
+boundary conditions can easily be detected.&lt;/p&gt;
+&lt;p&gt;Hand in hand with our automated test suite, &lt;strong&gt;code contracts make a
+great companion&lt;/strong&gt;. Never alone will one suffice, but when used in
+conjunction they can be extremely powerful. So the question is, why
+aren't you using them?&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>Object Calisthenics</title><link href="/2013/01/object-calisthenics.html" rel="alternate"></link><published>2013-01-01T00:00:00+01:00</published><updated>2013-01-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-01-01:/2013/01/object-calisthenics.html</id><summary type="html">&lt;p&gt;Recently I ran a session on &lt;a href="http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/"&gt;Object
+Calisthenics&lt;/a&gt;.
+I was first exposed to this challenge a few years ago and personally
+found it a fun, yet difficult experience. This is intentional as the
+challenge is designed to push the boundaries of best practices. The
+instructions are simple, there are nine …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I ran a session on &lt;a href="http://www.markhneedham.com/blog/2008/11/06/object-calisthenics-first-thoughts/"&gt;Object
+Calisthenics&lt;/a&gt;.
+I was first exposed to this challenge a few years ago and personally
+found it a fun, yet difficult experience. This is intentional as the
+challenge is designed to push the boundaries of best practices. The
+instructions are simple, there are nine rules to follow that &lt;strong&gt;&lt;em&gt;must&lt;/em&gt;&lt;/strong&gt;
+be obeyed during a traditional kata. We chose the &lt;a href="http://codekata.com/kata/kata09-back-to-the-checkout/"&gt;Checkout
+Kata&lt;/a&gt; as the
+backdrop for this session. The teams feedback is as follows.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;Use only one level of indentation per method&lt;/h3&gt;
+&lt;p&gt;The team found this easy, and we discussed that following this to
+some degree in day to day development would be beneficial. Limiting
+the amount of nested code you have can improve readability quite
+substantially.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Don't use the else keyword&lt;/h3&gt;
+&lt;p&gt;At first this seemed a no brainier, until people realised it meant
+to favour polymorphism and not simply relying on an early return
+(implicit else).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Wrap all primitives and strings&lt;/h3&gt;
+&lt;p&gt;The team managed well with this, one example would be a pair
+introduced an SKU (Stock Keeping Unit) to encapsulate a string and
+price. We do this well in day to day development at Codeweavers for
+domain objects, however we tend to fail in other areas such as data
+access code. This is one concept we need to try and improve at.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Use only one dot per line&lt;/h3&gt;
+&lt;p&gt;The &lt;a href="http://haacked.com/archive/2009/07/13/law-of-demeter-dot-counting.aspx"&gt;Law of Demeter in
+action&lt;/a&gt;.
+Once we cleared up the ideas behind this it was pretty easy for the
+teams to follow. This is not a dot counting exercise, so it is worth
+being familiar with the "law". Much of our code would satisfy this
+requirement.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Don't abbreviate&lt;/h3&gt;
+&lt;p&gt;One controversial point that came up from this was regarding the
+team who chose SKU as a class name. Some of the team disagreed with
+this naming, though in terms of the domain (a supermarket) this is a
+perfectly valid name, therefore this did not break the rule. On the
+whole our code is named well, though our legacy codebases have many
+abbreviations that can confuse and obfuscate the intent of the code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Keep all entities small&lt;/h3&gt;
+&lt;p&gt;For new code, this is not an issue, however we find legacy code is
+given less treatment in regards to the size of our entities. This is
+something we should try to improve, though the teams found this easy
+enough during the kata.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Don't use any classes with more than two instance variables&lt;/h3&gt;
+&lt;p&gt;Personally I find this an odd requirement, providing you keep your
+classes small as per the previous requirement this tends to be a
+less relevant task. Of all the rules to follow, this is the one I
+could not advocate during day to day development providing you keep
+your classes small.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Use first-class collections&lt;/h3&gt;
+&lt;p&gt;My personal favourite of the rules to abide by, and one I have since
+adopted into day to day coding. &lt;a href="http://blog.shaunfinglas.co.uk/2010/12/lists-or-objects.html"&gt;First class collections can
+simplify, and make code easier to understand as well as
+maintain&lt;/a&gt;
+and optimize. We have numerous examples of this at play at
+Codeweavers, and we should try to increase the amount of custom
+collections we have, as opposed to relying on primitive collections.
+For example, quotes is a better object than a array of quote.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Don't use any getters/setters/properties&lt;/h3&gt;
+&lt;p&gt;The hardest of all the rules to follow. Most of the teams tried to
+get past this rule by simply naming their getters/setters slightly
+differently. At the end of the day, there were still exposing state
+unnecessarily. We would never try to enforce such a rule for general
+development, but &lt;a href="http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;for core business logic this principle actually
+makes
+sense&lt;/a&gt;.
+The areas where this falls down, is on the boundary of the system,
+for example user input or output would be such scenarios where
+getters/setters are the easiest, cleanest solutions. Each team found
+this requirement the hardest to work with, which mimics my first
+expose to the object calisthenics challenge.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content><category term="programming"></category></entry></feed>

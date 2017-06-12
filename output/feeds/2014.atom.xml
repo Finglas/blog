@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2014</title><link href="/" rel="alternate"></link><link href="/feeds/2014.atom.xml" rel="self"></link><id>/</id><updated>2015-02-10T20:15:00+01:00</updated><entry><title>Acceptance Testing need not use the Full Stack</title><link href="/2014/08/acceptance-testing-need-not-use-full.html" rel="alternate"></link><published>2015-02-10T20:15:00+01:00</published><updated>2015-02-10T20:15:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-02-10:/2014/08/acceptance-testing-need-not-use-full.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Joined a team with thousands of unit tests (\~10k)&lt;/li&gt;
+&lt;li&gt;But bugs still got through our QA process&lt;/li&gt;
+&lt;li&gt;How could this be?&lt;/li&gt;
+&lt;li&gt;Team had a small number of full end to end live service tests&lt;/li&gt;
+&lt;li&gt;So my answer was to just increase the number of these&lt;/li&gt;
+&lt;li&gt;Surely this would solve our …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;Joined a team with thousands of unit tests (\~10k)&lt;/li&gt;
+&lt;li&gt;But bugs still got through our QA process&lt;/li&gt;
+&lt;li&gt;How could this be?&lt;/li&gt;
+&lt;li&gt;Team had a small number of full end to end live service tests&lt;/li&gt;
+&lt;li&gt;So my answer was to just increase the number of these&lt;/li&gt;
+&lt;li&gt;Surely this would solve our problem?&lt;/li&gt;
+&lt;li&gt;Not quite&lt;/li&gt;
+&lt;li&gt;The maintenance of these tests were a great burden&lt;/li&gt;
+&lt;li&gt;Each day many tests would fail, but nothing would be "broken".&lt;/li&gt;
+&lt;li&gt;Data would have changed in the DB&lt;/li&gt;
+&lt;li&gt;The UI could have changed&lt;/li&gt;
+&lt;li&gt;The browser could have been slightly slower&lt;/li&gt;
+&lt;li&gt;And so on&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Solution&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Delete the majority of live service tests - limit the tests to the
+    core user journey through the application&lt;/li&gt;
+&lt;li&gt;As long as the pages load up, without an error we shouldn't care&lt;/li&gt;
+&lt;li&gt;Stopped testing logic or behaviour - made the tests loose, e.g. as
+    long as value is not null or empty we are OK, we don't actually care
+    what the value is.&lt;/li&gt;
+&lt;li&gt;Made use of &lt;a href="http://martinfowler.com/bliki/IntegrationContractTest.html"&gt;contract
+    testing&lt;/a&gt;
+    to substitute boundaries with in memory fakes, e.g. persistent
+    storage. This allowed fast, stable acceptance tests to be run
+    against the system without the brittle nature described above.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Benefits&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Small handful of live service tests (using real DB, UI) caught the
+    majority of the serious flaws that snuck through&lt;/li&gt;
+&lt;li&gt;Future bugs were missing unit tests thanks to contract testing&lt;/li&gt;
+&lt;li&gt;Faster to write&lt;/li&gt;
+&lt;li&gt;Easier to debug&lt;/li&gt;
+&lt;li&gt;Faster to execute!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key point was the use of contract testing. Without contract testing,
+writing automated acceptance tests is a pretty awful process.&lt;/p&gt;
+&lt;p&gt;Data requires setup and tear down. Any data changes can break your tests
+and the UI is often in flux.&lt;/p&gt;
+&lt;p&gt;By substituting the UI layer, or the DB access with fakes such as a
+console view, or in memory hash table, your tests can still cover the
+whole stack, but in a more stable, bite size manner. You simply test
+your real view or data access separately to prove they work, and can in
+fact be swapped out thanks to the &lt;a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle"&gt;Liskov Substitution Principle
+(LSP&lt;/a&gt;) by
+running the same suite of tests against your fakes!&lt;/p&gt;
+&lt;p&gt;I'll be expanding on how and what contract testing is in a future post.&lt;/p&gt;</content><category term="testing"></category><category term="retro"></category></entry><entry><title>Recommended Reading List 2014</title><link href="/2015/01/recommended-reading-list-2014.html" rel="alternate"></link><published>2015-01-01T00:00:00+01:00</published><updated>2015-01-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-01-01:/2015/01/recommended-reading-list-2014.html</id><summary type="html">&lt;p&gt;I've read some great books in the last twelve months, here they are in
+no particular order.&lt;/p&gt;
+&lt;h4&gt;Process&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Getting-Things-Done-Stress-free-Productivity/dp/0749922648/"&gt;Getting Things
+    Done&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/ReWork-Change-Way-Work-Forever/dp/0091929784"&gt;Rework - Change the Way You Work
+    Forever&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Soft-Skills-software-developers-manual/dp/1617292397"&gt;Soft Skills - The Software Developer's Life
+    Manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Code&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213"&gt;Release
+    It!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577"&gt;Implementing Domain Driven
+    Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/REST-Practice-Hypermedia-Systems-Architecture/dp/0596805829"&gt;REST in
+    Practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742"&gt;Javascript the Good
+    Parts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Core-HTML5-Canvas-Animation-Development/dp/0132761610"&gt;Core …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I've read some great books in the last twelve months, here they are in
+no particular order.&lt;/p&gt;
+&lt;h4&gt;Process&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Getting-Things-Done-Stress-free-Productivity/dp/0749922648/"&gt;Getting Things
+    Done&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/ReWork-Change-Way-Work-Forever/dp/0091929784"&gt;Rework - Change the Way You Work
+    Forever&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Soft-Skills-software-developers-manual/dp/1617292397"&gt;Soft Skills - The Software Developer's Life
+    Manual&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Code&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Release-It-Production-Ready-Pragmatic-Programmers/dp/0978739213"&gt;Release
+    It!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577"&gt;Implementing Domain Driven
+    Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/REST-Practice-Hypermedia-Systems-Architecture/dp/0596805829"&gt;REST in
+    Practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742"&gt;Javascript the Good
+    Parts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Core-HTML5-Canvas-Animation-Development/dp/0132761610"&gt;Core HTML5
+    Canvas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Building-Microservices-Sam-Newman/dp/1491950358"&gt;Building Micro
+    Services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Learning-NServiceBus-David-Boike/dp/1782166343"&gt;Learning
+    NServiceBus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><category term="reading"></category></entry><entry><title>A Unit is Not Always a Method or Class</title><link href="/2014/12/a-unit-is-not-always-method-or-class.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/a-unit-is-not-always-method-or-class.html</id><summary type="html">&lt;p&gt;Part three of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+series&lt;/a&gt;.
+The most important concept when coupled with the previous two points -
+not every unit will relate to a method or class.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+    Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+    Use&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Most introductions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part three of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+series&lt;/a&gt;.
+The most important concept when coupled with the previous two points -
+not every unit will relate to a method or class.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+    Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+    Use&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Most introductions into TDD use simple examples. Even the excellent &lt;a href="http://www.amazon.co.uk/Driven-Development-Addison-Wesley-Signature-Series/dp/0321146530"&gt;TDD
+by
+Example&lt;/a&gt;
+uses a value object in terms of Domain Driven Design. Most introductory
+articles on the Internet suffer the same fate. While these are great for
+demonstrations, they don't relate to what most developers need to code
+on a day to day basis. It's around this point where people proclaim that
+the benefit of automated testing (even after the fact) is a waste of
+time.&lt;/p&gt;
+&lt;p&gt;One of my biggest &lt;a href="http://www.stevefenton.co.uk/Content/Blog/Date/201305/Blog/My-Unit-Testing-Epiphany/"&gt;revelations with
+TDD&lt;/a&gt;
+was that each unit does not need to equate to a single method or class.
+For a long time I followed what others did. Each collaborator would be
+injected and replaced with a test double. Each class would have a
+corresponding test file. However as I have &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;stated in the introduction,
+this leads to
+problems&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We should test units of behaviour, not units of implementation. Given we
+know we should be using as &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;few dependencies as
+possible&lt;/a&gt;,
+and we know we should &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;limit
+visibility&lt;/a&gt;,
+each test should be simple to write. As part of the refactor step if we
+choose to introduce a new class that is fine. There is no need in most
+cases to extract this and introduce a test double. Every time this is
+done we tie the test closer and closer to the implementation details.
+Every class having a corresponding test file is wrong.&lt;/p&gt;
+&lt;p&gt;By testing a unit of behaviour we can chop and change the internals of
+the system under test without breaking anything. This allows the
+merciless refactoring automated testing advertises as a benefit.&lt;/p&gt;
+&lt;h5&gt;Aren't you describing integration testing?&lt;/h5&gt;
+&lt;p&gt;No. &lt;a href="http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html"&gt;Tests should be isolated as I've documented
+before&lt;/a&gt;,
+but there is nothing stating they should be isolated from the components
+they work with. If we isolate at the method or class level we make
+testing and refactoring much harder. Due to the term "unit" being so
+closely linked with a class or method, I like the &lt;a href="http://www.amazon.co.uk/Google-Tests-Software-James-Whittaker/dp/0321803027"&gt;naming convention
+Google
+use&lt;/a&gt;
+for their tests - small, medium and large.&lt;/p&gt;
+&lt;p&gt;Additionally an excellent &lt;a href="http://martinfowler.com/bliki/UnitTest.html"&gt;article from Martin Fowler on the subject of
+unit testing&lt;/a&gt; introduces
+two new terms, solitary and sociable tests. Neither one style alone
+works so the type of test you write should be based on context.
+Unfortunately the industry seems to be fixated on solitary testing.&lt;/p&gt;
+&lt;h4&gt;Sociable Tests&lt;/h4&gt;
+&lt;p&gt;Work great at the aggregate root level. Does the object do what we
+expect it to? It can use zero or many collaborators behind the scenes
+but these are implementation details. Here we would limit the use of
+test doubles as much as possible but still have fast, isolated tests. As
+generalization - most automated testing should fall into this category
+as the core domain of your application is likely to have the most amount
+of logic present.&lt;/p&gt;
+&lt;h4&gt;Solitary Tests&lt;/h4&gt;
+&lt;p&gt;Useful at the adapter or system edge. For example, does the controller
+invoke the correct application service? We don't care how it works
+behind the scenes. Anything beyond this service would be a test double.
+These sort of tests are more closely coupled to implementation details
+so should be used sparingly.&lt;/p&gt;
+&lt;h5&gt;Doesn't this lead to huge tests?&lt;/h5&gt;
+&lt;p&gt;No, not really. As you will limit implementation details leaking into
+the public API the use of test doubles will reduce. This will shrink
+test setup and in most cases improve readability. Worrying about large
+tests shouldn't be a problem with this style of testing. You will not
+reduce the amount of tests required, however you will find them to be
+much more stable and resilient than before.&lt;/p&gt;</content><category term="3-steps-code-quality"></category><category term="tdd"></category></entry><entry><title>Factory Obsession</title><link href="/2014/12/factory-obsession.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/factory-obsession.html</id><summary type="html">&lt;p&gt;I have noticed a pattern over the years with developers of which I will
+refer to as factory obsession. Everything is a factory or builder
+object. To some, the use of &lt;code&gt;new&lt;/code&gt; is &lt;strong&gt;banned&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Consider a object that is responsible for some business logic and
+finally saves the result to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have noticed a pattern over the years with developers of which I will
+refer to as factory obsession. Everything is a factory or builder
+object. To some, the use of &lt;code&gt;new&lt;/code&gt; is &lt;strong&gt;banned&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Consider a object that is responsible for some business logic and
+finally saves the result to a persistent store.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/8f4f9dba2320e3d5ad57.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Message here is a value object, however the new can cause an odd fear
+within developers. Therefore a factory is required. Or is it? How can we
+test the repository is updated with the new message without reference
+equality?&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/4b43d5af771b9d13701c.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;An example test in C#, using the Mock framework with this newly
+introduced factory would look like:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/44cc9e70e2f9f5b47528.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;This fear of &lt;code&gt;new&lt;/code&gt; is wrong.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instantiating value types is a good thing.&lt;/li&gt;
+&lt;li&gt;Instantiating entities is a good thing.&lt;/li&gt;
+&lt;li&gt;Instantiating services can depend - if the service is expensive we
+    don't want to create lots of instances on a whim.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here the factory offers nothing but a more strongly coupled solution.&lt;/p&gt;
+&lt;p&gt;If we ignore the factory the test becomes easier to write. To do this
+equality should be correctly implemented upon the message value type. I
+have questioned this in the past but for correct Domain Driven Design
+(DDD) semantics this is a good thing to follow.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/91f346d41ba5055891c4.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;We can take this further though. If we ditch the factory idea all
+together and replace the repository with a fake implementation we can
+have an even cleaner test fixture. You would still need equality but the
+design retains its flexibility.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/a8513ecc8a7790d12ee2.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Factories have their place, like all design patterns, however they
+should be introduced as part of the refactor step in most cases. Hiding
+the new keyword is not a goal. The fact that mocking frameworks default
+to reference equality shouldn't force you to make a more complicated or
+coupled solution to a problem.&lt;/p&gt;</content><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Limit the Amount of Dependencies you Use</title><link href="/2014/12/limit-amount-of-dependencies-you-use.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/limit-amount-of-dependencies-you-use.html</id><summary type="html">&lt;p&gt;Part two of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
+TDD&lt;/a&gt;
+series and ties very closely into step one, limiting the visibility of
+your classes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+    Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+    Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;The more dependencies you use the more your …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part two of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
+TDD&lt;/a&gt;
+series and ties very closely into step one, limiting the visibility of
+your classes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+    Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+    Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;The more dependencies you use the more your tests are coupled to
+implementation.&lt;/p&gt;
+&lt;p&gt;Consider the constructor below.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/78bf9d35ef691f642d29.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Code like this is common and difficult to work with. Each dependency you
+inject requires a mock, stub or fake when writing tests. This couples
+the implementation to the test despite the use of interfaces or abstract
+base classes.&lt;/p&gt;
+&lt;p&gt;Every public dependency here increases the resistance for change. If I
+was to remove the builder and replace with some equivalent code to
+construct a &lt;code&gt;Bar&lt;/code&gt; instance, the test would fail despite being
+functionally equivalent. This is wrong.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.ploeh.dk/2011/02/28/Interfacesareaccessmodifiers/"&gt;A constructor is part of the public API of an object even though this
+is not detailed as part of
+interfaces&lt;/a&gt;
+in languages such as C#/Java. Every collaborator that is provided by a
+constructor should have a reason for being exposed as part of the the
+public API.&lt;/p&gt;
+&lt;h4&gt;What Are Good Dependencies?&lt;/h4&gt;
+&lt;p&gt;Good dependencies are things that are out of your control or process
+such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Databases (repositories, queries)&lt;/li&gt;
+&lt;li&gt;Web Services&lt;/li&gt;
+&lt;li&gt;Third Parties&lt;/li&gt;
+&lt;li&gt;Strategies (anything that needs to change dynamically)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As part three of the series will detail - isolate your tests from these
+sorts of dependencies, don't isolate your code from itself.&lt;/p&gt;
+&lt;h5&gt;Doesn't this mean you end up with God classes?&lt;/h5&gt;
+&lt;p&gt;No. As step one detailed - small, well focused classes are a good thing.
+They just should remain as implementation details.&lt;/p&gt;</content><category term="3-steps-code-quality"></category><category term="tdd"></category></entry><entry><title>Pair Programming vs Pairing</title><link href="/2014/12/pair-programming-vs-pairing.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/pair-programming-vs-pairing.html</id><summary type="html">&lt;p&gt;I'm a fan of pair programming. I owe a lot of this practice to my
+improvement early on in my career. I define pair programming as two
+developers working on a task using one or more machines at the same
+time.&lt;/p&gt;
+&lt;p&gt;I have had some excellent pair programming sessions. I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I'm a fan of pair programming. I owe a lot of this practice to my
+improvement early on in my career. I define pair programming as two
+developers working on a task using one or more machines at the same
+time.&lt;/p&gt;
+&lt;p&gt;I have had some excellent pair programming sessions. I can even remember
+some of them in great detail. Here I went away learning something new,
+solved a difficult problem, or just generally had a fun time.&lt;/p&gt;
+&lt;p&gt;On the other hand I've also had some awful experiences, which
+unfortunately I can still remember. Here my partner wouldn't play the
+role of the driver or navigator correctly, wouldn't be engaged, or just
+generally didn't get into the flow of pair programming.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Team's mandating 100% pair programming is bad&lt;/strong&gt;. Some tasks don't need
+two developers to be working on them concurrently. Here pairing should
+be used.&lt;/p&gt;
+&lt;p&gt;Pairing is two developers working together to solve a task, but doing so
+separately. During pairing regularly communication, design sessions and
+feedback should be used. You can even join up to pair program on complex
+areas. The difference is that unlike pair programming you don't need to
+have two developers working on the same part of a task at all times.
+&lt;strong&gt;Pair programming and pairing are two very distinct concepts&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The key takeaway here is to know when to use pairing over pair
+programming and vice versa. Both have their merits and should be applied
+in the correct context.&lt;/p&gt;</content><category term="developers"></category><category term="retro"></category></entry><entry><title>Stop Making Everything Public</title><link href="/2014/12/stop-making-everything-public.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/stop-making-everything-public.html</id><summary type="html">&lt;p&gt;Part one of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+series&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+    Use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+    Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;We always default to public class when creating a new class. Why? The
+concept of visibility in OO …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part one of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+series&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+    Use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+    Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;We always default to public class when creating a new class. Why? The
+concept of visibility in OO languages appears very early on in
+programming books, yet more often than not most of the classes we create
+default to public visibility.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/simonbrown"&gt;@simonbrown&lt;/a&gt; stated that each time you
+make something public you need to make a donation to charity. In other
+words we should think more about why the class we are making should be
+visible to everyone. I really like this idea that the use of the public
+keyword should be a well thought out decision.&lt;/p&gt;
+&lt;p&gt;Server side development has a part to play in the lack of concern given
+to visibility issues. Library or framework developers on the other hand
+must carefully consider what is part of the public API. Any changes made
+after are considered breaking and require careful consideration. Yet in
+the land of server side development this is see as a non issue. This is
+wrong. If we treat our tests as consumers of our public API, constantly
+updating them or modifying them should be a warning symbol.&lt;/p&gt;
+&lt;p&gt;Use internal or private classes for details and public classes for your
+API. The beauty of this is that TDD drives your public API, which should
+be fairly stable. Internally however you want the ability to refactor
+without a suite of tests breaking, otherwise what is the point of
+writing automated tests?&lt;/p&gt;
+&lt;p&gt;Implementation details are introduced as part of the refactor step.
+Ideally they should never be introduced without a passing test in place,
+as previously the simplest possible thing should have been done.&lt;/p&gt;
+&lt;h4&gt;What Should be Public Then?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Application services (use cases) that adapters talk to.&lt;/li&gt;
+&lt;li&gt;Adapters - controllers, console application, presentation layer.&lt;/li&gt;
+&lt;li&gt;Domain concepts - money or customer for example&lt;/li&gt;
+&lt;li&gt;Strategies - things you need to inject, repositories, third parties&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Doesn't this lead to god classes?&lt;/h5&gt;
+&lt;p&gt;No. As part of the TDD cycle, when refactoring you can extract
+implementation details. There is no reason why the public types should
+suffer.&lt;/p&gt;
+&lt;h5&gt;Doesn't this lead to large tests on the public types?&lt;/h5&gt;
+&lt;p&gt;No. You'll use less test doubles (stubs, mocks, fakes) and in turn
+reduce setup. For any logic that appears to be painful or common you can
+introduce domain concepts which can and should be public. The tests can
+be wrote at this level then. Just find the right test seam.&lt;/p&gt;
+&lt;h5&gt;What is the benefit?&lt;/h5&gt;
+&lt;p&gt;The ability to switch implementation details without breaking public
+functionality. A whole world of refactoring options are available,
+inline method, extract method, extract class, inline class, replace with
+library and so forth. As long as the tests pass, you can be confident.&lt;/p&gt;</content><category term="3-steps-code-quality"></category><category term="tdd"></category></entry><entry><title>Three Steps to Code Quality via TDD</title><link href="/2014/12/three-steps-to-code-quality-via-tdd.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/three-steps-to-code-quality-via-tdd.html</id><summary type="html">&lt;p&gt;Common complaints and problems that I've both encountered and hear other
+developers raise when it comes to the practice of Test Driven
+Development are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Impossible to refactor without all the tests breaking&lt;/li&gt;
+&lt;li&gt;Minor changes require hours of changes to test code&lt;/li&gt;
+&lt;li&gt;Test setup is huge, slow to write and difficult …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Common complaints and problems that I've both encountered and hear other
+developers raise when it comes to the practice of Test Driven
+Development are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Impossible to refactor without all the tests breaking&lt;/li&gt;
+&lt;li&gt;Minor changes require hours of changes to test code&lt;/li&gt;
+&lt;li&gt;Test setup is huge, slow to write and difficult to understand&lt;/li&gt;
+&lt;li&gt;The use of test doubles (mocks, stubs and fakes is confusing)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Over the next three posts I will demonstrate three easy steps that can
+resolve the problems above. In turn this will allow developers to gain
+one of the benefits that TDD promises - the ability to refactor your
+code mercifully in order to improve code quality.&lt;/p&gt;
+&lt;h4&gt;Steps&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+    Public&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+    Use&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+    Class&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Code quality is a tricky subject and highly subjective, however if you
+follow the three guidelines above you should have the ability to
+radically change implementation details and therefore improve code
+quality when needed.&lt;/p&gt;</content><category term="3-steps-code-quality"></category><category term="tdd"></category></entry><entry><title>Dependency Injection (DI) Containers</title><link href="/2014/11/dependency-injection-di-containers.html" rel="alternate"></link><published>2014-11-01T00:00:00+01:00</published><updated>2014-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-11-01:/2014/11/dependency-injection-di-containers.html</id><summary type="html">&lt;h2&gt;Strengths&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;One place for configuration&lt;/dt&gt;
+&lt;dd&gt;Rather than scattered through out the system. Most DI containers
+have some sort of "module" system where you group associated
+components together.&lt;/dd&gt;
+&lt;dt&gt;Scoping&lt;/dt&gt;
+&lt;dd&gt;Different types of lifestyle can be achieved. Per request, per
+thread, singleton and others. Usually other frameworks have the
+ability to plug …&lt;/dd&gt;&lt;/dl&gt;</summary><content type="html">&lt;h2&gt;Strengths&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;One place for configuration&lt;/dt&gt;
+&lt;dd&gt;Rather than scattered through out the system. Most DI containers
+have some sort of "module" system where you group associated
+components together.&lt;/dd&gt;
+&lt;dt&gt;Scoping&lt;/dt&gt;
+&lt;dd&gt;Different types of lifestyle can be achieved. Per request, per
+thread, singleton and others. Usually other frameworks have the
+ability to plug into these containers, meaning such features
+integrate nicely.&lt;/dd&gt;
+&lt;dt&gt;Feature rich&lt;/dt&gt;
+&lt;dd&gt;Included along with the basic DI components is usually a large
+amount of additional features which may or may not be needed.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;hr&gt;
+&lt;h2&gt;Weaknesses&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;Heavyweight&lt;/dt&gt;
+&lt;dd&gt;Usually in the form of frameworks or libraries. DI is a simple
+concept, but such containers can make getting to grips with it
+tremendously difficult.&lt;/dd&gt;
+&lt;dt&gt;Config&lt;/dt&gt;
+&lt;dd&gt;Configuration can be difficult. Rather than just applying DI you
+need to learn the tooling. XML configuration has widely fell out of
+favour, but even code based configurations can be costly to setup.&lt;/dd&gt;
+&lt;dt&gt;Runtime errors&lt;/dt&gt;
+&lt;dd&gt;Any errors that might have occurred at compile time (in a static
+language) now become runtime errors. Circular references are easily
+introduced if you are not careful. Made a mistake during
+configuration? The system will be out of action. If you're lucky the
+stacktrace can point you in the right direction, but usually these
+are vague and/or confusing.&lt;/dd&gt;
+&lt;dt&gt;Magic&lt;/dt&gt;
+&lt;dd&gt;With the container in charge you lose control of what should be an
+easy part of your development process. The more convention based
+configuration you apply, the more chance things can go wrong. Simple
+changes such as multiple implementations of an interface can prove
+difficult to configure without breaking previous conventions. Much
+of the time adding a new class to the system feels risky - you won't
+know until runtime if you've got it working.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;hr&gt;
+&lt;h2&gt;Alternatives&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;KISS&lt;/dt&gt;
+&lt;dd&gt;Keep your dependency wiring at your application root - most likely
+main. This is my preferred, default approach to begin with.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;script src="https://gist.github.com/Finglas/db42de9f16000e638315.js"&gt;&lt;/script&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;KISS - Modules&lt;/dt&gt;
+&lt;dd&gt;If this configuration starts to get out of hand - use modules. Need
+to modify how the kitchen is built? Just open up KitchenModule.cs.
+With direct access to the references of these dependencies you can
+control scoping. For example you can re-use the same kitchen
+instance between house instances.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;script src="https://gist.github.com/Finglas/f93f595960e8158ba8f2.js"&gt;&lt;/script&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Refacator&lt;/dt&gt;
+&lt;dd&gt;As always you can &lt;a href="http://blog.thecodewhisperer.com/2011/12/07/refactor-your-way-to-a-dependency-injection-container/"&gt;refactor towards an DI
+container&lt;/a&gt;
+if you feel the need to use one.&lt;/dd&gt;
+&lt;/dl&gt;</content><category term="programming"></category></entry><entry><title>Ratcheting</title><link href="/2014/11/ratcheting.html" rel="alternate"></link><published>2014-11-01T00:00:00+01:00</published><updated>2014-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-11-01:/2014/11/ratcheting.html</id><summary type="html">&lt;p&gt;Some tasks in software development are mundane such as formatting and
+code conventions. Where possible tooling should take away some of this
+pain, however sometimes you need a developer to take on a task that
+requires a great deal of time and/or effort to complete. Tooling will
+only get …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Some tasks in software development are mundane such as formatting and
+code conventions. Where possible tooling should take away some of this
+pain, however sometimes you need a developer to take on a task that
+requires a great deal of time and/or effort to complete. Tooling will
+only get you so far.&lt;/p&gt;
+&lt;p&gt;An example of this would be declaring that all projects build and
+compile with zero warnings. I've tried this in the past after a team
+retrospective. We had hundreds of errors per project, covering about
+fifteen projects at the time. Spending several weeks of development time
+resolving these would not have be fun nor financially viable. However we
+really wanted to implement this change&lt;/p&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I wrote a single test which would execute as part of the build
+    process that asserted the count of the errors per project.&lt;/li&gt;
+&lt;li&gt;Every now and then whenever I had some slack time (10 mins before a
+    meeting, 30 mins at the end of the day etc...) I would open up a
+    project and fix some errors. Then run the test and try and lower the
+    number of errors it was asserting against until I hit the lower
+    limit.&lt;/li&gt;
+&lt;li&gt;Rinse repeat this process and after a while a project would assert
+    that there are no errors.&lt;/li&gt;
+&lt;li&gt;From here on it was impossible for a developer to commit in a change
+    that would raise a warning.&lt;/li&gt;
+&lt;li&gt;The limit would ensure that during this period no new errors were
+    added, increasing the work load.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After a month or so all the projects reported zero warnings. Going
+forward the test was modified so that new projects added to source
+control would be checked and have the same tests run against them,
+meaning no new projects can have a warning count greater than zero.&lt;/p&gt;
+&lt;p&gt;It turns out this has been documented before - its called
+&lt;a href="http://martinfowler.com/articles/useOfMetrics.html#MetricsAsARatchet"&gt;Ratcheting&lt;/a&gt;.
+While I didn't know it at the time its nice to have a name to use when
+&lt;a href="http://bugroll.com/ratcheting.html"&gt;describing this technique&lt;/a&gt;.&lt;/p&gt;</content><category term="testing"></category><category term="programming"></category></entry><entry><title>Characterization Tests</title><link href="/2014/10/characterization-tests.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/characterization-tests.html</id><summary type="html">&lt;p&gt;Having worked with some truly awful codebases a common problem tends to
+arise every now and then. You need to make a change within some legacy
+component that most likely has limited or no automated tests around.
+This can be a scary process.&lt;/p&gt;
+&lt;p&gt;There are a few techniques you can …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Having worked with some truly awful codebases a common problem tends to
+arise every now and then. You need to make a change within some legacy
+component that most likely has limited or no automated tests around.
+This can be a scary process.&lt;/p&gt;
+&lt;p&gt;There are a few techniques you can use to limit the fear of breaking
+some legacy code such as &lt;a href="http://xunitpatterns.com/Sprout%20Class.html"&gt;sprout methods or
+classes&lt;/a&gt;, however these
+aren't always optimal in all scenarios.&lt;/p&gt;
+&lt;p&gt;Another option is &lt;a href="http://en.wikipedia.org/wiki/Characterization_test"&gt;characterization
+tests&lt;/a&gt; or "what is
+this bit of code actually doing?".&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Start with a simple test such as "ItWorks".&lt;/li&gt;
+&lt;li&gt;Run the test - watch it fail.&lt;/li&gt;
+&lt;li&gt;Using the stacktrace or error reported, write some additional setup.&lt;/li&gt;
+&lt;li&gt;Run the test - watch it get past the previous error.&lt;/li&gt;
+&lt;li&gt;Rinse and repeat step 3 - 4 until green.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;As part of the first step you should keep the initial test as simple as
+possible. For example if an input to the system under test (SUT) takes a
+Foo object, just instantiate Foo. Don't start setting values or fields
+on Foo. Let the failing test indicate what needs to be set such as a
+BarException informing you that "bar must be greater than zero" as part
+of step three.&lt;/p&gt;
+&lt;p&gt;By now you should have exercised a good chunk of the system under test.
+However you may need to add additional tests. For example if the code
+contained an "if" statement, you would need at least two
+characterization tests. A good way to detect how many tests you need is
+a code coverage tool, or manually inserting assertions into the SUT to
+show any missing coverage. Likewise a good manual review is required to
+fully detect any other tests you may have missed such as boundary cases.&lt;/p&gt;
+&lt;p&gt;Now the fun can begin. You can refactor like crazy.&lt;/p&gt;
+&lt;p&gt;Afterwards you should have a nicely refactored component that you can
+easily extend or modify to add your new feature. You also have a solid
+suite of tests to prove you've not broken anything. These tests will
+also document the current behaviour of the system - bugs included.&lt;/p&gt;
+&lt;h2&gt;Examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=J4dlF0kcThQ"&gt;Therapeutic
+    Refactoring&lt;/a&gt; - an
+    excellent video showing this process in action.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.co.uk/Working-Effectively-Legacy-Robert-Martin/dp/0131177052"&gt;Working Effectively with Legacy
+    Code&lt;/a&gt; -
+    a must read book for anyone working with legacy code.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="testing"></category><category term="programming"></category></entry><entry><title>Do it right - violate YAGNI</title><link href="/2014/10/do-it-right-violate-yagni.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/do-it-right-violate-yagni.html</id><summary type="html">&lt;p&gt;You Ain't Gonna Need It or YAGNI is about not writing code that is not
+needed. I've gone on to realise how important this is when it comes to
+&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
+change&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of my biggest pet peeves that I have experienced working on agile
+teams is the excuse of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You Ain't Gonna Need It or YAGNI is about not writing code that is not
+needed. I've gone on to realise how important this is when it comes to
+&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
+change&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of my biggest pet peeves that I have experienced working on agile
+teams is the excuse of YAGNI.&lt;/p&gt;
+&lt;p&gt;YAGNI is no excuse for doing a "proper job". The third step of the TDD
+cycle allows you to take the simplest thing that could possible work and
+refactor it into something more dynamic, flexible or just plain better.&lt;/p&gt;
+&lt;p&gt;If you spend your time writing the simplest thing possible such as brain
+dead procedural statements one after the next, the whole benefit of
+using TDD or writing automated tests is gone. You'd be more than capable
+of doing this yourself.&lt;/p&gt;
+&lt;p&gt;My discover here was simple. Don't skip the refactor part of TDD. Don't
+allow someone to play the YAGNI card. Do it right.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Practice, Practice, Practice</title><link href="/2014/10/practice-practice-practice.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/practice-practice-practice.html</id><summary type="html">&lt;p&gt;The final part of my "&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
+series&lt;/a&gt;"
+has the same conclusion as the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
+posts&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Continuous learning, practice and improvement is required.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Books&lt;/li&gt;
+&lt;li&gt;Blogs&lt;/li&gt;
+&lt;li&gt;Videos&lt;/li&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;Conferences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these mediums help, but as I've said before, practice, practice,
+practice.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The final part of my "&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
+series&lt;/a&gt;"
+has the same conclusion as the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
+posts&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Continuous learning, practice and improvement is required.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Books&lt;/li&gt;
+&lt;li&gt;Blogs&lt;/li&gt;
+&lt;li&gt;Videos&lt;/li&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;Conferences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All of these mediums help, but as I've said before, practice, practice,
+practice.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Reinvent the Wheel, Often</title><link href="/2014/10/reinvent-wheel-often.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/reinvent-wheel-often.html</id><summary type="html">&lt;p&gt;We are often never told to reinvent the wheel. In other words, if your
+job is solve problems within Domain X you shouldn't spend your time
+recreating or solving problems that fall outside of this domain.&lt;/p&gt;
+&lt;p&gt;For production code, this I agree with this statement fully. Software
+development is hard …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We are often never told to reinvent the wheel. In other words, if your
+job is solve problems within Domain X you shouldn't spend your time
+recreating or solving problems that fall outside of this domain.&lt;/p&gt;
+&lt;p&gt;For production code, this I agree with this statement fully. Software
+development is hard enough. The last thing we want is to waste resources
+such as time or money on anything we can get away with not implementing.
+For example, creating your own web framework is a project within itself.
+All you'll end up with is a slow, buggy, badly implemented version of a
+web framework that happens to power your domain. Sadly I have been on
+the receiving end of such decisions.&lt;/p&gt;
+&lt;p&gt;There are two times however, when reinventing the wheel is a good thing.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can't get the product off the shelf&lt;/li&gt;
+&lt;li&gt;Learning or personal benefit&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chances there is no web framework, database client, caching layer or so
+forth that you can use is very slim. Some systems become so bespoke or
+scale to such volumes that recreating such components makes sense. These
+are the Netflix/Facebook/Google of the world. Most enterprise software
+will never reach a slither of this sort of scale.&lt;/p&gt;
+&lt;p&gt;The biggest benefit of recreating well known, solved solutions is the
+vast amount of learning and knowledge you will obtain. In the past I
+have re-invented numerous wheels, but each time taken away something of
+value.&lt;/p&gt;
+&lt;p&gt;Systems that seem simple at first such as static website generator, turn
+out to be incredibly complex once you understand the full set of
+scenarios and edge cases you must handle. The key point here is these
+wheels, never make it into production for the reasons detailed
+previously.&lt;/p&gt;
+&lt;p&gt;In turn you will come to appreciate library and framework developers if
+you can fight the urge to resist &lt;a href="http://en.wikipedia.org/wiki/Not_invented_here"&gt;Not Invented Here
+Syndrome&lt;/a&gt;. Their full
+time project is the delivery of that solution. They have the time to
+solve all the edge cases you don't. Not to mention the vast amount of
+other users that will have debugged and improved the solution going
+forwards. By not reinventing wheels you get as much time as possible to
+focus on delivering your solution to the domain problem in question,
+which after all is your job.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>DDD Validation</title><link href="/2014/09/ddd-validation.html" rel="alternate"></link><published>2014-09-01T00:00:00+02:00</published><updated>2014-09-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-09-01:/2014/09/ddd-validation.html</id><summary type="html">&lt;p&gt;Validation within an application (specifically in terms of &lt;a href="http://en.wikipedia.org/wiki/Domain-driven_design"&gt;Domain
+Driven Design - DDD&lt;/a&gt;)
+can be solved in a variety of ways.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A validate method on the entity/value type in question&lt;/li&gt;
+&lt;li&gt;An IsValid property/accessor on the entity/value type in question&lt;/li&gt;
+&lt;li&gt;A separate service could be used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Validate Method&lt;/h4&gt;
+&lt;p&gt;Adding …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Validation within an application (specifically in terms of &lt;a href="http://en.wikipedia.org/wiki/Domain-driven_design"&gt;Domain
+Driven Design - DDD&lt;/a&gt;)
+can be solved in a variety of ways.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A validate method on the entity/value type in question&lt;/li&gt;
+&lt;li&gt;An IsValid property/accessor on the entity/value type in question&lt;/li&gt;
+&lt;li&gt;A separate service could be used&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Validate Method&lt;/h4&gt;
+&lt;p&gt;Adding a validate method would work, but the flaw with this approach is
+that you lack any context of what is happening to the object in
+question.&lt;/p&gt;
+&lt;h4&gt;Validate Flag&lt;/h4&gt;
+&lt;p&gt;Some sort of flag on the object that denotes whether or not the object
+is in a valid state is undesirable. Firstly it forces the developer to
+ensure they check this at the correct time. If the object is invalid,
+exactly what do you do at this point? This approach is often used with a
+combination of a validate method that returns the exact error messages.&lt;/p&gt;
+&lt;h4&gt;Validator Services&lt;/h4&gt;
+&lt;p&gt;A separate service seems less than ideal at first when you consider
+developing a richer domain model, but this solution has numerous
+benefits. Firstly unlike the two solutions above you always have the
+context in which validation is being performed. For example, if you are
+saving a customer you will most likely want to perform different
+validation to what you would perform when loading up an aggregate.&lt;/p&gt;
+&lt;p&gt;An additional point to consider is that most validation is not business
+logic. In other words, &lt;a href="http://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html"&gt;checking for null references is not a business
+concern. Therefore separating this from your domain objects makes a lot
+of
+sense.&lt;/a&gt;
+The only logic the domain objects should contain is business logic.&lt;/p&gt;
+&lt;p&gt;As each service is a separate object, you gain the benefits of the
+single responsibility principle (SRP). Meaning testing, development and
+future changes are easier.&lt;/p&gt;
+&lt;h4&gt;Example&lt;/h4&gt;
+&lt;script src="https://gist.github.com/Finglas/e522caca787c75cdea0f.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;The beauty here is that each validator (a simple function in this case)
+can be used in the correct context. E.g. when the PersonController POST
+handler is invoked, we use the person saving validator.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Developer Diaries</title><link href="/2014/09/developer-diaries.html" rel="alternate"></link><published>2014-09-01T00:00:00+02:00</published><updated>2014-09-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-09-01:/2014/09/developer-diaries.html</id><summary type="html">&lt;p&gt;A few weeks back I stumbled across a tweet which I unfortunately cannot
+find to give credit to. It talked about the benefit of keeping a
+developer diary.&lt;/p&gt;
+&lt;p&gt;At the same time I was reading &lt;a href="http://www.amazon.co.uk/Getting-Things-Done-Stress-free-Productivity/dp/0749922648"&gt;Getting Things Done
+(GTD)&lt;/a&gt;.
+I felt inspired to take note of everything related to development …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few weeks back I stumbled across a tweet which I unfortunately cannot
+find to give credit to. It talked about the benefit of keeping a
+developer diary.&lt;/p&gt;
+&lt;p&gt;At the same time I was reading &lt;a href="http://www.amazon.co.uk/Getting-Things-Done-Stress-free-Productivity/dp/0749922648"&gt;Getting Things Done
+(GTD)&lt;/a&gt;.
+I felt inspired to take note of everything related to development that I
+do during my day to day time. This would satisfy the criteria I had for
+my GTD system, along with trying to emulate the success the original
+tweet was referring to.&lt;/p&gt;
+&lt;p&gt;I don't have a fancy system. Rather I have a text file that is
+distributed between the numerous desktops and laptops I have access to.
+Here the file is synced, so I should always be up to date. Dropbox
+handles this for me.&lt;/p&gt;
+&lt;p&gt;Each day I simply make a note of anything I think "&lt;em&gt;I must remember
+that&lt;/em&gt;" or anything that happens to be useful, interesting or new. There
+is no complex system to this in order to keep in aligned with GTD, new
+points are simply appended at the bottom of the file. At the end of each
+week I simply group up related notes. For example, if I've got a few
+bullet points about databases, I move these to fit under a "Database"
+heading. &lt;a href="http://blog.shaunfinglas.co.uk/2016/02/why-you-need-developer-diary.html"&gt;This system works for now, though I might have to re-asses
+this in the
+future&lt;/a&gt;.
+An example of the file is below.&lt;/p&gt;
+&lt;h4&gt;Example&lt;/h4&gt;
+&lt;script src="https://gist.github.com/Finglas/7fd33b6aa2738f293c91.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;The most surprising thing about this, is that even on a dull day I
+absorb a lot of "stuff" related to development. Equally surprising is
+how awful my memory is regarding it. If I skim across the document now,
+I'm alarmed at the stuff that I would have forgotten had I not taken a
+note. It's quite possible that I would remember some of this information
+in the long term, but regular skim readings of the diary is proving very
+helpful.&lt;/p&gt;</content><category term="retro"></category><category term="tutorial"></category></entry><entry><title>Program for Change</title><link href="/2014/08/program-for-change.html" rel="alternate"></link><published>2014-08-01T00:00:00+02:00</published><updated>2014-08-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-08-01:/2014/08/program-for-change.html</id><summary type="html">&lt;p&gt;We should program for change AKA the &lt;a href="http://en.wikipedia.org/wiki/Open/closed_principle"&gt;Open/Closed
+Principle&lt;/a&gt;. In my
+opinion, the OCP is one of the lesser respected SOLID principles. One of
+my biggest, and earliest failures fresh out of university was ignoring
+this concept.&lt;/p&gt;
+&lt;p&gt;At the time I was applying
+&lt;a href="http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;YAGNI&lt;/a&gt; to some
+code myself and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;We should program for change AKA the &lt;a href="http://en.wikipedia.org/wiki/Open/closed_principle"&gt;Open/Closed
+Principle&lt;/a&gt;. In my
+opinion, the OCP is one of the lesser respected SOLID principles. One of
+my biggest, and earliest failures fresh out of university was ignoring
+this concept.&lt;/p&gt;
+&lt;p&gt;At the time I was applying
+&lt;a href="http://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it"&gt;YAGNI&lt;/a&gt; to some
+code myself and a couple of other developers were working on. After all
+agile methodologies promote this concept heavily. This made sense to me.
+My solution was to solve the problem with the minimal amount of fuss,
+however in doing so I strongly coupled the code we produced with the
+direct business requirements.&lt;/p&gt;
+&lt;p&gt;The requirements stated that we would have three different types
+expenses. So I promoted that we model these three types of expenses
+directly. The UI knew about these expenses. The database knew about
+these expenses. The domain logic knew about these expenses.&lt;/p&gt;
+&lt;p&gt;Everything worked well for a while. We finished early. We wrote just the
+code we needed. I was happy. Until the business requirements changed.
+The three types of expenses became four, then three again, then one was
+replaced completely. Bugger.&lt;/p&gt;
+&lt;p&gt;The code was unusable. Everything knew just enough to get by, so when
+the change came in, everything needed to change. My team was confident
+this would be OK. After a few hours of analysis, we concluded the code
+was a train wreck. We'd need to restart from the beginning in order to
+make the proper changes we wanted. I was pretty gutted, however I
+learned a very important lesson.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;YAGNI is about features, not code.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If I was to complete this feature again, I would still start with the
+simplest thing that could possibly work. Most likely the code would
+explicitly know about each type of expense, yet my tests would be wrote
+in an agnostic manner. I would still apply YAGNI, but at a feature
+level. In other words, I wouldn't write an expense logger, if all we
+need to do is validate and calculate expense totals.&lt;/p&gt;
+&lt;p&gt;During each refactor stage of the TDD cycle I would remove any specific
+expense knowledge. After a while I would end up with the various parts
+of the application working with a generic expense algorithm. The tests
+would drive us towards how the algorithm would work.&lt;/p&gt;
+&lt;p&gt;The beauty here is that if a new expense was to be introduced, this
+change would be data driven. We would be able to give this the business
+for "free".&lt;/p&gt;
+&lt;p&gt;I still regret this mistake, but this lesson has lived with for some
+time and has proved to be a valuable experience.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Stop.Mocking.EVERYTHING</title><link href="/2014/08/stopmockingeverything.html" rel="alternate"></link><published>2014-08-01T00:00:00+02:00</published><updated>2014-08-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-08-01:/2014/08/stopmockingeverything.html</id><summary type="html">&lt;p&gt;I've flip flopped on how to use mock objects since 2008. It's took me
+nearly five years to finally claim to have a solid, practical answer on
+what is in my opinion, their correct use.&lt;/p&gt;
+&lt;h4&gt;Mock Everything&lt;/h4&gt;
+&lt;p&gt;Some developers told me to mock everything. Every. Single. Collaborator.
+I wasn't sure …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I've flip flopped on how to use mock objects since 2008. It's took me
+nearly five years to finally claim to have a solid, practical answer on
+what is in my opinion, their correct use.&lt;/p&gt;
+&lt;h4&gt;Mock Everything&lt;/h4&gt;
+&lt;p&gt;Some developers told me to mock everything. Every. Single. Collaborator.
+I wasn't sure about this approach.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My tests felt too brittle - tied to implementation details.&lt;/li&gt;
+&lt;li&gt;My tests felt like a duplication of my production code.&lt;/li&gt;
+&lt;li&gt;Your test count rises rapidly.&lt;/li&gt;
+&lt;li&gt;This style of testing will slow you down - more to
+    write/execute/debug.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Mock Nothing&lt;/h4&gt;
+&lt;p&gt;Some developers told me to mock nothing. Sometimes I never used mocks. I
+wasn't sure about this approach either.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;My tests felt too loose - it was easy to introduce bugs or defects.&lt;/li&gt;
+&lt;li&gt;My production code suffered as I introduced accessors only for
+    testing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No wonder I was confused. Neither approach seemed to be comfortable with
+me.&lt;/p&gt;
+&lt;h4&gt;Solution&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Use mocks for commands&lt;/li&gt;
+&lt;li&gt;Use stubs for queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This halfway house is built around the idea of &lt;a href="http://martinfowler.com/bliki/CommandQuerySeparation.html"&gt;command and query
+separation&lt;/a&gt;
+as detailed by &lt;a href="http://blog.ploeh.dk/2013/10/23/mocks-for-commands-stubs-for-queries/"&gt;Mark
+Seeman&lt;/a&gt;.
+This simple principle makes a lot of sense, and finally helped me
+realise how best to use stubs and mocks.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Any commands (methods that have no return type) should have a mock
+    object verifying their use if they are architecturally significant.&lt;/li&gt;
+&lt;li&gt;Any queries (methods that have return types) should have a stub
+    object that is returned if their use is architecturally significant.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If the collaborator is not significant, or in other words is simply an
+implementation detail then no mock or stub is needed. That's right, just
+new up (or instantiate) your dependency there and then. This allows you
+to refactor the internals aggressively, without the fear of breaking or
+rewriting tests.&lt;/p&gt;
+&lt;p&gt;This approach has served me well for a while now, and in fact can be
+achieved even without the need to use a complicated mocking framework,
+though that will be the subject of a future post.&lt;/p&gt;</content><category term="programming"></category><category term="retro"></category><category term="tdd"></category></entry><entry><title>Dont Tie Yourself to a Framework</title><link href="/2014/07/dont-tie-yourself-to-framework.html" rel="alternate"></link><published>2014-07-22T19:19:00+02:00</published><updated>2014-07-22T19:19:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-07-22:/2014/07/dont-tie-yourself-to-framework.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;
+Programming is great
+
+&lt;/li&gt;
+&lt;li&gt;
+Software development is the crap bit. You'll spend more time
+configuring, integrating and faffing rather than writing logic most of
+the time.
+
+&lt;/li&gt;
+&lt;li&gt;
+Test Driven Development makes development easier as it forces you to
+decouple your code.
+
+-   Your core logic should be pure, dependency free C\#, Java, Python …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;
+Programming is great
+
+&lt;/li&gt;
+&lt;li&gt;
+Software development is the crap bit. You'll spend more time
+configuring, integrating and faffing rather than writing logic most of
+the time.
+
+&lt;/li&gt;
+&lt;li&gt;
+Test Driven Development makes development easier as it forces you to
+decouple your code.
+
+-   Your core logic should be pure, dependency free C\#, Java, Python
+    etc.
+-   Your frameworks and libraries should be on the edge of the system.
+
+&lt;/li&gt;
+&lt;li&gt;
+Most people do this for some of their code, e.g. your data access.
+
+&lt;/li&gt;
+&lt;li&gt;
+What about the other parts of a system?
+
+&lt;/li&gt;
+-   Web frontend
+-   REST api's
+-   Console applications
+-   Desktop clients
+
+&lt;li&gt;
+Why should we couple our applications with these layers?
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Hexagonal Architecture&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+[Hexagonal
+Architecture](http://alistair.cockburn.us/Hexagonal+architecture) is a
+solution to limit coupling
+
+&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+Easily switch out your delivery mechanism, e.g. test runner adapter for
+testing, HTML adapter for production.
+
+&lt;/li&gt;
+&lt;li&gt;
+[Great
+example](http://silkandspinach.net/2005/03/22/the-middle-hexagon-should-be-independent-of-the-adapters/)
+from Kevin Rutherford.
+
+&lt;/li&gt;
+&lt;li&gt;
+[Excellent video](https://www.youtube.com/watch?v=WpkDN78P884) by Uncle
+Bob though terminology differs.
+
+&lt;/li&gt;
+&lt;li&gt;
+Implementation details should be hidden behind adapters.
+
+&lt;/li&gt;
+-   Tested manually in the majority of cases
+-   Few integration tests for comfort
+-   Third party code after all.
+
+&lt;li&gt;
+Inner hexagon should only communicate via ports (interfaces) - keeps
+domain pure.
+
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Why?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+Last few major projects involved with were due to the delivery mechanism
+becoming out of date.
+
+&lt;/li&gt;
+-   Flash to Web
+-   Web to Mobile
+
+&lt;li&gt;
+Easier to test
+
+&lt;/li&gt;
+&lt;li&gt;
+Easier to change
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Why not?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;CRUD apps - sometimes it's just CRUD.&lt;/li&gt;
+&lt;li&gt;Lightweight projects might not need hexagonal architecture&lt;/li&gt;
+&lt;li&gt;SOA or Microservices could mean hexagonal architecture actually
+    introduces overhead or complexity - judge on context.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="programming"></category></entry><entry><title>I Need to Stop Misusing Namespaces</title><link href="/2014/07/i-need-to-stop-misusing-namespaces.html" rel="alternate"></link><published>2014-07-01T00:00:00+02:00</published><updated>2014-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-07-01:/2014/07/i-need-to-stop-misusing-namespaces.html</id><summary type="html">&lt;p&gt;At the recent &lt;a href="https://skillsmatter.com/conferences/6198-nsbcon"&gt;NSBCon&lt;/a&gt;
+one interesting question that came about was how to structure a project.
+The panel consisting of various speakers had no answer, after all this
+is dependant upon the project in question. Therefore there is no right
+or wrong answer.&lt;/p&gt;
+&lt;p&gt;However one point they were in unison …&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the recent &lt;a href="https://skillsmatter.com/conferences/6198-nsbcon"&gt;NSBCon&lt;/a&gt;
+one interesting question that came about was how to structure a project.
+The panel consisting of various speakers had no answer, after all this
+is dependant upon the project in question. Therefore there is no right
+or wrong answer.&lt;/p&gt;
+&lt;p&gt;However one point they were in unison about was splitting the domain and
+technical implementation of a project apart by the correct use of in
+namespaces.&lt;/p&gt;
+&lt;p&gt;This is not the first time I've come across this, but I find myself
+breaking this principle on a regular basis. For example a typical
+project I work on looks like the following.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/0b32973c8a339f283c60.js"&gt;&lt;/script&gt;
+
+&lt;h4&gt;Problems&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;The namespace reflects a technical implementation detail, and not
+    the problem domain.&lt;/li&gt;
+&lt;li&gt;Using Foo as an example, here the namespace is duplicated within the
+    name of the types, which in turn defeats the point of namespaces.&lt;/li&gt;
+&lt;li&gt;Another issue is that the types can be much longer than they need to
+    be, which is often a criticism of enterprise software development,
+    when the names of objects roll off the screen because they contain
+    so many patterns or conventions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Solution&lt;/h4&gt;
+&lt;p&gt;Use namespaces for related domain responsibilities. In turn, group
+together the objects and types that are used together.&lt;/p&gt;
+&lt;p&gt;An example of a better solution therefore would be:&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/b29e133fad03dd9430a7.js"&gt;&lt;/script&gt;
+
+&lt;h5&gt;Benefits&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Things that change at the same rate, would live logically next to
+    things that also need changes. In other words if I update the
+    FooViewModel, chances are I'll need to update views or controllers.&lt;/li&gt;
+&lt;li&gt;Less typing if you don't suffer a namespace clash!&lt;/li&gt;
+&lt;li&gt;You can still prefix the namespace where required, e.g.
+    Foo.Controller if you have a clash or prefer the readability.&lt;/li&gt;
+&lt;li&gt;Shorter type names!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While this is the ideal way of structuring our applications it's not
+always possible. Some coding conventions actually encourage the first
+example, and depending on the configurability of certain frameworks this
+may prove difficult. That aside, I'll be making a strong push towards
+structuring my projects correctly going forwards.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>SOA Done Badly vs SOA Done Right</title><link href="/2014/07/soa-done-badly-vs-soa-done-right.html" rel="alternate"></link><published>2014-07-01T00:00:00+02:00</published><updated>2014-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-07-01:/2014/07/soa-done-badly-vs-soa-done-right.html</id><summary type="html">&lt;p&gt;I was under the assumption I had been doing SOA for over 3 years.
+Previously I have had services which did stuff, these talked to other
+services which did other stuff and so on. We would group services around
+functionality.&lt;/p&gt;
+&lt;p&gt;We would break these services down if they got too …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I was under the assumption I had been doing SOA for over 3 years.
+Previously I have had services which did stuff, these talked to other
+services which did other stuff and so on. We would group services around
+functionality.&lt;/p&gt;
+&lt;p&gt;We would break these services down if they got too big to handle. Behind
+the scenes the services would talk to a single database. When it came to
+creating an application or system, these front end applications would
+invoke various services, which in turn invoked other services. This
+layered style of architecture worked for a while, so everything appeared
+to be fine.&lt;/p&gt;
+&lt;p&gt;The overall architecture looked like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Bad example of
+SOA" src="http://4.bp.blogspot.com/-c5WU2EqQCtY/U8uM98_qD1I/AAAAAAAAAEs/dD5OlDqWdr4/s420/bag.soa.png" title="Bad example of SOA. Messy."&gt;
+Over time I began to question the benefit of this style.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I spent more time coding than solving business problems&lt;/li&gt;
+&lt;li&gt;I spent more time debugging than solving problems&lt;/li&gt;
+&lt;li&gt;I spent more time fixing broken deploys than solving problems&lt;/li&gt;
+&lt;li&gt;I spent more time writing infrastructure (to glue services together)
+    than solving problems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;/p&gt;
+It turns out this is actually quite a common style to SOA. But there are
+some serious flaws with this layered approach.&lt;/p&gt;
+&lt;h4&gt;Problems&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;If a service fails, the whole system is pretty much broken.&lt;/li&gt;
+&lt;li&gt;If the database breaks, the whole system is pretty much broken.&lt;/li&gt;
+&lt;li&gt;If a service is slow or breaks SLA, the whole system is pretty much
+    broken.&lt;/li&gt;
+&lt;li&gt;In order to decouple between services, you need complex, costly
+    abstractions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+&lt;h4&gt;Solution&lt;/h4&gt;
+&lt;p&gt;A solution to solve these problems is to partition the domain
+boundaries, vertically. The overall architecture would look like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Good example of
+SOA" src="http://4.bp.blogspot.com/-OiuVjYL4pqk/U8uI0vIxAKI/AAAAAAAAAEg/Q4Ct8linDEk/s420/good.soa.png" title="A good example of SOA"&gt;&lt;/p&gt;
+&lt;h5&gt;Details&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Each domain could consist of one or more "services".&lt;/li&gt;
+&lt;li&gt;Each with their own choice of data store, e.g. SQL, NOSQL, file
+    system etc...&lt;/li&gt;
+&lt;li&gt;No domain can directly communicate with another domain.&lt;/li&gt;
+&lt;li&gt;If they do need to communicate, then the pub/sub model would be used
+    or an ansyc command could be issued. Think .NET events or the event
+    design pattern but across processes, not objects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Benefits&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;Each service could fail and the impact would be minimal, simply
+    rollback the deploy or fix the problem. Once the service comes back
+    to life any commands or events that have not yet been processed
+    would be handled. Each service would have their own message queues
+    to persist commands/events.&lt;/li&gt;
+&lt;li&gt;Services could be re-wrote and distributed easily, proving they are
+    highly decoupled.&lt;/li&gt;
+&lt;li&gt;No complex infrastructure, e.g. no need to map between objects
+    because the service owns the whole stack. The same model could be
+    used across partitions for example.&lt;/li&gt;
+&lt;li&gt;Works really well with agile development methodologies, e.g.
+    vertical slicing of stories.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There is more to this introduction. Microservices are a hot new topic.
+Being defined as "SOA done correctly". Using the second example, within
+each domain there could be multiple services (or autonomous components)
+that coexist. The likes of &lt;a href="http://www.udidahan.com/2012/06/23/ui-composition-techniques-for-correct-service-boundaries/"&gt;UI
+composition&lt;/a&gt;
+to enable applications to be created from services is another great
+benefit. This enables so called "mashups".&lt;/p&gt;
+&lt;p&gt;I'll expand on these topics over time, but I am certain this method of
+vertically slicing services based upon business capabilities will be my
+default approach going forward.&lt;/p&gt;</content><category term="architecture"></category><category term="programming"></category></entry><entry><title>The Importance of Tools</title><link href="/2014/07/the-importance-of-tools-one-of-most.html" rel="alternate"></link><published>2014-07-01T00:00:00+02:00</published><updated>2014-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-07-01:/2014/07/the-importance-of-tools-one-of-most.html</id><summary type="html">&lt;p&gt;One of the most influential books I've read on software development has
+been &lt;a href="http://www.amazon.co.uk/gp/product/020161622X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=020161622X&amp;amp;linkCode=as2&amp;amp;tag=bloshafin-21"&gt;The Pragmatic
+Programmer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of the key points raised within the book is that of automation and
+tooling. For example, automating the build process is a very worthwhile
+undertaking. You should be able to check out some …&lt;/p&gt;</summary><content type="html">&lt;p&gt;One of the most influential books I've read on software development has
+been &lt;a href="http://www.amazon.co.uk/gp/product/020161622X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=020161622X&amp;amp;linkCode=as2&amp;amp;tag=bloshafin-21"&gt;The Pragmatic
+Programmer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One of the key points raised within the book is that of automation and
+tooling. For example, automating the build process is a very worthwhile
+undertaking. You should be able to check out some code and execute a
+script that will set up your machine, compile, test and deploy the code
+base in question.&lt;/p&gt;
+&lt;p&gt;The key benefit of automating even trivial tasks such as automatically
+pulling down the latest code daily is that unlike developers, automating
+tooling will never perform the task wrong. Nor will they forget to do
+it. Ultimately this prevents the dreaded "works on my machine" issue.&lt;/p&gt;
+&lt;p&gt;I've become such a fan of this approach to automating away any manual
+steps that some of the &lt;a href="https://github.com/Finglas/commit.cmd"&gt;most used code I've
+written&lt;/a&gt; has been small scripts
+that execute hundreds of times a day. From a development point of view,
+the likes of good practices, SOLID, OO etc.. are usually void, such
+scripts simply get the job done, allowing myself to focus on the more
+important tasks such as delivering business value else where.&lt;/p&gt;
+&lt;p&gt;There is not a lot else to say on the subject of tooling. The best tools
+should be composable, proven solutions where possible. In other words,
+rather than something that must be configured via a GUI, opt for
+something that can be automated. Also ensure that you are not
+re-inventing the wheel unnecessarily. Save your time and energy on
+creating the custom tooling you can't get "off the shelf".&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Flexible Selenium Tests via Page Objects</title><link href="/2014/05/flexible-selenium-tests-via-page-objects.html" rel="alternate"></link><published>2014-05-01T00:00:00+02:00</published><updated>2014-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-05-01:/2014/05/flexible-selenium-tests-via-page-objects.html</id><summary type="html">&lt;p&gt;A fast, automated suite of unit and integration tests are not enough. At
+some point you'll need to test your presentation logic. Ideally your
+domain/business/game logic is stubbed so all you'll need to do at this
+point is check that the presentation is complete. For example, does view …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A fast, automated suite of unit and integration tests are not enough. At
+some point you'll need to test your presentation logic. Ideally your
+domain/business/game logic is stubbed so all you'll need to do at this
+point is check that the presentation is complete. For example, does view
+X load view Y? Does an error message appear when an error is raised?&lt;/p&gt;
+&lt;p&gt;With web sites and web applications the standard tool to use is the
+excellent &lt;a href="http://docs.seleniumhq.org/"&gt;Selenium&lt;/a&gt;. The problem with UI
+tests in Selenium is they are often slower to write. Not only this the
+maintenance cost of such tests can often be much more expensive that
+other styles of tests. If the cost of such tests is high, the likely
+hood of developers writing UI tests is low. In my experience there are
+three types of UI tests in use.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;Low Level&lt;/h3&gt;
+&lt;p&gt;Here UI tests are wrote directly against Selenium. This low level
+approach means tests are scattered with assertions and UI details.
+For example element locators such as divs and ids will be used with
+methods on the Selenium driver in question. Despite this low level
+approach such tests are often quick and dirty to create. The
+downside to this style of test is that as the volume of tests
+increase, the cost of maintenance can become very costly. A simple
+UI change can cause a ripple that will cascade through many test
+cases.&lt;/p&gt;
+&lt;p&gt;&lt;script src="https://gist.github.com/Finglas/aae1cd850fc37403dbb8.js"&gt;&lt;/script&gt;
+-   ### Browser Abstraction&lt;/p&gt;
+&lt;p&gt;The next level up from direct use of Selenium's driver is to create
+a facade around the browser or UI itself. For example rather than
+duplicating the steps to log in within each test you could create a
+method &lt;code&gt;PerfromLogin(...)&lt;/code&gt; which each test could make use of.
+Another example would be abstracting messier details of UI
+automation such as clicking a button and waiting for an event. This
+style of test has the benefits of low level tests but gives some
+flexibility when it comes to maintenance. The downside with this
+facade approach is that UI changes can still cause havoc, as each
+test in question will be tied to the UI elements directly.&lt;/p&gt;
+&lt;p&gt;&lt;script src="https://gist.github.com/Finglas/1063a11c30bc3e7290d8.js"&gt;&lt;/script&gt;
+-   ### Page Objects&lt;/p&gt;
+&lt;p&gt;Taking the browser abstraction to the next level, &lt;a href="http://code.google.com/p/selenium/wiki/PageObjects"&gt;page objects are
+an abstraction over the UI
+itself&lt;/a&gt;. These
+high level tests are wrote in terms of the domain, rather than
+implementation details. There is of course one place where each page
+object is bound to a UI element, but as each test uses an object,
+rather than element locators you only have to change one place when
+your UI changes. Unlike the previous two styles of tests, page
+objects incur the most amount of code, though for more than a
+handful of tests this style of UI acceptance test will pay for
+itself in no time.&lt;/p&gt;
+&lt;p&gt;&lt;script src="https://gist.github.com/Finglas/6d512240848359c12bc2.js"&gt;&lt;/script&gt;
+With the above example the &lt;code&gt;LogInPage&lt;/code&gt; object will be bound to UI
+locators. This will vary based on programming language, but using
+C# as an example each property would have a specific attribute to
+link up each element. The domain specific methods such as &lt;code&gt;Username&lt;/code&gt;
+will fill in the correct UI element with the provided value. By
+writing the objects in a fluent interface style, you can achieve QA
+friendly tests which are easy to debug when they go wrong.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A more fleshed out &lt;a href="https://github.com/Finglas/Playground/blob/master/PageObjects/PageObjects/PageObjects.cs"&gt;example of the Page Object pattern can be found on
+Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Choose a style based on context. Given more than a handful of tests then
+page objects are worth the extra cost, the ability to evolve your UI
+while maintaining end to end tests is worth some additional complexity
+at first.&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Learning Tests</title><link href="/2014/05/learning-tests.html" rel="alternate"></link><published>2014-05-01T00:00:00+02:00</published><updated>2014-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-05-01:/2014/05/learning-tests.html</id><summary type="html">&lt;p&gt;At the last &lt;a href="http://www.agilestaffordshire.org/"&gt;Agile Staffordshire&lt;/a&gt; I
+attended &lt;a href="http://www.agilestaffordshire.org/agile/january-2014-kata-with-constraints/"&gt;the task was to complete the string calculator with
+constraints&lt;/a&gt;.
+The group worked in pairs and everything was running smoothly. Until I
+heard a few guys behind struggling with something.&lt;/p&gt;
+&lt;p&gt;I'd worked with one of the developers previously, so they called me over …&lt;/p&gt;</summary><content type="html">&lt;p&gt;At the last &lt;a href="http://www.agilestaffordshire.org/"&gt;Agile Staffordshire&lt;/a&gt; I
+attended &lt;a href="http://www.agilestaffordshire.org/agile/january-2014-kata-with-constraints/"&gt;the task was to complete the string calculator with
+constraints&lt;/a&gt;.
+The group worked in pairs and everything was running smoothly. Until I
+heard a few guys behind struggling with something.&lt;/p&gt;
+&lt;p&gt;I'd worked with one of the developers previously, so they called me over
+to take a look. What he found was pretty shocking - they had found a bug
+in the .NET framework. The string class of all things. Bugs exist in all
+code. Bugs in the substring method though are probably rarer given how
+exhaustively used this particular bit of code is.&lt;/p&gt;
+&lt;p&gt;The problem was how they expected the method to behave. When creating a
+substring they were getting confused with how the offests worked.&lt;/p&gt;
+&lt;p&gt;This is an easy mistake. Different languages or frameworks can have
+different methods to do similar tasks. I take no shame in not knowing of
+the top of my head whether the offest of the substring method is an
+offset of the index, or an offset from the start of the string.&lt;/p&gt;
+&lt;p&gt;I managed to spot the issue very quickly but never let on. Instead I
+decided to share a technique which I use regularly to great effect.&lt;/p&gt;
+&lt;p&gt;Rather than painfully using the debugger and stepping through the code
+line by line I suggested he write a simple test around the single line
+of code they were convinced was misbehaving.&lt;/p&gt;
+&lt;p&gt;After a couple of more tests it was clear how the substring method
+worked in .NET. Once this was cleared up, we deleted the tests we just
+wrote and modified the production code to use the correct offset. This
+whole process took less than sixty seconds.&lt;/p&gt;
+&lt;p&gt;I explained afterwards that such a technique of writing &lt;a href="http://blog.thecodewhisperer.com/2011/12/14/when-to-write-learning-tests/"&gt;learning
+tests&lt;/a&gt;
+or scaffholding tests is incredibly valuable. The feedback cycle here is
+very quick. Quicker than explaining to another developer what is wrong;
+Quicker than "Googling" the problem; Quicker than looking at the
+reference implementation and certainly quicker than using the debugger.&lt;/p&gt;
+&lt;p&gt;My rules are pretty explicit when dealing with learning tests. They
+should be short lived. Testing implementation details is often a bad
+idea, but that is the whole point of such style of testing. Therefore if
+you do decided to check these tests in tagging them so they are only run
+as part of CI builds is worthwhile. In other words, just like real world
+scaffholding, they are temporary. &lt;a href="../../2012/01/write-unit-tests-start-deleting-them"&gt;Don't feel bad about writing some
+tests, only to delete them minutes
+later&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Learning tests have another nice side effect. They give static languages
+which have a slower feedback cycle a form of
+&lt;a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;REPL&lt;/a&gt;.
+It's a lot quicker to write a test method and execute than it would be
+to spin up a new project in languages such as C# or Java to just try
+something out.&lt;/p&gt;
+&lt;p&gt;Next time you're stuck, try writing a test.&lt;/p&gt;</content><category term="testing"></category><category term="tdd"></category></entry><entry><title>Design is Important</title><link href="/2014/04/design-is-important.html" rel="alternate"></link><published>2014-04-01T00:00:00+02:00</published><updated>2014-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-04-01:/2014/04/design-is-important.html</id><summary type="html">&lt;p&gt;When I was a student I used to cheat. Not in exams or practical
+assignments, but I used to cheat when it came to my process to develop
+code. Early on I noticed a common pattern. After receiving an assignment
+I would perform some analysis, figure out a basic design …&lt;/p&gt;</summary><content type="html">&lt;p&gt;When I was a student I used to cheat. Not in exams or practical
+assignments, but I used to cheat when it came to my process to develop
+code. Early on I noticed a common pattern. After receiving an assignment
+I would perform some analysis, figure out a basic design and document my
+steps. The problem came when to code up the solution. I may have
+overlooked something, or made a mistake. Sometimes I would just come up
+with a better solution. This meant any time I spent documenting was
+lost. It turns out this wasn't cheating, after all there was nothing
+within the assignments enforcing a waterfall approach.&lt;/p&gt;
+&lt;p&gt;I wasn't alone with this experience. Most of my peers had the same
+issue, and the report aspects of an assignment were often disliked for
+this very reason. My solution was simple. Code up something, get it
+working then document the design aspect. Rinse and repeat. Back in the
+early 2004 I wasn't aware of agile methodologies, but this solution
+worked a treat. In turn my classmates started to adopt this similar
+approach, either from my encouragement or their own discovery.&lt;/p&gt;
+&lt;p&gt;Moving from university into a practical environment was a joy. It almost
+appeared as if little to no documentation was produced. The
+documentation that was produced, was often created by other teams.
+Developers simply wrote code. At the time I thought this was great, but
+after some reflection the errors of my ways have been highlighted.&lt;/p&gt;
+&lt;h2&gt;Problems&lt;/h2&gt;
+&lt;p&gt;In my experience a variety anti patterns are to blame.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;No or limited design&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;worst&lt;/strong&gt; thing that can be done when it comes to design or
+planning is the absence of any design or plan whatsoever.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Coding your way out of problems&lt;/h3&gt;
+&lt;p&gt;Given some limited or poor design, I've often experienced scenarios
+where 80% of the tasks will be complete, then you hit a roadblock.
+In order to progress the team will hack their way around it,
+introduce &lt;a href="http://en.wikipedia.org/wiki/Technical_debt"&gt;technical
+debt&lt;/a&gt; or put in some
+&lt;strong&gt;not so temporary fixes&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;"Weeks of coding can save hours of planning"&lt;/h3&gt;
+&lt;p&gt;A colleague I used to work with used this once and I fell in love
+with the quote. Take an average web application, if the life cycle
+of this would be a meager two years, &lt;strong&gt;spending a few hours putting
+a design together is nothing&lt;/strong&gt;. You could argue that spending a few
+days would be equally fitting, better yet &lt;strong&gt;a couple of weeks well
+thought out design is only a small percentage of the overall cost of
+delivery&lt;/strong&gt;. When it's too late you can code your way around the
+problem. Though this debt will soon add up, meaning features are
+even slower to add going forwards.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Playing the "Agile" card&lt;/h3&gt;
+&lt;p&gt;A misconception of the &lt;a href="http://agilemanifesto.org/"&gt;agile manifesto&lt;/a&gt;
+is to favour "&lt;em&gt;working software over comprehensive documentation&lt;/em&gt;".
+&lt;strong&gt;Most developers read this as never document anything&lt;/strong&gt;. This is
+far from the truth. Documentation, design and planning should be
+built into the product in iteration. &lt;a href="http://en.wikipedia.org/wiki/Just_in_time_%28business%29"&gt;Just In
+Time&lt;/a&gt;
+(JIT), rather than all up front or never at all.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Greenfield projects&lt;/h3&gt;
+&lt;p&gt;Having been involved with a couple of "rewrites" I've seen this
+happen first hand. &lt;strong&gt;No design, limited design or bad planning in
+the first few iterations of a project can kill it&lt;/strong&gt;. &lt;a href="http://beust.com/weblog/2008/03/03/tdd-leads-to-an-architectural-meltdown-around-iteration-three/"&gt;Only by
+iteration three, four or five will you notice something isn't
+right&lt;/a&gt;.
+At this point you've lost. Suggesting to restart, reboot or refactor
+is a hard sell, especially to management teams. &lt;strong&gt;Architectural
+changes are very difficult at this point&lt;/strong&gt;, as you'll most likely
+have users, automated tests and other teams relying on what you have
+produced.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Refactoring can save the day!&lt;/h3&gt;
+&lt;p&gt;Give me a bad class or method and I can make it beautiful. Give me a
+bad application and we have a problem. &lt;strong&gt;Refactoring is a class or
+method based activity&lt;/strong&gt;. &lt;a href="http://www.amazon.co.uk/gp/product/0470684208/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=0470684208&amp;amp;linkCode=as2&amp;amp;tag=bloshafin-21"&gt;I don't buy architectural refactoring -
+and I'm not
+alone&lt;/a&gt;.
+Emergent design is a very powerful tool, but without some upfront
+planning you'll be stuck in limbo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Solutions&lt;/h2&gt;
+&lt;p&gt;There are a few ways to overcome the previous problems.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3&gt;Whiteboards&lt;/h3&gt;
+&lt;p&gt;As much as I love technology you &lt;strong&gt;cannot beat a whiteboard&lt;/strong&gt; (or
+piece of paper) and a couple of engineers. Visual collaboration in
+this manner is very easy, plus physically having the presence of
+another individual helps. You can also snap a picture of these
+diagrams to reproduce them in a more friendly, shareable, digital
+form afterwards.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;CRC's&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Class-responsibility-collaboration_card"&gt;Class Responsibility and Collaboration
+cards&lt;/a&gt;
+are another low tech solution, but one I find incredibly valuable,
+yet for some reason don't appear to do enough of. &lt;strong&gt;Best performed
+in groups&lt;/strong&gt;, though I've had some success on solo efforts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;JIT documentation&lt;/h3&gt;
+&lt;p&gt;Not pages of wiki articles or documents, just lean, self contained
+documents that serve a purpose. Develop these in iteration and
+you'll avoid a "documentation sprint" from hell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3&gt;Code itself&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Prototypes are worth their weight in gold&lt;/strong&gt;. Spike solutions when
+used across a team are also incredibly effective. Rather than a
+single prototype being produced, each team has a crack at the
+problem in isolation. After regrouping you present back your
+solution and findings. The team then combine to form a "best of
+breed" approach.&lt;/p&gt;
+&lt;p&gt;Iteration zero is often used for getting the build up and running.
+If you take this one step further, the ideal scenario is to produce
+a &lt;a href="http://alistair.cockburn.us/Walking+skeleton"&gt;walking skeleton&lt;/a&gt;.
+This should consist of empty or basic class/method/function
+definitons that have not yet been implemented. &lt;strong&gt;With a basic API in
+place, fleshing out the details is rather enjoyable&lt;/strong&gt;. You focus on
+the problem, not the design or architecture.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;None of these are ground breaking ideas, but combined these approaches
+have served me well both personally and professionally.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>TDD is a Tool</title><link href="/2014/02/tdd-is-tool.html" rel="alternate"></link><published>2014-02-01T00:00:00+01:00</published><updated>2014-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-02-01:/2014/02/tdd-is-tool.html</id><summary type="html">&lt;p&gt;I remember being introduced to Test Driven Development (TDD) very well.
+This is because it had such an &lt;strong&gt;overwhelming change on how I write code
+day to day&lt;/strong&gt;. It was incredibly alien, difficult, yet rewarding. On this
+journey for the last five years I've changed my style, learned how not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I remember being introduced to Test Driven Development (TDD) very well.
+This is because it had such an &lt;strong&gt;overwhelming change on how I write code
+day to day&lt;/strong&gt;. It was incredibly alien, difficult, yet rewarding. On this
+journey for the last five years I've changed my style, learned how not
+to do it and finally found &lt;a href="../../2014/02/top-down-vs-bottom-up"&gt;my "sweet spot" when it comes to pragmatic
+TDD&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Deliver Value&lt;/h3&gt;
+&lt;p&gt;Writing code is fun. Developing an application or system is fun. Using
+new technology is fun. Despite this &lt;strong&gt;the end goal should always be to
+deliver value&lt;/strong&gt;. Delivering business value over religiously following a
+practice was a turning point in my journey. After all &lt;strong&gt;the user doesn't
+care about what is behind the scenes&lt;/strong&gt;, as long as they can use your
+software, they're happy.&lt;/p&gt;
+&lt;h3&gt;When to Write Tests?&lt;/h3&gt;
+&lt;p&gt;One of the guidelines when starting TDD is&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"&lt;a href="http://c2.com/cgi/wiki?NeverWriteaLineOfCodeWithoutaFailingTest"&gt;Never write a line of code without a failing
+test&lt;/a&gt;"
+- Kent Beck&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;This rule is wrong on many levels&lt;/strong&gt;. Firstly it cripples most
+developers when starting TDD. Secondly the guideline is broken all the
+time by seasoned evangelists. Writing some framework code? Writing data
+access code? Writing markup? &lt;strong&gt;Any of these scenarios would be wasted by
+writing a failing tests first&lt;/strong&gt;. This rule should be reworded.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"Writing logic? Never write a line of code without a failing test" -
+me&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;It's OK to not use TDD&lt;/h3&gt;
+&lt;p&gt;After adoption TDD practitioners tend to face two challenges. Other
+developers looking down on non TDD practices and &lt;strong&gt;feeling as if they
+are "cheating" when not using TDD&lt;/strong&gt;. The later was an issue I struggled
+with. Newbies tend to find the same problem, and this goes back to the
+mantra above. One of the key lessons I've discovered over the past few
+years is that &lt;strong&gt;using TDD where appropriate is fine&lt;/strong&gt;. Not all code
+needs TDD. Even Kent Beck discusses this when he refers to "&lt;a href="http://programmers.stackexchange.com/questions/108338/does-tdds-obvious-implementation-mean-code-first-test-after"&gt;Obvious
+Implementation&lt;/a&gt;".&lt;/p&gt;
+&lt;h3&gt;Spike Solutions&lt;/h3&gt;
+&lt;p&gt;Another game changer in my journey was the concept of "&lt;a href="http://lizkeogh.com/2012/06/24/beyond-test-driven-development/"&gt;Spike and
+Stabilize&lt;/a&gt;".
+Using this technique you can deliver business value quickly. Gather
+feedback as soon as possible and either &lt;strong&gt;fail fast or wrap the code in
+tests and clean it up&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;CRUD&lt;/h3&gt;
+&lt;p&gt;Most of the code I (and others) write is very similar. I'd bet this is
+the same for different fields of software development. That being said,
+for &lt;strong&gt;each CRUD app we create there is a tiny aspect of this that is
+unique&lt;/strong&gt;. Using TDD to write yet another CRUD app is tedious. I'd
+imagine this is why many ditch the practice of TDD after some time.
+However the benefit comes from using TDD for that 20% of domain logic.
+Here a combination of obvious implementation and spike and stabilize can
+assist in the creation of the other 80%.&lt;/p&gt;
+&lt;h3&gt;It's about Design too&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.co.uk/gp/product/0321146530/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=0321146530&amp;amp;linkCode=as2&amp;amp;tag=bloshafin-21"&gt;TDD by
+Example&lt;/a&gt;
+gives the impression that the practice is primarily a testing
+discipline. This is not true. TDD does limit the bugs I introduce and
+enforces basic correctness, however &lt;strong&gt;bugs will still slip through&lt;/strong&gt;.
+After all the quality of the code is only as good as the quality of the
+tests. &lt;a href="http://www.amazon.co.uk/gp/product/0321503627/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;amp;camp=1634&amp;amp;creative=6738&amp;amp;creativeASIN=0321503627&amp;amp;linkCode=as2&amp;amp;tag=bloshafin-21"&gt;Growing Object Oriented Software: Guided by
+Tests&lt;/a&gt;
+and others introduce the concept that TDD is also a design process.
+Listening to the tests is a core concept. In other words, &lt;strong&gt;if something
+is hard to test, chances are the code in question can be improved&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Follow the Risks&lt;/h3&gt;
+&lt;p&gt;The final lesson I've come to realise is that even if you happen to work
+with those who don't practice TDD, you can reap the benefits. Simply
+&lt;strong&gt;test where the risk lives&lt;/strong&gt;. Ignore the framework, standard library
+and simply test what has risk. This might be a small, core part of your
+application. Aiming for 100% code coverage is not a goal, nor one worth
+aiming for.&lt;/p&gt;
+&lt;h3&gt;It's a Tool&lt;/h3&gt;
+&lt;p&gt;At the end of the day, &lt;strong&gt;TDD is a tool, not a goal&lt;/strong&gt;. In this day and
+age many believe that TDD should be mandatory. While I agree, the use
+should be restricted to where and when it makes sense. As for when and
+where, this is up for the developer to decide. Using some of the
+findings above allow me to be pragmatic, yet still have confidence in
+the quality of my code.&lt;/p&gt;</content><category term="programming"></category><category term="tdd"></category></entry><entry><title>The Correct Way to use var in C#</title><link href="/2014/02/the-correct-way-to-use-var-in-c.html" rel="alternate"></link><published>2014-02-01T00:00:00+01:00</published><updated>2014-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-02-01:/2014/02/the-correct-way-to-use-var-in-c.html</id><summary type="html">&lt;p&gt;The .NET community is not widely controversial, though there is a strong
+topic that appears to come up time and time again when I pair with other
+developers - how to use &lt;code&gt;var&lt;/code&gt; in C#.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword was introduced in .NET 3.5. Unlike other languages
+this is &lt;strong&gt;still a …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;The .NET community is not widely controversial, though there is a strong
+topic that appears to come up time and time again when I pair with other
+developers - how to use &lt;code&gt;var&lt;/code&gt; in C#.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;var&lt;/code&gt; keyword was introduced in .NET 3.5. Unlike other languages
+this is &lt;strong&gt;still a strongly typed declaration&lt;/strong&gt;. For example if we
+declare a string using &lt;code&gt;var&lt;/code&gt; then we cannot re-assign this variable to
+another type. This would be a compile time error.&lt;/p&gt;
+&lt;p&gt;There are two parties who have strong feelings about the use of &lt;code&gt;var&lt;/code&gt;,
+both of which are &lt;strong&gt;wrong&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Never use var&lt;/h3&gt;
+&lt;p&gt;Some developers suggest the use of &lt;code&gt;var&lt;/code&gt; be denied. This leads to code
+such as the following. &lt;strong&gt;Overly verbose, and in some cases obscuring the
+intent of the code&lt;/strong&gt;. This can commonly be seen when dealing with
+collections or generics.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/2050a8b2e6778eb86ebf.js"&gt;&lt;/script&gt;
+
+&lt;h3&gt;Always use var&lt;/h3&gt;
+&lt;p&gt;Other developers claim you should "&lt;em&gt;var all the things&lt;/em&gt;". This leads to
+code which has the opposite problem from above. &lt;strong&gt;The intent of the code
+can be obscured due to not knowing what type you are dealing with&lt;/strong&gt;.
+This is especially important during code reviews or times when you are
+not relying on the IDE's intellisense to remind you what you are dealing
+with. After all code is read many more times than it is written.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/9f0f755ee0879333b7f2.js"&gt;&lt;/script&gt;
+
+&lt;h3&gt;Best of both worlds&lt;/h3&gt;
+&lt;p&gt;The solution to this issue is simple. Where the type cannot be inferred
+just by looking at the source code (aka the type is on the right), use a
+strongly typed declaration. Where the type can be inferred, use implicit
+typing. Using the same examples as above, this would look like the
+following.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/d40dba8264fd0a0a6e04.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;As with most things when it comes to software development, there is
+never a black and white answer. &lt;strong&gt;Always gauge decisions and patterns
+based on context&lt;/strong&gt;. Just because automated tooling such as the excellent
+Resharper suggests you use implicit typing doesn't always make it
+correct.&lt;/p&gt;
+&lt;h3&gt;Bonus&lt;/h3&gt;
+&lt;p&gt;Talking of Resharper, a quick &lt;code&gt;Alt+Enter&lt;/code&gt; on a type/implicit declaration
+will allow you to switch between modes, meaning you can be lazy and have
+the IDE pull in the right type when required.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Top Down vs Bottom Up</title><link href="/2014/02/top-down-vs-bottom-up.html" rel="alternate"></link><published>2014-02-01T00:00:00+01:00</published><updated>2014-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-02-01:/2014/02/top-down-vs-bottom-up.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Top down development&lt;/strong&gt; has you starting at the highest point in the
+application that you can. From here you code down until there is nothing
+else left to develop. Once you reach this point you should be code
+complete. Along the way you may need to stub out areas that …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Top down development&lt;/strong&gt; has you starting at the highest point in the
+application that you can. From here you code down until there is nothing
+else left to develop. Once you reach this point you should be code
+complete. Along the way you may need to stub out areas that have not yet
+been created, or designed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bottom up development&lt;/strong&gt; has you starting at the lowest point in the
+application. The idea being that this part of the application has the
+most complexity or will be the most important. You will build the system
+up from a series of smaller components.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Top-down_and_bottom-up_design"&gt;Top down development and bottom up
+development&lt;/a&gt;
+was introduced to myself in my early days of university. At the time the
+distinction didn't really mean much - I was very much a developer who
+would work from the bottom up.&lt;/p&gt;
+&lt;p&gt;Over time I have completely switched my stance on this. I believe agile
+practices and TDD are the reason for this change. I feel so strongly
+about this that I would go as far as to claim that &lt;strong&gt;within an agile
+team - bottom up development is an anti pattern&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Consider the following tasks to be completed on a team of four
+developers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create controller - &lt;em&gt;main entry point, request mapping.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Create service - &lt;em&gt;service layer, simple business logic.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Database query - &lt;em&gt;thin wrapper around complex DB query.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With a bottom up approach a pair of developers could work on the complex
+database query. After some time they would have this working. The other
+two developers could start with the controller or service.&lt;/p&gt;
+&lt;p&gt;The problem with this approach comes from the &lt;strong&gt;painful integration
+process&lt;/strong&gt;. The developers working on the service might be coding against
+the interface the team discussed during a planning session, while the
+developers on the query may have had to change their approach.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/42c9e3e19c10f9fcffb3.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;This example is trivial, but imagine a story with thirty tasks, more
+developers and more complexity and this bottom up approach is difficult.
+Over the past few years my top down approach has evolved.&lt;/p&gt;
+&lt;p&gt;My first step would be to &lt;strong&gt;stub out the workflow&lt;/strong&gt; with the above
+implementation. There is no real logic here - only the objects
+collaboration is implemented. At this stage there are &lt;strong&gt;no tests, TDD
+would not be used&lt;/strong&gt;. After all there is no logic here. The code is so
+simple it can be reasoned about with peer review, planning sessions and
+so on.&lt;/p&gt;
+&lt;script src="https://gist.github.com/Finglas/0309d16a3d45ebf732dd.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;At this stage &lt;strong&gt;all of the tasks are open for any developer to pick
+up&lt;/strong&gt;. If a breaking change was required, there would be no way for one
+pair to commit these changes without the other pair knowing. Another
+benefit of this approach is that an end to end acceptance test could be
+wrapped around the functionality from the get go.&lt;/p&gt;
+&lt;p&gt;As &lt;strong&gt;part of these tasks each developer would use TDD&lt;/strong&gt;. Remember no
+tests exist at this point. Building up the tests in stages would ensure
+the logic of how the objects collaborate is preserved, and ensures that
+the actual domain logic that is implemented is correct. &lt;strong&gt;Does this mean
+we aren't doing TDD? No, of course not&lt;/strong&gt;. The tests will drive the
+implementation. If we need to introduce new objects that is fine - these
+simply become implementation details that the other devs need not worry
+about as long as the workflow is not broken.&lt;/p&gt;
+&lt;p&gt;This approach to top down development isn't new, though many don't
+appreciate its benefits. I plan on expanding on this style of pragmatic
+TDD in the coming months.&lt;/p&gt;</content><category term="retro"></category><category term="tutorial"></category></entry></feed>
