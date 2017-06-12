@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - agile-architecture-series</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2015/11/dont-build-thing.html">Don't Build a Thing</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info --><p>Part two of my agile architecture series.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">You Cannot Iterate upon
+    Architecture</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html">Throw Code
+    Away</a></li>
+</ul>
+<hr>
+<p>Here is a real life example of where I treated a unknown project
+incorrectly. Why I handled this is badly and how I should have handled
+it if I could rewind time.</p>
+<h4>Whoops</h4>
+<p>An external client had a proposal for a web service which would power
+part their new web application. This service sounded very simple. Data
+import and some basic querying. There were plans to add additional bells
+and whistles at a later date. After an initial meeting development
+began.</p>
+<p>A week later a second meeting was placed. A good few hours of
+development had been invested by this point. The meeting was useful,
+however some changes had cropped up. The data format had been modified,
+my solution could not handle the new format. Also the querying needed
+various modifications.</p>
+<p>A week later, after several more hours of changes, the second meeting
+landed. There were more changes. This time technical adjustments based
+on the feedback from the clients' developers.</p>
+<p>The third meeting introduced scope creep. Could this service handle any
+potential customer going forwards? It certainly could not at present.</p>
+<p>You should see where this is heading. Eventually the requirements
+stabilized. Not until several days of my time had been taken up building
+something that was not needed, only to have to tear it down and salvage
+what I could.</p>
+<p>The end result was a project I was not proud of. Due to my heavily
+invested time I wanted to save as much work as I could. It would be hard
+to tell my superiors we've wasted X amount of money. The project also
+lacked long term stability. Each iteration built upon the next. The
+feature to handle generic customers was tacked on. Had this been known
+from day one, things would have looked much better both in terms of code
+quality and architecture.</p>
+<h4>Solution</h4>
+<p>There is an easy way to transform a unknown project into a known project
+- build as little as you possibly can. Do this in the shortest amount of
+time to gather feedback, learn and defer decisions. After this process
+you will be in the best possible shape to tackle the project. These
+principles are the key to the processes within a lean start up.</p>
+<h4>How I Should Have Handled It</h4>
+<p>Starting with a minimal project in order to demo and deploy this would
+do nothing other than returned a hardcoded JSON literal. Enough to
+demonstrate and spark conversations.</p>
+<p>During week two the discovery that a new data format had been chosen
+would not matter. The feature to load data had not been written after
+all. At this point the hardcoded data would be tweaked to match the new
+content. Easy.</p>
+<p>Week three would pose no threat. Technical changes around best practices
+or technology are easily handled because very little code exists.</p>
+<p>The newly required functionality discovered in week four would
+prototyped, estimated and agreed. As no real work has been done, adding
+this feature in would not only be achievable, it would be
+architecturally sound rather than bolted on as an after thought.</p>
+<h4>Why?</h4>
+<p>Deferring decisions such as the above is so useful that this can be
+applied to any project from my experience. Knowing how long a decision
+can be deferred is dependent on the scenario, but you will be pleasantly
+surprised in many cases at just how long decisions can and should be
+deferred. Even for known projects the power that deferral brings is so
+beneficial I tend to favour this style whenever possible. Build just
+enough to gather feedback and go from there.</p>
+<p>The key point is that very little time and energy has been invested. In
+the second example of how I should have handled the client I invested
+hours of my time. In reality I invested days. I was invested in the
+first solution. The second solution however could be chopped, changed or
+thrown away with no protest. The act of throwing code away is so
+important, yet so rarely practised it will be the subject of the third
+part of this series.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/throw-code-away.html" rel="bookmark"
+                           title="Permalink to Throw Code Away">Throw Code Away</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info -->                <p>The third and final part of my agile architecture series.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">You Cannot Iterate upon
+    Architecture</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Don't Build a
+    Thing</a></li>
+</ul>
+<hr>
+<p><a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">Part
+one</a>
+suggested walking skeletons for new features or projects. <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Part
+two</a>
+suggested building the limited, smallest and simplest functionality
+possible. However you do not always have …</p>
+                <a class="readmore" href="/2015/11/throw-code-away.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/you-cannot-iterate-upon-architecture.html" rel="bookmark"
+                           title="Permalink to You Cannot Iterate upon Architecture">You Cannot Iterate upon Architecture</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info -->                <p>This is the first part of a series of posts as to why gradual iteration,
+doing the simplest thing that can possibly work over a software project
+fails in many cases. This series will explain why this is the case, and
+provide solutions.</p>
+<ul>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Don't Build a
+    Thing</a></li>
+<li>Part …</li></ul>
+                <a class="readmore" href="/2015/11/you-cannot-iterate-upon-architecture.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

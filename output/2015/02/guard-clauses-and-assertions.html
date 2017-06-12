@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Guard Clauses and Assertions</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/02/guard-clauses-and-assertions.html" rel="bookmark"
+           title="Permalink to Guard Clauses and Assertions">Guard Clauses and Assertions</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-01T00:00:00+01:00">
+                Published: Sun 01 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>Two simple techniques to increase code quality, resilience, and ease
+debugging scenarios is to use guard clauses effectively and ensure that
+assertions are used liberally.</p>
+<h4>Guard Clauses</h4>
+<ul>
+<li>Any public method should perform guard clauses to ensure pre
+    conditions are met.</li>
+<li>Ensures the code's invariants are not broken.</li>
+<li>Throw exceptions, because these are exceptional issues.</li>
+<li>Developer and user assistance as it is possible for these clauses to
+    fail at runtime.</li>
+</ul>
+<script src="https://gist.github.com/Finglas/5b784bd2782d1478fa40.js"></script>
+
+<p>Here we enforce that any <code>PersonalDetails</code> instance has a forename and
+surname. A forename must also be at least one character long. As long as
+these conditions are met, we finally assign the values internally. Guard
+clauses should also be used on dependencies that are services, checking
+that a service is not a null instance for example.</p>
+<h4>Assertions</h4>
+<ul>
+<li>Used within private methods/functions where required.</li>
+<li>Should be used for situations that should never happen, e.g the
+    presence of a bug or invalid scenario.</li>
+<li>Developer only assistance, the user should never see these ideally
+    because automated/manual testing should have detected them.</li>
+<li>Usually removed for release builds, though open to debate, best to
+    judge on context. Is it better for the program to crash and inform
+    the user, or carry on in an invalid state?</li>
+<li>Great for documenting assumptions, e.g. code a level above ensures
+    object is in a certain state.</li>
+</ul>
+<script src="https://gist.github.com/Finglas/2a59051e9c3d566185f1.js"></script>
+
+<p>While this method is private, we have essentially stated that we take no
+responsibility for validating that a name has been provided. This is the
+concern of another part of the code (the constructor in this case).
+However this simple assert statement means that if the method is used in
+a different manner, it will fail spectacularly at runtime. This will
+point at the incorrect use of the method and allow the developer to make
+the required changes.</p>
+<h5>Summary</h5>
+<p>Code quality will improve because less invalid scenarios should be
+allowed to happen. Due to clauses and assertions always being present
+they go hand in hand with automated tests, often catching scenarios that
+automated tests may miss. Debugging is easier because the stack trace
+points you at the source of the problem, rather than an initial problem
+hidden in layers of exceptions caused by invalid state. While applying
+clauses and assertions increases lines of code, they are easy to
+implement, and the return on investment is high. There are no excuses
+not to use them.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

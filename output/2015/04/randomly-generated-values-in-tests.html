@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Randomly Generated Values in Tests</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/04/randomly-generated-values-in-tests.html" rel="bookmark"
+           title="Permalink to Randomly Generated Values in Tests">Randomly Generated Values in Tests</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The use of randomly generated test data seems like a good thing at first
+glance. Having worked with several teams that have used this concept I
+generally discourage the practice. Consider a simple method that joins
+together two strings. A test using random values may look like this.</p>
+<script src="https://gist.github.com/Finglas/a52ff8867d6af0757059.js"></script>
+
+<h4>Problems</h4>
+<h5>Harder to Read</h5>
+<p>While this is a toy example to demonstrate the problem, in more
+realistic scenarios the lack of literal values harms the readability of
+the tests. It is worth noting the lack of literals causes more lines of
+code as anything that has importance needs to be stored in a variable or
+field. My biggest concern is when assertions start to become complicated
+or even worse, duplicate production code in order to pass. If we wish to
+treat tests as examples, this is pretty poor.</p>
+<h5>Edge Cases</h5>
+<p>Generating a random string seems easy enough. Overtime the edge cases in
+question start to ramp up. You have whitespace, special characters, new
+lines, numbers and much more to worry about if you wish to do this
+properly. The code to actually generate random values is often shared
+via inheritance or composition, this makes changes tricky and dangerous
+as you can inadvertently change more than one test when modifying this
+common code. If the two inputs need to be different then you could
+potentially generate the same string each time, leading to flaky tests
+if you're not careful.</p>
+<h5>Psuedo Random</h5>
+<p>The random aspect of these tests can confuse developers. In the example
+above, there is only ever one value for each variable. In other words
+this test can run many times locally and pass, but fail when executed
+elsewhere. There may be a subtle bug that is only found after the code
+is declared complete. This issue often causes failures in the build, at
+which developers declare "<em>it's just a random failure</em>" before
+re-triggering the build because a value may be invalid for a specific
+scenario.</p>
+<h5>Date/Times can be Tricky</h5>
+<p>Date/Times are hard enough as it is. Trying to randomly generate these
+is not worth the hassle.</p>
+<h4>Solution</h4>
+<p>My recommendation is to rely on literal values or <a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html">value
+objects</a>
+where possible, these make the test much more readable and act like an
+example or specification. Additionally their use allows the inline
+variable refactor to take place, meaning shorter, conciser tests.</p>
+<script src="https://gist.github.com/Finglas/35666813e84b920420e3.js"></script>
+
+<h5>Test Cases/Parameterized Tests</h5>
+<p>If you wish to test similar scenarios in one go then <a href="http://www.nunit.org/index.php?p=testCase&amp;r=2.5">test
+cases</a> can help. This
+is usually the case when you cannot name a test easily because the
+functionality is the same as an existing test.</p>
+<h5>Bugs</h5>
+<p>The assumption that randomly generated tests catch bugs and cover more
+ground is wrong. If you really do discover a bug after manual testing or
+on a live system just write a new test exposing that bug and fix it.
+Thinking you cover more scenarios by using random values is false.</p>
+<h5>Property Based Testing</h5>
+<p>I cannot comment on <a href="http://www.scalatest.org/user_guide/property_based_testing">Property Based
+Testing</a>
+fully, but this is certainly an interesting area and does not suffer
+from the issues above. Worth looking into.</p>
+<h5>DRY?</h5>
+<p>This solution certainly violates DRY. There is clear duplication. If
+this was production code I would remove it, however for tests my stance
+for a long time has been to allow this duplication to remain.
+Readability and expressiveness is much more important. There are valid
+times when duplication between tests is a bad thing. While this simple
+example doesn't suffer from this problem <a href="http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html">I will expand on how to keep
+your tests expressive but DRY in a future
+post</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

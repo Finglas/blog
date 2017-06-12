@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>DDD - Bounded Contexts</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/06/ddd-bounded-contexts.html" rel="bookmark"
+           title="Permalink to DDD - Bounded Contexts">DDD - Bounded Contexts</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-06-14T07:25:00+02:00">
+                Published: Tue 14 June 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>A single domain can grow large when applying Domain Driven Design. It
+can become very hard to contain a single model when using ubiquitous
+language to model the domain. Classic examples prevalent in many domains
+would be <code>Customer</code> or <code>User</code> models. A bounded context allows you to
+break down a large domain into smaller, independent contexts.</p>
+<p>In different contexts a customer may be something completely different,
+depending on who you ask and how you use the model. For example, take
+three bounded contexts within a typical domain that allows customer
+administration, customer notifications and general reporting.</p>
+<h4>Example</h4>
+<h5>Notification Context</h5>
+<p>A customer is their account id, social media accounts, email and any
+marketing preferences. Anything that would be required to uniquely
+identify a customer, and send a notification.</p>
+<div class="highlight"><pre><span></span>    + Id
+    + Email
+    + Marketing Preferences
+    + Social
+</pre></div>
+
+
+<h5>Reporting Context</h5>
+<p>When reporting customers are nothing more than statistics. A unique
+customer ID is more than enough just for aggregation and statistic
+collection.</p>
+<div class="highlight"><pre><span></span>    + Id
+</pre></div>
+
+
+<h5>Account Context</h5>
+<p>Allowing the customer to administer their account would require anything
+personally related to the customer to be modelled.</p>
+<div class="highlight"><pre><span></span>    + Id
+    + First Name
+    + Last Name
+    + Address
+    + Email
+</pre></div>
+
+
+<p>Despite the common elements such as Id and email, the other elements are
+specific to the context in which the customer is used. One of the
+biggest mistakes I've made by ignoring a bounded context is to see <a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html">a
+common model and try to apply this
+everywhere</a>.
+This leads to less code, but increases coupling. A single small change
+in one context can cause a rippling effect. In fact the best solution is
+to have a customer model per context.</p>
+<p>The result of this approach is you will end up with at least three
+models using the example above. While structural duplication increases,
+coupling decreases. Each context can change and evolve at its own pace.
+This is a good thing. No business logic here is being duplicated, only
+the model. As each context operates in its own speciality, there should
+never be a case where this is problematic.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Structural duplication outside of bounded context is not a bad
+    thing.</li>
+<li>Resist the urge to use a base class for common attributes. This is
+    especially true if you use an ORM or anything that will couple you
+    further when these models are used.</li>
+<li>Ending up with multiple models per bounded context is likely going
+    to happen, embrace it.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

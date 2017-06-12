@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Top Down vs Bottom Up</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/02/top-down-vs-bottom-up.html" rel="bookmark"
+           title="Permalink to Top Down vs Bottom Up">Top Down vs Bottom Up</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-01T00:00:00+01:00">
+                Published: Sat 01 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p><strong>Top down development</strong> has you starting at the highest point in the
+application that you can. From here you code down until there is nothing
+else left to develop. Once you reach this point you should be code
+complete. Along the way you may need to stub out areas that have not yet
+been created, or designed.</p>
+<p><strong>Bottom up development</strong> has you starting at the lowest point in the
+application. The idea being that this part of the application has the
+most complexity or will be the most important. You will build the system
+up from a series of smaller components.</p>
+<p><a href="http://en.wikipedia.org/wiki/Top-down_and_bottom-up_design">Top down development and bottom up
+development</a>
+was introduced to myself in my early days of university. At the time the
+distinction didn't really mean much - I was very much a developer who
+would work from the bottom up.</p>
+<p>Over time I have completely switched my stance on this. I believe agile
+practices and TDD are the reason for this change. I feel so strongly
+about this that I would go as far as to claim that <strong>within an agile
+team - bottom up development is an anti pattern</strong>.</p>
+<p>Consider the following tasks to be completed on a team of four
+developers.</p>
+<ul>
+<li>Create controller - <em>main entry point, request mapping.</em></li>
+<li>Create service - <em>service layer, simple business logic.</em></li>
+<li>Database query - <em>thin wrapper around complex DB query.</em></li>
+</ul>
+<p>With a bottom up approach a pair of developers could work on the complex
+database query. After some time they would have this working. The other
+two developers could start with the controller or service.</p>
+<p>The problem with this approach comes from the <strong>painful integration
+process</strong>. The developers working on the service might be coding against
+the interface the team discussed during a planning session, while the
+developers on the query may have had to change their approach.</p>
+<script src="https://gist.github.com/Finglas/42c9e3e19c10f9fcffb3.js"></script>
+
+<p>This example is trivial, but imagine a story with thirty tasks, more
+developers and more complexity and this bottom up approach is difficult.
+Over the past few years my top down approach has evolved.</p>
+<p>My first step would be to <strong>stub out the workflow</strong> with the above
+implementation. There is no real logic here - only the objects
+collaboration is implemented. At this stage there are <strong>no tests, TDD
+would not be used</strong>. After all there is no logic here. The code is so
+simple it can be reasoned about with peer review, planning sessions and
+so on.</p>
+<script src="https://gist.github.com/Finglas/0309d16a3d45ebf732dd.js"></script>
+
+<p>At this stage <strong>all of the tasks are open for any developer to pick
+up</strong>. If a breaking change was required, there would be no way for one
+pair to commit these changes without the other pair knowing. Another
+benefit of this approach is that an end to end acceptance test could be
+wrapped around the functionality from the get go.</p>
+<p>As <strong>part of these tasks each developer would use TDD</strong>. Remember no
+tests exist at this point. Building up the tests in stages would ensure
+the logic of how the objects collaborate is preserved, and ensures that
+the actual domain logic that is implemented is correct. <strong>Does this mean
+we aren't doing TDD? No, of course not</strong>. The tests will drive the
+implementation. If we need to introduce new objects that is fine - these
+simply become implementation details that the other devs need not worry
+about as long as the workflow is not broken.</p>
+<p>This approach to top down development isn't new, though many don't
+appreciate its benefits. I plan on expanding on this style of pragmatic
+TDD in the coming months.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

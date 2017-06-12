@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The Self Shunt - Test Doubles without a Framework</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/09/the-self-shunt-test-doubles-without.html" rel="bookmark"
+           title="Permalink to The Self Shunt - Test Doubles without a Framework">The Self Shunt - Test Doubles without a Framework</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>Generally you should <a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html">favour hand crafted stubs without a framework by
+default</a>.
+Before you reach for a framework there is another bridging step that you
+can take only pulling in a framework if complexity arises - the Self
+Shunt.</p>
+<p>Assume a simple <em>Hello World</em> subject under test where we can provide
+different formatters that format the message to a console, XML or JSON
+for example. How do we test that the formatter is used, with the right
+arguments?</p>
+<p>Enter the <a href="http://www.objectmentor.com/resources/articles/SelfShunPtrn.pdf">Self Shunt
+(pdf)</a>.
+Have the test fixture implement the interface aka assume the role of a
+message formatter. It provides itself as a parameter to the greeter in
+the form of <code>self/this</code>. The greeter uses this implementation during its
+execution, the test fixture can then assert or set state.</p>
+<script src="https://gist.github.com/Finglas/698caab47b1428d0e303.js"></script>
+
+<h4>Benefits</h4>
+<ul>
+<li>Quick and simple to get up and running.</li>
+<li>Most commands fall into the category of invoke something with some
+    parameters, with little more complexity.</li>
+<li>Forces you to respect the Interface Segregation Principle, otherwise
+    this technique can become painful. A framework usually masks this
+    complexity.</li>
+<li>Code is inline to the test or fixtures.</li>
+<li>Exposes and explains how frameworks work conceptually to new
+    developers - removing some of the <em>magic</em>.</li>
+</ul>
+<p>The Self Shunt is my default approach for testing commands which are
+usually local to test fixtures. Queries default to hand crafted stubs
+which are usually shared amongst tests. If further tests need the same
+configuration the shunt can be promoted to a full object that lives
+independently of the test fixture. Finally if this starts to become
+difficult to work with I would reach for a framework - commands usually
+reach this point first.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

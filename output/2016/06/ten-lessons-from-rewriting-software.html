@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Ten Lessons from Rewriting Software</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/06/ten-lessons-from-rewriting-software.html" rel="bookmark"
+           title="Permalink to Ten Lessons from Rewriting Software">Ten Lessons from Rewriting Software</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-07-01T00:00:00+02:00">
+                Published: Fri 01 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <ol>
+<li>
+<h4>It Will Take A Lot Longer Than Estimated</h4>
+<ul>
+<li>Its navie to actually think this but if a system has been in
+    production for say five years, expecting to reproduce it in five
+    weeks is not possible. You may be able to get 80% of the core
+    functionality done, but the remaining 20% that was added to,
+    iterated and stabilized over the remaining five years is what
+    will destroy any form of schedule.</li>
+<li>If your estimate exceeds three months, you need to reasses what
+    you are doing by breaking down the work, or changing plan. The
+    bigger the estimate, the bigger the risk.</li>
+</ul>
+</li>
+<li>
+<h4>Deploy Incrementally Via CI</h4>
+<ul>
+<li>If you aren't deploying to a live environment as soon as
+    possible, any future releases are destined to be failures,
+    troublesome or just plain difficult.</li>
+<li>Soft releases and feature toggles should be used to aid constant
+    releases.</li>
+</ul>
+</li>
+<li>
+<h4>Morale Will Drop The Longer It Goes On</h4>
+<ul>
+<li>Probably the biggest and most surprising realization is the drop
+    in personal and team morale.</li>
+<li>If you miss a "deadline" or keep failing to ship, then morale
+    will tank.</li>
+<li>While software is never complete, a rewrite has a definitive
+    target. If this target continues to move, team morale will move
+    too.</li>
+</ul>
+</li>
+<li>
+<h4>Users Will Probably Hate It Anyway</h4>
+<ul>
+<li>Predominantly the UI, but your users will complain about change.</li>
+<li>Big sweeping changes often receive the most hate. A website I
+    frequent had a major change both in visuals and the underlying
+    technology used. While there was warning, you were left to your
+    own to figure out where features were. This caused a great deal
+    of frustration and negative feedback.</li>
+<li>Small, incremental changes allow your users to keep pace.</li>
+<li>Alternatively some tutorial or hint system can help reduce user
+    pain.</li>
+</ul>
+</li>
+<li>
+<h4>Do What The Legacy System Does</h4>
+<ul>
+<li>As many of the original developers will likely have moved on, no
+    one is really sure what the legacy system does.</li>
+<li>Even with the source code available, it is likely going to be
+    hard to figure out the intent, afterall that's one of the
+    reasons for the rewrite.</li>
+<li>If you are not careful you will end up simply reimplementing the
+    same legacy in a new language or framework. Always weigh up
+    preserving existing behaviour versus introducing technical debt.</li>
+</ul>
+</li>
+<li>
+<h4>Be Cheap And Quick - Use Stubs</h4>
+<ul>
+<li>When implementing the new system, <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">don't build a
+    thing</a>.
+    At least at first.</li>
+<li>Use stubs to build the simplest, dumbest thing you can to get
+    feedback.</li>
+<li>Without fully integrating the system in an end to end manner
+    you'll end up throwing away a great deal of code.</li>
+</ul>
+</li>
+<li>
+<h4>Feedback, Feedback, Feedback</h4>
+<ul>
+<li>Early and fast feedback is essential.</li>
+<li>With a working end to end system gather as much as you can from
+    any stakeholders.</li>
+<li>Chances are as you begin you'll naturally incur some additions,
+    removals or modifications.</li>
+<li>Waiting months or longer for feedback is a guaranteed path to
+    failure.</li>
+</ul>
+</li>
+<li>
+<h4>Thin Vertical Slices Over Fat Technology Splits</h4>
+<ul>
+<li>Avoid the temptation to have a UI team, a backend team and a
+    data team and so on.</li>
+<li>Splitting at technology boundaries leads to systems that do not
+    integrate well, or worse fail to handle the required use cases.</li>
+<li>Your first iteration should consist of all parts of the
+    technology stack, in the thinnest manner possible. Combine this
+    with early feedback and the fast development speed of stubs.</li>
+</ul>
+</li>
+<li>
+<h4>Strangle Existing Legacy Code</h4>
+<ul>
+<li>When rewriting in increments or by logical sections the
+    <a href="http://martinfowler.com/bliki/StranglerApplication.html">technique of
+    strangulation</a>
+    is useful.</li>
+<li>Instead of releasing the new code as a standalone piece,
+    integrate the new code into the existing legacy code base.</li>
+<li>This may be tricky at first however over time the legacy system
+    will form nothing but an empty shell that integrates with the
+    new system.</li>
+<li>The beauty of this approach is early feedback, and a guarantee
+    that the new system behaves as intended.</li>
+<li>The final step would be to replace the legacy shell with the new
+    modern interface or frontend.</li>
+</ul>
+</li>
+<li>
+<h4>Refactor Where Possible</h4>
+<ul>
+<li>Deciding to refactor or rewrite is never easy. Refactoring
+    should be the default approach in many cases.</li>
+<li>Old languages or unsupported frameworks are good reasons to
+    adopt a rewrite, but this varies case by case.</li>
+<li>If business agility is suffering such rewrites can be beneficial
+    when using some of the techniques above.</li>
+</ul>
+</li>
+</ol>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

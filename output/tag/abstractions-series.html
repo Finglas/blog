@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - abstractions-series</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2015/02/abstractions.html.html">Abstractions</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/code-quality.html">code-quality</a> </p>
+</footer><!-- /.post-info --><p>This is the first part of my series on abstractions.</p>
+<ul>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html">Reused Abstraction
+    Principle</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">Dependency Elimination
+    Principle</a></li>
+</ul>
+<hr>
+<p>Coupling is one of the enemies of a healthy code base. One way to combat
+high coupling is to introduce abstractions.</p>
+<p>Too few abstractions is bad. Your code can become coupled. Some of the
+worst code I've worked with was highly coupled to either the database,
+UI or both. Working with such code is difficult.</p>
+<p>Too many abstractions is equally as bad. Abstraction behind abstraction
+can become so difficult to work with the benefit of abstracting in the
+first place is lost. Some of the worst code I've worked with was so
+convoluted with needless abstractions it made any development a tricky
+process.</p>
+<p><a href="http://blog.ploeh.dk/2010/12/02/Interfacesarenotabstractions/">Most abstractions are not really abstractions at
+all</a>, but
+nothing more than simple indirection. Indirection is sometimes required,
+though it is wrong to confuse with abstraction. <code>IFileWriter</code> is not an
+abstraction. <code>IReciept</code> that happens to write to the file system when
+implemented as <code>FileSystemReceipt</code> is an abstraction. <code>IFileWriter</code>
+<em>could</em> be an abstraction if the software we were writing involved
+working directly with the file system, such as a text editor. In the
+case of printing receipts, where they are printed is simply an
+implementation detail.</p>
+<p>Finding a balance between the right level of abstraction can be tricky.
+From my experience there a few techniques that can be used.</p>
+<h4>Techniques</h4>
+<h5>Embrace Coupling</h5>
+<p><a href="http://www.udidahan.com/?blog=true">Udi Dahan</a> makes this point in his
+presentations. If you have a traditional application with a UI, domain
+and data layer why bother adding further layers to abstract these? If we
+wish to retrieve a new field from the database and display the value we
+have three places to change, adding further models and mapping layers
+does nothing but increase coupling. <a href="http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html">Applying namespaces
+correctly</a>
+can also help here, if everything that needs to change at the same time
+is logically grouped, such changes are easier.</p>
+<h5>Apply YAGNI</h5>
+<p><a href="http://codeopinion.com/simplify-your-code/">Do you truly need a database model mapped into a domain model, mapped
+into a view model and back?</a>
+Applying YAGNI can limit many abstractions by simply not worrying about
+"<em>what if</em>" scenarios until they actually occur.</p>
+<h5>CQRS</h5>
+<p><a href="http://martinfowler.com/bliki/CQRS.html">Command Query Responsibility Separation or
+CQRS</a> deserves an explanation
+on its own, but for now applying CQRS reduces unnecessary coupling by
+embracing it. For querying data and displaying it on a screen my default
+choice is to use CQRS to simply read from the database and populate a
+view model. This limits abstractions and helps keep the code focused,
+flexible and open to change. <a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html">I will expand on CQRS in a future
+post</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/03/dependency-elimination-principle.html" rel="bookmark"
+                           title="Permalink to Dependency Elimination Principle">Dependency Elimination Principle</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>This is the third, and final part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html">Reused Abstraction
+    Principle</a></li>
+</ul>
+<hr>
+<p>I've wrote about what <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">good dependencies are before, and the benefits if
+you can limit and remove them where
+possible</a>.</p>
+<p>You can take this idea further though, by applying concepts …</p>
+                <a class="readmore" href="/2015/03/dependency-elimination-principle.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/03/reused-abstraction-principle.html" rel="bookmark"
+                           title="Permalink to Reused Abstraction Principle">Reused Abstraction Principle</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>This is the second part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">Dependency Elimination
+    Principle</a></li>
+</ul>
+<hr>
+<p>The Reused Abstraction Principle is a simple in concept in practice, but
+oddly rarely followed in typical enterprise development. I myself have
+been incredibly guilty of this in the past.</p>
+<p>Most code …</p>
+                <a class="readmore" href="/2015/03/reused-abstraction-principle.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

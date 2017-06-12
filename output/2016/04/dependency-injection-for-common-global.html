@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Dependency Injection for Common Global Dependencies</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/04/dependency-injection-for-common-global.html" rel="bookmark"
+           title="Permalink to Dependency Injection for Common Global Dependencies">Dependency Injection for Common Global Dependencies</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-04-13T07:09:00+02:00">
+                Published: Wed 13 April 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The use of <a href="http://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html">singletons can often be replaced by simply adjusting scoping
+of
+objects</a>.
+The vast majority of dependencies fit this pattern, with a few
+exceptions such as DateTime instances, or logging.</p>
+<p>Sometimes you just need these dependencies everywhere. You can find
+yourself passing these dependencies down into the deep depths of your
+code base. Such changes are often dangerous, time consuming and
+undesirable.</p>
+<h4>DateTime</h4>
+<p>For a while the use of some date/time abstraction was my default
+approach to handling dates and times. This fake clock or calendar
+instance when combined with DI at the lowest level does actually work.
+However if we stop and think about the abstraction it is clearly
+unnecessary in many cases. Unless your domain is dealing with date and
+times explicitly, you don't really need an abstraction. In other words,
+other than the system where the code is running when or why would you
+provide a different implementation?</p>
+<p>The approach taken as part of the <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">example within the Dependency
+Elimination
+Principle</a>
+is my current solution to date/times and DI. This is still dependency
+injection, except the value is provided, not the method of obtaining the
+value. This is essentially one of the benefits of functional
+programming.</p>
+<h4>Logging</h4>
+<p>All systems need some form of logging. Commonly either the standard
+library or a highly rated logging framework is used. The general advice
+has been to use the logging component directly, rather than providing
+your own abstraction. Most frameworks already provide interfaces or base
+classes that make this easy to achieve.</p>
+<p>Even so logging suffers the same issue as date/times when it comes to
+DI. You often need the logging component everywhere, whether it is
+simply to pass on to other services.</p>
+<p>Logging and DI generally do not go well together. Instead simple use the
+logging instance directly. A good logging framework would be fast, so
+any automated tests will not notice the difference. Likewise whether
+logging is configured or not, this should not cause tests to fail. In
+summary, not every object has to be provided via dependency injection.
+Loggers being a prime example.</p>
+<p>Due to this directly using a logging instance is the preferred approach.
+Do not rely on DI. However <a href="https://msdn.microsoft.com/en-us/library/dn440729%28v=pandp.60%29.aspx">semantic or structured
+logging</a>
+does change this suggestion as the use of a domain explicit interface
+can provide benefits. Semantic logging will be expanded in a future
+post.</p>
+<h4>Others</h4>
+<p>Date/Time and Logging are the two most common global dependencies. The
+majority of all other dependencies can and probably should be satisfied
+by traditional DI where possible. As always each dependency should be
+validated prior to introduction. It may be possible to either <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">eliminate
+or replace the component in
+question</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

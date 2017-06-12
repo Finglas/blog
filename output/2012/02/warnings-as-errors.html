@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Warnings as Errors</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2012/02/warnings-as-errors.html" rel="bookmark"
+           title="Permalink to Warnings as Errors">Warnings as Errors</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-02-01T00:00:00+01:00">
+                Published: Wed 01 February 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>One thing that annoyed me when starting at Codeweavers was the amounts
+of warnings that would occur during a build of any of our projects.
+Seeing the build progress only to spew out a screenful of text was
+something that did not sit right with me. I was not the only one who
+felt this was wrong, but as there was so many warnings in some cases, it
+was easier just to pretend they were not there. After all everything was
+working fine.</p>
+<p>The <a href="http://www.codinghorror.com/blog/2005/06/the-broken-window-theory.html">broken window
+theory</a>
+is very much in action here. During our last standards review we decided
+that there should ideally be zero warnings per project. It is worth
+mentioning that most of our warnings were just that, warnings about
+something that was not really a major issue. Warnings such as unused
+variables and so on fall into this area.</p>
+<p>On the other hand, while 90% of our warnings were ignorable, there were
+a handful which were rather important. Examples such as referencing
+different versions of required .dlls. Warnings like this are extremely
+helpful. It would be wrong for these to be hidden among a block of less
+serious issues. Warnings such as these once visible, can save hours of
+painful debugging.</p>
+<p>Some of our projects had a fair few warnings - in the region of fifty
+plus. In order to begin tackling these larger projects we started
+slowly. If in a single day I would have removed a batch of warnings,
+this was a step in the right direction. After a week or so all our
+projects were void of warnings.</p>
+<p>The next step was to make sure we do not go back to having larger
+projects with warnings galore. To prevent this I enabled "<strong>Treat
+warnings as errors</strong>" within Visual Studio. This is per project setting
+and can be found under the "<strong>Build</strong>" tab. Do note that you must enable
+this for "<strong>All Configurations</strong>" otherwise any settings you change will
+only apply to Debug/Release builds.</p>
+<p>I like this feature of Visual Studio immensely. Having the compilier do
+as much work as possible - in this case check for warnings is similar to
+a tip found in <a href="http://www.amazon.co.uk/Working-Effectively-Legacy-Code-ebook/dp/B0017DQ8KU/ref=sr_1_3?ie=UTF8&amp;qid=1329313155&amp;sr=8-3">Working Effectively with Legacy
+Code</a>.
+Here the concept of "leaning on the compiler" is introduced. In other
+words you introduce an error in order to show you the usages of a piece
+of code - this is stark contrast to manually searching for the code in
+question.</p>
+<p>The end result of this process is now during a build, if any warnings
+occur, the build will fail. The build will report where the warning is,
+along with why there is a problem. While this is great in theory it can
+cause some slight pain when developing, as you may comment out some code
+to experiment only to find the build failing due to unused variables.
+Despite this treating warnings as errors has been a great help. Recently
+we have solved some pretty serious issues with regards third party
+dependencies all thanks to treating warnings as errors.</p>
+<p><em>The idea of allowing the computer to do as much work as possible
+applies to all languages. For your compiler/interpreter etc... there
+will be an option to apply warnings. This is not a specific language
+feature.</em></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

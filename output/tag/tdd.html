@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - tdd</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2016/03/write-assertions-first.html">Write Assertions First</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-03-01T00:00:00+01:00">
+                Published: Tue 01 March 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info --><p>Writing a test as part of the TDD process is simple.</p>
+<ol>
+<li>Arrange</li>
+<li>Act</li>
+<li>Assert</li>
+</ol>
+<p>Many individuals recommend the process be reversed. Write assertions
+first. Then write the steps to perform the action. Followed by the
+required setup to complete the action.</p>
+<ol>
+<li>Arrange</li>
+<li>Act</li>
+<li>Assert</li>
+</ol>
+<h4>Simplicity</h4>
+<p>You will write just enough of the test to do the job. Its not far from
+doing TDD on the test itself. Using staticily compiled languages you
+would see compile time errors while performing this step. As you are
+writing the test in reverse this is normal and expected. Most text
+editors or IDE's can ease this process.</p>
+<p>Implement just enough of the test to do your job. The opposite of this
+is large, copy/paste tests that require lines of setup code that can
+safely be removed or reduced.</p>
+<h4>Meaning</h4>
+<p>You end up naming variables with more meaning. With a traditional
+approach variables can lack true, descriptive names. They are often
+called <code>result</code> or similar. By working in reverse you force yourself to
+think of what you are asserting upon. This forces better names out in
+the process. An example would be <code>orderTotals</code> if the purpose of the
+assertion was to check if the total of an order was as expected.</p>
+<p>Writing assertions first can feel awkward but the benefits of this
+change are well worth the initial slowdown.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/why-i-dont-like-mocking-frameworks.html" rel="bookmark"
+                           title="Permalink to Why I Don't Like Mocking Frameworks">Why I Don't Like Mocking Frameworks</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>Disclaimer: By <em>mocking</em> framework I generalize anything that includes
+support for stubs and mock objects.</p>
+<hr>
+<p>The use of mocking frameworks was a difficult part of my TDD journey.
+Not only are newcomers expected to get their head around the basics of
+the practice there are now new tools to contend …</p>
+                <a class="readmore" href="/2015/08/why-i-dont-like-mocking-frameworks.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/05/testing-private-code.html" rel="bookmark"
+                           title="Permalink to Testing Private Code">Testing Private Code</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-01T00:00:00+02:00">
+                Published: Fri 01 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>A common problem many people ask is - should you test private code? In
+short, you shouldn't. You should always test the public api of your code
+where possible. This is not always easy. Based on the context of the
+code in question there are a few options available.</p>
+<h5>Don't Test …</h5>
+                <a class="readmore" href="/2015/05/testing-private-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/04/randomly-generated-values-in-tests.html" rel="bookmark"
+                           title="Permalink to Randomly Generated Values in Tests">Randomly Generated Values in Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The use of randomly generated test data seems like a good thing at first
+glance. Having worked with several teams that have used this concept I
+generally discourage the practice. Consider a simple method that joins
+together two strings. A test using random values may look like this.</p>
+<script src="https://gist.github.com/Finglas/a52ff8867d6af0757059.js"></script>
+
+<h4>Problems</h4>
+<h5>Harder …</h5>
+                <a class="readmore" href="/2015/04/randomly-generated-values-in-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/12/a-unit-is-not-always-method-or-class.html" rel="bookmark"
+                           title="Permalink to A Unit is Not Always a Method or Class">A Unit is Not Always a Method or Class</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>Part three of my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">Three Steps to Code Quality via TDD
+series</a>.
+The most important concept when coupled with the previous two points -
+not every unit will relate to a method or class.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">Stop Making Everything
+    Public</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">Limit the Amount of Dependencies you
+    Use</a></li>
+</ul>
+<hr>
+<p>Most introductions …</p>
+                <a class="readmore" href="/2014/12/a-unit-is-not-always-method-or-class.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/12/limit-amount-of-dependencies-you-use.html" rel="bookmark"
+                           title="Permalink to Limit the Amount of Dependencies you Use">Limit the Amount of Dependencies you Use</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>Part two of my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">Three Steps to Code Quality via
+TDD</a>
+series and ties very closely into step one, limiting the visibility of
+your classes.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">Stop Making Everything
+    Public</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html">A Unit is Not Always a Method or
+    Class</a></li>
+</ul>
+<hr>
+<p>The more dependencies you use the more your …</p>
+                <a class="readmore" href="/2014/12/limit-amount-of-dependencies-you-use.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/12/stop-making-everything-public.html" rel="bookmark"
+                           title="Permalink to Stop Making Everything Public">Stop Making Everything Public</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>Part one of my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">Three Steps to Code Quality via TDD
+series</a>.</p>
+<ul>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">Limit the Amount of Dependencies you
+    Use</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html">A Unit is Not Always a Method or
+    Class</a></li>
+</ul>
+<hr>
+<p>We always default to public class when creating a new class. Why? The
+concept of visibility in OO …</p>
+                <a class="readmore" href="/2014/12/stop-making-everything-public.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/12/three-steps-to-code-quality-via-tdd.html" rel="bookmark"
+                           title="Permalink to Three Steps to Code Quality via TDD">Three Steps to Code Quality via TDD</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>Common complaints and problems that I've both encountered and hear other
+developers raise when it comes to the practice of Test Driven
+Development are:</p>
+<ul>
+<li>Impossible to refactor without all the tests breaking</li>
+<li>Minor changes require hours of changes to test code</li>
+<li>Test setup is huge, slow to write and difficult …</li></ul>
+                <a class="readmore" href="/2014/12/three-steps-to-code-quality-via-tdd.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/08/stopmockingeverything.html" rel="bookmark"
+                           title="Permalink to Stop.Mocking.EVERYTHING">Stop.Mocking.EVERYTHING</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-08-01T00:00:00+02:00">
+                Published: Fri 01 August 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/retro.html">retro</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>I've flip flopped on how to use mock objects since 2008. It's took me
+nearly five years to finally claim to have a solid, practical answer on
+what is in my opinion, their correct use.</p>
+<h4>Mock Everything</h4>
+<p>Some developers told me to mock everything. Every. Single. Collaborator.
+I wasn't sure …</p>
+                <a class="readmore" href="/2014/08/stopmockingeverything.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/05/learning-tests.html" rel="bookmark"
+                           title="Permalink to Learning Tests">Learning Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-01T00:00:00+02:00">
+                Published: Thu 01 May 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>At the last <a href="http://www.agilestaffordshire.org/">Agile Staffordshire</a> I
+attended <a href="http://www.agilestaffordshire.org/agile/january-2014-kata-with-constraints/">the task was to complete the string calculator with
+constraints</a>.
+The group worked in pairs and everything was running smoothly. Until I
+heard a few guys behind struggling with something.</p>
+<p>I'd worked with one of the developers previously, so they called me over …</p>
+                <a class="readmore" href="/2014/05/learning-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2014/02/tdd-is-tool.html" rel="bookmark"
+                           title="Permalink to TDD is a Tool">TDD is a Tool</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-01T00:00:00+01:00">
+                Published: Sat 01 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->                <p>I remember being introduced to Test Driven Development (TDD) very well.
+This is because it had such an <strong>overwhelming change on how I write code
+day to day</strong>. It was incredibly alien, difficult, yet rewarding. On this
+journey for the last five years I've changed my style, learned how not …</p>
+                <a class="readmore" href="/2014/02/tdd-is-tool.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2012/05/achieving-more-isolated-unit-testing.html" rel="bookmark"
+                           title="Permalink to Achieving more Isolated Unit Testing">Achieving more Isolated Unit Testing</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-05-01T00:00:00+02:00">
+                Published: Tue 01 May 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p><em>Good</em> unit tests should be:</p>
+<ul>
+<li>fast</li>
+<li>independent</li>
+<li>well focused</li>
+<li><em>isolated</em></li>
+</ul>
+<p>If your unit tests are slow, you're not gonna run them as often as you
+should. Therefore one of the main benefits of unit testing is lost - the
+lack of instant feedback.</p>
+<p>Each of your unit tests should be independent …</p>
+                <a class="readmore" href="/2012/05/achieving-more-isolated-unit-testing.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2012/01/write-unit-tests-start-deleting-them.html" rel="bookmark"
+                           title="Permalink to Write Unit Tests? Start deleting them">Write Unit Tests? Start deleting them</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-01-01T00:00:00+01:00">
+                Published: Sun 01 January 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>A recent <a href="http://blog.steveklabnik.com/posts/2011-09-22-extracting-domain-models-a-practical-example">blog post by Steve
+Klabnik</a>
+concluded with a statement about tossing unit tests if you have end to
+end tests covering the code in question.</p>
+<blockquote>
+<p>Don't be afraid to change the tests! As soon as you've verified that
+you've transcribed the code correctly, don't be afraid to just …</p></blockquote>
+                <a class="readmore" href="/2012/01/write-unit-tests-start-deleting-them.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

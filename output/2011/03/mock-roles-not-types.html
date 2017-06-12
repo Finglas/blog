@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Mock Roles not Types</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2011/03/mock-roles-not-types.html" rel="bookmark"
+           title="Permalink to Mock Roles not Types">Mock Roles not Types</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-03-01T00:00:00+01:00">
+                Published: Tue 01 March 2011
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2011.html">2011</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <blockquote>
+<p>"if it feels wrong, it probably is" - numerous Codeweavers' developers</p>
+</blockquote>
+<p>The framework we use at Codeweavers is the excellent
+<a href="http://code.google.com/p/moq/">Moq</a>, therefore when something is
+difficult to mock we are forced by the framework to write an adapter. We
+use an interface for testing, then create a concrete type which simply
+invokes the hard to test code such as static code, third party libraries
+and resources that are expensive to set up. There are some ways ways in
+C# to get around this, but they involve black magic and should be
+avoided at all costs unless you are deeply entangled in legacy code. A
+refactoring would be preferable over hard to test code.</p>
+<p>The process of writing an
+<a href="http://en.wikipedia.org/wiki/Adapter_pattern">adapter</a> around hard to
+test code is a standard practice, we do it all the time as we are forced
+to by the unit testing framework. Some frameworks we use at Codeweavers
+such as [<a href="http://asp.net/mvc">ASP.NET
+MVC</a>]{style="text-decoration:underline;"}are
+designed with testability in mind, so unlike scenarios where you cannot
+test code easily, the MVC framework makes it possible. In a recent
+feature myself and a fellow colleague wrote some code within a
+controller which relied on some of the controllers' (the MVC framework)
+internals.</p>
+<p>Rather than abstracting this into a class which we inject to make
+testing easier we went the route of setting up a complex, messy and
+tedious routing test fixture. Why you ask? Maybe it was the fact it was
+possible to test. Had it been straight up impossible or much harder,
+then introducing an abstraction would have been the obvious solution.
+The code in question was a small method that depending on the somewhat
+complex and unique routing values performed on a certain response. Fast
+forward a week later and the feature is to be expanded.</p>
+<p>We were back were we started, the new feature needed more setup that
+relied on the framework, and in turn once this production code was
+changed, the old test fixture would need updating. The very thought of
+this made me feel tired, fed up and generally annoyed that the test code
+was harder to write than the actual production code! While the code did
+not feel right, the actual process was a by the book approach, so it
+must have been right. Taking a step back myself and my new pairing
+partner decided for a different approach. Lets abstract the controller
+internals we need and inject this into the controller. In turn our code
+would read better and the tests would be easy to construct.</p>
+<p>Having made this refactoring the tests were still green. The refactoring
+was a great success. Now the test fixture set up consisted of a few
+simple lines. All the complex framework specific nonsense had
+disappeared. Getting to this stage took a bit of thought with regards
+the implementation, but we got there non the less. Having made this
+change, we wrote the next tests with such ease and joy it actually felt
+fun, enjoyable and completely stress free. Just how programming should
+be.</p>
+<p>For the production code, as the framework is test friendly we had some
+unit tests around the concrete object used in production. For scenarios
+where this is not possible, a high level acceptance test to ensure
+things are wired up correctly would suffice. Either way we should always
+be confident when using code we do not own that it is correct, providing
+we use it correctly. After all, this will be heavily tested by the third
+party or so we hope. Manual testing will catch any integration issues
+with third party code with any luck.</p>
+<p>The whole process was staggering, I was blown away by my ignorance. I
+knew the best practices, yet I chose <a href="http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod">to depend on concrete
+implementations rather than
+abstractions</a>.
+After this session the whole theory behind <a href="http://www.mockobjects.com/files/mockrolesnotobjects.pdf">mocking roles and not
+types</a> [pdf]
+became so much clearer. This is yet one more revelation to add to the
+list. Every time I write <code>Mock&lt;name&gt;</code>, stop and think. Do I own the
+type? If not then maybe there is an abstraction waiting to escape, after
+all it will save a lot of pain.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

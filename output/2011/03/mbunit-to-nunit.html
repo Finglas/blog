@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>MBUnit to NUnit</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2011/03/mbunit-to-nunit.html" rel="bookmark"
+           title="Permalink to MBUnit to NUnit">MBUnit to NUnit</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-03-01T00:00:00+01:00">
+                Published: Tue 01 March 2011
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2011.html">2011</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>Over the last few weeks we've ported our tests from
+<a href="http://www.mbunit.com/">MBUnit</a> to <a href="http://www.nunit.org/">NUnit</a>. This
+was done as after a quick spike it was seen that NUnit tests run almost
+fifty percent quicker. For example our common projects' test time went
+from around <strong>40s</strong> to around <strong>20s</strong> on average.</p>
+<p>This whole process was no easy task. Initially our largest project was
+converted by the whole team. We split into pairs/individuals and tackled
+a test project each. Working in this manner we could commit after each
+project, meaning at any one time the build was only fractionally broke,
+rather than completely unbuildable. Previously we tried a big bang
+approach but after several thousand errors, we quickly reverted. After
+each commit the tests were gradually moved over. This took around an
+hour or so, and therefore our allocated dojo/technical dojo time for
+that week was used. For the remaining projects an ad-hoc approach was
+taken. The first pairs to work on a project would be responsible for
+porting the tests over. Thankfull our other projects bar one were fairly
+straightforward to upgrade and were done as part of waste or kaizen.</p>
+<p>Some of this process could be automated however things were not
+completely smooth. For example converting the MBUnit namespace over was
+achieved by project level find and replace. Other issues such as Asserts
+being slightly different required a manual fix. One example being
+asserting a exception is thrown. The MBUnit approach used attributes
+while in NUnit it is more preferable to use <em>Assert.Throws</em>. The other
+issue we faced was porting over the relevant build scripts and Cruise
+Control configs. Again there was no easy way to do this. We had a fair
+few CI fails when this was done, but when editing the xml build files
+there is no real way to test what you've done without actual trying it!</p>
+<p>Overall the whole episode was not as bad as I thought it would be. We
+seem pretty stable at time of writing, and the tests are definitely
+quicker to run locally. We still have slow tests, and as part of waste
+we'll be looking into whether these slow tests are needed. One
+interesting practice I've noticed over the upgrade is how many dodgy
+tests we've removed. Tests such as <em>Assert.IsNotNull</em> after creating a
+new object - the sort of tests everyone writes when starting TDD have
+been removed. These legacy tests serve no purpose now, but were the key
+starting point of the TDD introduction to Codeweavers several years ago.
+Other tests which are covered else where or simply not needed were also
+removed. The final issue we are aiming to improve is that of our
+regression/acceptance tests, many of which are Selenium tests.</p>
+<p>Would we recommend upgrading your test suite to the latest/next best
+thing? Not unless you can prove with figures that it has an actual
+benefit. We provided no value to the business by doing this, but by
+hopefully taking one step to increase our feedback cycle we'll see the
+benefit over time. If anything, we should be more likely to run our
+tests. As for why MBUnit was slower? It features a lot of stuff we
+simply don't need, while NUnit is more lightweight and just plain faster
+for our use. We could perhaps speed the tests even more by writing our
+own test runner, but the likes of Visual Studio integration are a must
+therefore this is no easy task.</p>
+<p>One interesting point to conclude was that during this process there was
+talk about wrapping NUnit within a Codeweavers test framework,
+essentially meaning we could switch test frameworks whenever. Is this
+overkill for most projects? Most likely, but it was something to
+consider especially for large applications. As who knows, maybe there
+will be an even faster framework out there that we can upgrade to again,
+next year...</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

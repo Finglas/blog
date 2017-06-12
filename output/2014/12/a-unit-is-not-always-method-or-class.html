@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>A Unit is Not Always a Method or Class</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/12/a-unit-is-not-always-method-or-class.html" rel="bookmark"
+           title="Permalink to A Unit is Not Always a Method or Class">A Unit is Not Always a Method or Class</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->      <p>Part three of my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">Three Steps to Code Quality via TDD
+series</a>.
+The most important concept when coupled with the previous two points -
+not every unit will relate to a method or class.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">Stop Making Everything
+    Public</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">Limit the Amount of Dependencies you
+    Use</a></li>
+</ul>
+<hr>
+<p>Most introductions into TDD use simple examples. Even the excellent <a href="http://www.amazon.co.uk/Driven-Development-Addison-Wesley-Signature-Series/dp/0321146530">TDD
+by
+Example</a>
+uses a value object in terms of Domain Driven Design. Most introductory
+articles on the Internet suffer the same fate. While these are great for
+demonstrations, they don't relate to what most developers need to code
+on a day to day basis. It's around this point where people proclaim that
+the benefit of automated testing (even after the fact) is a waste of
+time.</p>
+<p>One of my biggest <a href="http://www.stevefenton.co.uk/Content/Blog/Date/201305/Blog/My-Unit-Testing-Epiphany/">revelations with
+TDD</a>
+was that each unit does not need to equate to a single method or class.
+For a long time I followed what others did. Each collaborator would be
+injected and replaced with a test double. Each class would have a
+corresponding test file. However as I have <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">stated in the introduction,
+this leads to
+problems</a>.</p>
+<p>We should test units of behaviour, not units of implementation. Given we
+know we should be using as <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">few dependencies as
+possible</a>,
+and we know we should <a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">limit
+visibility</a>,
+each test should be simple to write. As part of the refactor step if we
+choose to introduce a new class that is fine. There is no need in most
+cases to extract this and introduce a test double. Every time this is
+done we tie the test closer and closer to the implementation details.
+Every class having a corresponding test file is wrong.</p>
+<p>By testing a unit of behaviour we can chop and change the internals of
+the system under test without breaking anything. This allows the
+merciless refactoring automated testing advertises as a benefit.</p>
+<h5>Aren't you describing integration testing?</h5>
+<p>No. <a href="http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html">Tests should be isolated as I've documented
+before</a>,
+but there is nothing stating they should be isolated from the components
+they work with. If we isolate at the method or class level we make
+testing and refactoring much harder. Due to the term "unit" being so
+closely linked with a class or method, I like the <a href="http://www.amazon.co.uk/Google-Tests-Software-James-Whittaker/dp/0321803027">naming convention
+Google
+use</a>
+for their tests - small, medium and large.</p>
+<p>Additionally an excellent <a href="http://martinfowler.com/bliki/UnitTest.html">article from Martin Fowler on the subject of
+unit testing</a> introduces
+two new terms, solitary and sociable tests. Neither one style alone
+works so the type of test you write should be based on context.
+Unfortunately the industry seems to be fixated on solitary testing.</p>
+<h4>Sociable Tests</h4>
+<p>Work great at the aggregate root level. Does the object do what we
+expect it to? It can use zero or many collaborators behind the scenes
+but these are implementation details. Here we would limit the use of
+test doubles as much as possible but still have fast, isolated tests. As
+generalization - most automated testing should fall into this category
+as the core domain of your application is likely to have the most amount
+of logic present.</p>
+<h4>Solitary Tests</h4>
+<p>Useful at the adapter or system edge. For example, does the controller
+invoke the correct application service? We don't care how it works
+behind the scenes. Anything beyond this service would be a test double.
+These sort of tests are more closely coupled to implementation details
+so should be used sparingly.</p>
+<h5>Doesn't this lead to huge tests?</h5>
+<p>No, not really. As you will limit implementation details leaking into
+the public API the use of test doubles will reduce. This will shrink
+test setup and in most cases improve readability. Worrying about large
+tests shouldn't be a problem with this style of testing. You will not
+reduce the amount of tests required, however you will find them to be
+much more stable and resilient than before.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

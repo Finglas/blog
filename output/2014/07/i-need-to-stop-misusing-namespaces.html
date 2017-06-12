@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>I Need to Stop Misusing Namespaces</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/07/i-need-to-stop-misusing-namespaces.html" rel="bookmark"
+           title="Permalink to I Need to Stop Misusing Namespaces">I Need to Stop Misusing Namespaces</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-07-01T00:00:00+02:00">
+                Published: Tue 01 July 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>At the recent <a href="https://skillsmatter.com/conferences/6198-nsbcon">NSBCon</a>
+one interesting question that came about was how to structure a project.
+The panel consisting of various speakers had no answer, after all this
+is dependant upon the project in question. Therefore there is no right
+or wrong answer.</p>
+<p>However one point they were in unison about was splitting the domain and
+technical implementation of a project apart by the correct use of in
+namespaces.</p>
+<p>This is not the first time I've come across this, but I find myself
+breaking this principle on a regular basis. For example a typical
+project I work on looks like the following.</p>
+<script src="https://gist.github.com/Finglas/0b32973c8a339f283c60.js"></script>
+
+<h4>Problems</h4>
+<ul>
+<li>The namespace reflects a technical implementation detail, and not
+    the problem domain.</li>
+<li>Using Foo as an example, here the namespace is duplicated within the
+    name of the types, which in turn defeats the point of namespaces.</li>
+<li>Another issue is that the types can be much longer than they need to
+    be, which is often a criticism of enterprise software development,
+    when the names of objects roll off the screen because they contain
+    so many patterns or conventions.</li>
+</ul>
+<h4>Solution</h4>
+<p>Use namespaces for related domain responsibilities. In turn, group
+together the objects and types that are used together.</p>
+<p>An example of a better solution therefore would be:</p>
+<script src="https://gist.github.com/Finglas/b29e133fad03dd9430a7.js"></script>
+
+<h5>Benefits</h5>
+<ul>
+<li>Things that change at the same rate, would live logically next to
+    things that also need changes. In other words if I update the
+    FooViewModel, chances are I'll need to update views or controllers.</li>
+<li>Less typing if you don't suffer a namespace clash!</li>
+<li>You can still prefix the namespace where required, e.g.
+    Foo.Controller if you have a clash or prefer the readability.</li>
+<li>Shorter type names!</li>
+</ul>
+<p>While this is the ideal way of structuring our applications it's not
+always possible. Some coding conventions actually encourage the first
+example, and depending on the configurability of certain frameworks this
+may prove difficult. That aside, I'll be making a strong push towards
+structuring my projects correctly going forwards.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

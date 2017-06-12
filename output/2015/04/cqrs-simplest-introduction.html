@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>CQRS - The Simplest Introduction</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/04/cqrs-simplest-introduction.html" rel="bookmark"
+           title="Permalink to CQRS - The Simplest Introduction">CQRS - The Simplest Introduction</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/soa.html">SOA</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p><a href="http://martinfowler.com/bliki/CQRS.html">CQRS or Command Query Responsibility
+Separation</a> is easy to
+understand but it can become complex due to various levels to which
+developers take the principle behind it. Simply - <a href="http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/">CQRS is two models,
+where the used to be
+one</a>.
+Nothing more at its heart.</p>
+<p>Take the Customer aggregate below. This exposes both commands as void
+methods and queries as methods with return types. Public state is
+leaked, but needed in order to display or persist the data. Many
+frameworks or libraries require public accessibility in order to
+function.</p>
+<script src="https://gist.github.com/Finglas/c1d94351de393f782435.js"></script>
+
+<p>CQRS states we split commands from queries. This means we end up with a
+pure Customer aggregate root that exposes behaviour only. Likewise we
+end up with a basic application service that simply returns data.</p>
+<script src="https://gist.github.com/Finglas/dd2ff5c706847c3f4734.js"></script>
+
+<h4>Benefits</h4>
+<h5>Commands</h5>
+<ul>
+<li>Domain model is purely behaviour.</li>
+<li>No data is exposed, public fields/methods gone (no getters/setters)</li>
+<li>Only way to modify customers is via the commands - encapsulation is
+    preserved.</li>
+<li>Less relationships simply for querying/persistence (has-a
+    relationships)</li>
+<li>Testing is easier, check event raised/command issued rather than
+    state</li>
+<li>Allows task based UI's, rather than CRUD focused interactions.</li>
+<li>If you use repositories, you only need a GetById method.</li>
+</ul>
+<h5>Queries</h5>
+<ul>
+<li>Queries can be simplified - in many cases by a huge amount. Just
+    read from the data store, no need to create relationships between
+    models.</li>
+<li>You can <a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html">use direct data access, rather than repositories or other
+    abstractions</a>.
+    This has a lot of benefit.</li>
+<li>It's easy to develop, less layers and moving parts.</li>
+<li>You can independently replace persistent storage mechanisms per
+    query based on use cases.</li>
+</ul>
+<h4>Complexity</h4>
+<ul>
+<li>CQRS is not architecture - it is a pattern, often used within
+    boundaries of a system.</li>
+<li><a href="https://lostechies.com/jimmybogard/2012/08/22/busting-some-cqrs-myths/">Event Sourcing and Eventual Consistency don't need to be
+    used</a>,
+    but they can be employed if needed. Many examples of CQRS include
+    these, making CQRS appear more complicated than it really is.</li>
+<li>You can separate read and write stores. For example, store the read
+    data in document store, while storing write data in a relational
+    database. This increases complexity and means that seeding/feeding
+    data becomes an issue. <a href="http://www.udidahan.com/2011/04/22/when-to-avoid-cqrs/">A collaborative domain can signal the need
+    to do this</a>.</li>
+</ul>
+<p>CQRS is an easy concept, that introduces many benefits. However
+implementation of this pattern can vary from simple, to complicated. The
+extent to which CQRS is implemented should be judged on a case by case
+basis. Many systems can get away without separating read and write
+stores, yet still enjoy the benefits that this pattern provides.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

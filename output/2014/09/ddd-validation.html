@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>DDD Validation</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/09/ddd-validation.html" rel="bookmark"
+           title="Permalink to DDD Validation">DDD Validation</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-09-01T00:00:00+02:00">
+                Published: Mon 01 September 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>Validation within an application (specifically in terms of <a href="http://en.wikipedia.org/wiki/Domain-driven_design">Domain
+Driven Design - DDD</a>)
+can be solved in a variety of ways.</p>
+<ul>
+<li>A validate method on the entity/value type in question</li>
+<li>An IsValid property/accessor on the entity/value type in question</li>
+<li>A separate service could be used</li>
+</ul>
+<h4>Validate Method</h4>
+<p>Adding a validate method would work, but the flaw with this approach is
+that you lack any context of what is happening to the object in
+question.</p>
+<h4>Validate Flag</h4>
+<p>Some sort of flag on the object that denotes whether or not the object
+is in a valid state is undesirable. Firstly it forces the developer to
+ensure they check this at the correct time. If the object is invalid,
+exactly what do you do at this point? This approach is often used with a
+combination of a validate method that returns the exact error messages.</p>
+<h4>Validator Services</h4>
+<p>A separate service seems less than ideal at first when you consider
+developing a richer domain model, but this solution has numerous
+benefits. Firstly unlike the two solutions above you always have the
+context in which validation is being performed. For example, if you are
+saving a customer you will most likely want to perform different
+validation to what you would perform when loading up an aggregate.</p>
+<p>An additional point to consider is that most validation is not business
+logic. In other words, <a href="http://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html">checking for null references is not a business
+concern. Therefore separating this from your domain objects makes a lot
+of
+sense.</a>
+The only logic the domain objects should contain is business logic.</p>
+<p>As each service is a separate object, you gain the benefits of the
+single responsibility principle (SRP). Meaning testing, development and
+future changes are easier.</p>
+<h4>Example</h4>
+<script src="https://gist.github.com/Finglas/e522caca787c75cdea0f.js"></script>
+
+<p>The beauty here is that each validator (a simple function in this case)
+can be used in the correct context. E.g. when the PersonController POST
+handler is invoked, we use the person saving validator.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

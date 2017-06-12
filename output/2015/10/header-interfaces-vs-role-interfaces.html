@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Header Interfaces vs Role Interfaces</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/10/header-interfaces-vs-role-interfaces.html" rel="bookmark"
+           title="Permalink to Header Interfaces vs Role Interfaces">Header Interfaces vs Role Interfaces</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>In some languages such as C++ you must define header interfaces. These
+constructs define how a public type is exposed in terms of its public
+interface. Other languages take a different route. C# or Java do not
+require headers but they are still very much in circulation. This
+unfortunately brings along some unwanted side effects.</p>
+<h4>Header Interfaces</h4>
+<p>Header interfaces are a one to one mapping of public methods that match
+the type it is defining. In other words, they are recreating the
+overhead of headers in languages that do not need them.</p>
+<script src="https://gist.github.com/Finglas/191d9a210e830cb61d83.js"></script>
+
+<ul>
+<li>Header interfaces tend to break the Interface Segregation Principle.</li>
+<li>Harder to switch objects via DI as you are forced to implement all
+    members even if you do not use the whole interface.</li>
+<li>Prone to breakages as the one to one mapping means any change is
+    breaking.</li>
+</ul>
+<h4>Role Interfaces</h4>
+<p>Role interfaces define the role an object plays. Due to various roles
+having different responsibilities they are usually grouped by
+functionality. Role interfaces are usually combined with composition or
+interface inheritance.</p>
+<p>The role of a <code>Developer</code> has now been introduced. This is a separate
+concept from the rest of the object.</p>
+<script src="https://gist.github.com/Finglas/ae647867f27a7404720e.js"></script>
+
+<ul>
+<li>Easier to follow the Interface Segregation Principle.</li>
+<li>Closely related to the Liskov Substitution Principle - no need for
+    partial implementations.</li>
+<li>Less chance of breaking changes - interfaces can be removed or added
+    easily.</li>
+<li>Reduced scope - anything that fulfils the role of <code>Developer</code> can be
+    provided as an argument.</li>
+<li>DI frameworks may take more configuration if role interfaces are
+    used. This may explain the bias towards header interfaces.</li>
+</ul>
+<h4>More</h4>
+<ul>
+<li><a href="http://blog.ploeh.dk/2013/01/10/RoleInterfaceRoleHint">http://blog.ploeh.dk/2013/01/10/RoleInterfaceRoleHint</a></li>
+<li><a href="http://www.pluralsight.com/courses/encapsulation-solid">http://www.pluralsight.com/courses/encapsulation-solid</a></li>
+<li><a href="http://martinfowler.com/bliki/RoleInterface.html">http://martinfowler.com/bliki/RoleInterface.html</a></li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

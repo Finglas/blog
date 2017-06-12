@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Pre Computation</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/11/pre-computation.html" rel="bookmark"
+           title="Permalink to Pre Computation">Pre Computation</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> </p>
+</footer><!-- /.post-info -->      <p><a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html">Caching is a common
+technique</a>,
+especially with HTTP as it is made so easy. However pre computation is
+an alternative that can be used to reduce failures as well as speed up
+processing and response times.</p>
+<h4>Caching Example</h4>
+<p>Assume a list of countries to be displayed on the UI. These are often
+stored in one logical place, the database. A remote call is issued to
+query the database and return the results. The results are then
+manipulated and inserted into the UI. Repeat calls will then be cached
+for some period by the web server and/or proxy.</p>
+<h4>Pre Computed Example</h4>
+<p>As part of the build process have the same query performed, dynamically
+building up the result set. Using a templating language modify a base
+source file which simply inserts the dynamic result set. The end result
+of this would be a source file containing a collection of countries as
+if you had hardcoded the values. The difference is these values are
+pulled from a single source of truth as part of the pre build step.</p>
+<p>In a statically compiled language you would have compile time safety
+after this file is generated. Regardless a simple suite of tests to
+ensure the collection is not empty or badly formed would be beneficial.</p>
+<p>Once the deploy is complete all queries to retrieve the collection of
+countries would be performed by the pre computed collection. This
+technique works regardless of language due to the simplicity of storing
+a collection of items in a literal array or hashtable. For content that
+changes regularly you can use a separate content deploy which simply
+deploys any changes to content.</p>
+<p>Pre computation works for even what appears to be dynamic content.
+Article submission sites, e-commerce or wikis could all be developed
+using pre computation.</p>
+<p>Use punch outs for anything that varies based on user or context.
+Javascript is the natural choice for inserting this dynamic content.
+This advice flies in the face of much of the direction the modern web is
+heading. However the benefits of reduced remote calls, fast responses
+and less moving parts should not be under estimated.</p>
+<p>Naturally pre computation will not work in areas where content is highly
+dynamic or specific to users. Single page applications, social media
+streams and the like are better suited to dynamic content cached where
+possible. Additionally adjusting a system to handle content deploys is
+not something that can be achieved lightly. As the build and deploy
+process must accommodate these changes, pre computation is usually
+required to be thought of up front or require some rework to introduce.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

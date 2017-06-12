@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Convention Based Tests</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2017/01/convention-based-tests.html" rel="bookmark"
+           title="Permalink to Convention Based Tests">Convention Based Tests</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-11T00:00:00+01:00">
+                Published: Wed 11 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->      <p>Most projects have some form of convention. Examples would include:</p>
+<ul>
+<li>Attributes/Properties for REST API's</li>
+<li>Inheritance for third party base types</li>
+<li>Assemblies/Packages for third party code that is loaded dynamically</li>
+<li>Folder or namespace conventions</li>
+<li>And many other forms of conventions</li>
+</ul>
+<p>In a few of these examples static analysis can detect issues, but the
+majority of these problems would resolve only at runtime.</p>
+<p>A technique I've used in the past to great success is the concept of
+convention based tests (CBT). These are tests that ensure a particular
+convention is followed. As a general practice CBT tend to be written
+after the discovery of a problem as it is preferable to rely upon higher
+level tests initially. The good news is that CBT ensure that such
+problems never return and if a convention is broken you'll be notified
+during your test run.</p>
+<p>In terms of quantity there will be a very small number of these tests,
+and unlike typical tests that focus on behaviour rather than
+implementation, these tests are focused on implementation.</p>
+<h3>Reflection</h3>
+<p>Tests generally should <a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">favour readability and clarity over the removal
+of
+duplication</a>.
+Additionally the use of programming constructs such as loops or
+conditionals within tests are usually a bad idea. Using reflection is
+not recommended in most cases though the opposite is true for CBT.</p>
+<p>Reflection allows the previous examples to have tests written in a
+fairly flexible and dynamic manner. Future changes would automatically
+be tested.</p>
+<ul>
+<li>Tests to ensure particular types within a namespace have the correct
+    attribute/property applied.</li>
+<li>Tests to ensure particular types within a namespace have the correct
+    base class.</li>
+<li>Tests that assemblies/packages required at runtime are present
+    within the bin directory.</li>
+<li>Tests that folders/namespaces match a team/project naming standard.</li>
+<li>And so on.</li>
+</ul>
+<h3>Simpler Tests</h3>
+<p>In some cases reflection is not a suitable tool for convention based
+tools. In this scenarios a simpler style of test is required. These are
+essentially convention based tests that ensure additional tests are
+written. These simple tests act more as a prompt to the developer
+reminding them to add a test for a particular convention.</p>
+<p>This test would first detect how many types exist within the namespace
+and then detect how many tests have been written for those types. While
+this style of test does nothing other than really count the number of
+expected conventions versus the number of tests, the failure of this
+test provides a hint to the developer that they have forgotten
+something.</p>
+<p>The key with these simple detection tests is to provide a good failure
+message that includes details on why the test failed, and more
+importantly why and how a new test should be added.</p>
+<p>These simple CBT work when the use of reflection is difficult. While
+they may seem primitive, they do provide value as simple reminders to
+add future tests. Despite this it's worth remembering they provide no
+guarantee of the quality of the additional tests that are written. Here
+peer review is required.</p>
+<h3>Lessons</h3>
+<ul>
+<li>Add convention based tests if a convention cannot be detected by
+    static analysis or you cannot detect issues with higher level tests.</li>
+<li>Reflection is a valid tool to write a single CBT that covers many
+    areas.</li>
+<li>If a CBT is hard to write, use a test to prompt you to add further
+    tests in the future.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Value Object Refactoring</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/02/value-object-refactoring.html" rel="bookmark"
+           title="Permalink to Value Object Refactoring">Value Object Refactoring</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-03T20:36:00+01:00">
+                Published: Tue 03 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>After extract method or extract class introducing a value object is one
+of the most powerful refactorings available. A value object encapsulates
+a value or concept within your domain. While the term is more formally
+known from Domain Driven Design, DDD is not a pre-requresite for use.
+Introducing a value object can be applied to any code base.</p>
+<p>Some excellent examples of value objects would include <code>CustomerId</code>,
+<code>Money</code>, <code>OrderId</code> and <code>PhoneNumber</code>. These could all be identified as
+integers, strings or decimal numbers, but doing so would lead to a
+series of downsides.</p>
+<p>Making use of primitive data types to express concepts within an
+application is a code smell known as primitive obsession. Replacing
+primitives with value objects is the solution to this smell.</p>
+<h4>Primitive Obsession</h4>
+<ul>
+<li>Duplication will be thrown throughout the codebase. Both in the form
+    of simple guard clauses, or core domain logic.</li>
+<li>More tests are required. This ties into the duplication above.</li>
+<li>Your domain lends itself towards an anaemic model, full of utility
+    classes that operate upon state.</li>
+</ul>
+<h4>Solution</h4>
+<script src="https://gist.github.com/Finglas/e36d0ffc473d1dc12088.js"></script>
+
+<p>The implementation of <code>PersonalDetails</code> would be straight forward to
+begin with.</p>
+<script src="https://gist.github.com/Finglas/5a37ae3fe12211d2b527.js"></script>
+
+<p>Over time areas of logic can slowly migrate and move towards the class.
+In most IDE's, simply wrapping a primitive type as the first step can be
+carried out in a few keystrokes.</p>
+<p>The constructor performs basic validation on a technical level. Once
+complete we can carry out any domain logic. Likewise the behaviour
+attached to this object (hidden for beravity) would include various
+domain specific logic. For example, when changing surnames any leading
+or trailing whitespace is removed.</p>
+<p>One recommendation would be to expose the underlying primitive. In this
+example <code>ToString</code> has been overridden to return the string value that
+is being used. This should be a read only operation idealy, and enables
+the object to play nicely with third parties. Such use cases for this
+would be serialization, or writing the value to a persistent store.</p>
+<p>Equality (and hashcode in this case) should also be implemented. This is
+because the nature of value objects allows them to be equal to other
+instances that share the same value, despite being different references
+in memory. The beauty of this is that value objects can be used as
+needed, no need for injection or other patterns.</p>
+<h4>Benefits</h4>
+<ul>
+<li>Removes duplication. Only the object in question will be the source
+    of truth.</li>
+<li>Less tests need to be written. As the duplication has been removed,
+    only one test per behaviour is required. Rather than duplicating
+    checks for validation or formatting this can be contained to the
+    object. As the rest of the system deals with our value object, we
+    don't have to worry about dealing with an invalid representation.</li>
+<li>In statically typed languages you can lean on the compiler. It's
+    impossible to supply anything other than PersonalDetails when we ask
+    for an instance. Even for dynamic languages, the stack trace
+    presented upon error would be far more useful than had a primitive
+    type been provided.</li>
+<li>The surface area of mis-configuring arguments is smaller also.
+    Previously we would accept two strings that are order dependant. Now
+    this configuration has been reduced to a few areas.</li>
+<li>Using the example above, we can now rely on class pre-conditions to
+    simplify our expectations when working with this type. Given any
+    instance of <code>PersonalDetails</code> we can be sure that the forename and
+    surname are never null or empty, and that each personal details
+    instance will have a forename of at least one character long. A
+    simple string can never guarantee such conditions.</li>
+<li>Making value objects public generally makes sense. This provides an
+    excellent seam for testing and integration.</li>
+<li>The introduction of a value object plays nicely with my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">three basic
+    steps to code
+    quality</a>.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Walking Skeleton</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/05/walking-skeleton.html" rel="bookmark"
+           title="Permalink to Walking Skeleton">Walking Skeleton</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-05-01T00:00:00+02:00">
+                Published: Fri 01 May 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/development.html">development</a> <a href="/tag/team.html">team</a> </p>
+</footer><!-- /.post-info -->      <p><a href="http://alistair.cockburn.us/Walking+skeleton">A Walking Skeleton is the thinnest possible slice of new functionality
+that can be delivered end to
+end</a>. The term "<em>walking</em>"
+refers to the ability for the feature to "<em>stand on its own</em>". You
+should be able to deploy a Walking Skeleton and demonstrate it. Just
+like a human skeleton is an incomplete body, a Walking Skeleton is an
+incomplete piece of software with many internals stubbed, not
+implemented or consisting of basic functionality.</p>
+<p>While the software won't do much it provides rapid feedback. It allows
+your build and deploy pipeline to be set up if not already in place.
+More importantly it gives developers a framework or scaffold to work
+with.</p>
+<p>Production of a Walking Skeleton should be fast. Components such as
+<a href="http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html">which objects to introduce should ideally be developed top
+down</a>,
+however the actual direction each solution takes will vary. Some design
+will still be required, but the choice of patterns or implementation
+details should be deferred where possible. Core interfaces such as
+application services, domain models and data access will naturally fall
+out of this process.</p>
+<h4>Tasking</h4>
+<p>Each new story or feature should be implemented as a Walking Skeleton
+whenever possible. The first task a team should implement should be to
+create the skeleton itself. An optional step during implementation is to
+wrap the functionality in a acceptance test. Once the skeleton is
+complete, a task per object can be created with clear inputs, outputs
+and responsibilities.</p>
+<h4>Benefits</h4>
+<ul>
+<li>Highlights problems that tasking often misses.</li>
+<li>Tasks can be implemented in parallel once a framework is in place.</li>
+<li>Implementing or replacing stubbed code is easy given a stable API.</li>
+<li>Provides working software very quickly and cheaply, which is great
+    for feedback or exploration.</li>
+<li>Puts the whole team on the same page.</li>
+<li>Code trumps documentation.</li>
+<li>Leads to a more stable API.</li>
+<li>TDD is a natural fit once the skeleton is complete.</li>
+</ul>
+<p>Producing a Walking Skeleton is not perfect, problems still crop up, but
+they can be handled in a more controlled manner. Most issues relate to
+implementation details at lower levels, rather than integration or
+functional failures which are often symptoms of tasking before writing
+any code.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

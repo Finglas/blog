@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The Problem with Auto Updating Browsers</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2012/06/the-problem-with-auto-updating-browsers.html" rel="bookmark"
+           title="Permalink to The Problem with Auto Updating Browsers">The Problem with Auto Updating Browsers</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-06-01T00:00:00+02:00">
+                Published: Fri 01 June 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->      <p>At the time of writing the latest version of Firefox (version 13) has
+just been released. Bear in mind that a week ago I updated our Selenium
+bindings so that we could use Firefox 9+ for running our browser tests.</p>
+<p>The latest release is another great release for the Firefox team, except
+there is software out there will be broken. The software in question I'm
+talking about is any code that uses <a href="http://seleniumhq.org/download/">Selenium
+2.22.0</a> that was released 2012-05-29.
+It turns out the bindings only work for Firefox 12 or less.</p>
+<p>For whatever reason any tests that used Selenium this morning just
+stopped working for us - <a href="http://groups.google.com/group/selenium-users/browse_thread/thread/83a7895693364c3a">and
+others</a>.
+The tests in question caused the runner to hang as no window could be
+opened. I'm not sure what causes this, as the browser is essentially the
+same to the end user, bar some new features. Not being a Selenium
+developer I cannot comment how or why this has happened, nor can I
+suggest the Selenium team should be version agnostic.</p>
+<p>Our solution in the end was simple. Turn off the auto updating and
+downgrade the browser. <a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html">I've blogged about this in the
+past</a>,
+but since Firefox 10 - the team are adopting a "silent" update process.
+This is great for end users. Imagine the countless man hours saved if
+IE6 had shipped with an auto update feature? The problem now seems to be
+in the hands of developers.</p>
+<p>Another attempt to make this problem more obvious has been to add a
+check prior to our tests running to ensure that it can open a window. If
+this fails or hangs, we display a useful error message indicating that
+the browser in question is not compatible. This is due to the fact that
+it is not immediately obvious what the problem is. More confusion occurs
+when some machines will execute the tests with no problems at all.</p>
+<p>Tools -&gt; Options -&gt; Advanced -&gt; Update Tab</p>
+<p>So if you use Selenium and Firefox - ditch the auto updating. Manually
+update your bindings and check compatability for now...</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

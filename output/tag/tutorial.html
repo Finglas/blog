@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - tutorial</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2017/01/convention-based-tests.html">Convention Based Tests</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-01-11T00:00:00+01:00">
+                Published: Wed 11 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info --><p>Most projects have some form of convention. Examples would include:</p>
+<ul>
+<li>Attributes/Properties for REST API's</li>
+<li>Inheritance for third party base types</li>
+<li>Assemblies/Packages for third party code that is loaded dynamically</li>
+<li>Folder or namespace conventions</li>
+<li>And many other forms of conventions</li>
+</ul>
+<p>In a few of these examples static analysis can detect issues, but the
+majority of these problems would resolve only at runtime.</p>
+<p>A technique I've used in the past to great success is the concept of
+convention based tests (CBT). These are tests that ensure a particular
+convention is followed. As a general practice CBT tend to be written
+after the discovery of a problem as it is preferable to rely upon higher
+level tests initially. The good news is that CBT ensure that such
+problems never return and if a convention is broken you'll be notified
+during your test run.</p>
+<p>In terms of quantity there will be a very small number of these tests,
+and unlike typical tests that focus on behaviour rather than
+implementation, these tests are focused on implementation.</p>
+<h3>Reflection</h3>
+<p>Tests generally should <a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">favour readability and clarity over the removal
+of
+duplication</a>.
+Additionally the use of programming constructs such as loops or
+conditionals within tests are usually a bad idea. Using reflection is
+not recommended in most cases though the opposite is true for CBT.</p>
+<p>Reflection allows the previous examples to have tests written in a
+fairly flexible and dynamic manner. Future changes would automatically
+be tested.</p>
+<ul>
+<li>Tests to ensure particular types within a namespace have the correct
+    attribute/property applied.</li>
+<li>Tests to ensure particular types within a namespace have the correct
+    base class.</li>
+<li>Tests that assemblies/packages required at runtime are present
+    within the bin directory.</li>
+<li>Tests that folders/namespaces match a team/project naming standard.</li>
+<li>And so on.</li>
+</ul>
+<h3>Simpler Tests</h3>
+<p>In some cases reflection is not a suitable tool for convention based
+tools. In this scenarios a simpler style of test is required. These are
+essentially convention based tests that ensure additional tests are
+written. These simple tests act more as a prompt to the developer
+reminding them to add a test for a particular convention.</p>
+<p>This test would first detect how many types exist within the namespace
+and then detect how many tests have been written for those types. While
+this style of test does nothing other than really count the number of
+expected conventions versus the number of tests, the failure of this
+test provides a hint to the developer that they have forgotten
+something.</p>
+<p>The key with these simple detection tests is to provide a good failure
+message that includes details on why the test failed, and more
+importantly why and how a new test should be added.</p>
+<p>These simple CBT work when the use of reflection is difficult. While
+they may seem primitive, they do provide value as simple reminders to
+add future tests. Despite this it's worth remembering they provide no
+guarantee of the quality of the additional tests that are written. Here
+peer review is required.</p>
+<h3>Lessons</h3>
+<ul>
+<li>Add convention based tests if a convention cannot be detected by
+    static analysis or you cannot detect issues with higher level tests.</li>
+<li>Reflection is a valid tool to write a single CBT that covers many
+    areas.</li>
+<li>If a CBT is hard to write, use a test to prompt you to add further
+    tests in the future.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/01/finance-for-software-developers.html" rel="bookmark"
+                           title="Permalink to Finance For Software Developers">Finance For Software Developers</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-04T00:00:00+01:00">
+                Published: Wed 04 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Back at the start of 2016 I set about sorting my personal finances out,
+inspired by <a href="https://www.amazon.co.uk/d/Books/Soft-Skills-software-developers-manual/1617292397">Soft
+Skills</a>.
+The book makes a point to consider passive income as a viable solution
+to wealth building. The reason for this is simple, software developers
+tend to get paid well if working professionally …</p>
+                <a class="readmore" href="/2017/01/finance-for-software-developers.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/11/ddd-events.html.html" rel="bookmark"
+                           title="Permalink to DDD - Events">DDD - Events</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-01T00:00:00+01:00">
+                Published: Tue 01 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The act of something happening is one of the most crucial aspects of implementing Domain Driven Design (DDD). I missed the importance of domain events when first exploring DDD.</p>
+<h3>Why</h3>
+<p>Most requirements come in the form <q>when something happens, do this</q>. <em>Something</em> in this case would be an action, and …</p>
+                <a class="readmore" href="/2016/11/ddd-events.html.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/10/constant-object-anti-pattern.html" rel="bookmark"
+                           title="Permalink to Constant Object Anti Pattern">Constant Object Anti Pattern</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-01T00:00:00+02:00">
+                Published: Sat 01 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p>Most constants are used to remove magic numbers or variables that lack
+context. A classic example would be code littered with the number 7.
+What does this refer to exactly? If this was replaced with DaysInWeek or
+similar, much clarity is provided. You can determine that code
+performing offsets would …</p>
+                <a class="readmore" href="/2016/10/constant-object-anti-pattern.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/06/ddd-bounded-contexts.html" rel="bookmark"
+                           title="Permalink to DDD - Bounded Contexts">DDD - Bounded Contexts</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-06-14T07:25:00+02:00">
+                Published: Tue 14 June 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>A single domain can grow large when applying Domain Driven Design. It
+can become very hard to contain a single model when using ubiquitous
+language to model the domain. Classic examples prevalent in many domains
+would be <code>Customer</code> or <code>User</code> models. A bounded context allows you to
+break down a …</p>
+                <a class="readmore" href="/2016/06/ddd-bounded-contexts.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/06/given-when-then-scenarios-vs-test.html" rel="bookmark"
+                           title="Permalink to Given When Then Scenarios vs Test Fixtures">Given When Then Scenarios vs Test Fixtures</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-06-01T00:00:00+02:00">
+                Published: Wed 01 June 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>There are two common ways of writing automated tests which apply from
+unit to acceptance tests. These are typically known as test fixtures and
+Given-When-Then scenarios.</p>
+<h4>Test Fixture</h4>
+<ul>
+<li>Traditional method of writing tests.</li>
+<li>The common JUnit/NUnit approach. Other languages have very similar
+    concepts.</li>
+<li>Single test fixture with multiple tests …</li></ul>
+                <a class="readmore" href="/2016/06/given-when-then-scenarios-vs-test.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/05/you-rarely-need-custom-exceptions.html" rel="bookmark"
+                           title="Permalink to You Rarely Need Custom Exceptions">You Rarely Need Custom Exceptions</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-05-01T00:00:00+02:00">
+                Published: Sun 01 May 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Implementing custom exceptions usually gives a hint as to why you rarely
+need custom implementations. They are often nothing more than sub
+classes where the only difference is the type name and containing
+message.</p>
+<script src="https://gist.github.com/Finglas/b7341379033d951aa88d2b7ed28aaba5.js"></script>
+
+<p>In this C# example there is a lot of code for <em>nothing</em>. When checking
+logs or …</p>
+                <a class="readmore" href="/2016/05/you-rarely-need-custom-exceptions.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/04/dependency-injection-for-common-global.html" rel="bookmark"
+                           title="Permalink to Dependency Injection for Common Global Dependencies">Dependency Injection for Common Global Dependencies</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-04-13T07:09:00+02:00">
+                Published: Wed 13 April 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The use of <a href="http://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html">singletons can often be replaced by simply adjusting scoping
+of
+objects</a>.
+The vast majority of dependencies fit this pattern, with a few
+exceptions such as DateTime instances, or logging.</p>
+<p>Sometimes you just need these dependencies everywhere. You can find
+yourself passing these dependencies down into the deep …</p>
+                <a class="readmore" href="/2016/04/dependency-injection-for-common-global.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/03/singletons-and-singleton-lifestyle.html" rel="bookmark"
+                           title="Permalink to Singleton's and the Singleton Lifestyle">Singleton's and the Singleton Lifestyle</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-04-01T00:00:00+02:00">
+                Published: Fri 01 April 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/">The death of testability and the lack of
+isolation</a>
+make the singleton pattern a relic of times gone by. Rarely have I had a
+real need to code a singleton since my first year of university. Most
+decisions to use a singleton boil down to scoping issues.</p>
+<h4>Singleton</h4>
+<p>Assume a …</p>
+                <a class="readmore" href="/2016/03/singletons-and-singleton-lifestyle.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/02/the-n1-problem.html" rel="bookmark"
+                           title="Permalink to The N+1 Problem">The N+1 Problem</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-02-01T00:00:00+01:00">
+                Published: Mon 01 February 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The N+1 problem is when multiple queries are executed against a
+persistent store when a reduced amount could serve the same purpose.
+This degrades performance, uses more memory and can cause complexity to
+be added to the code that processes the results. Most sources of the
+problem come from …</p>
+                <a class="readmore" href="/2016/02/the-n1-problem.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/01/application-validation-and-domain.html" rel="bookmark"
+                           title="Permalink to Application Validation and Domain Validation">Application Validation and Domain Validation</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-01-13T19:58:00+01:00">
+                Published: Wed 13 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>There are two types of validation in an application - application
+validation and domain validation. This applies whether or not you
+practice DDD. One of my mistakes in the past has been confusing or
+conflating these two responsibilities at the same time.</p>
+<h4>Application Validation</h4>
+<p>Application validation is anything technical or anything …</p>
+                <a class="readmore" href="/2016/01/application-validation-and-domain.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/01/validation-is-not-cross-cutting-concern.html" rel="bookmark"
+                           title="Permalink to Validation is not a Cross Cutting Concern">Validation is not a Cross Cutting Concern</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-01-01T00:00:00+01:00">
+                Published: Fri 01 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Attributes in C# are also known as <a href="https://wiki.python.org/moin/PythonDecorators">decorators in
+Python</a> or <a href="http://docs.oracle.com/javase/tutorial/java/annotations/">annotations
+in Java</a>.
+Other languages may have similar constructs. This post will use
+<em>attribute</em> throughout but refers to the same concept.</p>
+<hr>
+<p>While attributes prove useful for cross cutting concerns such as
+authorization or logging, they can be misused. Attributes …</p>
+                <a class="readmore" href="/2016/01/validation-is-not-cross-cutting-concern.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/12/reactjs-and-jshint.html" rel="bookmark"
+                           title="Permalink to ReactJS and JSHint">ReactJS and JSHint</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The <a href="http://facebook.github.io/react/docs/getting-started.html">ReactJS Getting Started
+Guide</a> states
+that the recommended way of using React is combined with npm.</p>
+<p>This is great but poses a problem when trying to use JSHint. The default
+example outputs a single JS file containing both your code and the React
+library. The end result is the …</p>
+                <a class="readmore" href="/2015/12/reactjs-and-jshint.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/12/reducing-conditional-logic-to-single.html" rel="bookmark"
+                           title="Permalink to Reducing Conditional Logic to a Single Location">Reducing Conditional Logic to a Single Location</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html">My Anti If Campaign
+post</a>
+still generates a lot of questions and discussion. In summary:</p>
+<ul>
+<li>Conditional statements are not bad. They are a core programming
+    construct.</li>
+<li>If you are working in an OO language, type checks are probably not
+    the best solution to your problem. Rely on polymorphism.</li>
+<li>You need …</li></ul>
+                <a class="readmore" href="/2015/12/reducing-conditional-logic-to-single.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/10/header-interfaces-vs-role-interfaces.html" rel="bookmark"
+                           title="Permalink to Header Interfaces vs Role Interfaces">Header Interfaces vs Role Interfaces</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>In some languages such as C++ you must define header interfaces. These
+constructs define how a public type is exposed in terms of its public
+interface. Other languages take a different route. C# or Java do not
+require headers but they are still very much in circulation. This
+unfortunately brings …</p>
+                <a class="readmore" href="/2015/10/header-interfaces-vs-role-interfaces.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/the-self-shunt-test-doubles-without.html" rel="bookmark"
+                           title="Permalink to The Self Shunt - Test Doubles without a Framework">The Self Shunt - Test Doubles without a Framework</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Generally you should <a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html">favour hand crafted stubs without a framework by
+default</a>.
+Before you reach for a framework there is another bridging step that you
+can take only pulling in a framework if complexity arises - the Self
+Shunt.</p>
+<p>Assume a simple <em>Hello World</em> subject under test where we can provide …</p>
+                <a class="readmore" href="/2015/09/the-self-shunt-test-doubles-without.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/loops-vs-functional-programming-styles.html" rel="bookmark"
+                           title="Permalink to Loops vs Functional Programming Styles">Loops vs Functional Programming Styles</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/javascript.html">javascript</a> <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The following examples are four of the most common functional
+programming patterns that appear in mainstream languages though they may
+be known under different names.</p>
+<p>Being a <a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html">fan of CQS and
+CQRS</a>,
+queries work great when coding using the functional style. While this is
+completely subjective in terms of style …</p>
+                <a class="readmore" href="/2015/08/loops-vs-functional-programming-styles.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/dry-vs-coupling-in-production-code.html" rel="bookmark"
+                           title="Permalink to DRY vs Coupling in Production Code">DRY vs Coupling in Production Code</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">Duplication in tests can be a good
+thing</a>.
+The same can be said for production code as well in some cases. No. I'm
+not going mad. I probably wouldn't believe this if you showed me this
+several years ago either. More experience has shown me that loose
+coupling is often …</p>
+                <a class="readmore" href="/2015/06/dry-vs-coupling-in-production-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/branch-by-abstraction.html" rel="bookmark"
+                           title="Permalink to Branch by Abstraction">Branch by Abstraction</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p>Feature toggles are great for new features or features that are either
+enabled or disabled. Branch by Abstraction offers the <a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html">same benefits as
+feature
+toggles</a>
+but the seam to introduce the change is the abstraction itself. Unlike
+Feature Toggles, the use of Branch by Abstraction allows a gradual
+transition to …</p>
+                <a class="readmore" href="/2015/06/branch-by-abstraction.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/feature-toggles.html" rel="bookmark"
+                           title="Permalink to Feature Toggles">Feature Toggles</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/releasing.html">releasing</a> </p>
+</footer><!-- /.post-info -->                <p>I'm a fan of regular releasing. My background and experience leads me to
+release as regularly as possible. There are numerous benefits to regular
+releases; limited risk, slicker release processes and the ability to
+change as requirements evolve.</p>
+<p>The problem with this concept is how can you release when features …</p>
+                <a class="readmore" href="/2015/06/feature-toggles.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/firstordefault-in-linq.html" rel="bookmark"
+                           title="Permalink to FirstOrDefault in LINQ">FirstOrDefault in LINQ</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Explicit null checking is a code smell in most cases. It should be
+limited where possible, or pushed to the edge of the system. A common
+anti pattern I've noticed is the incorrect use of <code>First()</code> in LINQ,
+which I have used myself on many occasions in this manner.</p>
+<p>Assuming …</p>
+                <a class="readmore" href="/2015/06/firstordefault-in-linq.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/04/cqrs-simplest-introduction.html" rel="bookmark"
+                           title="Permalink to CQRS - The Simplest Introduction">CQRS - The Simplest Introduction</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/soa.html">SOA</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://martinfowler.com/bliki/CQRS.html">CQRS or Command Query Responsibility
+Separation</a> is easy to
+understand but it can become complex due to various levels to which
+developers take the principle behind it. Simply - <a href="http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/">CQRS is two models,
+where the used to be
+one</a>.
+Nothing more at its heart.</p>
+<p>Take the Customer aggregate below. This exposes …</p>
+                <a class="readmore" href="/2015/04/cqrs-simplest-introduction.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/04/dry-vs-damp-in-tests.html" rel="bookmark"
+                           title="Permalink to DRY vs DAMP in Tests">DRY vs DAMP in Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>In the <a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">previous post I mentioned that duplication in tests is not
+always
+bad</a>.
+Sometimes duplication becomes a problem. Tests can become large or
+virtually identically excluding a few lines. Changes to these tests can
+take a while and increase the maintenance overhead. At this point, DRY
+violations need to …</p>
+                <a class="readmore" href="/2015/04/dry-vs-damp-in-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/04/getters-and-setters-are-evil-redux.html" rel="bookmark"
+                           title="Permalink to Getters and Setters are Evil - Redux">Getters and Setters are Evil - Redux</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Back in early 2011 I wrote one of my <a href="http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html">most viewed and commented posts at
+the time - Getters and Setters are
+Evil</a>.
+Four years later it's time to review this.</p>
+<p>The feedback within the team was generally positive. Production code was
+written in this style to great success. The core …</p>
+                <a class="readmore" href="/2015/04/getters-and-setters-are-evil-redux.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/04/randomly-generated-values-in-tests.html" rel="bookmark"
+                           title="Permalink to Randomly Generated Values in Tests">Randomly Generated Values in Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-04-01T00:00:00+02:00">
+                Published: Wed 01 April 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The use of randomly generated test data seems like a good thing at first
+glance. Having worked with several teams that have used this concept I
+generally discourage the practice. Consider a simple method that joins
+together two strings. A test using random values may look like this.</p>
+<script src="https://gist.github.com/Finglas/a52ff8867d6af0757059.js"></script>
+
+<h4>Problems</h4>
+<h5>Harder …</h5>
+                <a class="readmore" href="/2015/04/randomly-generated-values-in-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/03/dependency-elimination-principle.html" rel="bookmark"
+                           title="Permalink to Dependency Elimination Principle">Dependency Elimination Principle</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>This is the third, and final part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html">Reused Abstraction
+    Principle</a></li>
+</ul>
+<hr>
+<p>I've wrote about what <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">good dependencies are before, and the benefits if
+you can limit and remove them where
+possible</a>.</p>
+<p>You can take this idea further though, by applying concepts …</p>
+                <a class="readmore" href="/2015/03/dependency-elimination-principle.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/03/reused-abstraction-principle.html" rel="bookmark"
+                           title="Permalink to Reused Abstraction Principle">Reused Abstraction Principle</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>This is the second part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">Dependency Elimination
+    Principle</a></li>
+</ul>
+<hr>
+<p>The Reused Abstraction Principle is a simple in concept in practice, but
+oddly rarely followed in typical enterprise development. I myself have
+been incredibly guilty of this in the past.</p>
+<p>Most code …</p>
+                <a class="readmore" href="/2015/03/reused-abstraction-principle.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/02/value-object-refactoring.html" rel="bookmark"
+                           title="Permalink to Value Object Refactoring">Value Object Refactoring</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-03T20:36:00+01:00">
+                Published: Tue 03 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>After extract method or extract class introducing a value object is one
+of the most powerful refactorings available. A value object encapsulates
+a value or concept within your domain. While the term is more formally
+known from Domain Driven Design, DDD is not a pre-requresite for use.
+Introducing a value …</p>
+                <a class="readmore" href="/2015/02/value-object-refactoring.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/02/guard-clauses-and-assertions.html" rel="bookmark"
+                           title="Permalink to Guard Clauses and Assertions">Guard Clauses and Assertions</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-01T00:00:00+01:00">
+                Published: Sun 01 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Two simple techniques to increase code quality, resilience, and ease
+debugging scenarios is to use guard clauses effectively and ensure that
+assertions are used liberally.</p>
+<h4>Guard Clauses</h4>
+<ul>
+<li>Any public method should perform guard clauses to ensure pre
+    conditions are met.</li>
+<li>Ensures the code's invariants are not broken.</li>
+<li>Throw exceptions, because …</li></ul>
+                <a class="readmore" href="/2015/02/guard-clauses-and-assertions.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/01/abstract-data-use-not-data-access.html" rel="bookmark"
+                           title="Permalink to Abstract Data Use Not Data Access">Abstract Data Use Not Data Access</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-01-01T00:00:00+01:00">
+                Published: Thu 01 January 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Common data access abstractions I've come across and been guilty of
+implementing myself are the likes of:</p>
+<ul>
+<li><code>IDatabase</code></li>
+<li><code>IPersistentStore</code></li>
+<li><code>IConnection</code></li>
+<li><code>IDataStore</code></li>
+<li><code>IRepository</code></li>
+</ul>
+<p>The problem is, these are not really abstractions. If anything they add
+an extra layer of indirection. One such benefit of this level of
+indirection is each concrete …</p>
+                <a class="readmore" href="/2015/01/abstract-data-use-not-data-access.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="/tag/tutorial2.html">&raquo;</a>
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

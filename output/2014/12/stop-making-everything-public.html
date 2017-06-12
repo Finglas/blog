@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Stop Making Everything Public</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/12/stop-making-everything-public.html" rel="bookmark"
+           title="Permalink to Stop Making Everything Public">Stop Making Everything Public</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-12-01T00:00:00+01:00">
+                Published: Mon 01 December 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/3-steps-code-quality.html">3-steps-code-quality</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->      <p>Part one of my <a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html">Three Steps to Code Quality via TDD
+series</a>.</p>
+<ul>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">Limit the Amount of Dependencies you
+    Use</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html">A Unit is Not Always a Method or
+    Class</a></li>
+</ul>
+<hr>
+<p>We always default to public class when creating a new class. Why? The
+concept of visibility in OO languages appears very early on in
+programming books, yet more often than not most of the classes we create
+default to public visibility.</p>
+<p><a href="https://twitter.com/simonbrown">@simonbrown</a> stated that each time you
+make something public you need to make a donation to charity. In other
+words we should think more about why the class we are making should be
+visible to everyone. I really like this idea that the use of the public
+keyword should be a well thought out decision.</p>
+<p>Server side development has a part to play in the lack of concern given
+to visibility issues. Library or framework developers on the other hand
+must carefully consider what is part of the public API. Any changes made
+after are considered breaking and require careful consideration. Yet in
+the land of server side development this is see as a non issue. This is
+wrong. If we treat our tests as consumers of our public API, constantly
+updating them or modifying them should be a warning symbol.</p>
+<p>Use internal or private classes for details and public classes for your
+API. The beauty of this is that TDD drives your public API, which should
+be fairly stable. Internally however you want the ability to refactor
+without a suite of tests breaking, otherwise what is the point of
+writing automated tests?</p>
+<p>Implementation details are introduced as part of the refactor step.
+Ideally they should never be introduced without a passing test in place,
+as previously the simplest possible thing should have been done.</p>
+<h4>What Should be Public Then?</h4>
+<ul>
+<li>Application services (use cases) that adapters talk to.</li>
+<li>Adapters - controllers, console application, presentation layer.</li>
+<li>Domain concepts - money or customer for example</li>
+<li>Strategies - things you need to inject, repositories, third parties</li>
+</ul>
+<h5>Doesn't this lead to god classes?</h5>
+<p>No. As part of the TDD cycle, when refactoring you can extract
+implementation details. There is no reason why the public types should
+suffer.</p>
+<h5>Doesn't this lead to large tests on the public types?</h5>
+<p>No. You'll use less test doubles (stubs, mocks, fakes) and in turn
+reduce setup. For any logic that appears to be painful or common you can
+introduce domain concepts which can and should be public. The tests can
+be wrote at this level then. Just find the right test seam.</p>
+<h5>What is the benefit?</h5>
+<p>The ability to switch implementation details without breaking public
+functionality. A whole world of refactoring options are available,
+inline method, extract method, extract class, inline class, replace with
+library and so forth. As long as the tests pass, you can be confident.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

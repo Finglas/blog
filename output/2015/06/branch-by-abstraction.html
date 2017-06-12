@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Branch by Abstraction</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/06/branch-by-abstraction.html" rel="bookmark"
+           title="Permalink to Branch by Abstraction">Branch by Abstraction</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>Feature toggles are great for new features or features that are either
+enabled or disabled. Branch by Abstraction offers the <a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html">same benefits as
+feature
+toggles</a>
+but the seam to introduce the change is the abstraction itself. Unlike
+Feature Toggles, the use of Branch by Abstraction allows a gradual
+transition to new functionality.</p>
+<p>Start by duplicating the type or implementing a new version of the
+abstraction. The work in progress changes can be made safely while the
+system is using the original implementations. In order to demonstrate
+the new functionality, rely on automated tests or wire up the new
+version. Once fully integrated and tested, simply remove the old
+implementation. The addition or removal of implementations acts as the
+toggle in this case.</p>
+<script src="https://gist.github.com/Finglas/779dc06ff19e7e842ff6.js"></script>
+
+<p>To extend the <code>SimpleReceiptWriter</code> a new version is made. This work in
+progress implementation has no limit on the time to complete. The new
+implementation will only take effect once configured.</p>
+<script src="https://gist.github.com/Finglas/bfe505e8f7946fa9b2fc.js"></script>
+
+<p>Configuration takes the form of composition root or dependency injection
+container changes. Given your code does not know the concrete
+implementation (apart from tests) you should be fine to make these
+switches.</p>
+<p><a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">If no abstraction exists you can introduce one if
+valid</a>. If no
+valid abstraction exists you can simply fallback to feature toggles.</p>
+<p>Branch by Abstraction plays nicely with <a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html">Walking
+Skeletons</a>.
+Your first implementation will most likely be a simple first pass
+attempt. Overtime these can be replaced with more fleshed out versions.</p>
+<p>Anytime you feel the need to create a branch in source, Branch by
+Abstraction can be a valid alternate in most cases. <a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html">UI changes are
+better suited as Feature
+Toggles</a>
+due to the nature of the code.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

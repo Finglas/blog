@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>I Need to Stop Misusing Divs</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/07/i-need-to-stop-misusing-divs.html" rel="bookmark"
+           title="Permalink to I Need to Stop Misusing Divs">I Need to Stop Misusing Divs</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-07-01T00:00:00+02:00">
+                Published: Fri 01 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <p>I a certainly not a skilled or expert front end developer. While I'm
+more than capable of creating pages I lack any design magic to make them
+look half decent. Despite this one area where improvement can be made is
+in my markup itself.</p>
+<p>Over the past few months I've spent most of my time getting to grips
+with recent additions and changes in the HTML5 and CSS3 space. During
+this one area stood out, my misuse of the division element or
+&lt;div&gt;.</p>
+<p>Before the addition of the newer elements pages nested with div after
+div was normal. However this is no longer the case. From this point
+onwards I will be ensuring that every time I introduce a div element I
+question whether a more appropriate element should be used.</p>
+<blockquote>
+<p>The HTML div element (or HTML Document Division Element) is the
+generic container for flow content, which does not inherently
+represent anything. It can be used to group elements for styling
+purposes (using the class or id attributes), or because they share
+attribute values, such as lang. It should be used only when no other
+semantic element (such as article or nav) is appropriate.</p>
+</blockquote>
+<h4>Semantic Meaning</h4>
+<p>Two huge side effects that are often overlooked when ignoring semantic
+markup is device compatibility with screen readers or other input
+methods and future proofing content.</p>
+<p>Many people wrongly assume that all users are either keyboard/mouse or
+mobile (touch) users. By using semantic elements, users of other input
+methods get a much smoother experience. It is possible to jump to
+navigation or content without having to page through dozens of unrelated
+sections added only for stylistic purposes. Having used such devices
+first hand, the joy such simple changes make are outstanding.</p>
+<p>Using semantic elements also helps future proof content. Screen scraping
+and other technologies can be simplified massively if content is
+correctly marked up. The thought that pages of content written now will
+still be used and accessible decades from now is incredible.</p>
+<h4>Lessons</h4>
+<p>The lesson here is an easy one. Every time you write a generic division
+element, stop and ask yourself is there an element with more semantic
+meaning that will do the same job?</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

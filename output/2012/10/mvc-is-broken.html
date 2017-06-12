@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>MVC is Broken</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2012/10/mvc-is-broken.html" rel="bookmark"
+           title="Permalink to MVC is Broken">MVC is Broken</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-10-01T00:00:00+02:00">
+                Published: Mon 01 October 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <p>If you look up the definition of <a href="http://en.wikipedia.org/wiki/Model_view_controller">MVC or Model View
+Controller</a>, it will
+hail the definition as being able to change your front end without
+affecting other parts of the application and vice versa. This sounds
+great in theory, however this claim is nothing more than a <em>blatant
+lie</em>.</p>
+<p>A failing of the architectural pattern comes from the whole codebase
+being tied to a specific stack. Take ASP.NET MVC. The domain logic will
+most likely be in C#. Therefore your models will be in C#. Your
+controllers will be in C#. Your views will be a mixture of C# and some
+form of a templating language.</p>
+<p>If you want to change your stack to the "next big thing" you are forced
+to take a big bang approach. ASP.NET MVC <em>won't be around forever</em>.
+Being tied to a specific technology feels wrong. Therefore this coupling
+means your designers are forced to use the templating language that your
+framework supports. This should be a flexible option that should be easy
+to change, after all the MVC pattern states this as one of it's
+benefits.</p>
+<p>Being tied to a specific technology leads onto our most recent project.
+One of our biggest and most important projects is a legacy Flash
+application. Back in the early 2000's it was a cutting edge application
+- consistent across all browsers, ajax style requests, responsive
+design, you name it.</p>
+<p>That being said we all know Flash is on its way out, and there lies the
+problem. It took myself about two weeks to add a few text boxes to the
+app in my first year at Codeweavers, all because the UI code is so
+difficult to work with. The <em>logic is mixed within the UI</em>. Had the app
+been developed in a MVC style we would be in a position to replace the
+legacy UI with a modern alternative.</p>
+<p>We make use of <a href="http://en.wikipedia.org/wiki/Service-oriented_architecture">SOA or Service Oriented
+Architecture</a>
+at Codeweavers, therefore it seemed a natural fit to apply this to our
+rewrite of our legacy application. I proposed a theory:</p>
+<blockquote>
+<p><strong>"for an application to be truly independent of the frontend and
+backend the code must be developed in different languages."</strong></p>
+</blockquote>
+<p>For example, I taught myself enough PHP to make a JSON request, perform
+some conditional logic and loop over a collection. With this I was able
+to recreate one of our applications that was powered by our backend C#
+services. <a href="http://www.codinghorror.com/blog/2012/06/the-php-singularity.html">I would not want to create an application in
+PHP</a>,
+but using PHP as a templating language was a great fit. After all this
+is one of the intentions of the language. Limiting myself to just three
+simple PHP constructs I was <em>forced to put all logic on the service</em> in
+question.</p>
+<p>This complete separation of concerns is made possible due to the fact it
+is simply not possible for code to leak between the layers due to the
+different languages used in the implementation. This means I could
+easily spin up numerous front end views while the backend remains
+unchanged. Likewise we could change the back end implementation from C#
+to another language. Providing the endpoints and request/responses
+match, the front end will still be functional. This full separation of
+concerns is what MVC style frameworks have <em>failed to achieve</em>.</p>
+<p>In ten years from now it is hard to say what the web will look like.
+What I can guarantee is that the web will still be here. We'll still be
+making HTTP requests. We'll still be making back end services that
+powers much of the apps on the internet. One thing no one can really
+comment on is what the web will look like. One point we all could agree
+on is that HTML5 should be wide spread and no doubt "<em>the next big
+thing</em>" will be on the horizon. The great thing by taking the approach
+discussed previously is that Codeweavers will be in the position to
+change either the front end or back end of our codebase at any time.
+Precisely what the MVC pattern has failed to deliver.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

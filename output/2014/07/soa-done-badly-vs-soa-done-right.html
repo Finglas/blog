@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>SOA Done Badly vs SOA Done Right</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/07/soa-done-badly-vs-soa-done-right.html" rel="bookmark"
+           title="Permalink to SOA Done Badly vs SOA Done Right">SOA Done Badly vs SOA Done Right</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-07-01T00:00:00+02:00">
+                Published: Tue 01 July 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>I was under the assumption I had been doing SOA for over 3 years.
+Previously I have had services which did stuff, these talked to other
+services which did other stuff and so on. We would group services around
+functionality.</p>
+<p>We would break these services down if they got too big to handle. Behind
+the scenes the services would talk to a single database. When it came to
+creating an application or system, these front end applications would
+invoke various services, which in turn invoked other services. This
+layered style of architecture worked for a while, so everything appeared
+to be fine.</p>
+<p>The overall architecture looked like this:</p>
+<p><img alt="Bad example of
+SOA" src="http://4.bp.blogspot.com/-c5WU2EqQCtY/U8uM98_qD1I/AAAAAAAAAEs/dD5OlDqWdr4/s420/bag.soa.png" title="Bad example of SOA. Messy.">
+Over time I began to question the benefit of this style.</p>
+<ul>
+<li>I spent more time coding than solving business problems</li>
+<li>I spent more time debugging than solving problems</li>
+<li>I spent more time fixing broken deploys than solving problems</li>
+<li>I spent more time writing infrastructure (to glue services together)
+    than solving problems</li>
+</ul>
+<p></p>
+It turns out this is actually quite a common style to SOA. But there are
+some serious flaws with this layered approach.</p>
+<h4>Problems</h4>
+<ul>
+<li>If a service fails, the whole system is pretty much broken.</li>
+<li>If the database breaks, the whole system is pretty much broken.</li>
+<li>If a service is slow or breaks SLA, the whole system is pretty much
+    broken.</li>
+<li>In order to decouple between services, you need complex, costly
+    abstractions.</li>
+</ul>
+</p>
+
+<h4>Solution</h4>
+<p>A solution to solve these problems is to partition the domain
+boundaries, vertically. The overall architecture would look like this:</p>
+<p><img alt="Good example of
+SOA" src="http://4.bp.blogspot.com/-OiuVjYL4pqk/U8uI0vIxAKI/AAAAAAAAAEg/Q4Ct8linDEk/s420/good.soa.png" title="A good example of SOA"></p>
+<h5>Details</h5>
+<ul>
+<li>Each domain could consist of one or more "services".</li>
+<li>Each with their own choice of data store, e.g. SQL, NOSQL, file
+    system etc...</li>
+<li>No domain can directly communicate with another domain.</li>
+<li>If they do need to communicate, then the pub/sub model would be used
+    or an ansyc command could be issued. Think .NET events or the event
+    design pattern but across processes, not objects.</li>
+</ul>
+<h5>Benefits</h5>
+<ul>
+<li>Each service could fail and the impact would be minimal, simply
+    rollback the deploy or fix the problem. Once the service comes back
+    to life any commands or events that have not yet been processed
+    would be handled. Each service would have their own message queues
+    to persist commands/events.</li>
+<li>Services could be re-wrote and distributed easily, proving they are
+    highly decoupled.</li>
+<li>No complex infrastructure, e.g. no need to map between objects
+    because the service owns the whole stack. The same model could be
+    used across partitions for example.</li>
+<li>Works really well with agile development methodologies, e.g.
+    vertical slicing of stories.</li>
+</ul>
+<p>There is more to this introduction. Microservices are a hot new topic.
+Being defined as "SOA done correctly". Using the second example, within
+each domain there could be multiple services (or autonomous components)
+that coexist. The likes of <a href="http://www.udidahan.com/2012/06/23/ui-composition-techniques-for-correct-service-boundaries/">UI
+composition</a>
+to enable applications to be created from services is another great
+benefit. This enables so called "mashups".</p>
+<p>I'll expand on these topics over time, but I am certain this method of
+vertically slicing services based upon business capabilities will be my
+default approach going forward.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>TDD is a Tool</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/02/tdd-is-tool.html" rel="bookmark"
+           title="Permalink to TDD is a Tool">TDD is a Tool</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-01T00:00:00+01:00">
+                Published: Sat 01 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tdd.html">tdd</a> </p>
+</footer><!-- /.post-info -->      <p>I remember being introduced to Test Driven Development (TDD) very well.
+This is because it had such an <strong>overwhelming change on how I write code
+day to day</strong>. It was incredibly alien, difficult, yet rewarding. On this
+journey for the last five years I've changed my style, learned how not
+to do it and finally found <a href="../../2014/02/top-down-vs-bottom-up">my "sweet spot" when it comes to pragmatic
+TDD</a>.</p>
+<h3>Deliver Value</h3>
+<p>Writing code is fun. Developing an application or system is fun. Using
+new technology is fun. Despite this <strong>the end goal should always be to
+deliver value</strong>. Delivering business value over religiously following a
+practice was a turning point in my journey. After all <strong>the user doesn't
+care about what is behind the scenes</strong>, as long as they can use your
+software, they're happy.</p>
+<h3>When to Write Tests?</h3>
+<p>One of the guidelines when starting TDD is</p>
+<blockquote>
+<p>"<a href="http://c2.com/cgi/wiki?NeverWriteaLineOfCodeWithoutaFailingTest">Never write a line of code without a failing
+test</a>"
+- Kent Beck</p>
+</blockquote>
+<p><strong>This rule is wrong on many levels</strong>. Firstly it cripples most
+developers when starting TDD. Secondly the guideline is broken all the
+time by seasoned evangelists. Writing some framework code? Writing data
+access code? Writing markup? <strong>Any of these scenarios would be wasted by
+writing a failing tests first</strong>. This rule should be reworded.</p>
+<blockquote>
+<p>"Writing logic? Never write a line of code without a failing test" -
+me</p>
+</blockquote>
+<h3>It's OK to not use TDD</h3>
+<p>After adoption TDD practitioners tend to face two challenges. Other
+developers looking down on non TDD practices and <strong>feeling as if they
+are "cheating" when not using TDD</strong>. The later was an issue I struggled
+with. Newbies tend to find the same problem, and this goes back to the
+mantra above. One of the key lessons I've discovered over the past few
+years is that <strong>using TDD where appropriate is fine</strong>. Not all code
+needs TDD. Even Kent Beck discusses this when he refers to "<a href="http://programmers.stackexchange.com/questions/108338/does-tdds-obvious-implementation-mean-code-first-test-after">Obvious
+Implementation</a>".</p>
+<h3>Spike Solutions</h3>
+<p>Another game changer in my journey was the concept of "<a href="http://lizkeogh.com/2012/06/24/beyond-test-driven-development/">Spike and
+Stabilize</a>".
+Using this technique you can deliver business value quickly. Gather
+feedback as soon as possible and either <strong>fail fast or wrap the code in
+tests and clean it up</strong>.</p>
+<h3>CRUD</h3>
+<p>Most of the code I (and others) write is very similar. I'd bet this is
+the same for different fields of software development. That being said,
+for <strong>each CRUD app we create there is a tiny aspect of this that is
+unique</strong>. Using TDD to write yet another CRUD app is tedious. I'd
+imagine this is why many ditch the practice of TDD after some time.
+However the benefit comes from using TDD for that 20% of domain logic.
+Here a combination of obvious implementation and spike and stabilize can
+assist in the creation of the other 80%.</p>
+<h3>It's about Design too</h3>
+<p><a href="http://www.amazon.co.uk/gp/product/0321146530/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0321146530&amp;linkCode=as2&amp;tag=bloshafin-21">TDD by
+Example</a>
+gives the impression that the practice is primarily a testing
+discipline. This is not true. TDD does limit the bugs I introduce and
+enforces basic correctness, however <strong>bugs will still slip through</strong>.
+After all the quality of the code is only as good as the quality of the
+tests. <a href="http://www.amazon.co.uk/gp/product/0321503627/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1634&amp;creative=6738&amp;creativeASIN=0321503627&amp;linkCode=as2&amp;tag=bloshafin-21">Growing Object Oriented Software: Guided by
+Tests</a>
+and others introduce the concept that TDD is also a design process.
+Listening to the tests is a core concept. In other words, <strong>if something
+is hard to test, chances are the code in question can be improved</strong>.</p>
+<h3>Follow the Risks</h3>
+<p>The final lesson I've come to realise is that even if you happen to work
+with those who don't practice TDD, you can reap the benefits. Simply
+<strong>test where the risk lives</strong>. Ignore the framework, standard library
+and simply test what has risk. This might be a small, core part of your
+application. Aiming for 100% code coverage is not a goal, nor one worth
+aiming for.</p>
+<h3>It's a Tool</h3>
+<p>At the end of the day, <strong>TDD is a tool, not a goal</strong>. In this day and
+age many believe that TDD should be mandatory. While I agree, the use
+should be restricted to where and when it makes sense. As for when and
+where, this is up for the developer to decide. Using some of the
+findings above allow me to be pragmatic, yet still have confidence in
+the quality of my code.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

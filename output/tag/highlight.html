@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - highlight</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2016/11/poodr-highlights-part-2.html">POODR Highlights Part 2</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-11-01T00:00:00+01:00">
+                Published: Tue 01 November 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/highlight.html">highlight</a> </p>
+</footer><!-- /.post-info --><p>Two other stand out topics from POODR were the use of tests and
+inheritance. The first set of <a href="http://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html">higlights covered dependencies and
+arguments</a>.</p>
+<h4>Tests</h4>
+<p>A conclusion that I agree with is that in general “most programmers
+write too many tests.”. A great quote in the book sees “tests (as) the
+canary in the coal mine; when the design is bad, testing is hard”. Sadly
+too many poor tests are often written. Examples such as property or
+construction tests, framework tests or tests that are coupled to the
+implementation are all common problems. Instead we should aim to get
+better and more value out of our tests by writing fewer of them, but of
+higher quality. In short test everything once and only in the proper
+place. A first step is to simply focus on the ROI that tests give, and
+focus on the high risk areas.</p>
+<p>The test categories are broken down into two core types of tests.</p>
+<ul>
+<li>Incoming Public Messages (public API)</li>
+<li>Outgoing Public Messages (To public API of another object)</li>
+</ul>
+<p>State based tests should be used for incoming public messages. While
+verification based tests should be used for outgoing public messages as
+the state is tested on the receiver, elsewhere. The <a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html">distinction between
+commands and
+queries</a>
+is also highlighted. In summary incoming messages should be tested for
+the state they return. Outgoing commands should be tested to ensure they
+get sent. Outgoing query messages should not be tested, merely stubbed.</p>
+<p>These testing rules are nothing new, but the summary and importance of
+following these guidelines is nicely summarized within the chapter
+covering testing principles.</p>
+<h4>Inheritance</h4>
+<p>Inheritance is widely abused and misunderstood. Either inheritance is
+the solution for all problems, or you're advised to never use
+inheritance. POODR takes a more pragmatic approach. Inheritance is a
+tool that can sometimes provide an excellent solution, however you are
+<a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html">better off duplicating
+code</a>
+and <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">defer such
+decisions</a>
+until you know more.</p>
+<p>The wrong abstraction is harder to work with than duplicated code as
+duplication can easily be removed. A bad abstraction that is used in
+many places is much harder however. The application of the <a href="http://wiki.c2.com/?RuleOfThree">Rule of
+Three</a> can help here.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Tests are hard - write less but focus on the quality.</li>
+<li>Minimize the number of tests you write by using boundaries via
+    incoming/outgoing messages.</li>
+<li>Inheritance is not all bad.</li>
+<li>Defer or hold back using inheritance until you understand the
+    problem.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/10/poodr-highlights-part-1.html" rel="bookmark"
+                           title="Permalink to POODR Highlights Part 1">POODR Highlights Part 1</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-10-01T00:00:00+02:00">
+                Published: Sat 01 October 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/highlight.html">highlight</a> <a href="/tag/code.html">code</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://www.poodr.com/">Practical Object-Oriented Design in Ruby</a> or
+POODR is clearly a book about Ruby development, however the odd aspect
+is much of the concepts apply to other languages. In fact I've taken
+these ideas and used them both before and after reading the book in
+other dynamic languages and even static …</p>
+                <a class="readmore" href="/2016/10/poodr-highlights-part-1.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

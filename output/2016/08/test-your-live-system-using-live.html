@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Test Your Live System using Live Service Tests</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/08/test-your-live-system-using-live.html" rel="bookmark"
+           title="Permalink to Test Your Live System using Live Service Tests">Test Your Live System using Live Service Tests</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-08-01T00:00:00+02:00">
+                Published: Mon 01 August 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->      <p>Traditionally there are three categories of functional tests.</p>
+<ul>
+<li>Acceptance</li>
+<li>Integration</li>
+<li>Unit</li>
+</ul>
+<p>This is often refereed to as the testing pyramid. Unit tests form the
+bulk of your suite, followed by a smaller subset of integration tests.
+Acceptance tests that cover features should be the tip of your testing
+strategy, few in number. These are great but there is a missing suite of
+tests - live service tests.</p>
+<ul>
+<li>Live Service Tests</li>
+<li>Acceptance</li>
+<li>Integration</li>
+<li>Unit</li>
+</ul>
+<h4>Live Service Tests.</h4>
+<p>The role of live service tests (LST) is to test the live system against
+the production environment and configuration. LST would be fewer in
+number than acceptance tests. Unlike acceptance tests, these should run
+constantly. Once a run has completed, kick of a new test run. This will
+require a dedicated machine or piece of infrastructure, but the value
+provided is well worth it.</p>
+<p>LST should focus on journeys instead of functionality or features. In
+contrast to acceptance tests a user journey would be the core purpose of
+the system. For example, a LST suite to cover this blog would ensure the
+home page loads, an individual post can be loaded, and the archive is
+accessible. The rest of the site such as comments or social media
+interactions could be broken, but the core purpose of the system is
+working. Readers can read and browse the blog. If at any time the tests
+detect a failure in the core journey there is a big problem.</p>
+<h4>Why</h4>
+<p>LST offer the fastest feedback possible due to the fact they are
+constantly running. It is far more desirable to detect a problem before
+your users do. Naturally LST offer great protection after deploys.
+Deployment of new code is one of the times you are more likely to
+encounter issues, so a suite of tests triggered after a deployment is a
+natural fit. LST also protect against unplanned events. In my
+experience, exceeding disk space, DNS failure, third party issues and
+more have all be detected.</p>
+<h4>How To</h4>
+<p>Adding another suite of tests may sound like increased effort but the
+cost associated with LST is rather low. Sometimes acceptance tests can
+be run as LST, meaning no extra effort. Care must be taken here if the
+tests perform anything destructive or anything that interacts with third
+parties.</p>
+<p>Alternatively writing LST is simpler than standard acceptance tests. The
+same tooling can be used such as Selenium, NUnit and so forth. As the
+tests themselves focus on journeys rather than functionality, the tests
+are often less complex to write.</p>
+<p>The only difficulty LST introduce is the fact they are executing against
+the live system. Consider interactions with a third party. Using a real
+account on the real system may be problematic. One way to get around
+this issue is to embed test functionality within the system itself. For
+example you could set up a test account which the tests use. Instead of
+executing against the third party system, the dummy account is used.
+Likewise most third parties have test accounts which can be setup and
+used instead.</p>
+<p>LST are a nice compliant to a diagnostic dashboard. If your dash is
+reporting no issues, and your tests are green, you can be confident the
+system is operating in a <em>good enough</em> state.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Functional tests are not enough.</li>
+<li>Use live service tests to test the real production system.</li>
+<li>Run live service tests constantly for the earliest feedback
+    possible.</li>
+<li>Alter production code to introduce test functionality.</li>
+<li>Make use of test accounts and anything else that third parties may
+    offer.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

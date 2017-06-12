@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The Correct Way to use var in C#</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/02/the-correct-way-to-use-var-in-c.html" rel="bookmark"
+           title="Permalink to The Correct Way to use var in C#">The Correct Way to use var in C#</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-02-01T00:00:00+01:00">
+                Published: Sat 01 February 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The .NET community is not widely controversial, though there is a strong
+topic that appears to come up time and time again when I pair with other
+developers - how to use <code>var</code> in C#.</p>
+<p>The <code>var</code> keyword was introduced in .NET 3.5. Unlike other languages
+this is <strong>still a strongly typed declaration</strong>. For example if we
+declare a string using <code>var</code> then we cannot re-assign this variable to
+another type. This would be a compile time error.</p>
+<p>There are two parties who have strong feelings about the use of <code>var</code>,
+both of which are <strong>wrong</strong>.</p>
+<h3>Never use var</h3>
+<p>Some developers suggest the use of <code>var</code> be denied. This leads to code
+such as the following. <strong>Overly verbose, and in some cases obscuring the
+intent of the code</strong>. This can commonly be seen when dealing with
+collections or generics.</p>
+<script src="https://gist.github.com/Finglas/2050a8b2e6778eb86ebf.js"></script>
+
+<h3>Always use var</h3>
+<p>Other developers claim you should "<em>var all the things</em>". This leads to
+code which has the opposite problem from above. <strong>The intent of the code
+can be obscured due to not knowing what type you are dealing with</strong>.
+This is especially important during code reviews or times when you are
+not relying on the IDE's intellisense to remind you what you are dealing
+with. After all code is read many more times than it is written.</p>
+<script src="https://gist.github.com/Finglas/9f0f755ee0879333b7f2.js"></script>
+
+<h3>Best of both worlds</h3>
+<p>The solution to this issue is simple. Where the type cannot be inferred
+just by looking at the source code (aka the type is on the right), use a
+strongly typed declaration. Where the type can be inferred, use implicit
+typing. Using the same examples as above, this would look like the
+following.</p>
+<script src="https://gist.github.com/Finglas/d40dba8264fd0a0a6e04.js"></script>
+
+<p>As with most things when it comes to software development, there is
+never a black and white answer. <strong>Always gauge decisions and patterns
+based on context</strong>. Just because automated tooling such as the excellent
+Resharper suggests you use implicit typing doesn't always make it
+correct.</p>
+<h3>Bonus</h3>
+<p>Talking of Resharper, a quick <code>Alt+Enter</code> on a type/implicit declaration
+will allow you to switch between modes, meaning you can be lazy and have
+the IDE pull in the right type when required.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

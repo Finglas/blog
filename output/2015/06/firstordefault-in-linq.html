@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>FirstOrDefault in LINQ</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/06/firstordefault-in-linq.html" rel="bookmark"
+           title="Permalink to FirstOrDefault in LINQ">FirstOrDefault in LINQ</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>Explicit null checking is a code smell in most cases. It should be
+limited where possible, or pushed to the edge of the system. A common
+anti pattern I've noticed is the incorrect use of <code>First()</code> in LINQ,
+which I have used myself on many occasions in this manner.</p>
+<p>Assuming a collection of items that you wish to query, the incorrect
+approach is to explicitly check for a null return value and act
+accordingly.</p>
+<script src="https://gist.github.com/Finglas/0ab1ace9e1d582047485.js"></script>
+
+<p>The use of <code>FirstOrDefault()</code> is redundant because no default is
+actually set. The default value of a reference type would be null.
+Meaning the explicit null checked is required. We could use <code>First()</code>
+alone, but this will throw an exception if there are no elements to
+query against.</p>
+<p>A better solution is to set the default. As long as our initial query is
+not operating on a null reference this is safe. Here the explicit null
+check is gone. We have replaced it with a more functional solution which
+is after all what LINQ is based upon. While both are equivalent, the
+second example is much cleaner as well as being open to further chained
+statements.</p>
+<script src="https://gist.github.com/Finglas/f8622201f6cd44af138d.js"></script>
+
+<p><code>First()</code> relies on one or more items being in the sequence. When you
+are only ever dealing with one result <code>Single()</code> is more appropriate.
+This method will throw an exception if more than one result is found,
+acting as a form of assertion. Like <code>First()</code>, <code>Single()</code> offers
+<code>SingleOrDefault()</code> which would work in the same manner as above.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

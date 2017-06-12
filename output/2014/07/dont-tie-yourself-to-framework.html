@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Dont Tie Yourself to a Framework</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/07/dont-tie-yourself-to-framework.html" rel="bookmark"
+           title="Permalink to Dont Tie Yourself to a Framework">Dont Tie Yourself to a Framework</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-07-22T19:19:00+02:00">
+                Published: Tue 22 July 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <ul>
+<li>
+Programming is great
+
+</li>
+<li>
+Software development is the crap bit. You'll spend more time
+configuring, integrating and faffing rather than writing logic most of
+the time.
+
+</li>
+<li>
+Test Driven Development makes development easier as it forces you to
+decouple your code.
+
+-   Your core logic should be pure, dependency free C\#, Java, Python
+    etc.
+-   Your frameworks and libraries should be on the edge of the system.
+
+</li>
+<li>
+Most people do this for some of their code, e.g. your data access.
+
+</li>
+<li>
+What about the other parts of a system?
+
+</li>
+-   Web frontend
+-   REST api's
+-   Console applications
+-   Desktop clients
+
+<li>
+Why should we couple our applications with these layers?
+
+</li>
+</ul>
+
+<h3>Hexagonal Architecture</h3>
+<ul>
+<li>
+[Hexagonal
+Architecture](http://alistair.cockburn.us/Hexagonal+architecture) is a
+solution to limit coupling
+
+</li>
+<ul>
+<li>
+Easily switch out your delivery mechanism, e.g. test runner adapter for
+testing, HTML adapter for production.
+
+</li>
+<li>
+[Great
+example](http://silkandspinach.net/2005/03/22/the-middle-hexagon-should-be-independent-of-the-adapters/)
+from Kevin Rutherford.
+
+</li>
+<li>
+[Excellent video](https://www.youtube.com/watch?v=WpkDN78P884) by Uncle
+Bob though terminology differs.
+
+</li>
+<li>
+Implementation details should be hidden behind adapters.
+
+</li>
+-   Tested manually in the majority of cases
+-   Few integration tests for comfort
+-   Third party code after all.
+
+<li>
+Inner hexagon should only communicate via ports (interfaces) - keeps
+domain pure.
+
+</li>
+</ul>
+</ul>
+
+<h3>Why?</h3>
+<ul>
+<li>
+Last few major projects involved with were due to the delivery mechanism
+becoming out of date.
+
+</li>
+-   Flash to Web
+-   Web to Mobile
+
+<li>
+Easier to test
+
+</li>
+<li>
+Easier to change
+
+</li>
+</ul>
+
+<h3>Why not?</h3>
+<ul>
+<li>CRUD apps - sometimes it's just CRUD.</li>
+<li>Lightweight projects might not need hexagonal architecture</li>
+<li>SOA or Microservices could mean hexagonal architecture actually
+    introduces overhead or complexity - judge on context.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

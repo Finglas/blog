@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Acceptance Testing need not use the Full Stack</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/08/acceptance-testing-need-not-use-full.html" rel="bookmark"
+           title="Permalink to Acceptance Testing need not use the Full Stack">Acceptance Testing need not use the Full Stack</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-02-10T20:15:00+01:00">
+                Published: Tue 10 February 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <ul>
+<li>Joined a team with thousands of unit tests (\~10k)</li>
+<li>But bugs still got through our QA process</li>
+<li>How could this be?</li>
+<li>Team had a small number of full end to end live service tests</li>
+<li>So my answer was to just increase the number of these</li>
+<li>Surely this would solve our problem?</li>
+<li>Not quite</li>
+<li>The maintenance of these tests were a great burden</li>
+<li>Each day many tests would fail, but nothing would be "broken".</li>
+<li>Data would have changed in the DB</li>
+<li>The UI could have changed</li>
+<li>The browser could have been slightly slower</li>
+<li>And so on</li>
+</ul>
+<h4>Solution</h4>
+<ul>
+<li>Delete the majority of live service tests - limit the tests to the
+    core user journey through the application</li>
+<li>As long as the pages load up, without an error we shouldn't care</li>
+<li>Stopped testing logic or behaviour - made the tests loose, e.g. as
+    long as value is not null or empty we are OK, we don't actually care
+    what the value is.</li>
+<li>Made use of <a href="http://martinfowler.com/bliki/IntegrationContractTest.html">contract
+    testing</a>
+    to substitute boundaries with in memory fakes, e.g. persistent
+    storage. This allowed fast, stable acceptance tests to be run
+    against the system without the brittle nature described above.</li>
+</ul>
+<h5>Benefits</h5>
+<ul>
+<li>Small handful of live service tests (using real DB, UI) caught the
+    majority of the serious flaws that snuck through</li>
+<li>Future bugs were missing unit tests thanks to contract testing</li>
+<li>Faster to write</li>
+<li>Easier to debug</li>
+<li>Faster to execute!</li>
+</ul>
+<p>The key point was the use of contract testing. Without contract testing,
+writing automated acceptance tests is a pretty awful process.</p>
+<p>Data requires setup and tear down. Any data changes can break your tests
+and the UI is often in flux.</p>
+<p>By substituting the UI layer, or the DB access with fakes such as a
+console view, or in memory hash table, your tests can still cover the
+whole stack, but in a more stable, bite size manner. You simply test
+your real view or data access separately to prove they work, and can in
+fact be swapped out thanks to the <a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov Substitution Principle
+(LSP</a>) by
+running the same suite of tests against your fakes!</p>
+<p>I'll be expanding on how and what contract testing is in a future post.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

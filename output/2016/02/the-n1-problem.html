@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The N+1 Problem</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/02/the-n1-problem.html" rel="bookmark"
+           title="Permalink to The N+1 Problem">The N+1 Problem</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-02-01T00:00:00+01:00">
+                Published: Mon 01 February 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The N+1 problem is when multiple queries are executed against a
+persistent store when a reduced amount could serve the same purpose.
+This degrades performance, uses more memory and can cause complexity to
+be added to the code that processes the results. Most sources of the
+problem come from the poor use of ORMs or developers thinking
+procedurally instead of in terms of how the underlying database
+operates.</p>
+<h4>Example</h4>
+<p>Consider a collection of posts that each contain zero or more comments.</p>
+<div class="highlight"><pre><span></span>  Post
+    Comment
+    Comment
+  Post
+    Comment
+    Comment
+    Comment
+    Comment
+    Comment
+  Post
+</pre></div>
+
+
+<p>To retrieve a selection of ten posts including their comments, one
+option would be to query all posts then perform a query for each
+individual posts' comments. This would result in a total of eleven
+queries. While this solution works it is far from ideal. Disturbingly
+this solution is easily introduced when developers execute queries
+against databases using loops or misconfigured ORMs.</p>
+<h4>Solutions</h4>
+<p>Solutions to solving the N+1 problem are remarkably straightforward. In
+the case of manual queries such changes are usually easy to implement.</p>
+<h5>Single Query</h5>
+<p>Use a join operation to perform a single query. This one query would
+pull back all posts and their matching comments. This would be the ideal
+fix for the example described above.</p>
+<h5>Query and Stitch</h5>
+<p>Sometimes there is no clear grouping or relation between sets of data.
+This is often the case when normalized data needs to be denormalized
+prior to retrieval. In these cases the query and stitch method can be
+used.</p>
+<ul>
+<li>One query to grab master set.</li>
+<li>Another query to grab the related set.</li>
+</ul>
+<p>Then simply match on a key in code. The key would be something that
+groups the data and is present in both sets or is the result of
+additional programming logic. Query and stitch is useful for paging or
+when relational thinking and grouping does not fit. This tends to be the
+case for REST APIs where data is aggregated or composed from multiple
+sources, or needs further processing after retrieval.</p>
+<p>Despite two queries here, it is often possible to return separate
+datasets within a single query prior to stitching the data together as a
+further optimisation and simplification.</p>
+<h5>ORMs or Tooling</h5>
+<p>When ORMs are used discovering the N+1 problem is more obscured without
+logging the underlying queries that are performed. Once an issue is
+discovered it is usually a case of consulting documentation on what the
+fix is - often configuration related. Due to this it is worth enabling
+logging during development so queries can be analysed.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

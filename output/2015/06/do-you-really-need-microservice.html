@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Do you really need a Microservice?</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/06/do-you-really-need-microservice.html" rel="bookmark"
+           title="Permalink to Do you really need a Microservice?">Do you really need a Microservice?</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <p>Lately there has been two sets of advice around the use of
+Microservices. <a href="http://martinfowler.com/bliki/MonolithFirst.html">Some advise that Microservices should be built after the
+fact</a>. <a href="http://www.martinfowler.com/articles/dont-start-monolith.html">Others advise
+the opposite
+solution</a>.
+In conjunction there is a third option that deserves more attention. Do
+you even need a Microservice at all? A <a href="https://twitter.com/natpryce/status/593763168977088513">recent
+tweet</a> sparked
+off the exact thought I have found myself conveying.</p>
+<p>Creating a Microservice is no easy feat. Despite the limited code or
+functionality that is involved. There is a whole host of things that
+need consideration; source control, project setup, databases, project
+conventions, monitoring, logging, deployment, hosting and security to
+name a few.</p>
+<p>The so called monolith or "application" as it was known before is a
+tried and tested way of structuring applications. One of the big
+criticisms levelled against monolithic applications is coupling. Having
+worked with some terribly coupled applications I agree fully with this
+complaint, but there are steps you can take to prevent this.</p>
+<p>A whole application does not need to live inside one logical project,
+but instead can be split appropriately. In DDD a Bounded Context makes
+sense. Using this model you would end up with a Customer and Products
+project rather than a single project containing both.</p>
+<p>An easy step is the <a href="http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html">correct use of namespaces that are structured by
+features rather than technology
+choices</a>.</p>
+<p>Education is also important, simply put in agreements across teams such
+as "<em>nothing from the customer project will directly reference the
+products functionality</em>". This can be taken a step further by
+introducing assertions into the build process that will fail if
+"<em>project A references project B</em>".</p>
+<p>There is no correct answer on whether you should or should not start
+with a Microservice architecture. Each team will need to judge and base
+their answer on their needs which will most likely vary over time. As it
+has been said before - <a href="http://www.codingthearchitecture.com/2014/07/06/distributed_big_balls_of_mud.html">if you can't structure a monolith what makes you
+think you can structure Microservices any
+better?</a></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

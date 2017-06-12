@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - 2015</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2015/12/reactjs-and-jshint.html">ReactJS and JSHint</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info --><p>The <a href="http://facebook.github.io/react/docs/getting-started.html">ReactJS Getting Started
+Guide</a> states
+that the recommended way of using React is combined with npm.</p>
+<p>This is great but poses a problem when trying to use JSHint. The default
+example outputs a single JS file containing both your code and the React
+library. The end result is the bundle when linted contains code you
+don't and shouldn't need to care about.</p>
+<p>The guide does provide a solution, though not as clear as it probably
+should be. Offline Transforms. These will transform your jsx files into
+plain Javascript without bundling react alongside.</p>
+<div class="highlight"><pre><span></span>babel --presets react app.js --out-file main.js
+</pre></div>
+
+
+<p>Simply take the result of the transform and perform your linting
+process.</p>
+<div class="highlight"><pre><span></span>jshint main.js
+</pre></div>
+
+
+<p>This may seem obvious but I did lose some time realising the benefit of
+offline transforms.</p>
+<p>Offline transforms do require that you either bundle the transformed
+file with React, or you simply include the standalone JS scripts in your
+html. This can be done after the fact. JSHint can then play nicely with
+your React apps without the need for other tooling such as wrappers or
+text editor extensions.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/12/recommended-reading-list-2015.html" rel="bookmark"
+                           title="Permalink to Recommended Reading List 2015">Recommended Reading List 2015</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/reading.html">reading</a> </p>
+</footer><!-- /.post-info -->                <p>In a similar manner to
+<a href="http://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html">previous</a>
+<a href="http://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html">years</a>
+here is my recommended reading list for 2015. As before some of these
+books have been released for a while, but these are some of my
+highlights for various reasons.</p>
+<h4>Code</h4>
+<dl>
+<dt><a href="http://www.amazon.co.uk/Dependency-Injection-NET-Mark-Seemann/dp/1935182501">Dependency Injection in .NET</a></dt>
+<dd>I had put off reading this book for …</dd></dl>
+                <a class="readmore" href="/2015/12/recommended-reading-list-2015.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/12/reducing-conditional-logic-to-single.html" rel="bookmark"
+                           title="Permalink to Reducing Conditional Logic to a Single Location">Reducing Conditional Logic to a Single Location</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html">My Anti If Campaign
+post</a>
+still generates a lot of questions and discussion. In summary:</p>
+<ul>
+<li>Conditional statements are not bad. They are a core programming
+    construct.</li>
+<li>If you are working in an OO language, type checks are probably not
+    the best solution to your problem. Rely on polymorphism.</li>
+<li>You need …</li></ul>
+                <a class="readmore" href="/2015/12/reducing-conditional-logic-to-single.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/12/year-in-review-2015.html" rel="bookmark"
+                           title="Permalink to Year in Review 2015">Year in Review 2015</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/year-in-review.html">year-in-review</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <h4>January</h4>
+<ul>
+<li>Started the year with reasons as to why <a href="http://blog.shaunfinglas.co.uk/2015/01/why-technical-blogging.html">technical blogging is
+    useful and
+    recommended</a>.</li>
+<li>Kick started a series of posts themed around simplicity,
+    recommending to <a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html">abstract data use and not data
+    access</a>.</li>
+</ul>
+<h4>February</h4>
+<ul>
+<li>A <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">series of posts on
+    abstractions</a>.</li>
+<li>The power of <a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html">Value Objects as a key
+    refactoring</a>.</li>
+</ul>
+<h4>March …</h4>
+                <a class="readmore" href="/2015/12/year-in-review-2015.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/dont-build-thing.html" rel="bookmark"
+                           title="Permalink to Don't Build a Thing">Don't Build a Thing</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info -->                <p>Part two of my agile architecture series.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">You Cannot Iterate upon
+    Architecture</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html">Throw Code
+    Away</a></li>
+</ul>
+<hr>
+<p>Here is a real life example of where I treated a unknown project
+incorrectly. Why I handled this is badly and how I should have handled
+it if I could rewind …</p>
+                <a class="readmore" href="/2015/11/dont-build-thing.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/pre-computation.html" rel="bookmark"
+                           title="Permalink to Pre Computation">Pre Computation</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html">Caching is a common
+technique</a>,
+especially with HTTP as it is made so easy. However pre computation is
+an alternative that can be used to reduce failures as well as speed up
+processing and response times.</p>
+<h4>Caching Example</h4>
+<p>Assume a list of countries to be displayed on the UI. These …</p>
+                <a class="readmore" href="/2015/11/pre-computation.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/throw-code-away.html" rel="bookmark"
+                           title="Permalink to Throw Code Away">Throw Code Away</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info -->                <p>The third and final part of my agile architecture series.</p>
+<ul>
+<li>Part 1 - <a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">You Cannot Iterate upon
+    Architecture</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Don't Build a
+    Thing</a></li>
+</ul>
+<hr>
+<p><a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html">Part
+one</a>
+suggested walking skeletons for new features or projects. <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Part
+two</a>
+suggested building the limited, smallest and simplest functionality
+possible. However you do not always have …</p>
+                <a class="readmore" href="/2015/11/throw-code-away.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/11/you-cannot-iterate-upon-architecture.html" rel="bookmark"
+                           title="Permalink to You Cannot Iterate upon Architecture">You Cannot Iterate upon Architecture</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-11-01T00:00:00+01:00">
+                Published: Sun 01 November 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> <a href="/tag/agile-architecture-series.html">agile-architecture-series</a> </p>
+</footer><!-- /.post-info -->                <p>This is the first part of a series of posts as to why gradual iteration,
+doing the simplest thing that can possibly work over a software project
+fails in many cases. This series will explain why this is the case, and
+provide solutions.</p>
+<ul>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html">Don't Build a
+    Thing</a></li>
+<li>Part …</li></ul>
+                <a class="readmore" href="/2015/11/you-cannot-iterate-upon-architecture.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/10/abstractions-in-code-details-in-metadata.html" rel="bookmark"
+                           title="Permalink to Abstractions in Code, Details in Metadata">Abstractions in Code, Details in Metadata</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>I've programmed many games - each one was special in its own way. One in
+particular stands out early in my university studies, a top down
+shooter. It was not graphics, gameplay, or sound that made it stand out
+however. It was the lesson it taught me about software development.</p>
+<h4>Level …</h4>
+                <a class="readmore" href="/2015/10/abstractions-in-code-details-in-metadata.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/10/coding-in-real-world.html" rel="bookmark"
+                           title="Permalink to Coding In the Real World">Coding In the Real World</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>As a student when confronted with a problem, I would end up coding it
+and thinking - <em>how do the professionals do this?</em></p>
+<p>For some reason I had the impression that once I entered the industry I
+would find enlightenment. Discovering the one true way to write high
+quality, professional code …</p>
+                <a class="readmore" href="/2015/10/coding-in-real-world.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/10/header-interfaces-vs-role-interfaces.html" rel="bookmark"
+                           title="Permalink to Header Interfaces vs Role Interfaces">Header Interfaces vs Role Interfaces</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>In some languages such as C++ you must define header interfaces. These
+constructs define how a public type is exposed in terms of its public
+interface. Other languages take a different route. C# or Java do not
+require headers but they are still very much in circulation. This
+unfortunately brings …</p>
+                <a class="readmore" href="/2015/10/header-interfaces-vs-role-interfaces.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/10/set-based-design.html" rel="bookmark"
+                           title="Permalink to Set Based Design">Set Based Design</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/architecture.html">architecture</a> </p>
+</footer><!-- /.post-info -->                <p>Each morning newspapers hit the newstands without fail. Live broadcasts
+are the same. Come show time they hit the air without fail. You can
+probably think of more examples of deadlines that are constantly
+achieved. So why does software development accept missed deadlines?
+Software development not only encourages software to …</p>
+                <a class="readmore" href="/2015/10/set-based-design.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/release-it-highlights-part-1.html" rel="bookmark"
+                           title="Permalink to Release It - Highlights Part 1">Release It - Highlights Part 1</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/release-it-series.html">release-it-series</a> </p>
+</footer><!-- /.post-info -->                <p><a href="https://pragprog.com/book/mnee/release-it">Release It!</a> is one of the
+most useful books I've read. The advice and suggestions inside certainly
+change your perspective on how to write software. My key takeaway is
+that software should be cynical. Expect the worst, expect failures and
+put up boundaries. In the majority of cases these failures …</p>
+                <a class="readmore" href="/2015/09/release-it-highlights-part-1.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/release-it-highlights-part-2.html" rel="bookmark"
+                           title="Permalink to Release It - Highlights Part 2">Release It - Highlights Part 2</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/release-it-series.html">release-it-series</a> </p>
+</footer><!-- /.post-info -->                <p>This is the second part of my collection of notes and snippets from
+<a href="https://pragprog.com/book/mnee/release-it">Release It!</a></p>
+<ul>
+<li><a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html">Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+    Breakers</a></li>
+<li>Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
+    Post)</li>
+</ul>
+<hr>
+<h4>Caches</h4>
+<ul>
+<li>Low memory conditions are a threat to both stability and capacity.</li>
+<li>You need to …</li></ul>
+                <a class="readmore" href="/2015/09/release-it-highlights-part-2.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/the-self-shunt-test-doubles-without.html" rel="bookmark"
+                           title="Permalink to The Self Shunt - Test Doubles without a Framework">The Self Shunt - Test Doubles without a Framework</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Generally you should <a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html">favour hand crafted stubs without a framework by
+default</a>.
+Before you reach for a framework there is another bridging step that you
+can take only pulling in a framework if complexity arises - the Self
+Shunt.</p>
+<p>Assume a simple <em>Hello World</em> subject under test where we can provide …</p>
+                <a class="readmore" href="/2015/09/the-self-shunt-test-doubles-without.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/types-of-test-doubles.html" rel="bookmark"
+                           title="Permalink to Types of Test Doubles">Types of Test Doubles</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p><em>Mock</em> is an overloaded term in software development. Sadly this leads
+to developers answering with "<em>mock it</em>" when a mock object may not be
+the right solution. <a href="http://xunitpatterns.com/Test%20Double.html">Test
+Doubles</a> are a more general
+term. I should try to use this naming more than I do at present - a goal
+I …</p>
+                <a class="readmore" href="/2015/09/types-of-test-doubles.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/waste-write-less-code.html" rel="bookmark"
+                           title="Permalink to Waste: Write Less Code">Waste: Write Less Code</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>One of the biggest <a href="https://en.wikipedia.org/wiki/Lean_manufacturing#Types_of_waste">forms of
+waste</a>
+is code. <a href="http://www.amazon.co.uk/Implementing-Lean-Software-Development-Addison-Wesley-ebook/dp/B00HNB3VQE">An estimated 80% of features in a software project are never
+or rarely
+used</a>.
+This makes code the software development equivalent of inventory. Having
+a warehouse full of inventory is not a benefit, neither is having a
+repository full of code …</p>
+                <a class="readmore" href="/2015/09/waste-write-less-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/loops-vs-functional-programming-styles.html" rel="bookmark"
+                           title="Permalink to Loops vs Functional Programming Styles">Loops vs Functional Programming Styles</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/javascript.html">javascript</a> <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>The following examples are four of the most common functional
+programming patterns that appear in mainstream languages though they may
+be known under different names.</p>
+<p>Being a <a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html">fan of CQS and
+CQRS</a>,
+queries work great when coding using the functional style. While this is
+completely subjective in terms of style …</p>
+                <a class="readmore" href="/2015/08/loops-vs-functional-programming-styles.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/production-code-is-dirty.html" rel="bookmark"
+                           title="Permalink to Production Code is Dirty">Production Code is Dirty</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> <a href="/tag/code-quality.html">code-quality</a> </p>
+</footer><!-- /.post-info -->                <p>Production code is dirty. <em>Dirty</em> may be the wrong word however. Complex
+could be more suitable. Unlike code that is not yet in production, it is
+weathered, proven, and full of edge cases including numerous bug fixes.
+After some time this build up of additions can cause the code to …</p>
+                <a class="readmore" href="/2015/08/production-code-is-dirty.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/queue-centric-work-pattern.html" rel="bookmark"
+                           title="Permalink to Queue Centric Work Pattern">Queue Centric Work Pattern</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/distributed-systems.html">distributed-systems</a> <a href="/tag/soa.html">SOA</a> </p>
+</footer><!-- /.post-info -->                <p>The <a href="http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern">Queue Centric Work Pattern
+(QCWP)</a>
+is simple. Send a message declaring the intent of the command,
+acknowledge the message and proceed. All work takes place in a
+background process so the user is not kept waiting for the request to
+return. Acknowledgement usually takes the form of persistence to …</p>
+                <a class="readmore" href="/2015/08/queue-centric-work-pattern.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/why-i-dont-like-mocking-frameworks.html" rel="bookmark"
+                           title="Permalink to Why I Don't Like Mocking Frameworks">Why I Don't Like Mocking Frameworks</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>Disclaimer: By <em>mocking</em> framework I generalize anything that includes
+support for stubs and mock objects.</p>
+<hr>
+<p>The use of mocking frameworks was a difficult part of my TDD journey.
+Not only are newcomers expected to get their head around the basics of
+the practice there are now new tools to contend …</p>
+                <a class="readmore" href="/2015/08/why-i-dont-like-mocking-frameworks.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/dry-vs-coupling-in-production-code.html" rel="bookmark"
+                           title="Permalink to DRY vs Coupling in Production Code">DRY vs Coupling in Production Code</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">Duplication in tests can be a good
+thing</a>.
+The same can be said for production code as well in some cases. No. I'm
+not going mad. I probably wouldn't believe this if you showed me this
+several years ago either. More experience has shown me that loose
+coupling is often …</p>
+                <a class="readmore" href="/2015/06/dry-vs-coupling-in-production-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/07/integration-tests.html" rel="bookmark"
+                           title="Permalink to Integration Tests">Integration Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>It is well documented you need a balance between different categories of
+automated tests. The split is usually in the form.</p>
+<ul>
+<li>70% unit</li>
+<li>20% integration</li>
+<li>10% acceptance</li>
+</ul>
+<p>While unit tests make up the majority of tests, there is a limit to
+their effectiveness. As soon as you leave the system …</p>
+                <a class="readmore" href="/2015/07/integration-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/07/static-code.html" rel="bookmark"
+                           title="Permalink to Static Code">Static Code</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/code-quality.html">code-quality</a> </p>
+</footer><!-- /.post-info -->                <p>Static code is considered a bad thing by developers. This is especially
+true when working with legacy code. The use of static code is often seen
+as a smell and should not be used.</p>
+<p>This is not as black and white as it first seems. Static code can be
+problematic …</p>
+                <a class="readmore" href="/2015/07/static-code.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/07/the-benefits-of-contract-testing.html" rel="bookmark"
+                           title="Permalink to The Benefits of Contract Testing">The Benefits of Contract Testing</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/contracts.html">contracts</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p><a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html">I previously claimed that you need some integrated tests but as few as
+possible</a>.
+There are huge benefits to this approach, but there is a problem. How do
+you stop your test doubles falling out of line with the real
+implementations? The answer is to use Contract Tests.</p>
+<h4>Steps</h4>
+<ol>
+<li>Create …</li></ol>
+                <a class="readmore" href="/2015/07/the-benefits-of-contract-testing.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/07/you-still-need-manual-tests.html" rel="bookmark"
+                           title="Permalink to You Still Need Manual Tests">You Still Need Manual Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/acceptance-testing.html">acceptance-testing</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->                <p>This blog has numerous examples of why unit,
+<a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html">integration</a>and
+<a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html">contract</a>testing
+is essential. However you still need manual tests. It is foolish to
+believe that all testing can be covered by automated tests despite the
+bias in this area.</p>
+<h4>Why?</h4>
+<ul>
+<li>Manual tests can catch anything you may have missed …</li></ul>
+                <a class="readmore" href="/2015/07/you-still-need-manual-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/branch-by-abstraction.html" rel="bookmark"
+                           title="Permalink to Branch by Abstraction">Branch by Abstraction</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->                <p>Feature toggles are great for new features or features that are either
+enabled or disabled. Branch by Abstraction offers the <a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html">same benefits as
+feature
+toggles</a>
+but the seam to introduce the change is the abstraction itself. Unlike
+Feature Toggles, the use of Branch by Abstraction allows a gradual
+transition to …</p>
+                <a class="readmore" href="/2015/06/branch-by-abstraction.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/do-you-really-need-microservice.html" rel="bookmark"
+                           title="Permalink to Do you really need a Microservice?">Do you really need a Microservice?</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>Lately there has been two sets of advice around the use of
+Microservices. <a href="http://martinfowler.com/bliki/MonolithFirst.html">Some advise that Microservices should be built after the
+fact</a>. <a href="http://www.martinfowler.com/articles/dont-start-monolith.html">Others advise
+the opposite
+solution</a>.
+In conjunction there is a third option that deserves more attention. Do
+you even need a Microservice at all? A <a href="https://twitter.com/natpryce/status/593763168977088513">recent
+tweet …</a></p>
+                <a class="readmore" href="/2015/06/do-you-really-need-microservice.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/feature-toggles.html" rel="bookmark"
+                           title="Permalink to Feature Toggles">Feature Toggles</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/releasing.html">releasing</a> </p>
+</footer><!-- /.post-info -->                <p>I'm a fan of regular releasing. My background and experience leads me to
+release as regularly as possible. There are numerous benefits to regular
+releases; limited risk, slicker release processes and the ability to
+change as requirements evolve.</p>
+<p>The problem with this concept is how can you release when features …</p>
+                <a class="readmore" href="/2015/06/feature-toggles.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/firstordefault-in-linq.html" rel="bookmark"
+                           title="Permalink to FirstOrDefault in LINQ">FirstOrDefault in LINQ</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Explicit null checking is a code smell in most cases. It should be
+limited where possible, or pushed to the edge of the system. A common
+anti pattern I've noticed is the incorrect use of <code>First()</code> in LINQ,
+which I have used myself on many occasions in this manner.</p>
+<p>Assuming …</p>
+                <a class="readmore" href="/2015/06/firstordefault-in-linq.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 2
+        <a href="/category/20152.html">&raquo;</a>
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Dependency Elimination Principle</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/03/dependency-elimination-principle.html" rel="bookmark"
+           title="Permalink to Dependency Elimination Principle">Dependency Elimination Principle</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>This is the third, and final part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 2 - <a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html">Reused Abstraction
+    Principle</a></li>
+</ul>
+<hr>
+<p>I've wrote about what <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">good dependencies are before, and the benefits if
+you can limit and remove them where
+possible</a>.</p>
+<p>You can take this idea further though, by applying concepts from
+functional programming such as "<em>depend on values rather than
+dependencies</em>".</p>
+<p>A wise colleague started me down this path of passing values, rather
+than dependencies on collaborators after we repeatedly found ourselves
+depending on implementation details. This meant our high level domain
+logic was tightly coupled to low level implementation details.</p>
+<p><a href="https://twitter.com/briangeihsler">Brian Geihsler</a> reminded me of this
+concept with an <a href="http://qualityisspeed.blogspot.co.uk/2015/02/the-dependency-elimination-principle-a-canonical-example.html">excellent demonstration of this in
+practice</a>
+and has allowed me to put a name to this practice.</p>
+<p>Additionally <a href="http://blog.thecodewhisperer.com/2013/11/23/beyond-mock-objects/">J.B. Rainsberger's example is with a virtual
+clock</a>,
+another common dependency we often need. In this case, ask for the time,
+not how you get the time. The example also highlights another common
+problem with conventions when using a framework or library.</p>
+<script src="https://gist.github.com/Finglas/ca5bbde5a06f6c7c627b.js"></script>
+
+<p>Here we can handle commands but only those that match the signature of
+taking a single command, and returning no response. In order to apply
+the Dependency Elimination Principle (DEP) and remove the clock wrapper
+we can introduce an overload. Our tests will be expressed using the
+overload, while the production code will make use of the standard
+method. If the class in question has a relevant set of interfaces, the
+overload would be omitted from this to ensure that consumers have a
+clean, focused API to consume.</p>
+<script src="https://gist.github.com/Finglas/9fe933e771fad1c3a693.js"></script>
+
+<p>When the DEP is applied to other dependencies such as configuration
+details, flexibility is achieved by the ability to provide these values
+from any source. As a side effect, coupling has been reduced, while also
+removing an unnecessary abstraction from the codebase.</p>
+<p>Try to apply the DEP where possible. Remove as many dependencies as
+possible for flexible, maintainable code. Not all dependencies can be
+eliminated, but unless the dependency is a valid abstraction it may be
+worth considering removing or reducing use.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

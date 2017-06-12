@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Abstractions in Code, Details in Metadata</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/10/abstractions-in-code-details-in-metadata.html" rel="bookmark"
+           title="Permalink to Abstractions in Code, Details in Metadata">Abstractions in Code, Details in Metadata</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-10-01T00:00:00+02:00">
+                Published: Thu 01 October 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <p>I've programmed many games - each one was special in its own way. One in
+particular stands out early in my university studies, a top down
+shooter. It was not graphics, gameplay, or sound that made it stand out
+however. It was the lesson it taught me about software development.</p>
+<h4>Level One</h4>
+<p>With the deadline for completion of the project looming, time was
+running out. The core game engine was complete but other than the first
+level there was nothing else for the player to do. With more marks
+awarded for various components I decided to add a second level.</p>
+<p>At the time the game consisted of a source file called <code>level.cs</code>. This
+contained parts of functionality explicit to every level that I would
+need. It also contained code specific to the first level. My solution
+was to extract a base class and introduce <code>level.cs</code> and <code>level1.cs</code>.
+This worked. The addition of level two was not as easy. The second level
+required a considerable amount of additional code, despite the shared
+functionality. A slow feedback cycle of change, compile, and test, made
+this addition even more tedious. With the test phase consuming much of
+my time.</p>
+<p>Hopefully you can see where this is going. While I never added a third
+level, the same problem exists. In fact for every additional level the
+problem would get worse.</p>
+<h4>Lesson</h4>
+<p>The lesson I learned here was that a game engine should be abstract,
+while the details of the level should be data that is configured outside
+of the code. This allows anyone to make levels for the game. Levels can
+be unique rather than constrained to how the programmers coded them to
+be, introducing novel gameplay elements constrained only by the
+imagination of the designers.</p>
+<p>This concept is not unique to games programming. I would learn a few
+years later that this is a well known and advised practice - <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The
+Pragmatic
+Programmer</a>
+summarises that abstractions should live in code, while details lives in
+metadata (data about data).</p>
+<blockquote>
+<p>"Program for the general case, and put the specifics outside the
+compiled code base."</p>
+</blockquote>
+<p>Those of you with a keen sense for code smells may be thinking about
+another issue with this story, and yes, you're right. The base class
+caused issues. The use and misuse of inheritance will be the subject of
+a future post.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

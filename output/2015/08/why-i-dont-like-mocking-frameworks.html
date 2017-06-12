@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Why I Don't Like Mocking Frameworks</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/08/why-i-dont-like-mocking-frameworks.html" rel="bookmark"
+           title="Permalink to Why I Don't Like Mocking Frameworks">Why I Don't Like Mocking Frameworks</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/tdd.html">tdd</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->      <p>Disclaimer: By <em>mocking</em> framework I generalize anything that includes
+support for stubs and mock objects.</p>
+<hr>
+<p>The use of mocking frameworks was a difficult part of my TDD journey.
+Not only are newcomers expected to get their head around the basics of
+the practice there are now new tools to contend with. To make matters
+worse there is a lot of mocking frameworks out there with differing
+quality qualities and suitability.</p>
+<p>The use of mocking frameworks includes a variety of disadvantages.</p>
+<ul>
+<li>Readability suffers in most cases. You often find yourself asking
+    <em>what is exactly happening here?</em> The frameworks themselves usually
+    impose these constraints and make the issue worse.</li>
+<li><a href="http://blog.ploeh.dk/2010/12/02/Interfacesarenotabstractions/">The use of frameworks tends to lead to header interfaces and not
+    role interfaces being
+    used</a>.
+    IDE's usually have a factor in this as they make this anti pattern
+    so very easy to introduce.</li>
+<li>A lot of developers are not aware of what these frameworks are doing
+    behind the scenes. This can lead to confusing tests and a general
+    lack of understanding.</li>
+</ul>
+<h4>Solution</h4>
+<p>My preference is to use hand crafted test doubles. While these are
+looked down upon by some, they offer numerous benefits.</p>
+<ul>
+<li><a href="http://stackoverflow.com/a/6674671">Stubs and Fakes are easier to
+    understand</a>, write and maintain
+    when hand crafted.</li>
+<li>Manual test doubles read easier. The key benefit here being able to
+    name implementations after their use and function.</li>
+<li>Hand crafted test doubles promote reuse. It is likely that such
+    doubles will be used across numerous tests. Once created code
+    duplication actually reduces.</li>
+<li>Hand crafted test doubles are a <a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html">prerequisite to enable contract
+    testing</a>.</li>
+</ul>
+<p>The actual implementation of these hand crafted doubles is minimal. In
+most cases simply providing the arguments as constructor or method
+parameters works. For more complicated scenarios <a href="http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html">DAMP
+tests</a>
+can be used.</p>
+<p>One area where frameworks provide a benefit is that of mock objects. In
+non trivial examples the requirements to verify numerous parameters and
+configurations can be verbose to hand craft. However there are
+alternatives to hand crafted test doubles such as the self shunt pattern
+which will be expanded upon in a future post.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

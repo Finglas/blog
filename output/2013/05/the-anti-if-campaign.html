@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The Anti If Campaign</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2013/05/the-anti-if-campaign.html" rel="bookmark"
+           title="Permalink to The Anti If Campaign">The Anti If Campaign</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-05-01T00:00:00+02:00">
+                Published: Wed 01 May 2013
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2013.html">2013</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>Firstly if you are unaware of what the <a href="http://www.antiifcampaign.com/">Anti If
+Campaign</a> is, I advise you to take look
+before coming back. My first impression a few years ago was the site
+must have been some sort of spoof. Programming without "if" statements,
+this was crazy nonsense. After all the "if" statement is one of the core
+constructs of any language. If you look deeper however the campaign is
+not advocating the abolition of "if" statements, it is simply
+encouraging cleaner code by removing the likes of type checking and
+control coupling. This can be achieved by the use of Polymorphism and
+abiding by the <a href="http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility
+Principle</a>
+(SRP).</p>
+<p>The Anti If Campaign is relevant as I have recently had first hand
+experience of what the supporters are campaigning against. I was working
+on one of our greenfield projects where I had violated SRP for an easy
+win. We had a class which would look up a quote based on some input
+criteria. I allowed this input to control how the lookup was performed.
+In some scenarios the input would be in a different form, meaning the
+lookup would need to be carried out in a different manner. An "if" check
+was introduced to handle this logic. In pseudo code:</p>
+<script src="https://gist.github.com/Finglas/54c9876cd1510228b36e.js"></script>
+
+<p>The code in question had supporting methods for both paths.</p>
+<p>Fast forward a few months and something terrible had happened. Like a
+plague, this simple conditional I had introduced was spreading. Code
+that was executed much later on was beginning to perform the same
+conditional check! At the same time I discovered this problem, I was
+asked to perform a trivial change as the requirements had evolved. What
+should have been a five minute job, turned into a few hours of paying
+back technical debt.</p>
+<p>The fix was well overdue at this point. I had to push the conditional
+statements as high as I could. <a href="http://silkandspinach.net/2011/09/19/conditionals-on-the-edge/">The closer they were to the edge of the
+system the
+better</a>.
+The by product of this refactor is that the code is a lot clearer now.
+Each class and method did just one thing, and they did it well. It
+turned out I was actually able to push the conditional statement so far
+up that it effectively disappeared into the routing of the system. It
+was up to the caller to "<em>do the right thing</em>".</p>
+<p>After the refactor:</p>
+<script src="https://gist.github.com/Finglas/e53f5a01135b8c1f7c1e.js"></script>
+
+<p>As each part of the code complies with SRP, I know exactly where to go
+if there is a problem. For example, if we have any problems with the
+retrieval of new quotes, I can easily debug and fix the issue. Likewise
+if we wish to extend the lookup of existing quotes, I can confidently
+change the code without the fear of breaking the retrieval of new
+quotes. The other side effect is that I can easily reason about and test
+the code in question.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

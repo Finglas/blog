@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Release It - Highlights Part 2</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/09/release-it-highlights-part-2.html" rel="bookmark"
+           title="Permalink to Release It - Highlights Part 2">Release It - Highlights Part 2</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/release-it-series.html">release-it-series</a> </p>
+</footer><!-- /.post-info -->      <p>This is the second part of my collection of notes and snippets from
+<a href="https://pragprog.com/book/mnee/release-it">Release It!</a></p>
+<ul>
+<li><a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html">Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+    Breakers</a></li>
+<li>Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
+    Post)</li>
+</ul>
+<hr>
+<h4>Caches</h4>
+<ul>
+<li>Low memory conditions are a threat to both stability and capacity.</li>
+<li>You need to ask whether the possible keys are infinite or finite and
+    would the items ever need to change?</li>
+<li>The simplest cache clearing mechanism is time based.</li>
+<li><a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html">Improper use of
+    caching</a> is the
+    major cause of memory leaks, which turn into horrors like daily
+    server restarts.</li>
+<li>Your system should run for at least the typical deployment cycle. If
+    you deploy once every two weeks, it should be able to run for at
+    least two weeks without restart.</li>
+<li>Limit the amount of memory a cache can use.</li>
+<li>Caches that do not limit memory will eventually eat all memory.</li>
+</ul>
+<h4>Testing</h4>
+<ul>
+<li>Every integration point should have a test harness that can be
+    substituted.</li>
+<li>Make your test harness act like a hacker - try large payloads,
+    invalid characters, injection and so on.</li>
+<li>Have your test harness log requests so you can see what has caused
+    problems.</li>
+<li>Run longevity tests - tests that put impulse and stress upon a
+    system over long periods of time.</li>
+<li>Someone saying "<em>the odds of that happening is millions to one</em>" is
+    actually quite likely to happen. Given a average site, making
+    thousands of requests a day this is an easy target to hit.</li>
+<li>Sessions are the Achilles heel of every application server.</li>
+<li>Most testing uses the app in the way it was expected to be use such
+    as load testing a site using the correct workflow. What about load
+    testing without using cookies? Would this spawn a new session each
+    time?</li>
+</ul>
+<h4>HTML</h4>
+<ul>
+<li>Whitespace costs! In HTML (or the markup generated) remove all
+    whitespace. It costs time to generate and money to send across the
+    wire. You could argue this is for big traffic sites only, but this
+    technique is very simple to apply as part of the build and speeds up
+    client side rendering.</li>
+<li>Omit needless characters in HTML such as comments. Use server side
+    commenting instead, this will be removed when processed.</li>
+</ul>
+<h4>Pre-Computation</h4>
+<ul>
+<li>Precompute as much of the page as possible. Use "punch outs" for
+    dynamic content. For example Slashdot generates its page once and
+    serves to thousands of users. All users get the page equally as
+    fast. Caching would mean handfuls of users would get a slow
+    experience.</li>
+<li>Precomputed content should be deployed as part of the build. For
+    more frequent updates another strategy or "content deploys" would be
+    required.</li>
+</ul>
+<h4>Logging</h4>
+<ul>
+<li>The human visual system is an excellent pattern matching machine.
+    Make logs readable by using a custom format. Scanning logs is very
+    easy then.</li>
+<li>Two line log files are difficult. Harder to grep. Keep everything on
+    one line.</li>
+<li>Each week review the systems tickets. Try to identify and fix
+    problems as you go. Try and predict future problems where possible
+    based on this info.</li>
+<li>Check the logs daily for stack traces that are suspicious. These
+    could be common errors that are bugs/problems that need fixing.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

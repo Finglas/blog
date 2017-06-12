@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Lists or Objects</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2010/12/lists-or-objects.html" rel="bookmark"
+           title="Permalink to Lists or Objects">Lists or Objects</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-12-01T00:00:00+01:00">
+                Published: Wed 01 December 2010
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2010.html">2010</a>.</p>
+<p>tags: <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <blockquote>
+<p>"Our rule of thumb is that we try to limit passing around types with
+generics (the types closed in angle brackets). Particularly when
+applied to collections, we view it as a form of duplication. It's a
+hint that there's a domain concept that should be extracted into a
+type." [<a href="http://www.growing-object-oriented-software.com/">Growing Object-Oriented Software, Guided by
+Tests</a> - Steve
+Freeman, Nat Pryce, page 136)]</p>
+</blockquote>
+<h3>Example</h3>
+<p>Not ideal - business logic will leak.</p>
+<script src="https://gist.github.com/Finglas/24ed5ead118ea8e2730c.js"></script>
+
+<p>Better - quotes are now encapsulated.</p>
+<script src="https://gist.github.com/Finglas/ed5e69d1e10925e7a4dd.js"></script>
+
+<h3>Why?</h3>
+<p>The benefit of the second approach is that you begin to force the
+collection to do the work. Consider a collection of quotes - using the
+first approach a developers' typical instinct would be to loop over the
+list and check each quote until the lowest quote was found. You could
+argue that this in turn violates the '<a href="http://www.pragprog.com/articles/tell-dont-ask">Tell Don't
+Ask</a>' principle because
+very quickly you can find yourself digging down into objects. We would
+not do this with standalone objects, so collections should not be any
+different. Yet as developers we often avoid creating objects to
+encapsulate collections, despite this principle being taught in the
+early chapters of any OO programming beginners book.</p>
+<p>Another key point of encapsulating collections is that you reduce
+duplication. If another part of the application needs to perform a check
+for the lowest quote, you'd end up either duplicating the code to loop
+over the quotes, or creating a helper method to do the actual
+processing. Using the collection means such features are only a method
+call away at all times.</p>
+<p>In a recent <a href="http://codekata.com/kata/kata09-back-to-the-checkout/">code
+kata</a> as well as
+a current set of work, we are applying some of the above concepts and
+finding a dramatic increase in the quality of our code. Those of you may
+have noticed that the above implementation inherits from a standard
+list, therefore it is indeed possible to still violate encapsulation and
+dig through the collection yourself. There are pros and cons to this
+approach, one benefit is all of the out of the box functionality you get
+for free - the ability to loop over the quotes (for displaying say) and
+return a count for example. The downside being developers can treat
+these collections as if they were a list.</p>
+<p>In C# it is possible to use
+<a href="http://msdn.microsoft.com/en-us/library/aa288465%28v=vs.71%29.aspx">indexers</a>or
+interfaces to improve the above implementation, though we tend to agree
+that it's up to the developers to do the "right" thing - in other words,
+not dive down into the collection. Interesting this very topic has been
+<a href="http://stackoverflow.com/questions/21715/listbusinessobject-or-businessobjectcollection">discussed on the excellent
+StackOverflow</a>
+- I and others will sure agree that the answer(s) provided are well off
+the mark. Encapsulate your public collections - do not treat them as
+primitives!</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

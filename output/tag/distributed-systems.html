@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - distributed-systems</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2016/05/foreign-key-constraints-and.html">Foreign Key Constraints and Microservices</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-05-01T00:00:00+02:00">
+                Published: Sun 01 May 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/distributed-systems.html">distributed-systems</a> </p>
+</footer><!-- /.post-info --><p>Database constraints when used in relational databases are great. They
+ensure data integrity at the lowest level. No one would argue against
+using them in practice. Essentially constraints can be thought of as
+assertions against your database. Rules such as requirement, default
+values and foreign key constraints double check your use of the
+database. This ensures your application is interacting in a sane manner.
+Databases often out live applications therefore constraints also ensure
+integrity long after the application has been replaced or modified.</p>
+<h4>Distributed Systems</h4>
+<p>Distributed systems change how foreign key constraints should be
+considered. As distributed systems own their data, each piece of data
+that is mastered by a single service should ensure integrity via foreign
+key constraints. However outside of this boundary the use of foreign
+keys should be avoided. This sounds disturbing at first. Especially
+given the traditional approach of a single system backed by a single
+database.</p>
+<h4>Example</h4>
+<p>Consider a blog post service that provides a selection of posts. The
+service would be responsible for everything related to blog posts, but
+nothing more. The comments for the site are a separate service, yet
+there is clearly a link between posts and comments. For example, in
+order to display both posts and comments a link is needed.</p>
+<div class="highlight"><pre><span></span>- tblPosts (blog database)
+    + Id
+    + Title
+    + Date
+    + Body
+</pre></div>
+
+
+<p>Each post would store data related to the blog post itself.</p>
+<div class="highlight"><pre><span></span>- tblComments (comment database)
+    + Id
+    + PostId
+    + AuthorId
+    + Message
+    + Date
+</pre></div>
+
+
+<p>The comment service would include a reference to each post that the
+comment is linked to. In this case both <code>PostId</code> and <code>AuthorId</code> would
+not use foreign key integrity as other services master this data.</p>
+<p>If this was a single database both <code>PostId</code> and <code>AuthorId</code> could enforce
+integrity, however as each service is independent this is not possible.
+With physically separate databases this lack of link is quite obvious.
+Working around this in application code would introduce subtle bugs, and
+temporal coupling. Such solutions are best avoided.</p>
+<h4>Check Formats</h4>
+<p>When using the comment service, this approach leaves you with very
+little work to do other than simple format checks. The format of a
+<code>PostId</code> and <code>AuthorId</code> should be known, so the comment service can
+validate at this level. The core benefit is both the blog post service
+and comment service are highly decoupled. The comments could be changed
+to another service altogether, even a 3rd party provider, yet other
+services would remain unaware.</p>
+<h4>Valid Format, Invalid Data</h4>
+<p>Format checks will only provide so much value. There is nothing stopping
+a valid request for a blog post that does not exist. In cases such as
+this there are a few options. One is to provide a compensating action.
+Periodically delete any comments that do not have corresponding blog
+posts. An alternative would be to rely upon events. Only insert comments
+when a blog post is added, likewise when the service publishes the fact
+a post has been removed, any associated comments could be deleted.</p>
+<h4>Many Services, Single Database</h4>
+<p>Confusion and resistance around the use of foreign keys is often found
+when transitioning from a single database, to a single database operated
+upon by multiple systems. Teams adopting microservices find themselves
+in this dilemma usually when a large, legacy database is involved. In
+these scenarios existing constraints may need to be removed, or
+modified. Another technique is to have the independent services add
+dummy data in order to pass database constraints. While this is far from
+ideal, this pragmatic solution can work well while databases are being
+separated.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Use foreign key constraints when using a single database via a
+    single application.</li>
+<li>Modify, replace or drop constraints when multiple services are
+    writing to a single database.</li>
+<li>Independent services should own their own data. Only enforce
+    integrity within service boundaries.</li>
+<li>Outside of service boundaries, use format checks to prevent errors.</li>
+<li>Rely on compensating actions or events for data management.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/queue-centric-work-pattern.html" rel="bookmark"
+                           title="Permalink to Queue Centric Work Pattern">Queue Centric Work Pattern</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/distributed-systems.html">distributed-systems</a> <a href="/tag/soa.html">SOA</a> </p>
+</footer><!-- /.post-info -->                <p>The <a href="http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern">Queue Centric Work Pattern
+(QCWP)</a>
+is simple. Send a message declaring the intent of the command,
+acknowledge the message and proceed. All work takes place in a
+background process so the user is not kept waiting for the request to
+return. Acknowledgement usually takes the form of persistence to …</p>
+                <a class="readmore" href="/2015/08/queue-centric-work-pattern.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

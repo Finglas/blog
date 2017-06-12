@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Static Code</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/07/static-code.html" rel="bookmark"
+           title="Permalink to Static Code">Static Code</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/code-quality.html">code-quality</a> </p>
+</footer><!-- /.post-info -->      <p>Static code is considered a bad thing by developers. This is especially
+true when working with legacy code. The use of static code is often seen
+as a smell and should not be used.</p>
+<p>This is not as black and white as it first seems. Static code can be
+problematic when global state is involved. Not only is it hard to
+change, static code is very hard to test in an automated fashion. Bad
+examples of static code include persistence, third party services, and
+out of process calls. These examples should avoid static code where
+possible.</p>
+<p>One guideline that served me very well in my early days of TDD was
+treating <a href="http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/">static code as a death to
+testability</a>.
+Unfortunately some developers don't move on from this guideline and
+treat any use of static code as bad.</p>
+<p>In fact static code can have a benefit. If a method within a class can
+be promoted to a public static method (PSM) it shows that the code is
+stateless. This allows the "extract class" refactoring to be performed.
+Without a PSM such refactoring is much more difficult. IDEs can automate
+this step and if in a dynamic language you can simply lean on the
+runtime to catch issues.</p>
+<p>The steps to perform this refactor are easy. If at any stage this is not
+possible the method contains state.</p>
+<ol>
+<li>Make the method public.</li>
+<li>Make the method static.</li>
+<li>Move the public static method to the new class.</li>
+<li>Update usage of the previous calls.</li>
+<li>Optionally remove the static modifier and update previous call
+    sites.</li>
+</ol>
+<p>If the code cannot be promoted to a PSM then state exists. Increasingly
+the code I write leads itself to a functional paradigm despite not be
+written in a strictly functional language. Small, focused classes that
+tend to be immutable. The use of PSM makes transition to this style of
+code easy. There is no reason to avoid the use of static code as an
+intermediate step to get to this position.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

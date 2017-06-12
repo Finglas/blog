@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Past Mistakes - Out of Process Commands</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/05/past-mistakes-out-of-process-commands.html" rel="bookmark"
+           title="Permalink to Past Mistakes - Out of Process Commands">Past Mistakes - Out of Process Commands</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-05-01T00:00:00+02:00">
+                Published: Sun 01 May 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> <a href="/tag/past-mistakes-series.html">past-mistakes-series</a> </p>
+</footer><!-- /.post-info -->      <p>Some of the best lessons you can learn are from failure. I figured a
+series on mistakes I've made in the past would highlight where I went
+wrong and more importantly what to remember going forward. These real
+life examples vary from my early days of programming all the way up
+until present day.</p>
+<hr>
+<p>I once wrote a feature that sent email to users on their behalf. On
+localhost this was fine. Fast, stable and good enough to get the job
+done.</p>
+<p>Despite early successes, under load in a live environment, things were
+different. Sometimes the process would out right fail, requiring the
+user to retry. Other times it would be slow to process. This meant the
+users browser would hang while the email was being sent.</p>
+<p>It was hard to replicate these problems. The actual code itself was
+pretty simple, there was nothing to optimize it seemed.</p>
+<h4>Mistakes</h4>
+<p>The core mistake was performing an operation out of process from within
+the life cycle of a HTTP request.</p>
+<p>When sending the email was slow, the HTTP response was slow as the
+thread was blocked. This was blindingly obvious after the fact.</p>
+<p>Frustratingly actually demonstrating or testing this feature was hard.
+Locally the server was nearby so latency was less. This started to
+introduce other red herrings such as was the server misconfigured?</p>
+<h4>What to do Instead</h4>
+<p>After the user has requested an email, record this fact and simply
+display a success message. Do this as quickly and simply as possible.
+While the message states an email has been sent this is not strictly
+true.</p>
+<p>Instead the act of requesting the email is recorded. Ideally via a
+message queue or other durable storage solution. A separate service then
+monitors this queue and periodically sends out emails.</p>
+<p>Users will not care if an email lands a few seconds or minutes after the
+fact. Additionally if anything goes wrong during this process no data is
+lost. The user will get their email eventually. Most e-commerce sites
+work in this exact manner.</p>
+<p>This approach works great when commands from users cannot and should not
+fail. Examples such as processing payments or key user interactions
+would be excellent candidates.</p>
+<p>Unfortunately not all out of process requests can be avoided. HTTP
+queries to retrieve data being one example. This cannot be faked. In
+these cases minimize the number and rely on other techniques, such as
+HTTP's excellent caching policies to reduce the affect on the system.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Never perform commands that cannot fail out of process from within
+    the same HTTP transaction.</li>
+<li>Fear all out of process calls - they are costly, prone to failure
+    and can cause chaos with your systems performance. Reduce and
+    replace where possible.</li>
+<li>When commands that should not fail are required, use a message queue
+    to record the command prior to processing them.</li>
+<li>Rely on HTTP caching policies to reduce the effect of queries that
+    cannot be avoided.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

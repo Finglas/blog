@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - microservices</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2016/07/ui-composition-techniques-for-services.html">UI Composition Techniques for Services</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-07-01T00:00:00+02:00">
+                Published: Fri 01 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/soa.html">SOA</a> </p>
+</footer><!-- /.post-info --><p>When using services be it SOA, microservices or some other hybrid
+approach, at some point you will need to display an aggregation of data
+onto a UI. This simple task can actually involve some complexity and
+hidden pitfalls.</p>
+<p>As an example, this blog could be powered by three independent services.
+A comment service, a post service and a archive service. Displaying this
+content on the page could involve a few different approaches both with
+pros and cons. Each vary in terms of benefits and complexity.</p>
+<ul>
+<li>Service Composition</li>
+<li>Server Side Composition</li>
+<li>Backends For Frontends</li>
+<li>Frontend UI Composition</li>
+</ul>
+<hr>
+<h4>Service Composition</h4>
+<p>Composition within independent services should be avoided at all costs.
+In these cases service A invokes service B which invokes service C,
+which has a dependency on A and so on. The problems such composition
+introduce defeats any benefits that a service based approach brings. In
+short <a href="http://blog.shaunfinglas.co.uk/2014/07/soa-done-badly-vs-soa-done-right.html">composing data in this manner will lead to
+problems</a>.</p>
+<hr>
+<h4>Server Side Composition</h4>
+<p>Invoke each service behind a single request and perform composition on
+the server. Return the results of the aggregation which can then be
+processed by the UI. In most cases a <em>request</em> will be a request over
+HTTP.</p>
+<h5>Pros</h5>
+<ul>
+<li>Single request to fetch all data.</li>
+<li>Single server side place to change if UI requirements change.</li>
+<li>Forms an anti corruption layer in front of the independent services.
+    Client specific changes do not leak down into the service.</li>
+</ul>
+<h5>Cons</h5>
+<ul>
+<li>Coupling is moved to the server side. Harder/slower to change
+    compared to HTML/JS/UI layer.</li>
+<li>Handling failures must be considered more so than client side
+    composition.</li>
+<li>Timeouts or lack of responses must be considered using asynchronous
+    techniques.</li>
+</ul>
+<h5>Where Does The UI Live?</h5>
+<p>Due to the nature of having to serve up data for the UI layer to
+consume, it makes sense to purely store the UI components within the
+host application. In this case the whole host application will use the
+same UI techniques.</p>
+<hr>
+<h4>Backends For Frontends (BFFs)</h4>
+<p><a href="http://samnewman.io/patterns/architectural/bff/">An alternative which builds upon server side
+composition</a> is server
+side composition but performed individually based on the UI required. In
+other words, a set of server side applications for each host are
+created.</p>
+<p>As UI clients can differ drastically a single server side composition
+technique may not be sufficient. Mobile devices may require a slimmed
+down version of data, while desktop dashboards may prefer large
+quantities. Additionally it is quite common to find certain clients
+asking for additional fields or requirements specific to their client
+implementation. In these cases BFFs make a great deal of sense.</p>
+<h5>Pros</h5>
+<ul>
+<li>Same pros as server side composition.</li>
+<li>BFFs allow full control of server side composition tailored to the
+    clients.</li>
+<li>Specialized BFFs reduce change and prevent independent services
+    handling UI specific edge cases.</li>
+</ul>
+<h5>Cons</h5>
+<ul>
+<li>Same cons as server side composition.</li>
+<li>More moving parts, though BFFs should be owned by the client
+    themselves for true autonomy.</li>
+</ul>
+<h5>Where Does The UI Live?</h5>
+<p>The same guidance as server side composition stands. Where the actual
+BFF lives depends on how it is used. If the mobile client is expected to
+have multiple implementations then a standalone service would be
+required. Alternatively if only a single mobile platform is targeted,
+then the service could live within the host application itself.</p>
+<hr>
+<h4>Frontend Composition</h4>
+<p><a href="http://udidahan.com/2012/06/23/ui-composition-techniques-for-correct-service-boundaries/">Invoke each service and display its data independently via the
+client</a>.
+The host application will include the front end of each service by
+conforming to a common standard such as Javascript or other UI
+components. The use of IDs and client side identifiers will be required
+to ensure all services are linked in some manner.</p>
+<h5>Pros</h5>
+<ul>
+<li>Failure tolerant by default, if a single request fails the others
+    carry on processing.</li>
+<li>JS/UI layers make asynchronous calls easy, composition is a natural
+    fit.</li>
+<li>Weakest form of coupling is in the UI layer - easier and cheaper to
+    change.</li>
+<li>Flexible as you can create <em>mash ups</em> that would otherwise violate
+    service boundaries.</li>
+</ul>
+<h5>Cons</h5>
+<ul>
+<li>Multiple requests to fetch content (four HTTP requests using the
+    blog example above).</li>
+<li>Aggregation may be complex. You may need to use more than just plain
+    Javascript or face complex, coupled JS.</li>
+<li>Depending on where the UI layer is stored, you may be coupled at the
+    UI level due to the same framework or approaches needed across each
+    service.</li>
+</ul>
+<h5>Where Does The UI Live?</h5>
+<p>Storing the UI within each service is ideal on paper, but in practice
+has some limitations. Each service can vary and iterate at its own pace
+which is fantastic as long as the integration of the service remains
+unchanged. Unfortunately the downside is that each service is actually
+independent in terms of the UI. This means that versioning the front end
+component becomes an issue. Likewise there is nothing stopping different
+services using different libraries or frameworks. If the UI component
+requires any server side additions this becomes even harder. For example
+a host application written in one language will be incompatible with
+other services if they differ. The final issue relates to storing UI
+components outside of host application frameworks. Many frameworks
+simply make this either impossible or very difficult to achieve.</p>
+<p>Using the host application to store the UI components side steps the
+disadvantages and issues above. While you are at the mercy of the host
+application to integrate each component, this is not a show stopper.
+Chances are most applications have multiple views, so a single UI
+component would never be reusable across applications. Additionally the
+use of thin vertical slices should mean that even though the UI
+component is physically separate from the service, there is no reason
+why the two cannot be worked on in conjunction.</p>
+<p>A final factor to consider is that there is no reason why a hybrid
+approach cannot be taken. Each service should store its own UI
+component, but also allow host applications the ability to integrate.
+This UI component can act as a form of dog fooding as well as providing
+an excellent development and test bed. It is far easier to work and test
+a small widget with an automated test than it is to exercise this within
+the context of a full blown application.</p>
+<hr>
+<h4>Lessons</h4>
+<ul>
+<li>Avoid the use of internal service composition - remote calls to
+    third parties being the obvious exception to this rule.</li>
+<li>There is no best approach overall, the chosen solution will vary
+    based on application.</li>
+<li>Server side composition has benefits, but client side UI composition
+    opens up new possibilities.</li>
+<li>Client side composition seems more complicated but in reality it is
+    merely different, though does require some up front planning.</li>
+<li>Default to using the services directly, only introducing a BFF if
+    client requirements differ or client requirements are being forced
+    upon the independent services.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/05/foreign-key-constraints-and.html" rel="bookmark"
+                           title="Permalink to Foreign Key Constraints and Microservices">Foreign Key Constraints and Microservices</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-05-01T00:00:00+02:00">
+                Published: Sun 01 May 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/distributed-systems.html">distributed-systems</a> </p>
+</footer><!-- /.post-info -->                <p>Database constraints when used in relational databases are great. They
+ensure data integrity at the lowest level. No one would argue against
+using them in practice. Essentially constraints can be thought of as
+assertions against your database. Rules such as requirement, default
+values and foreign key constraints double check your …</p>
+                <a class="readmore" href="/2016/05/foreign-key-constraints-and.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2016/04/project-setup-tax.html" rel="bookmark"
+                           title="Permalink to Project Setup Tax">Project Setup Tax</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-04-01T00:00:00+02:00">
+                Published: Fri 01 April 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>With microservices gaining popularity, one consideration prior to
+adoption is new project setup. In fact this statement holds true for any
+new project that you decide to create.</p>
+<p>Each new project requires at a minimum</p>
+<ul>
+<li>Source control - somewhere to actually store the code.</li>
+<li>A project base - API, executable, library, application …</li></ul>
+                <a class="readmore" href="/2016/04/project-setup-tax.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/08/queue-centric-work-pattern.html" rel="bookmark"
+                           title="Permalink to Queue Centric Work Pattern">Queue Centric Work Pattern</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/distributed-systems.html">distributed-systems</a> <a href="/tag/soa.html">SOA</a> </p>
+</footer><!-- /.post-info -->                <p>The <a href="http://www.asp.net/aspnet/overview/developing-apps-with-windows-azure/building-real-world-cloud-apps-with-windows-azure/queue-centric-work-pattern">Queue Centric Work Pattern
+(QCWP)</a>
+is simple. Send a message declaring the intent of the command,
+acknowledge the message and proceed. All work takes place in a
+background process so the user is not kept waiting for the request to
+return. Acknowledgement usually takes the form of persistence to …</p>
+                <a class="readmore" href="/2015/08/queue-centric-work-pattern.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/06/do-you-really-need-microservice.html" rel="bookmark"
+                           title="Permalink to Do you really need a Microservice?">Do you really need a Microservice?</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-06-01T00:00:00+02:00">
+                Published: Mon 01 June 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/microservices.html">microservices</a> <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>Lately there has been two sets of advice around the use of
+Microservices. <a href="http://martinfowler.com/bliki/MonolithFirst.html">Some advise that Microservices should be built after the
+fact</a>. <a href="http://www.martinfowler.com/articles/dont-start-monolith.html">Others advise
+the opposite
+solution</a>.
+In conjunction there is a third option that deserves more attention. Do
+you even need a Microservice at all? A <a href="https://twitter.com/natpryce/status/593763168977088513">recent
+tweet …</a></p>
+                <a class="readmore" href="/2015/06/do-you-really-need-microservice.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Loops vs Functional Programming Styles</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/08/loops-vs-functional-programming-styles.html" rel="bookmark"
+           title="Permalink to Loops vs Functional Programming Styles">Loops vs Functional Programming Styles</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-08-01T00:00:00+02:00">
+                Published: Sat 01 August 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/javascript.html">javascript</a> <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The following examples are four of the most common functional
+programming patterns that appear in mainstream languages though they may
+be known under different names.</p>
+<p>Being a <a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html">fan of CQS and
+CQRS</a>,
+queries work great when coding using the functional style. While this is
+completely subjective in terms of style there is another benefit -
+composition. In other words the functional styles below can all be
+joined together with minimal changes. A traditional loop would require
+additional modifications. The benefit composition provides is similar to
+the <a href="http://www.enterpriseintegrationpatterns.com/PipesAndFilters.html">pipes and filter
+architecture</a>
+- it is very easy to change the behaviour of the pipeline by simply
+adding or removing statements.</p>
+<p>Composition and concise code aside, traditional loops should not be
+avoided fully. Each scenario will have different solutions. Sometimes
+you really just want a standard loop.</p>
+<p>The benefit of learning the key concepts behind <code>Map</code>, <code>Filter</code>,
+<code>ForEach</code> and <code>Reduce</code> is the ability to translate these styles and
+idioms into other languages that may have the same functionality just
+behind a different interface.</p>
+<h4>Map</h4>
+<p>Also known as Projection. Convert the array into a new array based on
+the callback provided.</p>
+<script src="https://gist.github.com/Finglas/76da9beecc3f482daf20.js"></script>
+
+<h4>Filter</h4>
+<p>Filter the array based on the callback if the result is true. In the
+same manner as Map, the non functional version of this code is an
+extremely common pattern so the functional version really shines here.</p>
+<script src="https://gist.github.com/Finglas/1347cd4e6b5fb318429c.js"></script>
+
+<h4>ForEach</h4>
+<p>Invokes the callback for each member of the array. This is another very
+common pattern that really benefits from the functional form.</p>
+<script src="https://gist.github.com/Finglas/cd49450677bd2583dffe.js"></script>
+
+<h4>Reduce</h4>
+<p>Converts the array into a single value by taking the current index and
+the next index as parameters to be applied.</p>
+<script src="https://gist.github.com/Finglas/41ebbc74a83232227db8.js"></script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

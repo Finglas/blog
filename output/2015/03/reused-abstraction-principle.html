@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Reused Abstraction Principle</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/03/reused-abstraction-principle.html" rel="bookmark"
+           title="Permalink to Reused Abstraction Principle">Reused Abstraction Principle</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-03-01T00:00:00+01:00">
+                Published: Sun 01 March 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/abstractions-series.html">abstractions-series</a> <a href="/tag/code-quality.html">code-quality</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>This is the second part of my series on abstractions.</p>
+<ul>
+<li>Part 1 -
+    <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">Abstractions</a></li>
+<li>Part 3 - <a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html">Dependency Elimination
+    Principle</a></li>
+</ul>
+<hr>
+<p>The Reused Abstraction Principle is a simple in concept in practice, but
+oddly rarely followed in typical enterprise development. I myself have
+been incredibly guilty of this in the past.</p>
+<p>Most code bases have a 1:1 mapping of interfaces to implementations.
+Usually this is the sign of TDD or automated testing being applied
+badly. The majority of these interfaces are wrong. <a href="http://blog.ploeh.dk/2010/12/02/Interfacesarenotabstractions/">1:1 mappings between
+interfaces and implementations is a code
+smell</a>.</p>
+<p>Such situations are usually the result of extracting an interface from
+an implementation, rather than having the client drive behaviour.</p>
+<p>These interfaces are also often bad abstractions, known as "leaky
+abstractions". As <a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html">I've discussed previously, these abstractions tend to
+offer nothing more than simple
+indirection</a>.</p>
+<h4>Example</h4>
+<p>Apply the "<em>rule of three</em>". If there is only ever one implementation,
+then you don't need the interface/base class. If you do need to
+introduce an interface, have the client provide it. Try to resist the
+urge to extract from an implementation. Any stubs or testing
+implementations should be treated as valid implementations, despite no
+use within the production code directly.</p>
+<script src="https://gist.github.com/Finglas/53d16d4bcadaa6eda702.js"></script>
+
+<p>In the first example there is a 1:1 mapping. <a href="http://www.codemanship.co.uk/parlezuml/blog/?postid=934">This is clutter and
+needless
+indirection</a>.
+As we have nothing to replace <code>FooService</code> with, the interface offers no
+value. The second example shows multiple implementations of <code>IFoo</code>. Here
+different implementations have unique responsibilities. We could use a
+test stub, or use the decorator pattern whenever we use <code>IFoo</code>. The
+abstraction is valuable.</p>
+<p><a href="http://blog.ploeh.dk/2010/12/03/Towardsbetterabstractions/">If you can introduce a composite or decorator this is probably a sign
+of a good abstraction at
+work</a>.
+Likewise the ability to replace your implementation and have the code
+still function is a good sign. Such an example would be <code>SqlRepository</code>
+replaced with <code>MongoRepository</code> when <code>IRepository</code> is required.</p>
+<p>Additionally just because you opt to use dependency injection, there is
+no rule stating said dependency must be an interface or base class.</p>
+<p>The final point is to <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">remember what good dependencies
+are</a>,
+everything else can be an implementation detail leading to more flexible
+and resilient code.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

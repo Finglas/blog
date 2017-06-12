@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Given When Then Scenarios vs Test Fixtures</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/06/given-when-then-scenarios-vs-test.html" rel="bookmark"
+           title="Permalink to Given When Then Scenarios vs Test Fixtures">Given When Then Scenarios vs Test Fixtures</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-06-01T00:00:00+02:00">
+                Published: Wed 01 June 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>There are two common ways of writing automated tests which apply from
+unit to acceptance tests. These are typically known as test fixtures and
+Given-When-Then scenarios.</p>
+<h4>Test Fixture</h4>
+<ul>
+<li>Traditional method of writing tests.</li>
+<li>The common JUnit/NUnit approach. Other languages have very similar
+    concepts.</li>
+<li>Single test fixture with multiple tests.</li>
+<li>Test fixture is usually named after the subject under test.</li>
+<li>Can grow large with many test cases.</li>
+<li>Works well with data driven tests.</li>
+<li>Suited to <a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html">solitary
+    tests</a>
+    such as integration tests where GWT syntax would be verbose or hard
+    to include.</li>
+</ul>
+<h4>Example</h4>
+<script src="https://gist.github.com/Finglas/7748cf098415494c99ecaa0777eacacd.js"></script>
+
+<h4>Given-When-Then</h4>
+<ul>
+<li>Behaviour driven approach (BDD style).</li>
+<li>Made popular by tools such as RSpec.</li>
+<li>Single test fixture per behaviour.</li>
+<li>Test fixtures named after the functionality being tested.</li>
+<li>Often nested within other test fixtures.</li>
+<li>Smaller test fixtures but more verbose due to fixture per
+    functionality.</li>
+<li>Easy to see why a test failed due to naming convention - assertion
+    message is optional.</li>
+<li>Suited to <a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html">sociable
+    tests</a>
+    where the focus is on behaviour.</li>
+<li><code>Given</code> forms the pre-condition of the test.</li>
+<li><code>When</code> performs the action.</li>
+<li><code>Then</code> includes one or more related assertions.</li>
+<li>GWT can be difficult to name in some cases, often more thought and
+    discussion can be required around good naming conventions.</li>
+<li>Can act as useful documentation on how the code is meant to
+    function.</li>
+</ul>
+<h4>Example</h4>
+<script src="https://gist.github.com/Finglas/8d5b8fbc789acbe829d06312559a5d3a.js"></script>
+
+<h4>Lessons</h4>
+<ul>
+<li>No single way of writing automated tests is better.</li>
+<li>Favour single test fixtures for integration tests.</li>
+<li>The core of your tests can use GWT style.</li>
+<li>Mix and match where appropriate however.</li>
+<li>Your choice of tooling and language may influence your approach.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

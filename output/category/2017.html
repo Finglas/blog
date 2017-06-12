@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - 2017</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2017/05/logging-vs-auditing.html">Logging vs Auditing</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-05-02T00:00:00+02:00">
+                Published: Tue 02 May 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/summary.html">summary</a> </p>
+</footer><!-- /.post-info --><p>The difference between logging and auditing is a subtle yet important
+distinction.</p>
+<h3>Logging</h3>
+<ul>
+<li>Technical in nature. Deals with technical concerns, stacktraces or
+    errors.</li>
+<li>Additional levels such as DEBUG, INFO, WARN, ERROR, FATAL for
+    classification.</li>
+<li>Logging can be simple such as traditional stdout statements, or more
+    complex with semantic/structured logging.</li>
+<li>Should not cause a runtime failure if logging is defective, fail
+    silently.</li>
+<li>System should work with or without logging enabled from both a
+    technical and system view.</li>
+<li>No need for automated testing, simply ensure this works afterwards.
+    No need for interfaces or abstractions, use the logging library
+    directly.</li>
+</ul>
+<p>The primary users of logging should be the development team when
+developing and testing. Additional the team should use logging for daily
+monitoring and support. Effective log monitoring can produce trends or
+highlight problem areas well before users report them as issues. The use
+of a good monitoring system can also remove and reduce the need for
+complex and unstable system tests, this will be the subject of a future
+post.</p>
+<h3>Auditing</h3>
+<ul>
+<li>Domain specific. Deals with domain concerns for audit trails.</li>
+<li>Always one level, though context is important. Different audit roles
+    for different actions, for example, user makes a payment. User logs
+    in. User performs action. All three of these examples are unique and
+    should be treated as such.</li>
+<li>Auditing is important, it must occur. Should cause a runtime failure
+    if auditing is defective. Never fail silently.</li>
+<li>System cannot operate at 100% if auditing is not operating.</li>
+<li>Testable and should be considered a first class feature.
+    Abstractions useful to provide different implementations and to aid
+    testing.</li>
+</ul>
+<p>Auditing is a feature in itself. There is no point introducing this
+additional complexity unless the system requires this. Other concerns
+auditing introduces include where to store the data? For how long? And
+what potentially sensitive data can be stored?</p>
+<p>The key lesson here is that logging and auditing are two very distinct
+concepts and should be treated as such.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/04/the-qa-test-matrix.html" rel="bookmark"
+                           title="Permalink to The QA Test Matrix">The QA Test Matrix</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-04-03T00:00:00+02:00">
+                Published: Mon 03 April 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->                <p>Historically teams I've worked with have taken a few varying approaches
+when designing tests against acceptance criteria. One is to have the
+business define the feature, while the team help define the acceptance
+criteria. Ultimately the business gets the final say if they agree, and
+further acceptance criteria is either …</p>
+                <a class="readmore" href="/2017/04/the-qa-test-matrix.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/01/be-humble.html" rel="bookmark"
+                           title="Permalink to Be Humble">Be Humble</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-18T00:00:00+01:00">
+                Published: Wed 18 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->                <p>Some of the best developers I know treat everyone with mutual respect.
+Not only this they are open about what they do know and what they don't
+know. In fact they'll often proclaim “I don't know” and go about finding
+out how they can answer your question or solve a …</p>
+                <a class="readmore" href="/2017/01/be-humble.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/01/convention-based-tests.html" rel="bookmark"
+                           title="Permalink to Convention Based Tests">Convention Based Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-11T00:00:00+01:00">
+                Published: Wed 11 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->                <p>Most projects have some form of convention. Examples would include:</p>
+<ul>
+<li>Attributes/Properties for REST API's</li>
+<li>Inheritance for third party base types</li>
+<li>Assemblies/Packages for third party code that is loaded dynamically</li>
+<li>Folder or namespace conventions</li>
+<li>And many other forms of conventions</li>
+</ul>
+<p>In a few of these examples static analysis can …</p>
+                <a class="readmore" href="/2017/01/convention-based-tests.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/01/finance-for-software-developers.html" rel="bookmark"
+                           title="Permalink to Finance For Software Developers">Finance For Software Developers</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2017-01-04T00:00:00+01:00">
+                Published: Wed 04 January 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2017.html">2017</a>.</p>
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->                <p>Back at the start of 2016 I set about sorting my personal finances out,
+inspired by <a href="https://www.amazon.co.uk/d/Books/Soft-Skills-software-developers-manual/1617292397">Soft
+Skills</a>.
+The book makes a point to consider passive income as a viable solution
+to wealth building. The reason for this is simple, software developers
+tend to get paid well if working professionally …</p>
+                <a class="readmore" href="/2017/01/finance-for-software-developers.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

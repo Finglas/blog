@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Past Mistakes - ORMs and Bounded Contexts</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/08/past-mistakes-orms-and-bounded-contexts.html" rel="bookmark"
+           title="Permalink to Past Mistakes - ORMs and Bounded Contexts">Past Mistakes - ORMs and Bounded Contexts</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-08-01T00:00:00+02:00">
+                Published: Mon 01 August 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> <a href="/tag/past-mistakes-series.html">past-mistakes-series</a> </p>
+</footer><!-- /.post-info -->      <p>Sticking with the theme of documenting past mistakes, it's worth
+expanding a real life scenario where I was unaware of the use of bounded
+contexts and fully understanding the tools you use.</p>
+<h4>Ignoring a Bounded Context</h4>
+<p>A fellow developer set upon a quest to rid numerous projects of
+duplicated records, which was effectively the active record pattern.
+This was a huge under taking split across hundreds of thousands of lines
+of code, over numerous separate projects. Close to completing the task I
+assisted and finally the shared library containing a single record for
+each type was complete. Each project now referenced the shared copy.
+This was versioned as each build was completed.</p>
+<p>For a while this worked with no problems. It certainly felt nice to see
+the reduction in duplicated code. Sadly sometime later myself and
+another developer made a seemingly innocent change. In terms of
+relation, the change was as far removed from the production error that
+we had just been alerted to was. There was no link. It was a different
+project, in a different path, on a different model. The only commonality
+was the fact the issue only occurred after the previous deploy.</p>
+<h4>ORMs and Changes</h4>
+<p>Several minutes of panic later, the problem was spotted. While the model
+we had changed had no direct relation, indirectly there was. As each
+record was loaded by the ORM in question, links and dependencies where
+also loaded or checked. So were the children's links and dependencies.
+Finally this would hit the newly changed record. Due to the database
+changing ahead of the library, numerous other projects now had a runtime
+error. As we naively believed we were only working within a single
+project, we deployed the changes within the one project. As the library
+was shared, all other projects were now vulnerable.</p>
+<p>This lack of <a href="http://blog.shaunfinglas.co.uk/2016/06/ddd-bounded-contexts.html">bounded
+context</a>,
+and focusing on <a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html">removal of
+duplication</a>
+was not the only lesson here. This issue painfully highlighted the need
+and importance to know exactly what your tools are doing, especially
+when they are hidden behind the scenes. In fact, my use of ORMs other
+than micro-ORMs is next to non existent at present.</p>
+<h4>Lessons</h4>
+<ul>
+<li>Use bounded contexts.</li>
+<li>Favour loose coupling, over reduced duplication.</li>
+<li>Anything shared must be deployed and tested as a single unit,
+    otherwise remove the shared component.</li>
+<li>ORMs (or other tools) should be understand and respected.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

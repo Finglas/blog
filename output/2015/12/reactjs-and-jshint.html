@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>ReactJS and JSHint</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/12/reactjs-and-jshint.html" rel="bookmark"
+           title="Permalink to ReactJS and JSHint">ReactJS and JSHint</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-12-01T00:00:00+01:00">
+                Published: Tue 01 December 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
+</footer><!-- /.post-info -->      <p>The <a href="http://facebook.github.io/react/docs/getting-started.html">ReactJS Getting Started
+Guide</a> states
+that the recommended way of using React is combined with npm.</p>
+<p>This is great but poses a problem when trying to use JSHint. The default
+example outputs a single JS file containing both your code and the React
+library. The end result is the bundle when linted contains code you
+don't and shouldn't need to care about.</p>
+<p>The guide does provide a solution, though not as clear as it probably
+should be. Offline Transforms. These will transform your jsx files into
+plain Javascript without bundling react alongside.</p>
+<div class="highlight"><pre><span></span>babel --presets react app.js --out-file main.js
+</pre></div>
+
+
+<p>Simply take the result of the transform and perform your linting
+process.</p>
+<div class="highlight"><pre><span></span>jshint main.js
+</pre></div>
+
+
+<p>This may seem obvious but I did lose some time realising the benefit of
+offline transforms.</p>
+<p>Offline transforms do require that you either bundle the transformed
+file with React, or you simply include the standalone JS scripts in your
+html. This can be done after the fact. JSHint can then play nicely with
+your React apps without the need for other tooling such as wrappers or
+text editor extensions.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

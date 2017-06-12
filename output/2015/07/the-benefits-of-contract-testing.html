@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>The Benefits of Contract Testing</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/07/the-benefits-of-contract-testing.html" rel="bookmark"
+           title="Permalink to The Benefits of Contract Testing">The Benefits of Contract Testing</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-07-01T00:00:00+02:00">
+                Published: Wed 01 July 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/contracts.html">contracts</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->      <p><a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html">I previously claimed that you need some integrated tests but as few as
+possible</a>.
+There are huge benefits to this approach, but there is a problem. How do
+you stop your test doubles falling out of line with the real
+implementations? The answer is to use Contract Tests.</p>
+<h4>Steps</h4>
+<ol>
+<li>Create a base test fixture, this is where your tests live. All
+    assertions belong here.</li>
+<li>Subclass this base class with each implementation.</li>
+<li>Override each setup step to provide the implementation that is to be
+    tested.</li>
+<li>All tests should pass for each instance.</li>
+</ol>
+<h4>Example</h4>
+<p>In this example there is a SQL repository and an in memory repository.
+It is not possible to change either in any manner that causes them to
+behave differently. We can safely use the in memory repository for
+tests, with confidence that the test double matches the contract of the
+real implementation.</p>
+<script src="https://gist.github.com/Finglas/63a042dd2a20487410ab.js"></script>
+
+<p>The test double implementations can be executed on every test run. While
+real implementations can be relegated to execution prior to commit or
+during continuous integration. This trade off allows for fast feedback
+cycles while ensuring all tests are run against production like
+implementations.</p>
+<h4>References</h4>
+<ul>
+<li><a href="http://blog.thecodewhisperer.com/2009/10/08/who-tests-the-contract-tests/">Contract
+    Tests</a></li>
+<li><a href="https://github.com/arlobelshee/ArsEditorExample/blob/master/SimulatableApi.Tests/FileSystemCanLocateFilesAndDirs.cs">No Mocks
+    Example</a></li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

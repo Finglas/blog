@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Flexible Selenium Tests via Page Objects</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/05/flexible-selenium-tests-via-page-objects.html" rel="bookmark"
+           title="Permalink to Flexible Selenium Tests via Page Objects">Flexible Selenium Tests via Page Objects</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-01T00:00:00+02:00">
+                Published: Thu 01 May 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info -->      <p>A fast, automated suite of unit and integration tests are not enough. At
+some point you'll need to test your presentation logic. Ideally your
+domain/business/game logic is stubbed so all you'll need to do at this
+point is check that the presentation is complete. For example, does view
+X load view Y? Does an error message appear when an error is raised?</p>
+<p>With web sites and web applications the standard tool to use is the
+excellent <a href="http://docs.seleniumhq.org/">Selenium</a>. The problem with UI
+tests in Selenium is they are often slower to write. Not only this the
+maintenance cost of such tests can often be much more expensive that
+other styles of tests. If the cost of such tests is high, the likely
+hood of developers writing UI tests is low. In my experience there are
+three types of UI tests in use.</p>
+<ul>
+<li>
+<h3>Low Level</h3>
+<p>Here UI tests are wrote directly against Selenium. This low level
+approach means tests are scattered with assertions and UI details.
+For example element locators such as divs and ids will be used with
+methods on the Selenium driver in question. Despite this low level
+approach such tests are often quick and dirty to create. The
+downside to this style of test is that as the volume of tests
+increase, the cost of maintenance can become very costly. A simple
+UI change can cause a ripple that will cascade through many test
+cases.</p>
+<p><script src="https://gist.github.com/Finglas/aae1cd850fc37403dbb8.js"></script>
+-   ### Browser Abstraction</p>
+<p>The next level up from direct use of Selenium's driver is to create
+a facade around the browser or UI itself. For example rather than
+duplicating the steps to log in within each test you could create a
+method <code>PerfromLogin(...)</code> which each test could make use of.
+Another example would be abstracting messier details of UI
+automation such as clicking a button and waiting for an event. This
+style of test has the benefits of low level tests but gives some
+flexibility when it comes to maintenance. The downside with this
+facade approach is that UI changes can still cause havoc, as each
+test in question will be tied to the UI elements directly.</p>
+<p><script src="https://gist.github.com/Finglas/1063a11c30bc3e7290d8.js"></script>
+-   ### Page Objects</p>
+<p>Taking the browser abstraction to the next level, <a href="http://code.google.com/p/selenium/wiki/PageObjects">page objects are
+an abstraction over the UI
+itself</a>. These
+high level tests are wrote in terms of the domain, rather than
+implementation details. There is of course one place where each page
+object is bound to a UI element, but as each test uses an object,
+rather than element locators you only have to change one place when
+your UI changes. Unlike the previous two styles of tests, page
+objects incur the most amount of code, though for more than a
+handful of tests this style of UI acceptance test will pay for
+itself in no time.</p>
+<p><script src="https://gist.github.com/Finglas/6d512240848359c12bc2.js"></script>
+With the above example the <code>LogInPage</code> object will be bound to UI
+locators. This will vary based on programming language, but using
+C# as an example each property would have a specific attribute to
+link up each element. The domain specific methods such as <code>Username</code>
+will fill in the correct UI element with the provided value. By
+writing the objects in a fluent interface style, you can achieve QA
+friendly tests which are easy to debug when they go wrong.</p>
+</li>
+</ul>
+<p>A more fleshed out <a href="https://github.com/Finglas/Playground/blob/master/PageObjects/PageObjects/PageObjects.cs">example of the Page Object pattern can be found on
+Github</a>.</p>
+<p>Choose a style based on context. Given more than a handful of tests then
+page objects are worth the extra cost, the ability to evolve your UI
+while maintaining end to end tests is worth some additional complexity
+at first.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

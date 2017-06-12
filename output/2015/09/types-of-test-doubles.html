@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Types of Test Doubles</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2015/09/types-of-test-doubles.html" rel="bookmark"
+           title="Permalink to Types of Test Doubles">Types of Test Doubles</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/unit-testing.html">unit-testing</a> </p>
+</footer><!-- /.post-info -->      <p><em>Mock</em> is an overloaded term in software development. Sadly this leads
+to developers answering with "<em>mock it</em>" when a mock object may not be
+the right solution. <a href="http://xunitpatterns.com/Test%20Double.html">Test
+Doubles</a> are a more general
+term. I should try to use this naming more than I do at present - a goal
+I aim to work towards. The result of choosing the wrong test double may
+seem innocent but the effect will be a very different style of test
+method, with increased coupling to implementation details. The following
+definitions are ordered in terms of complexity and increased coupling.</p>
+<h4>Stubs</h4>
+<p>Provide canned responses. By their nature stubs would respond to
+queries. Stubs allow you to test paths of the code that would be
+otherwise difficult as they always provide the same answer.</p>
+<h4>Spies</h4>
+<p>Similar to a stub but with the addition that a spy records its actions.
+When responding to a query or a command the spy keeps track of what
+happened, how often and anything else relevant. The test can then
+inspect the spy for the answer, deciding whether to pass or fail. Unlike
+Mocks, spies play well with the Arrange-Act-Assert pattern. Spies let
+you answer the question <em>has something happened</em> whereas Mocks tend to
+lead you towards <em>how has something happened</em>.</p>
+<h4>Fakes</h4>
+<p>Fake objects tend to be used in higher level tests. These are fake
+implementations of the object they are standing in for. A fake
+repository would be implemented in a simple manner, instead opting for a
+simple in memory hash table for its implementation. This allows tests to
+be run with some confidence that the system will behave as expected.
+Combined with <a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html">Contract
+Tests</a>,
+fakes can turbo charge the speed of your test execution while still
+providing confidence.</p>
+<h4>Mocks</h4>
+<p>Similar to spies mocks are primarily in charge with recording what
+happens. However while spies are silent in their nature relying on the
+test to interrogate them, mocks differ by throwing exceptions if their
+expectations are not met. Mocks natural partner is commands. Unlike
+spies Mocks can struggle to fit into the Arrange-Act-Assert pattern. Of
+all the test doubles Mocks are the most coupled to implementation
+details so their use should be limited.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

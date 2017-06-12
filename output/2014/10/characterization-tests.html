@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Characterization Tests</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2014/10/characterization-tests.html" rel="bookmark"
+           title="Permalink to Characterization Tests">Characterization Tests</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-10-01T00:00:00+02:00">
+                Published: Wed 01 October 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2014.html">2014</a>.</p>
+<p>tags: <a href="/tag/testing.html">testing</a> <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p>Having worked with some truly awful codebases a common problem tends to
+arise every now and then. You need to make a change within some legacy
+component that most likely has limited or no automated tests around.
+This can be a scary process.</p>
+<p>There are a few techniques you can use to limit the fear of breaking
+some legacy code such as <a href="http://xunitpatterns.com/Sprout%20Class.html">sprout methods or
+classes</a>, however these
+aren't always optimal in all scenarios.</p>
+<p>Another option is <a href="http://en.wikipedia.org/wiki/Characterization_test">characterization
+tests</a> or "what is
+this bit of code actually doing?".</p>
+<ol>
+<li>Start with a simple test such as "ItWorks".</li>
+<li>Run the test - watch it fail.</li>
+<li>Using the stacktrace or error reported, write some additional setup.</li>
+<li>Run the test - watch it get past the previous error.</li>
+<li>Rinse and repeat step 3 - 4 until green.</li>
+</ol>
+<p>As part of the first step you should keep the initial test as simple as
+possible. For example if an input to the system under test (SUT) takes a
+Foo object, just instantiate Foo. Don't start setting values or fields
+on Foo. Let the failing test indicate what needs to be set such as a
+BarException informing you that "bar must be greater than zero" as part
+of step three.</p>
+<p>By now you should have exercised a good chunk of the system under test.
+However you may need to add additional tests. For example if the code
+contained an "if" statement, you would need at least two
+characterization tests. A good way to detect how many tests you need is
+a code coverage tool, or manually inserting assertions into the SUT to
+show any missing coverage. Likewise a good manual review is required to
+fully detect any other tests you may have missed such as boundary cases.</p>
+<p>Now the fun can begin. You can refactor like crazy.</p>
+<p>Afterwards you should have a nicely refactored component that you can
+easily extend or modify to add your new feature. You also have a solid
+suite of tests to prove you've not broken anything. These tests will
+also document the current behaviour of the system - bugs included.</p>
+<h2>Examples</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutic
+    Refactoring</a> - an
+    excellent video showing this process in action.</li>
+<li><a href="http://www.amazon.co.uk/Working-Effectively-Legacy-Robert-Martin/dp/0131177052">Working Effectively with Legacy
+    Code</a> -
+    a must read book for anyone working with legacy code.</li>
+</ul>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

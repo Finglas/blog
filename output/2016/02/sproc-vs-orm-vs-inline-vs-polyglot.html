@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Sproc vs ORM vs Inline vs Polyglot</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2016/02/sproc-vs-orm-vs-inline-vs-polyglot.html" rel="bookmark"
+           title="Permalink to Sproc vs ORM vs Inline vs Polyglot">Sproc vs ORM vs Inline vs Polyglot</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-02-01T00:00:00+01:00">
+                Published: Mon 01 February 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2016.html">2016</a>.</p>
+<p>tags: <a href="/tag/retro.html">retro</a> </p>
+</footer><!-- /.post-info -->      <p>With relational databases the common data access patterns tend to fall
+into three core options.</p>
+<ul>
+<li>Direct access via inline SQL</li>
+<li>Stored procedures using the standard library</li>
+<li>ORM frameworks or libraries</li>
+</ul>
+<p>Individually these have both pros and cons, often leading to heated
+debate and discussion.</p>
+<h4>Inline</h4>
+<ul>
+<li>Leaky abstractions.</li>
+<li>Dangerous in places via SQL injection.</li>
+<li>Quick and dirty solution.</li>
+<li>Non testable by default.</li>
+<li>Useful for integration testing where dynamic input is required and
+    safe.</li>
+</ul>
+<h4>Stored Procedures (standard library)</h4>
+<ul>
+<li>Can be clunky and low level to use in places.</li>
+<li>Non testable by default.</li>
+<li>Allows the use of DB specific features internally.</li>
+<li>Easy to tune and optimize as long as interface is stable.</li>
+<li>Developers can optimise the execution of queries.</li>
+</ul>
+<h4>ORMs</h4>
+<ul>
+<li>Testable by default.</li>
+<li>Complex, large and difficult to use correctly.</li>
+<li>Leaky abstractions.</li>
+<li>Optimisation is harder, especially for DB engineers.</li>
+<li>Mini or lightweight alternatives exist, with less of the downsides.</li>
+</ul>
+<h4>Polyglot Persistence</h4>
+<p>The actual decision of which data access method to use can be a non
+issue providing a good abstraction is used. Whether you use inline SQL,
+stored procedures or full blown ORMs is beside the point. <a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html">Instead of
+abstracting the implementation detail, focus on the role the object or
+function has to
+play</a>.
+A benefit of this approach is the ability to mix and match data access
+patterns. Polyglot persistence is gaining more traction where alternate
+data storage solutions are more appropriate.</p>
+<h4>N+1</h4>
+<p>One common flaw that all these data access patterns can have is the <a href="http://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html">N+1
+problem</a>.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

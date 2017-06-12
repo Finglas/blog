@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Shaun Finglas - release-it-series</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/2015/09/release-it-highlights-part-1.html">Release It - Highlights Part 1</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/release-it-series.html">release-it-series</a> </p>
+</footer><!-- /.post-info --><p><a href="https://pragprog.com/book/mnee/release-it">Release It!</a> is one of the
+most useful books I've read. The advice and suggestions inside certainly
+change your perspective on how to write software. My key takeaway is
+that software should be cynical. Expect the worst, expect failures and
+put up boundaries. In the majority of cases these failures will be
+trigged by integration points with other systems, be it third parties or
+your own.</p>
+<p>My rough notes and snippets will be spread across the following two
+posts. There is much more to the book than this, including various
+examples of real life systems failing and how they should have handled
+the problem in the first place.</p>
+<ul>
+<li>Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+    Breakers</li>
+<li><a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-2.html">Part 2 - Caches, Testing, HTML, Pre-Computation and
+    Logging</a></li>
+</ul>
+<hr>
+<h4>Shared Resources</h4>
+<ul>
+<li>Shared Resources can jeopardize scalability.</li>
+<li>When a shared resource gets overloaded, it will become a bottleneck.</li>
+<li>If you provide the front end system, test what happens if the back
+    end is slow/down. If you provide the back end, test what happens if
+    the front end is under heavy load.</li>
+</ul>
+<h4>Responses</h4>
+<ul>
+<li>Generating a slow response is worse than refusing to connect or
+    timing out.</li>
+<li>Slow responses trigger cascading failures.</li>
+<li>Slow responses on the front end trigger more requests. Such as the
+    user hitting refresh a few times, therefore generating more load
+    ironically.</li>
+<li>You should error when a response exceeds the systems allowed time,
+    rather than waiting.</li>
+<li>Most default timeouts of libraries and frameworks are far too
+    generous - always configure manually.</li>
+<li>One of the worst places that scaling effects will bite you is with
+    point to point communication. Favour <a href="http://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html">other alternatives such as
+    messaging</a>
+    to remove this problem.</li>
+</ul>
+<h4>SLA</h4>
+<ul>
+<li>When calling third parties, services levels only decrease.</li>
+<li>Make sure even without a third party response your system can
+    degrade gracefully.</li>
+<li>Be careful when crafting SLA's. Do not simply state 99.999%, it
+    costs too much to hit this target and most systems don't need this
+    sort of uptime.</li>
+<li>Reorient the discussion around SLA's to focus on features, not
+    systems.</li>
+<li>You cannot offer a better SLA than the worst of any external
+    dependencies you use.</li>
+</ul>
+<h4>Databases</h4>
+<ul>
+<li>Your application probably trusts the database far too much.</li>
+<li>Design with scepticism and you will achieve resilience.</li>
+<li>What happens if the DB returns 5 million rows instead of 5 hundred?
+    You could run out of memory trying to load all this. The only
+    answers a query can return is 0, 1 or many. Don't rely on the
+    database to follow this limit. Other systems or batch processes may
+    not respect this rule and insert too much data.</li>
+<li>After a system is in production, fetch results can return huge
+    result sets. Unlike developer testing where only a small subset of
+    data is around.</li>
+<li>Limit your DB queries, e.g. SELECT * FROM table LIMIT 15 (the
+    wildcard criteria would be substituted)</li>
+<li>Put limits into other application protocols such REST endpoints via
+    paging or offsets.</li>
+</ul>
+<h4>Circuit Breakers</h4>
+<ul>
+<li>Now and forever <a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">networks will always be
+    unreliable</a>.</li>
+<li>The timeout pattern prevents calls to integration points from
+    becoming blocked threads.</li>
+<li><a href="http://martinfowler.com/bliki/CircuitBreaker.html">Circuit
+    Breakers</a> area
+    way of automatically degrading functionality when a system is under
+    stress.</li>
+<li>Changes in a circuit breaker should always be logged and monitored.</li>
+<li>The frequency of state changes in a circuit breaker can help
+    diagnose other problems with the system.</li>
+<li>When there is a problem with an integration point, stop calling it
+    during a cool off period. The circuit breaker will enable this.</li>
+<li>Popping a circuit breaker always indicates a serious problem - log
+    it.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2015/09/release-it-highlights-part-2.html" rel="bookmark"
+                           title="Permalink to Release It - Highlights Part 2">Release It - Highlights Part 2</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2015-09-01T00:00:00+02:00">
+                Published: Tue 01 September 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2015.html">2015</a>.</p>
+<p>tags: <a href="/tag/release-it-series.html">release-it-series</a> </p>
+</footer><!-- /.post-info -->                <p>This is the second part of my collection of notes and snippets from
+<a href="https://pragprog.com/book/mnee/release-it">Release It!</a></p>
+<ul>
+<li><a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html">Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+    Breakers</a></li>
+<li>Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
+    Post)</li>
+</ul>
+<hr>
+<h4>Caches</h4>
+<ul>
+<li>Low memory conditions are a threat to both stability and capacity.</li>
+<li>You need to …</li></ul>
+                <a class="readmore" href="/2015/09/release-it-highlights-part-2.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

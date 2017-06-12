@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Log Everything</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2012/01/log-everything.html" rel="bookmark"
+           title="Permalink to Log Everything">Log Everything</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-01-01T00:00:00+01:00">
+                Published: Sun 01 January 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2012.html">2012</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <p><em>This post was originally conceived back in mid 2011, starting a new
+project made me think back to this event, hence the post.</em></p>
+<p>Any developer worth their salt will know what logging is. You could
+argue there are two types of logging, either developer logging or
+auditing. Developer logging would be what we log when something goes
+wrong. Using the results of this logging we can track down what went
+wrong, and put fixes in place to stop this event from occurring again.
+If this logging fails, or logs the incorrect thing it is not the end of
+the world. Due to this, I generally do not care for testing such
+scenarios. The code should behave the same with our without this
+logging.</p>
+<p>Auditing would come under logging which as part of the application needs
+to be carried out at all times. Consider visiting a cash machine. When
+withdrawing fifty pounds, you want to make sure your bank logs this in
+case anything goes wrong. This sort of logging is crucial, and must work
+and must log the correct data. This is considered a feature, therefore
+this should be tested as it is part of the behavior of the application.</p>
+<p>When I think back to my first few years of programming my code was
+littered with logging. In the early days after each statement, variable
+and function I would print out what happened, along with any errors that
+happened. In fact I'd say that everyone starts out like this. The
+strange thing is as we get better, the logging becomes less and less.
+Rather than the first class citizen we relied on in the early days,
+logging is seen as boring. The problem with treating logging code as a
+second class citizen is that when things go wrong, it can be very
+difficult or near impossible to track down what has happened. When you
+realise you need logging, its often too late. You will need to redeploy
+the application and wait for the problem to expose itself again.</p>
+<p>Back in 2011 we had a difficult problem to track down. The dreaded
+"<code>OutOfMemoryException</code>". Being the cocky developers we were, we decided
+to add the logging last. After all, it was there for when things went
+wrong. We never planned things would go wrong, after all it "<em>worked on
+my machine</em>". After redeploying the application with logging we managed
+to track down roughly what was going wrong, and in turn began to resolve
+the problem. Had we added this logging initially, we could have resolved
+this problem in half the time.</p>
+<p>The lesson I learned here was simple. Any time you have an error, log
+it. If the logging is not in place, we add it. Creating a new
+application? In the first iteration(s) make sure some form of logging is
+in place. I believe by following this simple rule any future issues can
+be handled easier. Logging should be a first class citizen regardless of
+purpose.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="english">
+<head>
+        <meta charset="utf-8" />
+        <title>Mapping Objects via TDD</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Shaun Finglas  <strong>Agile software development & programming - one lesson at a time.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/pages/p/about.html">About Me</a></li>
+                    <li><a href="/pages/p/series.html">Series</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/2011/06/mapping-objects-via-tdd.html" rel="bookmark"
+           title="Permalink to Mapping Objects via TDD">Mapping Objects via TDD</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2011-06-01T00:00:00+02:00">
+                Published: Wed 01 June 2011
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/shaun-finglas.html">Shaun Finglas</a>
+        </address>
+<p>In <a href="/category/2011.html">2011</a>.</p>
+<p>tags: <a href="/tag/programming.html">programming</a> </p>
+</footer><!-- /.post-info -->      <h3>Why we map?</h3>
+<p>Many times at Codeweavers we often have tasks which involve mapping
+between various objects. It is no secret that I dislike such tasks. The
+reason we map between objects though is actually a good thing as pointed
+out by several developers. Mapping means our components are less
+coupled. For example, we can write one feature and then simply map
+different web services to use this feature. If we chose not to map to a
+common object we would need to re-implement this functionality for each
+service. Therefore not only do we decouple our code, but our codebase is
+much <a href="http://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRYer</a>.</p>
+<h3>What ways do we do it?</h3>
+<ul>
+<li>
+<p>One approach is a test per property. One developer will write a
+    failing test for a property (accessor), while the other developer
+    writes the code to make this test pass. During this process the
+    keyboard flicks back between each developer very rapidly, in fact
+    most of the time when writing a property per test is spent sliding
+    the keyboard to the other developer.</p>
+</li>
+<li>
+<p>Another approach we have tried on occasion is to have one developer
+    write one test for the whole class, while the second developer will
+    write the mapping code to make this test pass. We may or may not
+    split each assert into separate tests. TDD purists will find this
+    odd, as it does indeed go against our normal work flow. On the other
+    hand, the reason we do this is the tests and code are virtually
+    identical; therefore it is quicker. The downside with this "big bang
+    approach" is the developer writing the code to make the tests pass
+    may miss something. If this happens, finding out what is wrong is
+    much harder as the code was written in one big go.</p>
+</li>
+<li>
+<p>The final approach we have attempted is to not test mapping code,
+    after all what could go wrong? It turns out a lot. Mapping often
+    defaults values to specific values, or is subtly different to the
+    source object. Much time can be wasted when all your tests are
+    passing, yet the application is falling over because some data is
+    being set incorrectly.</p>
+</li>
+</ul>
+<h3>What is wrong with this approach?</h3>
+<p>My main gripes with mapping, albeit an integral part of our development
+process is how boring it is. Not to mention how slow mapping tests can
+be to write. After an hour to have successfully mapped an object you
+feel exhausted, not because of how challenging the process was, but how
+tedious the task was. I also cannot seem to shake the fact that after
+this process is complete you feel as if you are exactly the same
+distance away from your goal as you were before. For someone on the
+outside looking in, no "real" work has been done.</p>
+<h3>Enter AutoMapper</h3>
+<p><a href="http://automapper.codeplex.com/">AutoMapper</a>is a project I wish I had
+created myself. AutoMapper as the name suggests will map objects to
+other objects on your behalf. For example, imagine a view model that
+needs mapping from a bog standard DTO. Providing the objects names
+follow the same conventions, auto mapper will automatically map these
+values for you. Currently we have only used this on an internal project,
+though based on the official website AutoMapper's <a href="http://automapper.codeplex.com/wikipage/comments">usage is
+widespread</a> with great
+success.</p>
+<p>Not all mapping is straight property to property however. Sometimes the
+source or destination will be of a different type. AutoMapper can handle
+this. It is worth mentioning special flavours of mapping such as enums
+are supported straight out of the box too. Additionally not all mapping
+is one to one. Other times <a href="http://automapper.codeplex.com/wikipage?title=Null%20Substitution&amp;referringTitle=Home">default
+values</a>
+may be required, but AutoMapper's fluent interface allows this to be
+achieved with limited fuss. AutoMapper can also handle more bespoke,
+advanced mapping scenarios. For example we mapped a raw string into a
+complete object with default values. This required a <a href="http://automapper.codeplex.com/wikipage?title=Custom%20Value%20Resolvers&amp;referringTitle=Home">custom value
+resolver</a>
+to be wrote, which in turn defeats the purpose of using a tool like
+AutoMapper but as this scenario was a one off this was not a problem.
+All together we're becoming big fans of this tool, it is just a shame it
+has taken so long for us to discover it.</p>
+<h3>Benefits</h3>
+<p>There are huge benefits to using AutoMapper. After getting to grips with
+the tool we have been able to map a complete webservice within less than
+thirty minutes. The trick to creating a hierarchy (objects containing
+other objects) is to take a bottom up approach. By taking this approach
+each step is gradual and steady. You are not forced to implement a large
+chunk of functionality in one go. In combination the way to test this
+was to use the built in <a href="http://automapper.codeplex.com/wikipage?title=Configuration%20Validation&amp;referringTitle=Home">AutoMapper
+validation</a>.
+This one assert will ensure that any mapping that has been written is
+indeed valid. This will cover all your standard scenarios. From here, we
+wrote one test per object to ensure that any defaulting we had set up
+was indeed performed. For the scenario discussed above the webservice
+response had around ten types, this meant ten, quick unit tests ensured
+the whole mapping functionality worked correctly. The built in testable
+assertion makes much of this process a joy to do. While the two main
+methods you use with AutoMapper are static, we simply wrapped these in
+instance methods that we use in our production code.</p>
+<p>Like most open source projects, the documentation for AutoMapper is
+pretty weak, though the error output you receive when developing is
+outstanding. Each failed test will indicate in plain English what is
+wrong, and better yet how to solve it. A few of us are pretty excited
+about AutoMapper and I look forward to mapping again in the future,
+something I feel odd stating. Yes, this tool is that good.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/ShaunFinglas">Twitter</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
