@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Shaun Finglas'
 SITENAME = 'Shaun Finglas'
-SITESUBTITLE = 'Agile software development & programming - one lesson at a time.'
+SITESUBTITLE = 'Agile software development &amp; programming - one lesson at a time.'
 SITEURL = ''
 
 PATH = 'content'
@@ -29,6 +29,3 @@ LINKS = ()
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/ShaunFinglas'),)
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
