@@ -8,6 +8,6 @@ TODO:
 
 6. Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
 
-8. Setup CD with host.
-
 9. Run test script to check pages.
+
+10. Pages needs to use a slug.
