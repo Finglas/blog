@@ -22,6 +22,9 @@ FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/posts/default.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
+# Themes
+THEME = 'themes/notmyidea'
+
 # Blogroll
 LINKS = ()
 
