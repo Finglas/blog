@@ -18,7 +18,7 @@
 /* Body */
 body {
     color: #000305;
-    font-size: 87.5%; /* Base font size: 14px */
+    font-size: 110%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.429;
     margin: 0;
@@ -90,6 +90,7 @@ li { margin-top: 0.5em;
     float:right;
     margin:10px;
     padding:5px;
+
 }
 
 .post-info p{
@@ -185,10 +186,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		padding: 0;
 		text-align: center;
 		width: 800px;
-
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
 	}
 
 	#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
@@ -206,16 +203,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		background: #C74451;
 		color: #fff;
 		text-shadow: none !important;
-	}
-
-	#banner nav li:first-child a {
-		border-top-left-radius: 5px;
-		-moz-border-radius-topleft: 5px;
-		-webkit-border-top-left-radius: 5px;
-
-		border-bottom-left-radius: 5px;
-		-moz-border-radius-bottomleft: 5px;
-		-webkit-border-bottom-left-radius: 5px;
 	}
 
 /*
@@ -260,6 +247,10 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+
+article {
+	font-family: "Serif";
 }
 
 /*
@@ -362,7 +353,11 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 /*
 	Footer
 *****************/
-#contentinfo {padding-bottom: 2em; text-align: right;}
+#contentinfo {
+	padding-bottom: 2em;
+	text-align: center;
+	font-size: xx-small;
+}
 
 /***** Sections *****/
 /* Blog */
