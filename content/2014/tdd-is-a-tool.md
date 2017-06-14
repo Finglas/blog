@@ -9,7 +9,7 @@ This is because it had such an **overwhelming change on how I write code
 day to day**. It was incredibly alien, difficult, yet rewarding. On this
 journey for the last five years I've changed my style, learned how not
 to do it and finally found [my "sweet spot" when it comes to pragmatic
-TDD](../../2014/02/top-down-vs-bottom-up).
+TDD](http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html).
 
 ### Deliver Value
 

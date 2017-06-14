@@ -1,12 +1,9 @@
 TODO:
 
-3. Set each post slug to use yyyy/mm/slug format and set tags, and dates for older categories (2014 and less).
-
-    - Search for ../../ and fix dodgy links?
-
 4. Setup archives "/archive.html" by default.
 
 6. Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
+    - Social feeds need inlining.
 
 9. Run test script to check pages.
 
