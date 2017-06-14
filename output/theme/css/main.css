@@ -5,7 +5,7 @@
 	Version: 1.0
 	License: MIT <http://opensource.org/licenses/MIT>
 	Licensed by: Smashing Media GmbH <http://www.smashingmagazine.com/>
-	Original author: Enrique Ramírez <http://enrique-ramirez.com/>
+	Original author: Enrique RamÃ­rez <http://enrique-ramirez.com/>
 */
 
 /* Imports */
@@ -88,8 +88,8 @@ li { margin-top: 0.5em;
 
 .post-info {
     float:right;
-    font-family: sans-serif;
-    font-size: small;
+    margin:10px;
+    padding:5px;
 }
 
 .post-info p{
@@ -248,10 +248,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	-webkit-border-radius: 10px;
 }
 
-article {
-	font-family: "Serif";
-}
-
 /*
 	Extras
 *****************/
@@ -356,6 +352,7 @@ article {
 	padding-bottom: 2em;
 	text-align: center;
 	font-size: xx-small;
+	font-style: italic;
 }
 
 /***** Sections *****/

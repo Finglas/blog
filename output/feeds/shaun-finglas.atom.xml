@@ -6543,7 +6543,7 @@ should be short lived. Testing implementation details is often a bad
 idea, but that is the whole point of such style of testing. Therefore if
 you do decided to check these tests in tagging them so they are only run
 as part of CI builds is worthwhile. In other words, just like real world
-scaffholding, they are temporary. &lt;a href="../../2012/01/write-unit-tests-start-deleting-them"&gt;Don't feel bad about writing some
+scaffholding, they are temporary. &lt;a href="http://blog.shaunfinglas.co.uk/2012/01/write-unit-tests-start-deleting-them.html"&gt;Don't feel bad about writing some
 tests, only to delete them minutes
 later&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Learning tests have another nice side effect. They give static languages
@@ -6690,7 +6690,7 @@ journey for the last five years I've changed my style, learned how not …&lt;/p
 This is because it had such an &lt;strong&gt;overwhelming change on how I write code
 day to day&lt;/strong&gt;. It was incredibly alien, difficult, yet rewarding. On this
 journey for the last five years I've changed my style, learned how not
-to do it and finally found &lt;a href="../../2014/02/top-down-vs-bottom-up"&gt;my "sweet spot" when it comes to pragmatic
+to do it and finally found &lt;a href="http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html"&gt;my "sweet spot" when it comes to pragmatic
 TDD&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Deliver Value&lt;/h3&gt;
 &lt;p&gt;Writing code is fun. Developing an application or system is fun. Using
