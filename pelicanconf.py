@@ -15,6 +15,8 @@ DEFAULT_LANG = 'English'
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
+USE_FOLDER_AS_CATEGORY = True
+
 DEFAULT_PAGINATION = 30
 
 # Feed generation is usually not desired when developing
