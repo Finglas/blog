@@ -253,7 +253,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 *****************/
 #extras {margin: 0 auto 3em auto; overflow: hidden;}
 
-#extras ul {list-style: none; margin: 0;}
+#extras ul {list-style: none; }
 #extras li {border-bottom: 1px solid #fff;}
 #extras h2 {
 	color: #C74350;
@@ -281,15 +281,16 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	#extras .blogroll li {float: left; margin: 0 20px 0 0; width: 185px;}
 
 	/* Social */
-	#extras .social {
-		float: right;
-		width: 175px;
-	}
-
 	#extras div[class='social'] a {
 		background-repeat: no-repeat;
 		background-position: 3px 6px;
 		padding-left: 25px;
+	}
+
+	.social ul li {
+		display: inline;
+		float: left;
+		padding: 20px;
 	}
 
 		/* Icons */
