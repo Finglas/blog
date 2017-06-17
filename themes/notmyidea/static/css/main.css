@@ -86,10 +86,18 @@ ol {
 li { margin-top: 0.5em;
      margin-bottom: 1em; }
 
+.post-info {
+	font-size: small;
+}
+
 .post-info p{
     margin-top: 1px;
     margin-bottom: 1px;
     display: inline;
+}
+
+.post-info * {
+	margin-right: 1em;
 }
 
 .post-info address {
@@ -373,20 +381,15 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 .hentry .post-info * {font-style: normal;}
 
 	/* Content */
-	.hentry footer {margin-bottom: 2em;}
 	.hentry footer address {display: inline;}
-	#posts-list footer address {display: block;}
+	#posts-list footer address {display: inline;}
 
 	/* Blog Index */
 	#posts-list {list-style: none; margin: 0;}
 	#posts-list .hentry {padding-left: 10px; position: relative;}
 
 	#posts-list footer {
-		left: 10px;
-		position: relative;
-        float: left;
 		top: 0.5em;
-		width: 190px;
 	}
 
 	/* About the Author */
