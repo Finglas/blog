@@ -3,7 +3,6 @@ TODO:
 4. Setup archives "/archive.html" by default.
 
 6. Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
-    - Social feeds need inlining.
     - Choose colour theme.
     - Header/Title needs to be flexible.
     - Inline post info.

@@ -21,13 +21,14 @@ body {
     font-size: 110%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.429;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     text-align: left;
+    width: 80%;
 }
 
 /* Headings */
-h1 {font-size: 2em }
+h1 {font-size: 2em; }
 h2 {font-size: 1.571em}	/* 22px */
 h3 {font-size: 1.429em}	/* 20px */
 h4 {font-size: 1.286em}	/* 18px */
@@ -37,7 +38,6 @@ h6 {font-size: 1em}		/* 14px */
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 1.1;
-	margin-bottom: .8em;
     font-family: 'Yanone Kaffeesatz', arial, serif;
 }
 
@@ -88,6 +88,7 @@ li { margin-top: 0.5em;
 
 .post-info {
 	font-size: small;
+	display: inline;
 }
 
 .post-info p{
@@ -153,7 +154,7 @@ aside, nav, article, figure {
 }
 
 /***** Layout *****/
-.body {clear: both; margin: 0 auto; width: 800px;}
+.body {clear: both; margin: 0 auto; }
 img.right, figure.right {float: right; margin: 0 0 2em 2em;}
 img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 
@@ -165,13 +166,16 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	padding: 2.5em 0 0 0;
 }
 
+#banner h2 {
+	margin-bottom: 1em;
+}
+
 	/* Banner */
-	#banner h1 {font-size: 3.571em; line-height: 0;}
+	#banner h1 {font-size: 3.571em; }
 	#banner h1 a:link, #banner h1 a:visited {
 		color: #000305;
 		display: block;
 		font-weight: bold;
-		margin: 0 0 .6em .2em;
 		text-decoration: none;
 	}
 	#banner h1 a:hover, #banner h1 a:active {
@@ -191,10 +195,9 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		margin: 0 auto 2em auto;
 		padding: 0;
 		text-align: center;
-		width: 800px;
 	}
 
-	#banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
+	#banner nav ul {list-style: none; margin: 0 auto;}
 	#banner nav li {float: left; display: inline; margin: 0;}
 
 	#banner nav a:link, #banner nav a:visited {
@@ -219,7 +222,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	margin-bottom: 2em;
 	overflow: hidden;
 	padding: 20px;
-	width: 760px;
 
 	border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -248,7 +250,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	margin-bottom: 2em;
 	overflow: hidden;
 	padding: 20px 20px;
-	width: 760px;
 
 	border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -338,7 +339,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	overflow: hidden;
 	padding: 20px;
 	text-align: left;
-	width: 760px;
 
 	border-radius: 10px;
 	-moz-border-radius: 10px;
