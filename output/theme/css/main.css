@@ -25,6 +25,7 @@ body {
     padding: 0;
     text-align: left;
     width: 80%;
+    max-width: 1024px;
 }
 
 /* Headings */
@@ -102,7 +103,7 @@ li { margin-top: 0.5em;
 }
 
 .post-info address {
-	display: inline;
+	display: none;
 }
 
 .readmore { float: right }
@@ -221,11 +222,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	background: #fff;
 	margin-bottom: 2em;
 	overflow: hidden;
-	padding: 20px;
-
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 }
 
 #featured figure {
@@ -249,11 +245,6 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 	background: #fff;
 	margin-bottom: 2em;
 	overflow: hidden;
-	padding: 20px 20px;
-
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
 }
 
 /*
@@ -381,8 +372,8 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 .hentry .post-info * {font-style: normal;}
 
 	/* Content */
-	.hentry footer address {display: inline;}
-	#posts-list footer address {display: inline;}
+	.hentry footer address {display: none;}
+	#posts-list footer address {display: none;}
 
 	/* Blog Index */
 	#posts-list {list-style: none; margin: 0;}

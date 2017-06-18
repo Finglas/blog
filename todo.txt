@@ -4,8 +4,6 @@ TODO:
 
 6. Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
     - Choose colour theme.
-    - Header/Title needs to be flexible.
-    - Inline post info.
     - Choose and use a consistent font (google font).
 
 9. Run test script to check pages.
