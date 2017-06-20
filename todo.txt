@@ -5,7 +5,11 @@ TODO:
 6. Use default theme "Not my idea", but modifiy the markup and CSS tweaks. Store this in a git repo.
     - Choose colour theme.
     - Choose and use a consistent font (google font).
+        'Yanone Kaffeesatz'
+        @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
 
 9. Run test script to check pages.
 
 10. Pages needs to redirect from /p to /pages.
+
+11. Speed test + fixes.
