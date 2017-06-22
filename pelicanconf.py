@@ -19,6 +19,9 @@ USE_FOLDER_AS_CATEGORY = True
 
 DEFAULT_PAGINATION = 30
 
+# Single author, do not generate author pages.
+AUTHOR_SAVE_AS = ''
+
 # Feed generation is usually not desired when developing
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/posts/default.xml'
