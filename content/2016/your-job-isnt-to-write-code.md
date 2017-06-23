@@ -2,7 +2,7 @@ Title: Your Job Isn't to Write Code
 Date: 2016-05-01
 Author: Shaun Finglas
 Tags: developers, retro
-Slug: 2016/05/your-job-isnt-to-write-code.html
+Slug: 2016/05/your-job-isnt-to-write-code
 
 Solving problems is the role of software developers first and foremost.
 The most interesting aspect is that in many cases it is possible to

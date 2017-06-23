@@ -2,7 +2,7 @@ Title: DDD - Events
 Date: 2016-11-01
 Author: Shaun Finglas
 Tags: tutorial
-Slug: 2016/11/ddd-events.html
+Slug: 2016/11/ddd-events
 
 The act of something happening is one of the most crucial aspects of implementing Domain Driven Design (DDD). I missed the importance of domain events when first exploring DDD.
 

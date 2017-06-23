@@ -329,7 +329,7 @@ possible.&lt;/p&gt;
 &lt;li&gt;Retirement isn't a thirty or forty year process.&lt;/li&gt;
 &lt;li&gt;No one will teach you personal finance, it's up to yourself to get
     to grips with it.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="tutorial"></category></entry><entry><title>DDD - Events</title><link href="/2016/11/ddd-events.html.html" rel="alternate"></link><published>2016-11-01T00:00:00+01:00</published><updated>2016-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-11-01:/2016/11/ddd-events.html.html</id><summary type="html">&lt;p&gt;The act of something happening is one of the most crucial aspects of implementing Domain Driven Design (DDD). I missed the importance of domain events when first exploring DDD.&lt;/p&gt;
+&lt;/ul&gt;</content><category term="tutorial"></category></entry><entry><title>DDD - Events</title><link href="/2016/11/ddd-events.html" rel="alternate"></link><published>2016-11-01T00:00:00+01:00</published><updated>2016-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-11-01:/2016/11/ddd-events.html</id><summary type="html">&lt;p&gt;The act of something happening is one of the most crucial aspects of implementing Domain Driven Design (DDD). I missed the importance of domain events when first exploring DDD.&lt;/p&gt;
 &lt;h3&gt;Why&lt;/h3&gt;
 &lt;p&gt;Most requirements come in the form &lt;q&gt;when something happens, do this&lt;/q&gt;. &lt;em&gt;Something&lt;/em&gt; in this case would be an action, and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The act of something happening is one of the most crucial aspects of implementing Domain Driven Design (DDD). I missed the importance of domain events when first exploring DDD.&lt;/p&gt;
 &lt;h3&gt;Why&lt;/h3&gt;
@@ -1635,7 +1635,7 @@ does not matter in most cases.&lt;/p&gt;
     needs to be handled uniquely.&lt;/li&gt;
 &lt;li&gt;Put effort into ensuring the message of an exception is useful -
     messages and the stack trace are the most important elements.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Your Job Isn't to Write Code</title><link href="/2016/05/your-job-isnt-to-write-code.html.html" rel="alternate"></link><published>2016-05-01T00:00:00+02:00</published><updated>2016-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-05-01:/2016/05/your-job-isnt-to-write-code.html.html</id><summary type="html">&lt;p&gt;Solving problems is the role of software developers first and foremost.
+&lt;/ul&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Your Job Isn't to Write Code</title><link href="/2016/05/your-job-isnt-to-write-code.html" rel="alternate"></link><published>2016-05-01T00:00:00+02:00</published><updated>2016-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-05-01:/2016/05/your-job-isnt-to-write-code.html</id><summary type="html">&lt;p&gt;Solving problems is the role of software developers first and foremost.
 The most interesting aspect is that in many cases it is possible to
 perform this role without writing a single line of code.&lt;/p&gt;
 &lt;h4&gt;Low Tech&lt;/h4&gt;
