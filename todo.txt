@@ -4,10 +4,8 @@ TODO:
 
 10. Pages needs to redirect from /p to /pages.
 
-11. Speed test + fixes.
-
 12. FOUC fix.
 
 13. https
 
-14. Domain
+14. Domain (in progress)
