@@ -22,6 +22,8 @@ DEFAULT_PAGINATION = 30
 # Single author, do not generate author pages.
 AUTHOR_SAVE_AS = ''
 
+YEAR_ARCHIVE_SAVE_AS = 'archives/{date:%Y}/index.html'
+
 # Feed generation is usually not desired when developing
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/posts/default.xml'

@@ -1,7 +1,5 @@
 TODO:
 
-4. Setup archives "/archive.html" by default.
-
 9. Run test script to check pages.
 
 10. Pages needs to redirect from /p to /pages.
@@ -15,6 +13,8 @@ TODO:
 14. Domain
 
 15. Index page format instead of index2.html 2/index.html?
+
+16. Increase margin of lists.
 
 
 https://designschool.canva.com/blog/website-color-schemes/

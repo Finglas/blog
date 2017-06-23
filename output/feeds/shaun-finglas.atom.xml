@@ -4404,7 +4404,7 @@ and responsibilities.&lt;/p&gt;
 they can be handled in a more controlled manner. Most issues relate to
 implementation details at lower levels, rather than integration or
 functional failures which are often symptoms of tasking before writing
-any code.&lt;/p&gt;</content><category term="development"></category><category term="team"></category></entry><entry><title>Abstractions</title><link href="/2015/02/abstractions.html.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/02/abstractions.html.html</id><summary type="html">&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
+any code.&lt;/p&gt;</content><category term="development"></category><category term="team"></category></entry><entry><title>Abstractions</title><link href="/2015/02/abstractions.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/02/abstractions.html</id><summary type="html">&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;

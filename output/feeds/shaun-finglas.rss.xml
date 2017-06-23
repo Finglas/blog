@@ -442,7 +442,7 @@ that can be delivered end to
 end&lt;/a&gt;. The term "&lt;em&gt;walking&lt;/em&gt;"
 refers to the ability for the feature to "&lt;em&gt;stand on its own&lt;/em&gt;". You
 should be able to deploy a Walking Skeleton and demonstrate it. Just
-like a human skeleton …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Fri, 01 May 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2015-05-01:/2015/05/walking-skeleton.html</guid><category>development</category><category>team</category></item><item><title>Abstractions</title><link>/2015/02/abstractions.html.html</link><description>&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
+like a human skeleton …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Fri, 01 May 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2015-05-01:/2015/05/walking-skeleton.html</guid><category>development</category><category>team</category></item><item><title>Abstractions</title><link>/2015/02/abstractions.html</link><description>&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;
@@ -452,7 +452,7 @@ like a human skeleton …&lt;/p&gt;</description><dc:creator xmlns:dc="http://pu
 &lt;hr&gt;
 &lt;p&gt;Coupling is one of the enemies of a healthy code base. One way to combat
 high coupling is to introduce abstractions.&lt;/p&gt;
-&lt;p&gt;Too few abstractions is bad. Your code can become …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Wed, 01 Apr 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2015-04-01:/2015/02/abstractions.html.html</guid><category>abstractions-series</category><category>code-quality</category></item><item><title>Cool URI's Don't Change</title><link>/2015/04/cool-uris-dont-change.html</link><description>&lt;p&gt;I switched domains back in June 2013. This was out of my control. A lot
+&lt;p&gt;Too few abstractions is bad. Your code can become …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Wed, 01 Apr 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2015-04-01:/2015/02/abstractions.html</guid><category>abstractions-series</category><category>code-quality</category></item><item><title>Cool URI's Don't Change</title><link>/2015/04/cool-uris-dont-change.html</link><description>&lt;p&gt;I switched domains back in June 2013. This was out of my control. A lot
 of links were lost despite an attempt to backlink in order to keep the
 traffic from the old links and new links crossing over. The previous
 domain also broke content without consideration, there are links …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Wed, 01 Apr 2015 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2015-04-01:/2015/04/cool-uris-dont-change.html</guid><category>blogging</category></item><item><title>CQRS - The Simplest Introduction</title><link>/2015/04/cqrs-simplest-introduction.html</link><description>&lt;p&gt;&lt;a href="http://martinfowler.com/bliki/CQRS.html"&gt;CQRS or Command Query Responsibility

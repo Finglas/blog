@@ -2,7 +2,7 @@ Title: Abstractions
 Date: 2015-04-01
 Author: Shaun Finglas
 Tags: abstractions-series, code-quality
-Slug: 2015/02/abstractions.html
+Slug: 2015/02/abstractions
 
 This is the first part of my series on abstractions.
 
