@@ -1,9 +1,5 @@
 TODO:
 
-9. Run test script to check pages.
+1. Pages needs to redirect from /p to /pages.
 
-10. Pages needs to redirect from /p to /pages.
-
-13. https
-
-14. Domain (in progress)
+2. https
