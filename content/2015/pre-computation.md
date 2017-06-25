@@ -5,7 +5,7 @@ Tags: architecture
 Slug: 2015/11/pre-computation
 
 [Caching is a common
-technique](http://blog.shaunfinglas.co.uk/2015/01/caching.html),
+technique](https://blog.shaunfinglas.co.uk/2015/01/caching.html),
 especially with HTTP as it is made so easy. However pre computation is
 an alternative that can be used to reduce failures as well as speed up
 processing and response times.

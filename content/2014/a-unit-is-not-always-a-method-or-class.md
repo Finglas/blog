@@ -5,14 +5,14 @@ Tags: 3-steps-code-quality, tdd
 Slug: 2014/12/a-unit-is-not-always-method-or-class
 
 Part three of my [Three Steps to Code Quality via TDD
-series](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
+series](https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
 The most important concept when coupled with the previous two points -
 not every unit will relate to a method or class.
 
 -   Part 1 - [Stop Making Everything
-    Public](http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
+    Public](https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
 -   Part 2 - [Limit the Amount of Dependencies you
-    Use](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
+    Use](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
 
 ------------------------------------------------------------------------
 
@@ -33,13 +33,13 @@ For a long time I followed what others did. Each collaborator would be
 injected and replaced with a test double. Each class would have a
 corresponding test file. However as I have [stated in the introduction,
 this leads to
-problems](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
+problems](https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
 
 We should test units of behaviour, not units of implementation. Given we
 know we should be using as [few dependencies as
-possible](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html),
+possible](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html),
 and we know we should [limit
-visibility](http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html),
+visibility](https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html),
 each test should be simple to write. As part of the refactor step if we
 choose to introduce a new class that is fine. There is no need in most
 cases to extract this and introduce a test double. Every time this is
@@ -53,7 +53,7 @@ merciless refactoring automated testing advertises as a benefit.
 ##### Aren't you describing integration testing?
 
 No. [Tests should be isolated as I've documented
-before](http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html),
+before](https://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html),
 but there is nothing stating they should be isolated from the components
 they work with. If we isolate at the method or class level we make
 testing and refactoring much harder. Due to the term "unit" being so

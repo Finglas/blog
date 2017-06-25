@@ -9,7 +9,7 @@ programming patterns that appear in mainstream languages though they may
 be known under different names.
 
 Being a [fan of CQS and
-CQRS](http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html),
+CQRS](https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html),
 queries work great when coding using the functional style. While this is
 completely subjective in terms of style there is another benefit -
 composition. In other words the functional styles below can all be

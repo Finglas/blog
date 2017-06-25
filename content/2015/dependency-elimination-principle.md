@@ -7,15 +7,15 @@ Slug: 2015/03/dependency-elimination-principle
 This is the third, and final part of my series on abstractions.
 
 -   Part 1 -
-    [Abstractions](http://blog.shaunfinglas.co.uk/2015/02/abstractions.html)
+    [Abstractions](https://blog.shaunfinglas.co.uk/2015/02/abstractions.html)
 -   Part 2 - [Reused Abstraction
-    Principle](http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html)
+    Principle](https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html)
 
 ------------------------------------------------------------------------
 
 I've wrote about what [good dependencies are before, and the benefits if
 you can limit and remove them where
-possible](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html).
+possible](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html).
 
 You can take this idea further though, by applying concepts from
 functional programming such as "*depend on values rather than

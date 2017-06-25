@@ -5,7 +5,7 @@ Tags: testing, contracts, unit-testing
 Slug: 2015/07/the-benefits-of-contract-testing
 
 [I previously claimed that you need some integrated tests but as few as
-possible](http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html).
+possible](https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html).
 There are huge benefits to this approach, but there is a problem. How do
 you stop your test doubles falling out of line with the real
 implementations? The answer is to use Contract Tests.

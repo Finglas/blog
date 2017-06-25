@@ -51,7 +51,7 @@ Despite the common elements such as Id and email, the other elements are
 specific to the context in which the customer is used. One of the
 biggest mistakes I've made by ignoring a bounded context is to see [a
 common model and try to apply this
-everywhere](http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html).
+everywhere](https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html).
 This leads to less code, but increases coupling. A single small change
 in one context can cause a rippling effect. In fact the best solution is
 to have a customer model per context.

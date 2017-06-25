@@ -45,7 +45,7 @@ end up with a basic application service that simply returns data.
     read from the data store, no need to create relationships between
     models.
 -   You can [use direct data access, rather than repositories or other
-    abstractions](http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
+    abstractions](https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
     This has a lot of benefit.
 -   It's easy to develop, less layers and moving parts.
 -   You can independently replace persistent storage mechanisms per

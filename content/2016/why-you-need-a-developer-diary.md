@@ -6,7 +6,7 @@ Slug: 2016/02/why-you-need-developer-diary
 
 After eighteen months of use, I can safely claim [how useful a a
 developer diary is, and why you should start using
-one](http://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html) if
+one](https://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html) if
 you don't already.
 
 #### Changes

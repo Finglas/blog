@@ -5,7 +5,7 @@ Tags: testing, unit-testing, tutorial
 Slug: 2015/09/the-self-shunt-test-doubles-without
 
 Generally you should [favour hand crafted stubs without a framework by
-default](http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html).
+default](https://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html).
 Before you reach for a framework there is another bridging step that you
 can take only pulling in a framework if complexity arises - the Self
 Shunt.

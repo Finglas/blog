@@ -59,6 +59,6 @@ fully enabled and proven.
 
 Another technique to allow fast, regular releases is to rely on [Branch
 by
-Abstraction](http://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html).
+Abstraction](https://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html).
 This works great when the toggles live in the composition root or the
 team have the ability to split work around features.

@@ -43,12 +43,12 @@ looked down upon by some, they offer numerous benefits.
     doubles will be used across numerous tests. Once created code
     duplication actually reduces.
 -   Hand crafted test doubles are a [prerequisite to enable contract
-    testing](http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html).
+    testing](https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html).
 
 The actual implementation of these hand crafted doubles is minimal. In
 most cases simply providing the arguments as constructor or method
 parameters works. For more complicated scenarios [DAMP
-tests](http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html)
+tests](https://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html)
 can be used.
 
 One area where frameworks provide a benefit is that of mock objects. In

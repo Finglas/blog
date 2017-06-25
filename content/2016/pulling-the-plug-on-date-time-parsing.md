@@ -24,7 +24,7 @@ format differs.
 
 This idea is pretty easy, and is very close to my technique of [pulling
 the plug on automated
-tests](http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html).
+tests](https://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html).
 The test suite can now be run on any machine, even those incorrectly
 configured and we can be sure the tests will still pass.
 

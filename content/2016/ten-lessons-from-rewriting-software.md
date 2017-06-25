@@ -60,7 +60,7 @@ Slug: 2016/06/ten-lessons-from-rewriting-software
 6.  #### Be Cheap And Quick - Use Stubs
 
     -   When implementing the new system, [don't build a
-        thing](http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html).
+        thing](https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html).
         At least at first.
     -   Use stubs to build the simplest, dumbest thing you can to get
         feedback.

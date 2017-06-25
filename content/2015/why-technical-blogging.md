@@ -14,7 +14,7 @@ focus. This blog focuses on programming and software development related
 topics, so anything that falls within this category is fair game. Take a
 single idea and from this one blog post you can generate many more
 ideas. This is where my [upcoming
-list](http://blog.shaunfinglas.co.uk/p/upcoming.html) comes from. A
+list](https://blog.shaunfinglas.co.uk/p/upcoming.html) comes from. A
 single post can spawn many others and the process will repeat itself.
 
 Honest posts, that focus on your experiences tend to be the most well
@@ -67,7 +67,7 @@ old posts and confirming whether or not I still agree helps with
 learning. Have I discovered anything new since? Just the act of
 re-reading and refreshing myself with a concept can be useful. This
 tactic combined with a [developer
-diary](http://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html)
+diary](https://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html)
 has proved a powerful combination.
 
 #### Career Benefits

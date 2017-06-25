@@ -20,7 +20,7 @@ with.
 
 Production of a Walking Skeleton should be fast. Components such as
 [which objects to introduce should ideally be developed top
-down](http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html),
+down](https://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html),
 however the actual direction each solution takes will vary. Some design
 will still be required, but the choice of patterns or implementation
 details should be deferred where possible. Core interfaces such as

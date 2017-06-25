@@ -2,4 +2,4 @@ TODO:
 
 1. Pages needs to redirect from /p to /pages.
 
-2. https
+2. Enforce https everywhere.

@@ -31,7 +31,7 @@ implementation, these tests are focused on implementation.
 
 Tests generally should [favour readability and clarity over the removal
 of
-duplication](http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
+duplication](https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
 Additionally the use of programming constructs such as loops or
 conditionals within tests are usually a bad idea. Using reflection is
 not recommended in most cases though the opposite is true for CBT.

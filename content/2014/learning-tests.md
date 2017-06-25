@@ -50,7 +50,7 @@ you do decided to check these tests in tagging them so they are only run
 as part of CI builds is worthwhile. In other words, just like real world
 scaffholding, they are temporary. [Don't feel bad about writing some
 tests, only to delete them minutes
-later](http://blog.shaunfinglas.co.uk/2012/01/write-unit-tests-start-deleting-them.html).
+later](https://blog.shaunfinglas.co.uk/2012/01/write-unit-tests-start-deleting-them.html).
 
 Learning tests have another nice side effect. They give static languages
 which have a slower feedback cycle a form of

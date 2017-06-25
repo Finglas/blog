@@ -7,9 +7,9 @@ Slug: 2015/03/reused-abstraction-principle
 This is the second part of my series on abstractions.
 
 -   Part 1 -
-    [Abstractions](http://blog.shaunfinglas.co.uk/2015/02/abstractions.html)
+    [Abstractions](https://blog.shaunfinglas.co.uk/2015/02/abstractions.html)
 -   Part 3 - [Dependency Elimination
-    Principle](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
+    Principle](https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
 
 ------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ an implementation, rather than having the client drive behaviour.
 These interfaces are also often bad abstractions, known as "leaky
 abstractions". As [I've discussed previously, these abstractions tend to
 offer nothing more than simple
-indirection](http://blog.shaunfinglas.co.uk/2015/02/abstractions.html).
+indirection](https://blog.shaunfinglas.co.uk/2015/02/abstractions.html).
 
 #### Example
 
@@ -61,6 +61,6 @@ Additionally just because you opt to use dependency injection, there is
 no rule stating said dependency must be an interface or base class.
 
 The final point is to [remember what good dependencies
-are](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html),
+are](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html),
 everything else can be an implementation detail leading to more flexible
 and resilient code.

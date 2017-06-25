@@ -61,7 +61,7 @@ smaller chunks is better for the teams' morale.
 
 The two other solutions are the most powerful at combating the tasking
 problem I have described, these are to utilize a [Walking
-Skeleton](http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html)
+Skeleton](https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html)
 and try [Mob
-Programming](http://blog.shaunfinglas.co.uk/2015/05/mob-programming.html).
+Programming](https://blog.shaunfinglas.co.uk/2015/05/mob-programming.html).
 Both of which will be detailed in future posts.

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2011</title><link href="/" rel="alternate"></link><link href="/feeds/2011.atom.xml" rel="self"></link><id>/</id><updated>2011-12-01T00:00:00+01:00</updated><entry><title>6 Ways to Speed Up Selenium Tests</title><link href="/2011/12/6-ways-to-speed-up-selenium-tests.html" rel="alternate"></link><published>2011-12-01T00:00:00+01:00</published><updated>2011-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-12-01:/2011/12/6-ways-to-speed-up-selenium-tests.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas - 2011</title><link href="/" rel="alternate"></link><link href="/feeds/2011.atom.xml" rel="self"></link><id>/</id><updated>2011-12-01T00:00:00+01:00</updated><entry><title>6 Ways to Speed Up Selenium Tests</title><link href="/2011/12/6-ways-to-speed-up-selenium-tests.html" rel="alternate"></link><published>2011-12-01T00:00:00+01:00</published><updated>2011-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-12-01:/2011/12/6-ways-to-speed-up-selenium-tests.html</id><summary type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
 tests&lt;/a&gt;
 via Selenium, we figured it would be worth while sharing how we achieved
 this. The following are six steps we've found that you can do to make
 Selenium tests more stable.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Turn off automatic updates for your browser/plugins&lt;/li&gt;
-&lt;li&gt;Set your …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
+&lt;li&gt;Set your …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;Having finally achieved more stable end to end
 tests&lt;/a&gt;
 via Selenium, we figured it would be worth while sharing how we achieved
 this. The following are six steps we've found that you can do to make
@@ -574,14 +574,14 @@ yet save me a long time figuring out why the error handling has broken.
 Plus being unit tests they execute in the blink of an eye, no need to
 write a regression test to check the redirection has been carried out.
 These tests are therefore more "documentation" of how the system should
-behave.&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Getters and Setters are Evil</title><link href="/2011/04/getters-and-setters-are-evil.html" rel="alternate"></link><published>2011-04-01T00:00:00+02:00</published><updated>2011-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-04-01:/2011/04/getters-and-setters-are-evil.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
+behave.&lt;/p&gt;</content><category term="testing"></category></entry><entry><title>Getters and Setters are Evil</title><link href="/2011/04/getters-and-setters-are-evil.html" rel="alternate"></link><published>2011-04-01T00:00:00+02:00</published><updated>2011-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2011-04-01:/2011/04/getters-and-setters-are-evil.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
 version&lt;/a&gt;
 of this post.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;I've been programming with OO languages since I was seventeen yet in the
 last week I've had what is without doubt one of the biggest learning
 experiences since I've started.&lt;/p&gt;
-&lt;p&gt;Numerous developers that I've worked with claimed that we aren't doing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
+&lt;p&gt;Numerous developers that I've worked with claimed that we aren't doing …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: There is a &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;new
 version&lt;/a&gt;
 of this post.&lt;/p&gt;
 &lt;hr&gt;

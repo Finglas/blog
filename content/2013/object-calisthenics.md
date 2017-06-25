@@ -73,7 +73,7 @@ backdrop for this session. The teams feedback is as follows.
     My personal favourite of the rules to abide by, and one I have since
     adopted into day to day coding. [First class collections can
     simplify, and make code easier to understand as well as
-    maintain](http://blog.shaunfinglas.co.uk/2010/12/lists-or-objects.html)
+    maintain](https://blog.shaunfinglas.co.uk/2010/12/lists-or-objects.html)
     and optimize. We have numerous examples of this at play at
     Codeweavers, and we should try to increase the amount of custom
     collections we have, as opposed to relying on primitive collections.
@@ -87,7 +87,7 @@ backdrop for this session. The teams feedback is as follows.
     unnecessarily. We would never try to enforce such a rule for general
     development, but [for core business logic this principle actually
     makes
-    sense](http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html).
+    sense](https://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html).
     The areas where this falls down, is on the boundary of the system,
     for example user input or output would be such scenarios where
     getters/setters are the easiest, cleanest solutions. Each team found

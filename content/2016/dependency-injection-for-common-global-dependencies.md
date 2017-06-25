@@ -6,7 +6,7 @@ Slug: 2016/04/dependency-injection-for-common-global
 
 The use of [singletons can often be replaced by simply adjusting scoping
 of
-objects](http://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html).
+objects](https://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html).
 The vast majority of dependencies fit this pattern, with a few
 exceptions such as DateTime instances, or logging.
 
@@ -28,7 +28,7 @@ provide a different implementation?
 
 The approach taken as part of the [example within the Dependency
 Elimination
-Principle](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
+Principle](https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
 is my current solution to date/times and DI. This is still dependency
 injection, except the value is provided, not the method of obtaining the
 value. This is essentially one of the benefits of functional
@@ -67,4 +67,4 @@ majority of all other dependencies can and probably should be satisfied
 by traditional DI where possible. As always each dependency should be
 validated prior to introduction. It may be possible to either [eliminate
 or replace the component in
-question](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html).
+question](https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html).

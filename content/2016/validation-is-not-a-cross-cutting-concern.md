@@ -20,7 +20,7 @@ testability and composition very difficult.
 These flaws are especially true for validation. Despite all input
 requiring validation, the manner in which validation is performed is
 dependent on the entry point to the code. [Context
-matters](http://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html).
+matters](https://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html).
 
 Consider order information that requires a billing address and by
 definition, its children to be populated. An attribute works a treat

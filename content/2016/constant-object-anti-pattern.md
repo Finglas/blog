@@ -35,7 +35,7 @@ similar to set the values. While the const keyword is dropped in this
 case, the object performs the same role. A public key, followed by a
 value that is used. [The anti pattern in this case is treating all
 values as requiring
-configuration](http://blog.shaunfinglas.co.uk/2016/04/x-of-configuration-is-never-used.html).
+configuration](https://blog.shaunfinglas.co.uk/2016/04/x-of-configuration-is-never-used.html).
 Unless you need to change such values at runtime or based on deployment
 models, inline constants are much preferred. Literal values, mainly
 strings can often be left inline with limited downsides also. For

@@ -7,9 +7,9 @@ Slug: 2015/02/abstractions
 This is the first part of my series on abstractions.
 
 -   Part 2 - [Reused Abstraction
-    Principle](http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html)
+    Principle](https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html)
 -   Part 3 - [Dependency Elimination
-    Principle](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
+    Principle](https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html)
 
 ------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ and data layer why bother adding further layers to abstract these? If we
 wish to retrieve a new field from the database and display the value we
 have three places to change, adding further models and mapping layers
 does nothing but increase coupling. [Applying namespaces
-correctly](http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html)
+correctly](https://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html)
 can also help here, if everything that needs to change at the same time
 is logically grouped, such changes are easier.
 
@@ -70,4 +70,4 @@ embracing it. For querying data and displaying it on a screen my default
 choice is to use CQRS to simply read from the database and populate a
 view model. This limits abstractions and helps keep the code focused,
 flexible and open to change. [I will expand on CQRS in a future
-post](http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html).
+post](https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html).

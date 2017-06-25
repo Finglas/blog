@@ -6,7 +6,7 @@ Slug: 2016/11/poodr-highlights-part-2
 
 Two other stand out topics from POODR were the use of tests and
 inheritance. The first set of [higlights covered dependencies and
-arguments](http://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html).
+arguments](https://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html).
 
 #### Tests
 
@@ -30,7 +30,7 @@ State based tests should be used for incoming public messages. While
 verification based tests should be used for outgoing public messages as
 the state is tested on the receiver, elsewhere. The [distinction between
 commands and
-queries](http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html)
+queries](https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html)
 is also highlighted. In summary incoming messages should be tested for
 the state they return. Outgoing commands should be tested to ensure they
 get sent. Outgoing query messages should not be tested, merely stubbed.
@@ -46,9 +46,9 @@ the solution for all problems, or you're advised to never use
 inheritance. POODR takes a more pragmatic approach. Inheritance is a
 tool that can sometimes provide an excellent solution, however you are
 [better off duplicating
-code](http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html)
+code](https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html)
 and [defer such
-decisions](http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
+decisions](https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
 until you know more.
 
 The wrong abstraction is harder to work with than duplicated code as

@@ -178,7 +178,7 @@ during your test run.&lt;/p&gt;
 and unlike typical tests that focus on behaviour rather than
 implementation, these tests are focused on implementation.&lt;/p&gt;
 &lt;h3&gt;Reflection&lt;/h3&gt;
-&lt;p&gt;Tests generally should &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;favour readability and clarity over the removal
+&lt;p&gt;Tests generally should &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;favour readability and clarity over the removal
 of
 duplication&lt;/a&gt;.
 Additionally the use of programming constructs such as loops or

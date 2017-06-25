@@ -5,7 +5,7 @@ Tags: programming
 Slug: 2011/04/getters-and-setters-are-evil
 
 **Update**: There is a [new
-version](http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html)
+version](https://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html)
 of this post.
 
 ------------------------------------------------------------------------

@@ -5,7 +5,7 @@ Tags: tutorial, testing
 Slug: 2011/12/6-ways-to-speed-up-selenium-tests
 
 [Having finally achieved more stable end to end
-tests](http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html)
+tests](https://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html)
 via Selenium, we figured it would be worth while sharing how we achieved
 this. The following are six steps we've found that you can do to make
 Selenium tests more stable.

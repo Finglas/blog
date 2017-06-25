@@ -5,14 +5,14 @@ Tags: 3-steps-code-quality, tdd
 Slug: 2014/12/limit-amount-of-dependencies-you-use
 
 Part two of my [Three Steps to Code Quality via
-TDD](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html)
+TDD](https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html)
 series and ties very closely into step one, limiting the visibility of
 your classes.
 
 -   Part 1 - [Stop Making Everything
-    Public](http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
+    Public](https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
 -   Part 3 - [A Unit is Not Always a Method or
-    Class](http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
+    Class](https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
 
 ------------------------------------------------------------------------
 

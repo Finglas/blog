@@ -6,7 +6,7 @@ Slug: 2015/04/dry-vs-damp-in-tests
 
 In the [previous post I mentioned that duplication in tests is not
 always
-bad](http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
+bad](https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
 Sometimes duplication becomes a problem. Tests can become large or
 virtually identically excluding a few lines. Changes to these tests can
 take a while and increase the maintenance overhead. At this point, DRY
@@ -30,7 +30,7 @@ Phrases](http://www.pluralsight.com/courses/advanced-unit-testing) is
 the alter ego of DRY. DAMP tests often use the builder pattern to
 construct the System Under Test. This allows calls to be chained in a
 fluent API style, similar to the [Page Object
-Pattern](http://blog.shaunfinglas.co.uk/2014/05/flexible-selenium-tests-via-page-objects.html).
+Pattern](https://blog.shaunfinglas.co.uk/2014/05/flexible-selenium-tests-via-page-objects.html).
 Internally the implementation will still use literals or value objects,
 but each test can provide just the differences it needs in order to
 execute. The key point regardless of how DAMP tests are implemented is

@@ -28,7 +28,7 @@ In these cases service A invokes service B which invokes service C,
 which has a dependency on A and so on. The problems such composition
 introduce defeats any benefits that a service based approach brings. In
 short [composing data in this manner will lead to
-problems](http://blog.shaunfinglas.co.uk/2014/07/soa-done-badly-vs-soa-done-right.html).
+problems](https://blog.shaunfinglas.co.uk/2014/07/soa-done-badly-vs-soa-done-right.html).
 
 ------------------------------------------------------------------------
 

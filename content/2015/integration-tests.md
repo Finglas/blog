@@ -58,5 +58,5 @@ There is a fatal flaw with integration tests however. They can be wrong.
 Given tests at a unit level will stub out anything that is out of
 process, how do you stop such tests falling out of sync with the real
 implementation? This is where [Contract
-Tests](http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html)
+Tests](https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html)
 come into play.

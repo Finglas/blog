@@ -62,16 +62,16 @@ simple as "<em>don't invoke it</em>" or relying on naming conventions to
 denoate implementation details.</p>
 <h5>Make a Public Class</h5>
 <p>When single responsibility principle would be violated in the technique
-above, this is your other option. <a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">Beware the power of just adding a new
+above, this is your other option. <a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html">Beware the power of just adding a new
 class and making it
 public</a>.
-While it will allow testing in one place, <a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">each public dependency you
+While it will allow testing in one place, <a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html">each public dependency you
 introduce further increases
 coupling</a>.</p>
 <p>If the code that needs testing is a service, the act to introduce a
 public object should be considered thoughtfully. Once the class is
 pubic, you simply need to verify the use of the class, rather than what
-it does. However <a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html">Value Objects can help limit the tests you need to
+it does. However <a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html">Value Objects can help limit the tests you need to
 write</a>
 entirely and should be used whenever possible.</p>
     </div><!-- /.entry-content -->

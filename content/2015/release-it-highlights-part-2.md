@@ -8,7 +8,7 @@ This is the second part of my collection of notes and snippets from
 [Release It!](https://pragprog.com/book/mnee/release-it)
 
 -   [Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
-    Breakers](http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html)
+    Breakers](https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html)
 -   Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
     Post)
 
@@ -21,7 +21,7 @@ This is the second part of my collection of notes and snippets from
     would the items ever need to change?
 -   The simplest cache clearing mechanism is time based.
 -   [Improper use of
-    caching](http://blog.shaunfinglas.co.uk/2015/01/caching.html) is the
+    caching](https://blog.shaunfinglas.co.uk/2015/01/caching.html) is the
     major cause of memory leaks, which turn into horrors like daily
     server restarts.
 -   Your system should run for at least the typical deployment cycle. If

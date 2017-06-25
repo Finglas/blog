@@ -39,9 +39,9 @@ project, we deployed the changes within the one project. As the library
 was shared, all other projects were now vulnerable.
 
 This lack of [bounded
-context](http://blog.shaunfinglas.co.uk/2016/06/ddd-bounded-contexts.html),
+context](https://blog.shaunfinglas.co.uk/2016/06/ddd-bounded-contexts.html),
 and focusing on [removal of
-duplication](http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html)
+duplication](https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html)
 was not the only lesson here. This issue painfully highlighted the need
 and importance to know exactly what your tools are doing, especially
 when they are hidden behind the scenes. In fact, my use of ORMs other

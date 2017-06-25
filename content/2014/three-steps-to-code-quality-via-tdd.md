@@ -21,11 +21,11 @@ code mercifully in order to improve code quality.
 #### Steps
 
 1.  [Stop Making Everything
-    Public](http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
+    Public](https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html)
 2.  [Limit the Amount of Dependencies you
-    Use](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
+    Use](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
 3.  [A Unit is Not Always a Method or
-    Class](http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
+    Class](https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
 
 Code quality is a tricky subject and highly subjective, however if you
 follow the three guidelines above you should have the ability to

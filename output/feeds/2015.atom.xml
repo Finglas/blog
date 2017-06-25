@@ -31,8 +31,8 @@ file with React, or you simply include the standalone JS scripts in your
 html. This can be done after the fact. JSHint can then play nicely with
 your React apps without the need for other tooling such as wrappers or
 text editor extensions.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Recommended Reading List 2015</title><link href="/2015/12/recommended-reading-list-2015.html" rel="alternate"></link><published>2015-12-01T00:00:00+01:00</published><updated>2015-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-12-01:/2015/12/recommended-reading-list-2015.html</id><summary type="html">&lt;p&gt;In a similar manner to
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html"&gt;previous&lt;/a&gt;
-&lt;a href="http://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html"&gt;years&lt;/a&gt;
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html"&gt;previous&lt;/a&gt;
+&lt;a href="https://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html"&gt;years&lt;/a&gt;
 here is my recommended reading list for 2015. As before some of these
 books have been released for a while, but these are some of my
 highlights for various reasons.&lt;/p&gt;
@@ -40,8 +40,8 @@ highlights for various reasons.&lt;/p&gt;
 &lt;dl&gt;
 &lt;dt&gt;&lt;a href="http://www.amazon.co.uk/Dependency-Injection-NET-Mark-Seemann/dp/1935182501"&gt;Dependency Injection in .NET&lt;/a&gt;&lt;/dt&gt;
 &lt;dd&gt;I had put off reading this book for …&lt;/dd&gt;&lt;/dl&gt;</summary><content type="html">&lt;p&gt;In a similar manner to
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html"&gt;previous&lt;/a&gt;
-&lt;a href="http://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html"&gt;years&lt;/a&gt;
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html"&gt;previous&lt;/a&gt;
+&lt;a href="https://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html"&gt;years&lt;/a&gt;
 here is my recommended reading list for 2015. As before some of these
 books have been released for a while, but these are some of my
 highlights for various reasons.&lt;/p&gt;
@@ -104,7 +104,7 @@ useful and tested practices that has changed my perspective on
 beginning a startup. Interestingly much of the advice can be applied
 to individuals working within larger organizations on smaller
 projects.&lt;/dd&gt;
-&lt;/dl&gt;</content><category term="reading"></category></entry><entry><title>Reducing Conditional Logic to a Single Location</title><link href="/2015/12/reducing-conditional-logic-to-single.html" rel="alternate"></link><published>2015-12-01T00:00:00+01:00</published><updated>2015-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-12-01:/2015/12/reducing-conditional-logic-to-single.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html"&gt;My Anti If Campaign
+&lt;/dl&gt;</content><category term="reading"></category></entry><entry><title>Reducing Conditional Logic to a Single Location</title><link href="/2015/12/reducing-conditional-logic-to-single.html" rel="alternate"></link><published>2015-12-01T00:00:00+01:00</published><updated>2015-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-12-01:/2015/12/reducing-conditional-logic-to-single.html</id><summary type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html"&gt;My Anti If Campaign
 post&lt;/a&gt;
 still generates a lot of questions and discussion. In summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -112,7 +112,7 @@ still generates a lot of questions and discussion. In summary:&lt;/p&gt;
     construct.&lt;/li&gt;
 &lt;li&gt;If you are working in an OO language, type checks are probably not
     the best solution to your problem. Rely on polymorphism.&lt;/li&gt;
-&lt;li&gt;You need …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html"&gt;My Anti If Campaign
+&lt;li&gt;You need …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html"&gt;My Anti If Campaign
 post&lt;/a&gt;
 still generates a lot of questions and discussion. In summary:&lt;/p&gt;
 &lt;ul&gt;
@@ -183,158 +183,158 @@ boolean flags usually indicates at least two hidden types.&lt;/p&gt;
 &lt;p&gt;The anti if campaign is not the removal of all conditional checks. They
 need to happen somewhere. Just try to limit them.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Year in Review 2015</title><link href="/2015/12/year-in-review-2015.html" rel="alternate"></link><published>2015-12-01T00:00:00+01:00</published><updated>2015-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-12-01:/2015/12/year-in-review-2015.html</id><summary type="html">&lt;h4&gt;January&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Started the year with reasons as to why &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/why-technical-blogging.html"&gt;technical blogging is
+&lt;li&gt;Started the year with reasons as to why &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/why-technical-blogging.html"&gt;technical blogging is
     useful and
     recommended&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Kick started a series of posts themed around simplicity,
-    recommending to &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;abstract data use and not data
+    recommending to &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;abstract data use and not data
     access&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;February&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;A &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;series of posts on
+&lt;li&gt;A &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;series of posts on
     abstractions&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The power of &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects as a key
+&lt;li&gt;The power of &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects as a key
     refactoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;March …&lt;/h4&gt;</summary><content type="html">&lt;h4&gt;January&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Started the year with reasons as to why &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/why-technical-blogging.html"&gt;technical blogging is
+&lt;li&gt;Started the year with reasons as to why &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/why-technical-blogging.html"&gt;technical blogging is
     useful and
     recommended&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Kick started a series of posts themed around simplicity,
-    recommending to &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;abstract data use and not data
+    recommending to &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;abstract data use and not data
     access&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;February&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;A &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;series of posts on
+&lt;li&gt;A &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;series of posts on
     abstractions&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The power of &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects as a key
+&lt;li&gt;The power of &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects as a key
     refactoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;March&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Concluded the series on abstractions.&lt;/li&gt;
-&lt;li&gt;The &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
+&lt;li&gt;The &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
     Principle&lt;/a&gt;
-    and &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
+    and &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;
     have been two of the biggest changes I've made in my coding habits
     this year.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;April&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;A follow up to one of my previous posts around the &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;use of getters
+&lt;li&gt;A follow up to one of my previous posts around the &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/getters-and-setters-are-evil-redux.html"&gt;use of getters
     and
     setters&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;I realised I had &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cool-uris-dont-change.html"&gt;failed at maintaining and managing
+&lt;li&gt;I realised I had &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cool-uris-dont-change.html"&gt;failed at maintaining and managing
     URIs&lt;/a&gt;
     for the content on the site.&lt;/li&gt;
 &lt;li&gt;The end of the month saw a focus on two simple topics that can
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;clean up duplication in
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;clean up duplication in
     tests&lt;/a&gt;
-    and &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;remove obscurity from
+    and &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;remove obscurity from
     assertions&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;May&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;A focus on &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html"&gt;tasking and planning in software
+&lt;li&gt;A focus on &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html"&gt;tasking and planning in software
     development&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Two core techniques of producing a &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
+&lt;li&gt;Two core techniques of producing a &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
     Skeleton&lt;/a&gt;
-    and &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/mob-programming.html"&gt;Mob
+    and &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/mob-programming.html"&gt;Mob
     Programming&lt;/a&gt;
     have proved invaluable.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;June&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Provided two techniques that allow continuous delivery of software
-    thanks to &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;feature
+    thanks to &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;feature
     toggles&lt;/a&gt;
-    and &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html"&gt;branching by
+    and &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html"&gt;branching by
     abstraction&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html"&gt;question of whether or not you actually need a
+&lt;li&gt;The &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html"&gt;question of whether or not you actually need a
     microservice&lt;/a&gt;
     also came up.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;July&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;value in integration testing was
+&lt;li&gt;The &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;value in integration testing was
     highlighted&lt;/a&gt;,
-    along with an introduction into &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract
+    along with an introduction into &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract
     testing&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The month concluded with a key reminder of &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/you-still-need-manual-tests.html"&gt;how important manual
+&lt;li&gt;The month concluded with a key reminder of &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/you-still-need-manual-tests.html"&gt;how important manual
     testing
     is&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;August&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Began with &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;an alternative to complex mocking
+&lt;li&gt;Began with &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;an alternative to complex mocking
     frameworks&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html"&gt;use of message
+&lt;li&gt;The &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html"&gt;use of message
     queues&lt;/a&gt;
     is one of the biggest changes in my software development process of
     the last few years.&lt;/li&gt;
 &lt;li&gt;The month concluded with the acceptance that high quality
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/production-code-is-dirty.html"&gt;production code is often considered
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/production-code-is-dirty.html"&gt;production code is often considered
     dirty&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;September&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;This year the concepts and ideas in &lt;a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Release
+&lt;li&gt;This year the concepts and ideas in &lt;a href="https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Release
     It&lt;/a&gt;
     have proved incredibly useful.&lt;/li&gt;
-&lt;li&gt;A key principle I have applied this year is to &lt;a href="http://blog.shaunfinglas.co.uk/2015/09/waste-write-less-code.html"&gt;write less
+&lt;li&gt;A key principle I have applied this year is to &lt;a href="https://blog.shaunfinglas.co.uk/2015/09/waste-write-less-code.html"&gt;write less
     code&lt;/a&gt;,
     truly following the benefits of DRY and KISS.&lt;/li&gt;
-&lt;li&gt;The use of the &lt;a href="http://blog.shaunfinglas.co.uk/2015/09/the-self-shunt-test-doubles-without.html"&gt;self shunt
+&lt;li&gt;The use of the &lt;a href="https://blog.shaunfinglas.co.uk/2015/09/the-self-shunt-test-doubles-without.html"&gt;self shunt
     pattern&lt;/a&gt;
     was provided as a simply testing strategy.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;October&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/10/abstractions-in-code-details-in-metadata.html"&gt;Abstractions in code and details in
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/10/abstractions-in-code-details-in-metadata.html"&gt;Abstractions in code and details in
     metadata&lt;/a&gt;
     is one of the many pieces of advice the Pragmatic Programmer
     highlights.&lt;/li&gt;
 &lt;li&gt;Another big change in my coding habits this year has been the focus
-    of &lt;a href="http://blog.shaunfinglas.co.uk/2015/10/header-interfaces-vs-role-interfaces.html"&gt;header interfaces vs role
+    of &lt;a href="https://blog.shaunfinglas.co.uk/2015/10/header-interfaces-vs-role-interfaces.html"&gt;header interfaces vs role
     interfaces&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The use of &lt;a href="http://blog.shaunfinglas.co.uk/2015/10/set-based-design.html"&gt;Set Based
+&lt;li&gt;The use of &lt;a href="https://blog.shaunfinglas.co.uk/2015/10/set-based-design.html"&gt;Set Based
     Design&lt;/a&gt;
     stands out as one of the most thought provoking idea of this year.&lt;/li&gt;
-&lt;li&gt;The month concluded with a summary of what &lt;a href="http://blog.shaunfinglas.co.uk/2015/10/coding-in-real-world.html"&gt;coding in the real
+&lt;li&gt;The month concluded with a summary of what &lt;a href="https://blog.shaunfinglas.co.uk/2015/10/coding-in-real-world.html"&gt;coding in the real
     world&lt;/a&gt;
     is.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;November&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/11/pre-computation.html"&gt;Pre-Computation&lt;/a&gt;
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/11/pre-computation.html"&gt;Pre-Computation&lt;/a&gt;
     is a simple and incredibly effective solution to improve performance
     and reduce complexity.&lt;/li&gt;
-&lt;li&gt;The lack of the ability to &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;iterate upon
+&lt;li&gt;The lack of the ability to &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;iterate upon
     architecture&lt;/a&gt;
     was acknowledged.&lt;/li&gt;
-&lt;li&gt;The month ended with two odd, but valuable lessons - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;try not to
+&lt;li&gt;The month ended with two odd, but valuable lessons - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;try not to
     build
     anything&lt;/a&gt;
-    and make sure you &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;throw code
+    and make sure you &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;throw code
     away&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;December&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;December closed out with a look back at the &lt;a href="http://blog.shaunfinglas.co.uk/2015/12/reducing-conditional-logic-to-single.html"&gt;anti if campaign from
+&lt;li&gt;December closed out with a look back at the &lt;a href="https://blog.shaunfinglas.co.uk/2015/12/reducing-conditional-logic-to-single.html"&gt;anti if campaign from
     another
     perspective&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The month ended with a round up of some of my &lt;a href="http://blog.shaunfinglas.co.uk/2015/12/recommended-reading-list-2015.html"&gt;best reads of the
+&lt;li&gt;The month ended with a round up of some of my &lt;a href="https://blog.shaunfinglas.co.uk/2015/12/recommended-reading-list-2015.html"&gt;best reads of the
     last twelve
     months&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="year-in-review"></category><category term="retro"></category></entry><entry><title>Don't Build a Thing</title><link href="/2015/11/dont-build-thing.html" rel="alternate"></link><published>2015-11-01T00:00:00+01:00</published><updated>2015-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-11-01:/2015/11/dont-build-thing.html</id><summary type="html">&lt;p&gt;Part two of my agile architecture series.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
     Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
     Away&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -342,9 +342,9 @@ need to happen somewhere. Just try to limit them.&lt;/p&gt;</content><category t
 incorrectly. Why I handled this is badly and how I should have handled
 it if I could rewind …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part two of my agile architecture series.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
     Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
     Away&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -412,13 +412,13 @@ hours of my time. In reality I invested days. I was invested in the
 first solution. The second solution however could be chopped, changed or
 thrown away with no protest. The act of throwing code away is so
 important, yet so rarely practised it will be the subject of the third
-part of this series.&lt;/p&gt;</content><category term="architecture"></category><category term="agile-architecture-series"></category></entry><entry><title>Pre Computation</title><link href="/2015/11/pre-computation.html" rel="alternate"></link><published>2015-11-01T00:00:00+01:00</published><updated>2015-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-11-01:/2015/11/pre-computation.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Caching is a common
+part of this series.&lt;/p&gt;</content><category term="architecture"></category><category term="agile-architecture-series"></category></entry><entry><title>Pre Computation</title><link href="/2015/11/pre-computation.html" rel="alternate"></link><published>2015-11-01T00:00:00+01:00</published><updated>2015-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-11-01:/2015/11/pre-computation.html</id><summary type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Caching is a common
 technique&lt;/a&gt;,
 especially with HTTP as it is made so easy. However pre computation is
 an alternative that can be used to reduce failures as well as speed up
 processing and response times.&lt;/p&gt;
 &lt;h4&gt;Caching Example&lt;/h4&gt;
-&lt;p&gt;Assume a list of countries to be displayed on the UI. These …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Caching is a common
+&lt;p&gt;Assume a list of countries to be displayed on the UI. These …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Caching is a common
 technique&lt;/a&gt;,
 especially with HTTP as it is made so easy. However pre computation is
 an alternative that can be used to reduce failures as well as speed up
@@ -461,28 +461,28 @@ not something that can be achieved lightly. As the build and deploy
 process must accommodate these changes, pre computation is usually
 required to be thought of up front or require some rework to introduce.&lt;/p&gt;</content><category term="architecture"></category></entry><entry><title>Throw Code Away</title><link href="/2015/11/throw-code-away.html" rel="alternate"></link><published>2015-11-01T00:00:00+01:00</published><updated>2015-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-11-01:/2015/11/throw-code-away.html</id><summary type="html">&lt;p&gt;The third and final part of my agile architecture series.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
     Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
     Thing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;Part
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;Part
 one&lt;/a&gt;
-suggested walking skeletons for new features or projects. &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Part
+suggested walking skeletons for new features or projects. &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Part
 two&lt;/a&gt;
 suggested building the limited, smallest and simplest functionality
 possible. However you do not always have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The third and final part of my agile architecture series.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;You Cannot Iterate upon
     Architecture&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
     Thing&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;Part
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html"&gt;Part
 one&lt;/a&gt;
-suggested walking skeletons for new features or projects. &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Part
+suggested walking skeletons for new features or projects. &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Part
 two&lt;/a&gt;
 suggested building the limited, smallest and simplest functionality
 possible. However you do not always have the luxury of deferral.
@@ -542,16 +542,16 @@ doing the simplest thing that can possibly work over a software project
 fails in many cases. This series will explain why this is the case, and
 provide solutions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
     Thing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is the first part of a series of posts as to why gradual iteration,
 doing the simplest thing that can possibly work over a software project
 fails in many cases. This series will explain why this is the case, and
 provide solutions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;Don't Build a
     Thing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html"&gt;Throw Code
     Away&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -605,7 +605,7 @@ application is complete. Usually there are many compromises along the
 way. Further enhancements or changes could be costly.&lt;/p&gt;
 &lt;h4&gt;Solutions&lt;/h4&gt;
 &lt;p&gt;For unknown projects there are two solutions. First and foremost build a
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;walking
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;walking
 skeleton&lt;/a&gt;.
 Using the vehicle example, the first iteration of a known project should
 produce the frame of the car. Other than wheels there would be very
@@ -848,7 +848,7 @@ the problem in the first place.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
     Breakers&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-2.html"&gt;Part 2 - Caches, Testing, HTML, Pre-Computation and
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-2.html"&gt;Part 2 - Caches, Testing, HTML, Pre-Computation and
     Logging&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -873,7 +873,7 @@ the problem in the first place.&lt;/p&gt;
 &lt;li&gt;Most default timeouts of libraries and frameworks are far too
     generous - always configure manually.&lt;/li&gt;
 &lt;li&gt;One of the worst places that scaling effects will bite you is with
-    point to point communication. Favour &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html"&gt;other alternatives such as
+    point to point communication. Favour &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html"&gt;other alternatives such as
     messaging&lt;/a&gt;
     to remove this problem.&lt;/li&gt;
 &lt;/ul&gt;
@@ -927,7 +927,7 @@ the problem in the first place.&lt;/p&gt;
 &lt;/ul&gt;</content><category term="release-it-series"></category></entry><entry><title>Release It - Highlights Part 2</title><link href="/2015/09/release-it-highlights-part-2.html" rel="alternate"></link><published>2015-09-01T00:00:00+02:00</published><updated>2015-09-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-09-01:/2015/09/release-it-highlights-part-2.html</id><summary type="html">&lt;p&gt;This is the second part of my collection of notes and snippets from
 &lt;a href="https://pragprog.com/book/mnee/release-it"&gt;Release It!&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
     Breakers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
     Post)&lt;/li&gt;
@@ -939,7 +939,7 @@ the problem in the first place.&lt;/p&gt;
 &lt;li&gt;You need to …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This is the second part of my collection of notes and snippets from
 &lt;a href="https://pragprog.com/book/mnee/release-it"&gt;Release It!&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-1.html"&gt;Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
     Breakers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 2 - Caches, Testing, HTML, Pre-Computation and Logging (Future
     Post)&lt;/li&gt;
@@ -951,7 +951,7 @@ the problem in the first place.&lt;/p&gt;
 &lt;li&gt;You need to ask whether the possible keys are infinite or finite and
     would the items ever need to change?&lt;/li&gt;
 &lt;li&gt;The simplest cache clearing mechanism is time based.&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Improper use of
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/caching.html"&gt;Improper use of
     caching&lt;/a&gt; is the
     major cause of memory leaks, which turn into horrors like daily
     server restarts.&lt;/li&gt;
@@ -1013,12 +1013,12 @@ the problem in the first place.&lt;/p&gt;
     based on this info.&lt;/li&gt;
 &lt;li&gt;Check the logs daily for stack traces that are suspicious. These
     could be common errors that are bugs/problems that need fixing.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="release-it-series"></category></entry><entry><title>The Self Shunt - Test Doubles without a Framework</title><link href="/2015/09/the-self-shunt-test-doubles-without.html" rel="alternate"></link><published>2015-09-01T00:00:00+02:00</published><updated>2015-09-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-09-01:/2015/09/the-self-shunt-test-doubles-without.html</id><summary type="html">&lt;p&gt;Generally you should &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;favour hand crafted stubs without a framework by
+&lt;/ul&gt;</content><category term="release-it-series"></category></entry><entry><title>The Self Shunt - Test Doubles without a Framework</title><link href="/2015/09/the-self-shunt-test-doubles-without.html" rel="alternate"></link><published>2015-09-01T00:00:00+02:00</published><updated>2015-09-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-09-01:/2015/09/the-self-shunt-test-doubles-without.html</id><summary type="html">&lt;p&gt;Generally you should &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;favour hand crafted stubs without a framework by
 default&lt;/a&gt;.
 Before you reach for a framework there is another bridging step that you
 can take only pulling in a framework if complexity arises - the Self
 Shunt.&lt;/p&gt;
-&lt;p&gt;Assume a simple &lt;em&gt;Hello World&lt;/em&gt; subject under test where we can provide …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Generally you should &lt;a href="http://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;favour hand crafted stubs without a framework by
+&lt;p&gt;Assume a simple &lt;em&gt;Hello World&lt;/em&gt; subject under test where we can provide …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Generally you should &lt;a href="https://blog.shaunfinglas.co.uk/2015/08/why-i-dont-like-mocking-frameworks.html"&gt;favour hand crafted stubs without a framework by
 default&lt;/a&gt;.
 Before you reach for a framework there is another bridging step that you
 can take only pulling in a framework if complexity arises - the Self
@@ -1085,7 +1085,7 @@ implementations of the object they are standing in for. A fake
 repository would be implemented in a simple manner, instead opting for a
 simple in memory hash table for its implementation. This allows tests to
 be run with some confidence that the system will behave as expected.
-Combined with &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;Contract
+Combined with &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;Contract
 Tests&lt;/a&gt;,
 fakes can turbo charge the speed of your test execution while still
 providing confidence.&lt;/p&gt;
@@ -1142,13 +1142,13 @@ write code, it is to solve problems. Sometimes this takes thousands of
 lines of code, other times it can take a simple conversation.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Loops vs Functional Programming Styles</title><link href="/2015/08/loops-vs-functional-programming-styles.html" rel="alternate"></link><published>2015-08-01T00:00:00+02:00</published><updated>2015-08-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-08-01:/2015/08/loops-vs-functional-programming-styles.html</id><summary type="html">&lt;p&gt;The following examples are four of the most common functional
 programming patterns that appear in mainstream languages though they may
 be known under different names.&lt;/p&gt;
-&lt;p&gt;Being a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;fan of CQS and
+&lt;p&gt;Being a &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;fan of CQS and
 CQRS&lt;/a&gt;,
 queries work great when coding using the functional style. While this is
 completely subjective in terms of style …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The following examples are four of the most common functional
 programming patterns that appear in mainstream languages though they may
 be known under different names.&lt;/p&gt;
-&lt;p&gt;Being a &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;fan of CQS and
+&lt;p&gt;Being a &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;fan of CQS and
 CQRS&lt;/a&gt;,
 queries work great when coding using the functional style. While this is
 completely subjective in terms of style there is another benefit -
@@ -1204,7 +1204,7 @@ project so you can do it properly a second time around.&lt;/p&gt;
 operating systems, browsers and embedded systems are maintained and
 extended well after they were created. Production code can be
 complicated but still clean with redeemable qualities. In order to do
-this you should write tests, &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;control
+this you should write tests, &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;control
 dependencies&lt;/a&gt;
 and get into production or the hands of the user as soon as possible.
 This may seem an obvious solution but sadly many software projects fall
@@ -1306,24 +1306,24 @@ looked down upon by some, they offer numerous benefits.&lt;/p&gt;
 &lt;li&gt;Hand crafted test doubles promote reuse. It is likely that such
     doubles will be used across numerous tests. Once created code
     duplication actually reduces.&lt;/li&gt;
-&lt;li&gt;Hand crafted test doubles are a &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;prerequisite to enable contract
+&lt;li&gt;Hand crafted test doubles are a &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;prerequisite to enable contract
     testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The actual implementation of these hand crafted doubles is minimal. In
 most cases simply providing the arguments as constructor or method
-parameters works. For more complicated scenarios &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;DAMP
+parameters works. For more complicated scenarios &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;DAMP
 tests&lt;/a&gt;
 can be used.&lt;/p&gt;
 &lt;p&gt;One area where frameworks provide a benefit is that of mock objects. In
 non trivial examples the requirements to verify numerous parameters and
 configurations can be verbose to hand craft. However there are
 alternatives to hand crafted test doubles such as the self shunt pattern
-which will be expanded upon in a future post.&lt;/p&gt;</content><category term="tdd"></category><category term="unit-testing"></category></entry><entry><title>DRY vs Coupling in Production Code</title><link href="/2015/06/dry-vs-coupling-in-production-code.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/06/dry-vs-coupling-in-production-code.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;Duplication in tests can be a good
+which will be expanded upon in a future post.&lt;/p&gt;</content><category term="tdd"></category><category term="unit-testing"></category></entry><entry><title>DRY vs Coupling in Production Code</title><link href="/2015/06/dry-vs-coupling-in-production-code.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/06/dry-vs-coupling-in-production-code.html</id><summary type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;Duplication in tests can be a good
 thing&lt;/a&gt;.
 The same can be said for production code as well in some cases. No. I'm
 not going mad. I probably wouldn't believe this if you showed me this
 several years ago either. More experience has shown me that loose
-coupling is often …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;Duplication in tests can be a good
+coupling is often …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;Duplication in tests can be a good
 thing&lt;/a&gt;.
 The same can be said for production code as well in some cases. No. I'm
 not going mad. I probably wouldn't believe this if you showed me this
@@ -1459,7 +1459,7 @@ level. The key here is balance.&lt;/p&gt;
 &lt;p&gt;There is a fatal flaw with integration tests however. They can be wrong.
 Given tests at a unit level will stub out anything that is out of
 process, how do you stop such tests falling out of sync with the real
-implementation? This is where &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;Contract
+implementation? This is where &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;Contract
 Tests&lt;/a&gt;
 come into play.&lt;/p&gt;</content><category term="testing"></category><category term="unit-testing"></category></entry><entry><title>Static Code</title><link href="/2015/07/static-code.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/07/static-code.html</id><summary type="html">&lt;p&gt;Static code is considered a bad thing by developers. This is especially
 true when working with legacy code. The use of static code is often seen
@@ -1500,14 +1500,14 @@ the code I write leads itself to a functional paradigm despite not be
 written in a strictly functional language. Small, focused classes that
 tend to be immutable. The use of PSM makes transition to this style of
 code easy. There is no reason to avoid the use of static code as an
-intermediate step to get to this position.&lt;/p&gt;</content><category term="programming"></category><category term="code-quality"></category></entry><entry><title>The Benefits of Contract Testing</title><link href="/2015/07/the-benefits-of-contract-testing.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/07/the-benefits-of-contract-testing.html</id><summary type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;I previously claimed that you need some integrated tests but as few as
+intermediate step to get to this position.&lt;/p&gt;</content><category term="programming"></category><category term="code-quality"></category></entry><entry><title>The Benefits of Contract Testing</title><link href="/2015/07/the-benefits-of-contract-testing.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/07/the-benefits-of-contract-testing.html</id><summary type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;I previously claimed that you need some integrated tests but as few as
 possible&lt;/a&gt;.
 There are huge benefits to this approach, but there is a problem. How do
 you stop your test doubles falling out of line with the real
 implementations? The answer is to use Contract Tests.&lt;/p&gt;
 &lt;h4&gt;Steps&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;Create …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;I previously claimed that you need some integrated tests but as few as
+&lt;li&gt;Create …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;I previously claimed that you need some integrated tests but as few as
 possible&lt;/a&gt;.
 There are huge benefits to this approach, but there is a problem. How do
 you stop your test doubles falling out of line with the real
@@ -1541,16 +1541,16 @@ implementations.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/arlobelshee/ArsEditorExample/blob/master/SimulatableApi.Tests/FileSystemCanLocateFilesAndDirs.cs"&gt;No Mocks
     Example&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="testing"></category><category term="contracts"></category><category term="unit-testing"></category></entry><entry><title>You Still Need Manual Tests</title><link href="/2015/07/you-still-need-manual-tests.html" rel="alternate"></link><published>2015-07-01T00:00:00+02:00</published><updated>2015-07-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-07-01:/2015/07/you-still-need-manual-tests.html</id><summary type="html">&lt;p&gt;This blog has numerous examples of why unit,
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;integration&lt;/a&gt;and
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract&lt;/a&gt;testing
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;integration&lt;/a&gt;and
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract&lt;/a&gt;testing
 is essential. However you still need manual tests. It is foolish to
 believe that all testing can be covered by automated tests despite the
 bias in this area.&lt;/p&gt;
 &lt;h4&gt;Why?&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;Manual tests can catch anything you may have missed …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog has numerous examples of why unit,
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;integration&lt;/a&gt;and
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract&lt;/a&gt;testing
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html"&gt;integration&lt;/a&gt;and
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html"&gt;contract&lt;/a&gt;testing
 is essential. However you still need manual tests. It is foolish to
 believe that all testing can be covered by automated tests despite the
 bias in this area.&lt;/p&gt;
@@ -1581,13 +1581,13 @@ prevented.&lt;/p&gt;
 usability to name a few are equally important. Do not avoid the manual
 test step. Automated tests are only as good as the tests themselves.
 Embrace manual and automated testing for the best of both worlds.&lt;/p&gt;</content><category term="acceptance-testing"></category><category term="unit-testing"></category></entry><entry><title>Branch by Abstraction</title><link href="/2015/06/branch-by-abstraction.html" rel="alternate"></link><published>2015-06-01T00:00:00+02:00</published><updated>2015-06-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-06-01:/2015/06/branch-by-abstraction.html</id><summary type="html">&lt;p&gt;Feature toggles are great for new features or features that are either
-enabled or disabled. Branch by Abstraction offers the &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;same benefits as
+enabled or disabled. Branch by Abstraction offers the &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;same benefits as
 feature
 toggles&lt;/a&gt;
 but the seam to introduce the change is the abstraction itself. Unlike
 Feature Toggles, the use of Branch by Abstraction allows a gradual
 transition to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Feature toggles are great for new features or features that are either
-enabled or disabled. Branch by Abstraction offers the &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;same benefits as
+enabled or disabled. Branch by Abstraction offers the &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;same benefits as
 feature
 toggles&lt;/a&gt;
 but the seam to introduce the change is the abstraction itself. Unlike
@@ -1611,15 +1611,15 @@ implementation will only take effect once configured.&lt;/p&gt;
 container changes. Given your code does not know the concrete
 implementation (apart from tests) you should be fine to make these
 switches.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;If no abstraction exists you can introduce one if
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;If no abstraction exists you can introduce one if
 valid&lt;/a&gt;. If no
 valid abstraction exists you can simply fallback to feature toggles.&lt;/p&gt;
-&lt;p&gt;Branch by Abstraction plays nicely with &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
+&lt;p&gt;Branch by Abstraction plays nicely with &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
 Skeletons&lt;/a&gt;.
 Your first implementation will most likely be a simple first pass
 attempt. Overtime these can be replaced with more fleshed out versions.&lt;/p&gt;
 &lt;p&gt;Anytime you feel the need to create a branch in source, Branch by
-Abstraction can be a valid alternate in most cases. &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;UI changes are
+Abstraction can be a valid alternate in most cases. &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/feature-toggles.html"&gt;UI changes are
 better suited as Feature
 Toggles&lt;/a&gt;
 due to the nature of the code.&lt;/p&gt;</content><category term="tutorial"></category><category term="programming"></category></entry><entry><title>Do you really need a Microservice?</title><link href="/2015/06/do-you-really-need-microservice.html" rel="alternate"></link><published>2015-06-01T00:00:00+02:00</published><updated>2015-06-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-06-01:/2015/06/do-you-really-need-microservice.html</id><summary type="html">&lt;p&gt;Lately there has been two sets of advice around the use of
@@ -1652,7 +1652,7 @@ complaint, but there are steps you can take to prevent this.&lt;/p&gt;
 but instead can be split appropriately. In DDD a Bounded Context makes
 sense. Using this model you would end up with a Customer and Products
 project rather than a single project containing both.&lt;/p&gt;
-&lt;p&gt;An easy step is the &lt;a href="http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html"&gt;correct use of namespaces that are structured by
+&lt;p&gt;An easy step is the &lt;a href="https://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html"&gt;correct use of namespaces that are structured by
 features rather than technology
 choices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Education is also important, simply put in agreements across teams such
@@ -1714,7 +1714,7 @@ users who are exposed to the feature. In this case the actual toggle may
 perform some basic logic such as "&lt;em&gt;one out of ten requests&lt;/em&gt;" enable the
 new feature. Overtime this ratio can be increased until the feature is
 fully enabled and proven.&lt;/p&gt;
-&lt;p&gt;Another technique to allow fast, regular releases is to rely on &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html"&gt;Branch
+&lt;p&gt;Another technique to allow fast, regular releases is to rely on &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/branch-by-abstraction.html"&gt;Branch
 by
 Abstraction&lt;/a&gt;.
 This works great when the toggles live in the composition root or the
@@ -1761,7 +1761,7 @@ developers rotate regularly and those who are not driving can add
 feedback, make suggestions or simply watch and learn. Everyone should be
 placed on a level playing field. I will admit to being highly sceptical
 of Mob Programming at first.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;I advocate walking skeletons to ensure we are on the "right path" when
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;I advocate walking skeletons to ensure we are on the "right path" when
 developing&lt;/a&gt;.
 We wanted to do these as a team, during our planning and tasking phase.
 I suggested mobbing rather than watching a solo developer on a projector
@@ -1783,7 +1783,7 @@ teams this may be too much of a hard sell.&lt;/p&gt;
 &lt;p&gt;The end result of a mobbing session is a task board filled up with minor
 tasks such as improving test coverage, refactoring, or edge cases. The
 core functionality is delivered as a team. Combined with the walking
-skeleton Mob Programming solves some of the key &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html"&gt;problems that
+skeleton Mob Programming solves some of the key &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html"&gt;problems that
 traditional tasking and planning
 introduces&lt;/a&gt;
 and is well worth an experiment.&lt;/p&gt;</content><category term="development"></category><category term="team"></category></entry><entry><title>Tasking in Software Development</title><link href="/2015/05/tasking-in-software-development.html" rel="alternate"></link><published>2015-05-01T00:00:00+02:00</published><updated>2015-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-05-01:/2015/05/tasking-in-software-development.html</id><summary type="html">&lt;p&gt;Tasking is core part of XP, Kanban, Scrum and other software development
@@ -1834,9 +1834,9 @@ move onto coding. If during this coding phase you change plans or
 discover a problem, limited work is lost. Additionally tasking in
 smaller chunks is better for the teams' morale.&lt;/p&gt;
 &lt;p&gt;The two other solutions are the most powerful at combating the tasking
-problem I have described, these are to utilize a &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
+problem I have described, these are to utilize a &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html"&gt;Walking
 Skeleton&lt;/a&gt;
-and try &lt;a href="http://blog.shaunfinglas.co.uk/2015/05/mob-programming.html"&gt;Mob
+and try &lt;a href="https://blog.shaunfinglas.co.uk/2015/05/mob-programming.html"&gt;Mob
 Programming&lt;/a&gt;.
 Both of which will be detailed in future posts.&lt;/p&gt;</content><category term="retro"></category><category term="team"></category></entry><entry><title>Testing Private Code</title><link href="/2015/05/testing-private-code.html" rel="alternate"></link><published>2015-05-01T00:00:00+02:00</published><updated>2015-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-05-01:/2015/05/testing-private-code.html</id><summary type="html">&lt;p&gt;A common problem many people ask is - should you test private code? In
 short, you shouldn't. You should always test the public api of your code
@@ -1871,16 +1871,16 @@ simple as "&lt;em&gt;don't invoke it&lt;/em&gt;" or relying on naming convention
 denoate implementation details.&lt;/p&gt;
 &lt;h5&gt;Make a Public Class&lt;/h5&gt;
 &lt;p&gt;When single responsibility principle would be violated in the technique
-above, this is your other option. &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Beware the power of just adding a new
+above, this is your other option. &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Beware the power of just adding a new
 class and making it
 public&lt;/a&gt;.
-While it will allow testing in one place, &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;each public dependency you
+While it will allow testing in one place, &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;each public dependency you
 introduce further increases
 coupling&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If the code that needs testing is a service, the act to introduce a
 public object should be considered thoughtfully. Once the class is
 pubic, you simply need to verify the use of the class, rather than what
-it does. However &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects can help limit the tests you need to
+it does. However &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;Value Objects can help limit the tests you need to
 write&lt;/a&gt;
 entirely and should be used whenever possible.&lt;/p&gt;</content><category term="testing"></category><category term="tdd"></category><category term="unit-testing"></category></entry><entry><title>Walking Skeleton</title><link href="/2015/05/walking-skeleton.html" rel="alternate"></link><published>2015-05-01T00:00:00+02:00</published><updated>2015-05-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-05-01:/2015/05/walking-skeleton.html</id><summary type="html">&lt;p&gt;&lt;a href="http://alistair.cockburn.us/Walking+skeleton"&gt;A Walking Skeleton is the thinnest possible slice of new functionality
 that can be delivered end to
@@ -1900,7 +1900,7 @@ your build and deploy pipeline to be set up if not already in place.
 More importantly it gives developers a framework or scaffold to work
 with.&lt;/p&gt;
 &lt;p&gt;Production of a Walking Skeleton should be fast. Components such as
-&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html"&gt;which objects to introduce should ideally be developed top
+&lt;a href="https://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html"&gt;which objects to introduce should ideally be developed top
 down&lt;/a&gt;,
 however the actual direction each solution takes will vary. Some design
 will still be required, but the choice of patterns or implementation
@@ -1932,9 +1932,9 @@ implementation details at lower levels, rather than integration or
 functional failures which are often symptoms of tasking before writing
 any code.&lt;/p&gt;</content><category term="development"></category><category term="team"></category></entry><entry><title>Abstractions</title><link href="/2015/02/abstractions.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/02/abstractions.html</id><summary type="html">&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -1942,9 +1942,9 @@ any code.&lt;/p&gt;</content><category term="development"></category><category t
 high coupling is to introduce abstractions.&lt;/p&gt;
 &lt;p&gt;Too few abstractions is bad. Your code can become …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the first part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -1977,7 +1977,7 @@ presentations. If you have a traditional application with a UI, domain
 and data layer why bother adding further layers to abstract these? If we
 wish to retrieve a new field from the database and display the value we
 have three places to change, adding further models and mapping layers
-does nothing but increase coupling. &lt;a href="http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html"&gt;Applying namespaces
+does nothing but increase coupling. &lt;a href="https://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html"&gt;Applying namespaces
 correctly&lt;/a&gt;
 can also help here, if everything that needs to change at the same time
 is logically grouped, such changes are easier.&lt;/p&gt;
@@ -1993,7 +1993,7 @@ on its own, but for now applying CQRS reduces unnecessary coupling by
 embracing it. For querying data and displaying it on a screen my default
 choice is to use CQRS to simply read from the database and populate a
 view model. This limits abstractions and helps keep the code focused,
-flexible and open to change. &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;I will expand on CQRS in a future
+flexible and open to change. &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;I will expand on CQRS in a future
 post&lt;/a&gt;.&lt;/p&gt;</content><category term="abstractions-series"></category><category term="code-quality"></category></entry><entry><title>Cool URI's Don't Change</title><link href="/2015/04/cool-uris-dont-change.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/04/cool-uris-dont-change.html</id><summary type="html">&lt;p&gt;I switched domains back in June 2013. This was out of my control. A lot
 of links were lost despite an attempt to backlink in order to keep the
 traffic from the old links and new links crossing over. The previous
@@ -2072,7 +2072,7 @@ end up with a basic application service that simply returns data.&lt;/p&gt;
 &lt;li&gt;Queries can be simplified - in many cases by a huge amount. Just
     read from the data store, no need to create relationships between
     models.&lt;/li&gt;
-&lt;li&gt;You can &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;use direct data access, rather than repositories or other
+&lt;li&gt;You can &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;use direct data access, rather than repositories or other
     abstractions&lt;/a&gt;.
     This has a lot of benefit.&lt;/li&gt;
 &lt;li&gt;It's easy to develop, less layers and moving parts.&lt;/li&gt;
@@ -2097,13 +2097,13 @@ end up with a basic application service that simply returns data.&lt;/p&gt;
 implementation of this pattern can vary from simple, to complicated. The
 extent to which CQRS is implemented should be judged on a case by case
 basis. Many systems can get away without separating read and write
-stores, yet still enjoy the benefits that this pattern provides.&lt;/p&gt;</content><category term="programming"></category><category term="SOA"></category><category term="tutorial"></category></entry><entry><title>DRY vs DAMP in Tests</title><link href="/2015/04/dry-vs-damp-in-tests.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/04/dry-vs-damp-in-tests.html</id><summary type="html">&lt;p&gt;In the &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;previous post I mentioned that duplication in tests is not
+stores, yet still enjoy the benefits that this pattern provides.&lt;/p&gt;</content><category term="programming"></category><category term="SOA"></category><category term="tutorial"></category></entry><entry><title>DRY vs DAMP in Tests</title><link href="/2015/04/dry-vs-damp-in-tests.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/04/dry-vs-damp-in-tests.html</id><summary type="html">&lt;p&gt;In the &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;previous post I mentioned that duplication in tests is not
 always
 bad&lt;/a&gt;.
 Sometimes duplication becomes a problem. Tests can become large or
 virtually identically excluding a few lines. Changes to these tests can
 take a while and increase the maintenance overhead. At this point, DRY
-violations need to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;previous post I mentioned that duplication in tests is not
+violations need to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html"&gt;previous post I mentioned that duplication in tests is not
 always
 bad&lt;/a&gt;.
 Sometimes duplication becomes a problem. Tests can become large or
@@ -2123,7 +2123,7 @@ differently.&lt;/p&gt;
 Phrases&lt;/a&gt; is
 the alter ego of DRY. DAMP tests often use the builder pattern to
 construct the System Under Test. This allows calls to be chained in a
-fluent API style, similar to the &lt;a href="http://blog.shaunfinglas.co.uk/2014/05/flexible-selenium-tests-via-page-objects.html"&gt;Page Object
+fluent API style, similar to the &lt;a href="https://blog.shaunfinglas.co.uk/2014/05/flexible-selenium-tests-via-page-objects.html"&gt;Page Object
 Pattern&lt;/a&gt;.
 Internally the implementation will still use literals or value objects,
 but each test can provide just the differences it needs in order to
@@ -2151,12 +2151,12 @@ your design. DAMP tests have numerous advantages, but they should be
 applied where required rather than for every scenario. Tests for objects
 that are lower in the dependency graph tend to fit into the more
 traditional testing patterns, while higher up your stack DAMP tests can
-prove useful.&lt;/p&gt;</content><category term="programming"></category><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Getters and Setters are Evil - Redux</title><link href="/2015/04/getters-and-setters-are-evil-redux.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/04/getters-and-setters-are-evil-redux.html</id><summary type="html">&lt;p&gt;Back in early 2011 I wrote one of my &lt;a href="http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;most viewed and commented posts at
+prove useful.&lt;/p&gt;</content><category term="programming"></category><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Getters and Setters are Evil - Redux</title><link href="/2015/04/getters-and-setters-are-evil-redux.html" rel="alternate"></link><published>2015-04-01T00:00:00+02:00</published><updated>2015-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-04-01:/2015/04/getters-and-setters-are-evil-redux.html</id><summary type="html">&lt;p&gt;Back in early 2011 I wrote one of my &lt;a href="https://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;most viewed and commented posts at
 the time - Getters and Setters are
 Evil&lt;/a&gt;.
 Four years later it's time to review this.&lt;/p&gt;
 &lt;p&gt;The feedback within the team was generally positive. Production code was
-written in this style to great success. The core …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Back in early 2011 I wrote one of my &lt;a href="http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;most viewed and commented posts at
+written in this style to great success. The core …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Back in early 2011 I wrote one of my &lt;a href="https://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;most viewed and commented posts at
 the time - Getters and Setters are
 Evil&lt;/a&gt;.
 Four years later it's time to review this.&lt;/p&gt;
@@ -2174,7 +2174,7 @@ getters/setters to function.&lt;/p&gt;
 &lt;p&gt;Overtime I found myself and others slipping back to the "old ways" of
 applying getters/setters without thought.&lt;/p&gt;
 &lt;h4&gt;2015&lt;/h4&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;I now simply use two models, where the used to be
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;I now simply use two models, where the used to be
 one&lt;/a&gt;.
 Changes go to the domain model in the form of commands. Queries get
 returned as view models. The big change here is to simply split commands
@@ -2244,7 +2244,7 @@ scenario.&lt;/p&gt;
 &lt;p&gt;Date/Times are hard enough as it is. Trying to randomly generate these
 is not worth the hassle.&lt;/p&gt;
 &lt;h4&gt;Solution&lt;/h4&gt;
-&lt;p&gt;My recommendation is to rely on literal values or &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;value
+&lt;p&gt;My recommendation is to rely on literal values or &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;value
 objects&lt;/a&gt;
 where possible, these make the test much more readable and act like an
 example or specification. Additionally their use allows the inline
@@ -2272,28 +2272,28 @@ this was production code I would remove it, however for tests my stance
 for a long time has been to allow this duplication to remain.
 Readability and expressiveness is much more important. There are valid
 times when duplication between tests is a bad thing. While this simple
-example doesn't suffer from this problem &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;I will expand on how to keep
+example doesn't suffer from this problem &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html"&gt;I will expand on how to keep
 your tests expressive but DRY in a future
 post&lt;/a&gt;.&lt;/p&gt;</content><category term="testing"></category><category term="tdd"></category><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Dependency Elimination Principle</title><link href="/2015/03/dependency-elimination-principle.html" rel="alternate"></link><published>2015-03-01T00:00:00+01:00</published><updated>2015-03-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-03-01:/2015/03/dependency-elimination-principle.html</id><summary type="html">&lt;p&gt;This is the third, and final part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 1 -
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;I've wrote about what &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;good dependencies are before, and the benefits if
+&lt;p&gt;I've wrote about what &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;good dependencies are before, and the benefits if
 you can limit and remove them where
 possible&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can take this idea further though, by applying concepts …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the third, and final part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 1 -
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;Reused Abstraction
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;I've wrote about what &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;good dependencies are before, and the benefits if
+&lt;p&gt;I've wrote about what &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;good dependencies are before, and the benefits if
 you can limit and remove them where
 possible&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;You can take this idea further though, by applying concepts from
@@ -2356,8 +2356,8 @@ post&lt;/a&gt;
 detailing why they still believe in remote working.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Reused Abstraction Principle</title><link href="/2015/03/reused-abstraction-principle.html" rel="alternate"></link><published>2015-03-01T00:00:00+01:00</published><updated>2015-03-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-03-01:/2015/03/reused-abstraction-principle.html</id><summary type="html">&lt;p&gt;This is the second part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 1 -
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -2367,8 +2367,8 @@ been incredibly guilty of this in the past.&lt;/p&gt;
 &lt;p&gt;Most code …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is the second part of my series on abstractions.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Part 1 -
-    &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
+    &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;Abstractions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;Dependency Elimination
     Principle&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -2383,7 +2383,7 @@ smell&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Such situations are usually the result of extracting an interface from
 an implementation, rather than having the client drive behaviour.&lt;/p&gt;
 &lt;p&gt;These interfaces are also often bad abstractions, known as "leaky
-abstractions". As &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;I've discussed previously, these abstractions tend to
+abstractions". As &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/abstractions.html"&gt;I've discussed previously, these abstractions tend to
 offer nothing more than simple
 indirection&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Example&lt;/h4&gt;
@@ -2411,7 +2411,7 @@ still function is a good sign. Such an example would be &lt;code&gt;SqlRepositor
 replaced with &lt;code&gt;MongoRepository&lt;/code&gt; when &lt;code&gt;IRepository&lt;/code&gt; is required.&lt;/p&gt;
 &lt;p&gt;Additionally just because you opt to use dependency injection, there is
 no rule stating said dependency must be an interface or base class.&lt;/p&gt;
-&lt;p&gt;The final point is to &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;remember what good dependencies
+&lt;p&gt;The final point is to &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;remember what good dependencies
 are&lt;/a&gt;,
 everything else can be an implementation detail leading to more flexible
 and resilient code.&lt;/p&gt;</content><category term="abstractions-series"></category><category term="code-quality"></category><category term="tutorial"></category></entry><entry><title>Value Object Refactoring</title><link href="/2015/02/value-object-refactoring.html" rel="alternate"></link><published>2015-02-03T20:36:00+01:00</published><updated>2015-02-03T20:36:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-02-03:/2015/02/value-object-refactoring.html</id><summary type="html">&lt;p&gt;After extract method or extract class introducing a value object is one
@@ -2488,7 +2488,7 @@ needed, no need for injection or other patterns.&lt;/p&gt;
     simple string can never guarantee such conditions.&lt;/li&gt;
 &lt;li&gt;Making value objects public generally makes sense. This provides an
     excellent seam for testing and integration.&lt;/li&gt;
-&lt;li&gt;The introduction of a value object plays nicely with my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;three basic
+&lt;li&gt;The introduction of a value object plays nicely with my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;three basic
     steps to code
     quality&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Consistency</title><link href="/2015/02/consistency.html" rel="alternate"></link><published>2015-02-01T00:00:00+01:00</published><updated>2015-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2015-02-01:/2015/02/consistency.html</id><summary type="html">&lt;p&gt;Striving for consistency within a codebase is a &lt;strong&gt;good thing&lt;/strong&gt;. I'm very
@@ -2516,7 +2516,7 @@ consistency rules&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;This approach allows incremental evolution, but still keeps consistency
 within a boundary. This enables both benefits of favouring consistency,
 while still allowing the code to evolve over time.
-&lt;a href="http://blog.shaunfinglas.co.uk/2014/11/ratcheting.html"&gt;Ratcheting&lt;/a&gt; can
+&lt;a href="https://blog.shaunfinglas.co.uk/2014/11/ratcheting.html"&gt;Ratcheting&lt;/a&gt; can
 be used to ensure future work is aligned consistently. Rather than big
 bang implementation, you can perform larger, long term changes steadily.&lt;/p&gt;
 &lt;p&gt;Remember; software development is like gardening, it takes time to see
@@ -2776,7 +2776,7 @@ while answering "&lt;em&gt;Why bother with technical blogging?&lt;/em&gt;".&lt;/
 focus. This blog focuses on programming and software development related
 topics, so anything that falls within this category is fair game. Take a
 single idea and from this one blog post you can generate many more
-ideas. This is where my &lt;a href="http://blog.shaunfinglas.co.uk/p/upcoming.html"&gt;upcoming
+ideas. This is where my &lt;a href="https://blog.shaunfinglas.co.uk/p/upcoming.html"&gt;upcoming
 list&lt;/a&gt; comes from. A
 single post can spawn many others and the process will repeat itself.&lt;/p&gt;
 &lt;p&gt;Honest posts, that focus on your experiences tend to be the most well
@@ -2818,7 +2818,7 @@ Blog about it. This helps with the generation of new content.&lt;/p&gt;
 old posts and confirming whether or not I still agree helps with
 learning. Have I discovered anything new since? Just the act of
 re-reading and refreshing myself with a concept can be useful. This
-tactic combined with a &lt;a href="http://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;developer
+tactic combined with a &lt;a href="https://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;developer
 diary&lt;/a&gt;
 has proved a powerful combination.&lt;/p&gt;
 &lt;h4&gt;Career Benefits&lt;/h4&gt;

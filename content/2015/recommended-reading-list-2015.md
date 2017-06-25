@@ -5,8 +5,8 @@ Tags: reading
 Slug: 2015/12/recommended-reading-list-2015
 
 In a similar manner to
-[previous](http://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html)
-[years](http://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html)
+[previous](https://blog.shaunfinglas.co.uk/2015/01/recommended-reading-list-2014.html)
+[years](https://blog.shaunfinglas.co.uk/2012/10/recommended-reading-2012.html)
 here is my recommended reading list for 2015. As before some of these
 books have been released for a while, but these are some of my
 highlights for various reasons.

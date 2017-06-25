@@ -83,4 +83,4 @@ needed, no need for injection or other patterns.
     excellent seam for testing and integration.
 -   The introduction of a value object plays nicely with my [three basic
     steps to code
-    quality](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
+    quality](https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).

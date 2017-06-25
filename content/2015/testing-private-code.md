@@ -44,14 +44,14 @@ denoate implementation details.
 When single responsibility principle would be violated in the technique
 above, this is your other option. [Beware the power of just adding a new
 class and making it
-public](http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html).
+public](https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html).
 While it will allow testing in one place, [each public dependency you
 introduce further increases
-coupling](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html).
+coupling](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html).
 
 If the code that needs testing is a service, the act to introduce a
 public object should be considered thoughtfully. Once the class is
 pubic, you simply need to verify the use of the class, rather than what
 it does. However [Value Objects can help limit the tests you need to
-write](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
+write](https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
 entirely and should be used whenever possible.

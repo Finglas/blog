@@ -14,7 +14,7 @@ placed on a level playing field. I will admit to being highly sceptical
 of Mob Programming at first.
 
 [I advocate walking skeletons to ensure we are on the "right path" when
-developing](http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html).
+developing](https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html).
 We wanted to do these as a team, during our planning and tasking phase.
 I suggested mobbing rather than watching a solo developer on a projector
 and it turned out to be quite fun. We also learned a few new tricks such
@@ -40,5 +40,5 @@ tasks such as improving test coverage, refactoring, or edge cases. The
 core functionality is delivered as a team. Combined with the walking
 skeleton Mob Programming solves some of the key [problems that
 traditional tasking and planning
-introduces](http://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html)
+introduces](https://blog.shaunfinglas.co.uk/2015/05/tasking-in-software-development.html)
 and is well worth an experiment.

@@ -7,16 +7,16 @@ Slug: 2015/11/throw-code-away
 The third and final part of my agile architecture series.
 
 -   Part 1 - [You Cannot Iterate upon
-    Architecture](http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
+    Architecture](https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
 -   Part 2 - [Don't Build a
-    Thing](http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
+    Thing](https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
 
 ------------------------------------------------------------------------
 
 [Part
-one](http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
+one](https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
 suggested walking skeletons for new features or projects. [Part
-two](http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
+two](https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
 suggested building the limited, smallest and simplest functionality
 possible. However you do not always have the luxury of deferral.
 Likewise if the project already exists and you are amending

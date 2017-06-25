@@ -48,7 +48,7 @@ used such as IConfiguration.
 
 [The solution is to instead provide the configuration value, not the
 means of obtaining
-it](http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html).
+it](https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html).
 This can be done either via a constructor or directly to the method.
 This allows the configuration to be provided in different manners such
 as from a DB or file, with no code changes apart from the composition

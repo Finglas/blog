@@ -29,7 +29,7 @@ configured.
 
 Additionally the gateway interface demonstrates another common problem,
 [leaky
-abstractions](http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
+abstractions](https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
 This particular interface while coded without an implementation in mind,
 is tightly coupled to a relational database. If we opted for a file
 system or document database the use of transactions is now incorrect.

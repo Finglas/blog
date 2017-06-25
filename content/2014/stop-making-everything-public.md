@@ -5,12 +5,12 @@ Tags: 3-steps-code-quality, tdd
 Slug: 2014/12/stop-making-everything-public
 
 Part one of my [Three Steps to Code Quality via TDD
-series](http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
+series](https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html).
 
 -   Part 2 - [Limit the Amount of Dependencies you
-    Use](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
+    Use](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
 -   Part 3 - [A Unit is Not Always a Method or
-    Class](http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
+    Class](https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
 
 ------------------------------------------------------------------------
 

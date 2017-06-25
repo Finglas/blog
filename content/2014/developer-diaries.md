@@ -28,7 +28,7 @@ week I simply group up related notes. For example, if I've got a few
 bullet points about databases, I move these to fit under a "Database"
 heading. [This system works for now, though I might have to re-asses
 this in the
-future](http://blog.shaunfinglas.co.uk/2016/02/why-you-need-developer-diary.html).
+future](https://blog.shaunfinglas.co.uk/2016/02/why-you-need-developer-diary.html).
 An example of the file is below.
 
 #### Example

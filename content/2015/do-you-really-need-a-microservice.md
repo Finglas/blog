@@ -33,7 +33,7 @@ project rather than a single project containing both.
 
 An easy step is the [correct use of namespaces that are structured by
 features rather than technology
-choices](http://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html).
+choices](https://blog.shaunfinglas.co.uk/2014/07/i-need-to-stop-misusing-namespaces.html).
 
 Education is also important, simply put in agreements across teams such
 as "*nothing from the customer project will directly reference the

@@ -53,7 +53,7 @@ this, services will begin to dissolve. All of this can be done when
 supported by a good suite of tests.
 
 An [equally simple step is to being introducing value
-types](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html).
+types](https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html).
 Over time these will act as code magnets pulling any related behaviour
 towards them.
 

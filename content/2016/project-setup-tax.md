@@ -31,4 +31,4 @@ configuration options or security concerns.
 The lesson here is to never underestimate the time and effort required
 in starting a new project. Always allocate more time. Better yet,
 [question if the introduction of a new project is even
-required](http://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html).
+required](https://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html).

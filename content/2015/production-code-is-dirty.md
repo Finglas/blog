@@ -23,7 +23,7 @@ operating systems, browsers and embedded systems are maintained and
 extended well after they were created. Production code can be
 complicated but still clean with redeemable qualities. In order to do
 this you should write tests, [control
-dependencies](http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
+dependencies](https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html)
 and get into production or the hands of the user as soon as possible.
 This may seem an obvious solution but sadly many software projects fall
 into this trap of dirty code after a handful of iterations.

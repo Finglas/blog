@@ -75,7 +75,7 @@ change the behaviour of the application.
 -   Too long and people wont commit often.
 -   Under thirty seconds is ideal. Faster is better.
 -   Fail the build if the time exceeds a set threshold. You can use
-    [ratcheting](http://blog.shaunfinglas.co.uk/2014/11/ratcheting.html)
+    [ratcheting](https://blog.shaunfinglas.co.uk/2014/11/ratcheting.html)
     to reduce this over time.
 -   Monitor tests regularly and try to speed the slowest ones up.
 
@@ -94,7 +94,7 @@ change the behaviour of the application.
 -   Fail the build for architectural breaches such as a module
     referencing a module it shouldn't.
 -   [Fail the build for
-    warnings](http://blog.shaunfinglas.co.uk/2014/02/warnings-as-errors.html)
+    warnings](https://blog.shaunfinglas.co.uk/2014/02/warnings-as-errors.html)
     or code style breaches. Warnings can hide serious problems.
 
 #### Infrastructure

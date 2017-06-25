@@ -46,7 +46,7 @@ issue providing a good abstraction is used. Whether you use inline SQL,
 stored procedures or full blown ORMs is beside the point. [Instead of
 abstracting the implementation detail, focus on the role the object or
 function has to
-play](http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
+play](https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html).
 A benefit of this approach is the ability to mix and match data access
 patterns. Polyglot persistence is gaining more traction where alternate
 data storage solutions are more appropriate.
@@ -54,4 +54,4 @@ data storage solutions are more appropriate.
 #### N+1
 
 One common flaw that all these data access patterns can have is the [N+1
-problem](http://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html).
+problem](https://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html).

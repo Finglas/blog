@@ -38,7 +38,7 @@ repository would be implemented in a simple manner, instead opting for a
 simple in memory hash table for its implementation. This allows tests to
 be run with some confidence that the system will behave as expected.
 Combined with [Contract
-Tests](http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html),
+Tests](https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html),
 fakes can turbo charge the speed of your test execution while still
 providing confidence.
 

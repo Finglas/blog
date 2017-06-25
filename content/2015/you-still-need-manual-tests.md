@@ -5,8 +5,8 @@ Tags: acceptance-testing, unit-testing
 Slug: 2015/07/you-still-need-manual-tests
 
 This blog has numerous examples of why unit,
-[integration](http://blog.shaunfinglas.co.uk/2015/07/integration-tests.html)and
-[contract](http://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html)testing
+[integration](https://blog.shaunfinglas.co.uk/2015/07/integration-tests.html)and
+[contract](https://blog.shaunfinglas.co.uk/2015/07/the-benefits-of-contract-testing.html)testing
 is essential. However you still need manual tests. It is foolish to
 believe that all testing can be covered by automated tests despite the
 bias in this area.

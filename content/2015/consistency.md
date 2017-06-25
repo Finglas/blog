@@ -30,7 +30,7 @@ consistency rules**.
 This approach allows incremental evolution, but still keeps consistency
 within a boundary. This enables both benefits of favouring consistency,
 while still allowing the code to evolve over time.
-[Ratcheting](http://blog.shaunfinglas.co.uk/2014/11/ratcheting.html) can
+[Ratcheting](https://blog.shaunfinglas.co.uk/2014/11/ratcheting.html) can
 be used to ensure future work is aligned consistently. Rather than big
 bang implementation, you can perform larger, long term changes steadily.
 

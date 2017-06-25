@@ -5,7 +5,7 @@ Tags: tutorial, programming
 Slug: 2015/06/dry-vs-coupling-in-production-code
 
 [Duplication in tests can be a good
-thing](http://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
+thing](https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html).
 The same can be said for production code as well in some cases. No. I'm
 not going mad. I probably wouldn't believe this if you showed me this
 several years ago either. More experience has shown me that loose

@@ -39,7 +39,7 @@ An additional point to consider is that most validation is not business
 logic. In other words, [checking for null references is not a business
 concern. Therefore separating this from your domain objects makes a lot
 of
-sense.](http://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html)
+sense.](https://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html)
 The only logic the domain objects should contain is business logic.
 
 As each service is a separate object, you gain the benefits of the

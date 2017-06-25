@@ -7,9 +7,9 @@ Slug: 2015/11/dont-build-thing
 Part two of my agile architecture series.
 
 -   Part 1 - [You Cannot Iterate upon
-    Architecture](http://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
+    Architecture](https://blog.shaunfinglas.co.uk/2015/11/you-cannot-iterate-upon-architecture.html)
 -   Part 3 - [Throw Code
-    Away](http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html)
+    Away](https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html)
 
 ------------------------------------------------------------------------
 

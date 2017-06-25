@@ -53,7 +53,7 @@ is not worth the hassle.
 #### Solution
 
 My recommendation is to rely on literal values or [value
-objects](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
+objects](https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
 where possible, these make the test much more readable and act like an
 example or specification. Additionally their use allows the inline
 variable refactor to take place, meaning shorter, conciser tests.
@@ -89,4 +89,4 @@ Readability and expressiveness is much more important. There are valid
 times when duplication between tests is a bad thing. While this simple
 example doesn't suffer from this problem [I will expand on how to keep
 your tests expressive but DRY in a future
-post](http://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html).
+post](https://blog.shaunfinglas.co.uk/2015/04/dry-vs-damp-in-tests.html).

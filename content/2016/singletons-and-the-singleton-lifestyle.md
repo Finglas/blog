@@ -31,7 +31,7 @@ big difference is that unlike singletons you cannot provide static
 instances as arguments. In practice this is rarely a problem given you
 have easy access to the instance anyway. You should treat static classes
 as suspiciously as singletons. However static classes are not bad. [They
-do have uses](http://blog.shaunfinglas.co.uk/2015/07/static-code.html).
+do have uses](https://blog.shaunfinglas.co.uk/2015/07/static-code.html).
 
 <script src="https://gist.github.com/Finglas/1ad58d37ba4d4d55a01b.js"></script>
 The renderer is now a static class. The same disadvantage as the
@@ -53,7 +53,7 @@ area that has been lost is the lazy initialisation of the renderer which
 may or may not be an issue.
 
 DI does not solve all problems however. [Sometimes dependencies are
-global](http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html).
+global](https://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html).
 The likes of date/time or logging spring to mind. In these cases
 [alternative solutions
-exist](http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html).
+exist](https://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html).

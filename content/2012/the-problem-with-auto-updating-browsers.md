@@ -25,7 +25,7 @@ suggest the Selenium team should be version agnostic.
 
 Our solution in the end was simple. Turn off the auto updating and
 downgrade the browser. [I've blogged about this in the
-past](http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html),
+past](https://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html),
 but since Firefox 10 - the team are adopting a "silent" update process.
 This is great for end users. Imagine the countless man hours saved if
 IE6 had shipped with an auto update feature? The problem now seems to be

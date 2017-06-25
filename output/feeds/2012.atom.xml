@@ -330,7 +330,7 @@ same to the end user, bar some new features. Not being a Selenium
 developer I cannot comment how or why this has happened, nor can I
 suggest the Selenium team should be version agnostic.&lt;/p&gt;
 &lt;p&gt;Our solution in the end was simple. Turn off the auto updating and
-downgrade the browser. &lt;a href="http://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;I've blogged about this in the
+downgrade the browser. &lt;a href="https://blog.shaunfinglas.co.uk/2011/12/how-to-achieve-more-stable-end-to-end.html"&gt;I've blogged about this in the
 past&lt;/a&gt;,
 but since Firefox 10 - the team are adopting a "silent" update process.
 This is great for end users. Imagine the countless man hours saved if

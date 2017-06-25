@@ -5,7 +5,7 @@ Tags: programming, tutorial
 Slug: 2015/12/reducing-conditional-logic-to-single
 
 [My Anti If Campaign
-post](http://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html)
+post](https://blog.shaunfinglas.co.uk/2013/05/the-anti-if-campaign.html)
 still generates a lot of questions and discussion. In summary:
 
 -   Conditional statements are not bad. They are a core programming

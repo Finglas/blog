@@ -10,9 +10,9 @@ fails in many cases. This series will explain why this is the case, and
 provide solutions.
 
 -   Part 2 - [Don't Build a
-    Thing](http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
+    Thing](https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html)
 -   Part 3 - [Throw Code
-    Away](http://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html)
+    Away](https://blog.shaunfinglas.co.uk/2015/11/throw-code-away.html)
 
 ------------------------------------------------------------------------
 
@@ -79,7 +79,7 @@ way. Further enhancements or changes could be costly.
 
 For unknown projects there are two solutions. First and foremost build a
 [walking
-skeleton](http://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html).
+skeleton](https://blog.shaunfinglas.co.uk/2015/05/walking-skeleton.html).
 Using the vehicle example, the first iteration of a known project should
 produce the frame of the car. Other than wheels there would be very
 little else here. However this is still a car, though limited in

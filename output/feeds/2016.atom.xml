@@ -30,12 +30,12 @@
 &lt;li&gt;Use events to write loosely coupled code.&lt;/li&gt;
 &lt;li&gt;Ensure you have a method of auditing with handlers respond to which events.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="tutorial"></category></entry><entry><title>POODR Highlights Part 2</title><link href="/2016/11/poodr-highlights-part-2.html" rel="alternate"></link><published>2016-11-01T00:00:00+01:00</published><updated>2016-11-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-11-01:/2016/11/poodr-highlights-part-2.html</id><summary type="html">&lt;p&gt;Two other stand out topics from POODR were the use of tests and
-inheritance. The first set of &lt;a href="http://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html"&gt;higlights covered dependencies and
+inheritance. The first set of &lt;a href="https://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html"&gt;higlights covered dependencies and
 arguments&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Tests&lt;/h4&gt;
 &lt;p&gt;A conclusion that I agree with is that in general “most programmers
 write too many tests.”. A great quote in the book sees “tests (as) the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Two other stand out topics from POODR were the use of tests and
-inheritance. The first set of &lt;a href="http://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html"&gt;higlights covered dependencies and
+inheritance. The first set of &lt;a href="https://blog.shaunfinglas.co.uk/2016/10/poodr-highlights-part-1.html"&gt;higlights covered dependencies and
 arguments&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Tests&lt;/h4&gt;
 &lt;p&gt;A conclusion that I agree with is that in general “most programmers
@@ -55,7 +55,7 @@ focus on the high risk areas.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;State based tests should be used for incoming public messages. While
 verification based tests should be used for outgoing public messages as
-the state is tested on the receiver, elsewhere. The &lt;a href="http://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;distinction between
+the state is tested on the receiver, elsewhere. The &lt;a href="https://blog.shaunfinglas.co.uk/2015/04/cqrs-simplest-introduction.html"&gt;distinction between
 commands and
 queries&lt;/a&gt;
 is also highlighted. In summary incoming messages should be tested for
@@ -69,9 +69,9 @@ covering testing principles.&lt;/p&gt;
 the solution for all problems, or you're advised to never use
 inheritance. POODR takes a more pragmatic approach. Inheritance is a
 tool that can sometimes provide an excellent solution, however you are
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;better off duplicating
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;better off duplicating
 code&lt;/a&gt;
-and &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;defer such
+and &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;defer such
 decisions&lt;/a&gt;
 until you know more.&lt;/p&gt;
 &lt;p&gt;The wrong abstraction is harder to work with than duplicated code as
@@ -116,7 +116,7 @@ out namespace.&lt;/p&gt;
 &lt;p&gt;A similar issue regarding constants is the use of configuration files or
 similar to set the values. While the const keyword is dropped in this
 case, the object performs the same role. A public key, followed by a
-value that is used. &lt;a href="http://blog.shaunfinglas.co.uk/2016/04/x-of-configuration-is-never-used.html"&gt;The anti pattern in this case is treating all
+value that is used. &lt;a href="https://blog.shaunfinglas.co.uk/2016/04/x-of-configuration-is-never-used.html"&gt;The anti pattern in this case is treating all
 values as requiring
 configuration&lt;/a&gt;.
 Unless you need to change such values at runtime or based on deployment
@@ -340,9 +340,9 @@ changing ahead of the library, numerous other projects now had a runtime
 error. As we naively believed we were only working within a single
 project, we deployed the changes within the one project. As the library
 was shared, all other projects were now vulnerable.&lt;/p&gt;
-&lt;p&gt;This lack of &lt;a href="http://blog.shaunfinglas.co.uk/2016/06/ddd-bounded-contexts.html"&gt;bounded
+&lt;p&gt;This lack of &lt;a href="https://blog.shaunfinglas.co.uk/2016/06/ddd-bounded-contexts.html"&gt;bounded
 context&lt;/a&gt;,
-and focusing on &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;removal of
+and focusing on &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;removal of
 duplication&lt;/a&gt;
 was not the only lesson here. This issue painfully highlighted the need
 and importance to know exactly what your tools are doing, especially
@@ -530,7 +530,7 @@ change the behaviour of the application.&lt;/p&gt;
 &lt;li&gt;Too long and people wont commit often.&lt;/li&gt;
 &lt;li&gt;Under thirty seconds is ideal. Faster is better.&lt;/li&gt;
 &lt;li&gt;Fail the build if the time exceeds a set threshold. You can use
-    &lt;a href="http://blog.shaunfinglas.co.uk/2014/11/ratcheting.html"&gt;ratcheting&lt;/a&gt;
+    &lt;a href="https://blog.shaunfinglas.co.uk/2014/11/ratcheting.html"&gt;ratcheting&lt;/a&gt;
     to reduce this over time.&lt;/li&gt;
 &lt;li&gt;Monitor tests regularly and try to speed the slowest ones up.&lt;/li&gt;
 &lt;/ul&gt;
@@ -548,7 +548,7 @@ change the behaviour of the application.&lt;/p&gt;
     build. Just revert.&lt;/li&gt;
 &lt;li&gt;Fail the build for architectural breaches such as a module
     referencing a module it shouldn't.&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/warnings-as-errors.html"&gt;Fail the build for
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/02/warnings-as-errors.html"&gt;Fail the build for
     warnings&lt;/a&gt;
     or code style breaches. Warnings can hide serious problems.&lt;/li&gt;
 &lt;/ul&gt;
@@ -650,7 +650,7 @@ change the behaviour of the application.&lt;/p&gt;
 &lt;li&gt;
 &lt;h4&gt;Be Cheap And Quick - Use Stubs&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;When implementing the new system, &lt;a href="http://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;don't build a
+&lt;li&gt;When implementing the new system, &lt;a href="https://blog.shaunfinglas.co.uk/2015/11/dont-build-thing.html"&gt;don't build a
     thing&lt;/a&gt;.
     At least at first.&lt;/li&gt;
 &lt;li&gt;Use stubs to build the simplest, dumbest thing you can to get
@@ -751,7 +751,7 @@ time.&lt;/p&gt;
 &lt;p&gt;Simply push behaviour onto entities, one method at a time. As you do
 this, services will begin to dissolve. All of this can be done when
 supported by a good suite of tests.&lt;/p&gt;
-&lt;p&gt;An &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;equally simple step is to being introducing value
+&lt;p&gt;An &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;equally simple step is to being introducing value
 types&lt;/a&gt;.
 Over time these will act as code magnets pulling any related behaviour
 towards them.&lt;/p&gt;
@@ -828,7 +828,7 @@ pros and cons. Each vary in terms of benefits and complexity.&lt;/p&gt;
 In these cases service A invokes service B which invokes service C,
 which has a dependency on A and so on. The problems such composition
 introduce defeats any benefits that a service based approach brings. In
-short &lt;a href="http://blog.shaunfinglas.co.uk/2014/07/soa-done-badly-vs-soa-done-right.html"&gt;composing data in this manner will lead to
+short &lt;a href="https://blog.shaunfinglas.co.uk/2014/07/soa-done-badly-vs-soa-done-right.html"&gt;composing data in this manner will lead to
 problems&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h4&gt;Server Side Composition&lt;/h4&gt;
@@ -1007,7 +1007,7 @@ personally related to the customer to be modelled.&lt;/p&gt;
 
 &lt;p&gt;Despite the common elements such as Id and email, the other elements are
 specific to the context in which the customer is used. One of the
-biggest mistakes I've made by ignoring a bounded context is to see &lt;a href="http://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;a
+biggest mistakes I've made by ignoring a bounded context is to see &lt;a href="https://blog.shaunfinglas.co.uk/2015/06/dry-vs-coupling-in-production-code.html"&gt;a
 common model and try to apply this
 everywhere&lt;/a&gt;.
 This leads to less code, but increases coupling. A single small change
@@ -1048,7 +1048,7 @@ Given-When-Then scenarios.&lt;/p&gt;
 &lt;li&gt;Test fixture is usually named after the subject under test.&lt;/li&gt;
 &lt;li&gt;Can grow large with many test cases.&lt;/li&gt;
 &lt;li&gt;Works well with data driven tests.&lt;/li&gt;
-&lt;li&gt;Suited to &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;solitary
+&lt;li&gt;Suited to &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;solitary
     tests&lt;/a&gt;
     such as integration tests where GWT syntax would be verbose or hard
     to include.&lt;/li&gt;
@@ -1067,7 +1067,7 @@ Given-When-Then scenarios.&lt;/p&gt;
     functionality.&lt;/li&gt;
 &lt;li&gt;Easy to see why a test failed due to naming convention - assertion
     message is optional.&lt;/li&gt;
-&lt;li&gt;Suited to &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;sociable
+&lt;li&gt;Suited to &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;sociable
     tests&lt;/a&gt;
     where the focus is on behaviour.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Given&lt;/code&gt; forms the pre-condition of the test.&lt;/li&gt;
@@ -1385,13 +1385,13 @@ not possible, use specific techniques for dealing with legacy code
 Much of the code I have written can/should/will be replaced but the
 features live on.&lt;/p&gt;
 &lt;p&gt;The lesson here is to simply treat all code as equal regardless of its
-status - legacy or not.&lt;/p&gt;</content><category term="programming"></category><category term="retro"></category></entry><entry><title>Dependency Injection for Common Global Dependencies</title><link href="/2016/04/dependency-injection-for-common-global.html" rel="alternate"></link><published>2016-04-13T07:09:00+02:00</published><updated>2016-04-13T07:09:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-04-13:/2016/04/dependency-injection-for-common-global.html</id><summary type="html">&lt;p&gt;The use of &lt;a href="http://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html"&gt;singletons can often be replaced by simply adjusting scoping
+status - legacy or not.&lt;/p&gt;</content><category term="programming"></category><category term="retro"></category></entry><entry><title>Dependency Injection for Common Global Dependencies</title><link href="/2016/04/dependency-injection-for-common-global.html" rel="alternate"></link><published>2016-04-13T07:09:00+02:00</published><updated>2016-04-13T07:09:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-04-13:/2016/04/dependency-injection-for-common-global.html</id><summary type="html">&lt;p&gt;The use of &lt;a href="https://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html"&gt;singletons can often be replaced by simply adjusting scoping
 of
 objects&lt;/a&gt;.
 The vast majority of dependencies fit this pattern, with a few
 exceptions such as DateTime instances, or logging.&lt;/p&gt;
 &lt;p&gt;Sometimes you just need these dependencies everywhere. You can find
-yourself passing these dependencies down into the deep …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The use of &lt;a href="http://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html"&gt;singletons can often be replaced by simply adjusting scoping
+yourself passing these dependencies down into the deep …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The use of &lt;a href="https://blog.shaunfinglas.co.uk/2016/03/singletons-and-singleton-lifestyle.html"&gt;singletons can often be replaced by simply adjusting scoping
 of
 objects&lt;/a&gt;.
 The vast majority of dependencies fit this pattern, with a few
@@ -1409,7 +1409,7 @@ unnecessary in many cases. Unless your domain is dealing with date and
 times explicitly, you don't really need an abstraction. In other words,
 other than the system where the code is running when or why would you
 provide a different implementation?&lt;/p&gt;
-&lt;p&gt;The approach taken as part of the &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;example within the Dependency
+&lt;p&gt;The approach taken as part of the &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;example within the Dependency
 Elimination
 Principle&lt;/a&gt;
 is my current solution to date/times and DI. This is still dependency
@@ -1441,7 +1441,7 @@ post.&lt;/p&gt;
 &lt;p&gt;Date/Time and Logging are the two most common global dependencies. The
 majority of all other dependencies can and probably should be satisfied
 by traditional DI where possible. As always each dependency should be
-validated prior to introduction. It may be possible to either &lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;eliminate
+validated prior to introduction. It may be possible to either &lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;eliminate
 or replace the component in
 question&lt;/a&gt;.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Singleton's and the Singleton Lifestyle</title><link href="/2016/03/singletons-and-singleton-lifestyle.html" rel="alternate"></link><published>2016-04-01T00:00:00+02:00</published><updated>2016-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-04-01:/2016/03/singletons-and-singleton-lifestyle.html</id><summary type="html">&lt;p&gt;&lt;a href="http://misko.hevery.com/2008/12/15/static-methods-are-death-to-testability/"&gt;The death of testability and the lack of
 isolation&lt;/a&gt;
@@ -1471,7 +1471,7 @@ singletons. You only have one instance and you can access it easily. One
 big difference is that unlike singletons you cannot provide static
 instances as arguments. In practice this is rarely a problem given you
 have easy access to the instance anyway. You should treat static classes
-as suspiciously as singletons. However static classes are not bad. &lt;a href="http://blog.shaunfinglas.co.uk/2015/07/static-code.html"&gt;They
+as suspiciously as singletons. However static classes are not bad. &lt;a href="https://blog.shaunfinglas.co.uk/2015/07/static-code.html"&gt;They
 do have uses&lt;/a&gt;.&lt;/p&gt;
 &lt;script src="https://gist.github.com/Finglas/1ad58d37ba4d4d55a01b.js"&gt;&lt;/script&gt;
 
@@ -1490,10 +1490,10 @@ to provide a composite of rendering components the game would be
 unaware. This change of scope provides the benefits of a singleton. One
 area that has been lost is the lazy initialisation of the renderer which
 may or may not be an issue.&lt;/p&gt;
-&lt;p&gt;DI does not solve all problems however. &lt;a href="http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html"&gt;Sometimes dependencies are
+&lt;p&gt;DI does not solve all problems however. &lt;a href="https://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html"&gt;Sometimes dependencies are
 global&lt;/a&gt;.
 The likes of date/time or logging spring to mind. In these cases
-&lt;a href="http://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html"&gt;alternative solutions
+&lt;a href="https://blog.shaunfinglas.co.uk/2016/04/dependency-injection-for-common-global.html"&gt;alternative solutions
 exist&lt;/a&gt;.&lt;/p&gt;</content><category term="programming"></category><category term="tutorial"></category></entry><entry><title>Project Setup Tax</title><link href="/2016/04/project-setup-tax.html" rel="alternate"></link><published>2016-04-01T00:00:00+02:00</published><updated>2016-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-04-01:/2016/04/project-setup-tax.html</id><summary type="html">&lt;p&gt;With microservices gaining popularity, one consideration prior to
 adoption is new project setup. In fact this statement holds true for any
 new project that you decide to create.&lt;/p&gt;
@@ -1522,7 +1522,7 @@ expected. Often it is very easy to forget various project conventions,
 configuration options or security concerns.&lt;/p&gt;
 &lt;p&gt;The lesson here is to never underestimate the time and effort required
 in starting a new project. Always allocate more time. Better yet,
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html"&gt;question if the introduction of a new project is even
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/06/do-you-really-need-microservice.html"&gt;question if the introduction of a new project is even
 required&lt;/a&gt;.&lt;/p&gt;</content><category term="microservices"></category><category term="retro"></category></entry><entry><title>X% of Configuration is Never Used</title><link href="/2016/04/x-of-configuration-is-never-used.html" rel="alternate"></link><published>2016-04-01T00:00:00+02:00</published><updated>2016-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-04-01:/2016/04/x-of-configuration-is-never-used.html</id><summary type="html">&lt;p&gt;Code configuration is essentially for the likes of URLs, credentials or
 other per deployable settings. Sadly configuration seems to fall into
 examples where there is simply too much configuration, or the system has
@@ -1563,7 +1563,7 @@ solution that was not required.&lt;/p&gt;
 upon the method of obtaining the value, rather than the value itself.
 Additionally the use of some form of abstraction is often mistakenly
 used such as IConfiguration.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;The solution is to instead provide the configuration value, not the
+&lt;p&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2015/03/dependency-elimination-principle.html"&gt;The solution is to instead provide the configuration value, not the
 means of obtaining
 it&lt;/a&gt;.
 This can be done either via a constructor or directly to the method.
@@ -1605,7 +1605,7 @@ temporary change on the development machine was required.&lt;/p&gt;
 case setting to &lt;code&gt;en-US&lt;/code&gt; was enough to cause the tests to fail. After the
 code change the tests passed. Any locale can be used as long as the date
 format differs.&lt;/p&gt;
-&lt;p&gt;This idea is pretty easy, and is very close to my technique of &lt;a href="http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html"&gt;pulling
+&lt;p&gt;This idea is pretty easy, and is very close to my technique of &lt;a href="https://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html"&gt;pulling
 the plug on automated
 tests&lt;/a&gt;.
 The test suite can now be run on any machine, even those incorrectly
@@ -1682,7 +1682,7 @@ actually fit for purpose. Naturally this will incur overhead when the
 users raise issues that need resolving, often late in the day.&lt;/p&gt;
 &lt;h4&gt;Libraries&lt;/h4&gt;
 &lt;p&gt;It is often tempting to extract a library for a common task. As always
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;try to fight this urge until at least the third
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html"&gt;try to fight this urge until at least the third
 time&lt;/a&gt;.
 As well as this try to use the library yourself before releasing. If you
 can use this library in at least three places you very well may have a
@@ -1835,7 +1835,7 @@ debate and discussion.&lt;/p&gt;
 &lt;h4&gt;Polyglot Persistence&lt;/h4&gt;
 &lt;p&gt;The actual decision of which data access method to use can be a non
 issue providing a good abstraction is used. Whether you use inline SQL,
-stored procedures or full blown ORMs is beside the point. &lt;a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;Instead of
+stored procedures or full blown ORMs is beside the point. &lt;a href="https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;Instead of
 abstracting the implementation detail, focus on the role the object or
 function has to
 play&lt;/a&gt;.
@@ -1843,7 +1843,7 @@ A benefit of this approach is the ability to mix and match data access
 patterns. Polyglot persistence is gaining more traction where alternate
 data storage solutions are more appropriate.&lt;/p&gt;
 &lt;h4&gt;N+1&lt;/h4&gt;
-&lt;p&gt;One common flaw that all these data access patterns can have is the &lt;a href="http://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html"&gt;N+1
+&lt;p&gt;One common flaw that all these data access patterns can have is the &lt;a href="https://blog.shaunfinglas.co.uk/2016/02/the-n1-problem.html"&gt;N+1
 problem&lt;/a&gt;.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>The N+1 Problem</title><link href="/2016/02/the-n1-problem.html" rel="alternate"></link><published>2016-02-01T00:00:00+01:00</published><updated>2016-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-02-01:/2016/02/the-n1-problem.html</id><summary type="html">&lt;p&gt;The N+1 problem is when multiple queries are executed against a
 persistent store when a reduced amount could serve the same purpose.
 This degrades performance, uses more memory and can cause complexity to
@@ -1906,13 +1906,13 @@ further optimisation and simplification.&lt;/p&gt;
 logging the underlying queries that are performed. Once an issue is
 discovered it is usually a case of consulting documentation on what the
 fix is - often configuration related. Due to this it is worth enabling
-logging during development so queries can be analysed.&lt;/p&gt;</content><category term="tutorial"></category></entry><entry><title>Why you need a Developer Diary</title><link href="/2016/02/why-you-need-developer-diary.html" rel="alternate"></link><published>2016-02-01T00:00:00+01:00</published><updated>2016-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-02-01:/2016/02/why-you-need-developer-diary.html</id><summary type="html">&lt;p&gt;After eighteen months of use, I can safely claim &lt;a href="http://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;how useful a a
+logging during development so queries can be analysed.&lt;/p&gt;</content><category term="tutorial"></category></entry><entry><title>Why you need a Developer Diary</title><link href="/2016/02/why-you-need-developer-diary.html" rel="alternate"></link><published>2016-02-01T00:00:00+01:00</published><updated>2016-02-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-02-01:/2016/02/why-you-need-developer-diary.html</id><summary type="html">&lt;p&gt;After eighteen months of use, I can safely claim &lt;a href="https://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;how useful a a
 developer diary is, and why you should start using
 one&lt;/a&gt; if
 you don't already.&lt;/p&gt;
 &lt;h4&gt;Changes&lt;/h4&gt;
 &lt;p&gt;Using a single file grew too large as expected. Instead each grouping is
-allocated an individual file. While some of these are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;After eighteen months of use, I can safely claim &lt;a href="http://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;how useful a a
+allocated an individual file. While some of these are …&lt;/p&gt;</summary><content type="html">&lt;p&gt;After eighteen months of use, I can safely claim &lt;a href="https://blog.shaunfinglas.co.uk/2014/09/developer-diaries.html"&gt;how useful a a
 developer diary is, and why you should start using
 one&lt;/a&gt; if
 you don't already.&lt;/p&gt;
@@ -1956,10 +1956,10 @@ with other technical aspects such as transactions or configuration. This
 is due to different applications having different technical
 requirements. For example a HTML frontend may differ to a web service,
 so application validation would need to vary also.&lt;/p&gt;
-&lt;p&gt;This form of validation is best performed using &lt;a href="http://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html"&gt;validation
+&lt;p&gt;This form of validation is best performed using &lt;a href="https://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html"&gt;validation
 services&lt;/a&gt;.
 The use of attributes/decorators/annotations can also be used though
-&lt;a href="http://blog.shaunfinglas.co.uk/2016/01/validation-is-not-cross-cutting-concern.html"&gt;the following post will explain why this is usually a bad
+&lt;a href="https://blog.shaunfinglas.co.uk/2016/01/validation-is-not-cross-cutting-concern.html"&gt;the following post will explain why this is usually a bad
 idea&lt;/a&gt;.&lt;/p&gt;
 &lt;h4&gt;Domain Validation&lt;/h4&gt;
 &lt;p&gt;Domain validation is concepts the business or domain experts would
@@ -1971,7 +1971,7 @@ understand. Examples include:&lt;/p&gt;
 &lt;li&gt;"&lt;em&gt;users can only edit their own posts&lt;/em&gt;"&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once inside your domain, validation should live as part of your domain
-model or domain logic. If &lt;a href="http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;value types are utilised you can safely omit
+model or domain logic. If &lt;a href="https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html"&gt;value types are utilised you can safely omit
 additional application
 validation&lt;/a&gt;
 as each object would ensure consistency.&lt;/p&gt;</content><category term="tutorial"></category></entry><entry><title>A Lotta Architecture - A Reply to "A Little Architecture"</title><link href="/2016/01/a-lotta-architecture-reply-to-little.html" rel="alternate"></link><published>2016-01-01T00:00:00+01:00</published><updated>2016-01-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2016-01-01:/2016/01/a-lotta-architecture-reply-to-little.html</id><summary type="html">&lt;p&gt;A recent post about &lt;a href="http://blog.cleancoder.com/uncle-bob/2016/01/04/ALittleArchitecture.html"&gt;architecture from Uncle
@@ -1998,7 +1998,7 @@ implemented. When things go wrong and you are staring at a one hundred
 line stack trace, you better hope you understand how the DB is
 configured.&lt;/p&gt;
 &lt;p&gt;Additionally the gateway interface demonstrates another common problem,
-&lt;a href="http://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;leaky
+&lt;a href="https://blog.shaunfinglas.co.uk/2015/01/abstract-data-use-not-data-access.html"&gt;leaky
 abstractions&lt;/a&gt;.
 This particular interface while coded without an implementation in mind,
 is tightly coupled to a relational database. If we opted for a file
@@ -2092,7 +2092,7 @@ metadata, providing no direct behaviour. Failing to do so will make DI,
 testability and composition very difficult.&lt;/p&gt;
 &lt;p&gt;These flaws are especially true for validation. Despite all input
 requiring validation, the manner in which validation is performed is
-dependent on the entry point to the code. &lt;a href="http://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html"&gt;Context
+dependent on the entry point to the code. &lt;a href="https://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html"&gt;Context
 matters&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Consider order information that requires a billing address and by
 definition, its children to be populated. An attribute works a treat

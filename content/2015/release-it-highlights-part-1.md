@@ -20,7 +20,7 @@ the problem in the first place.
 -   Part 1 - Shared Resources, Responses, SLA, Databases and Circuit
     Breakers
 -   [Part 2 - Caches, Testing, HTML, Pre-Computation and
-    Logging](http://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-2.html)
+    Logging](https://blog.shaunfinglas.co.uk/2015/09/release-it-highlights-part-2.html)
 
 ------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ the problem in the first place.
     generous - always configure manually.
 -   One of the worst places that scaling effects will bite you is with
     point to point communication. Favour [other alternatives such as
-    messaging](http://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html)
+    messaging](https://blog.shaunfinglas.co.uk/2015/08/queue-centric-work-pattern.html)
     to remove this problem.
 
 #### SLA

@@ -18,7 +18,7 @@ Given-When-Then scenarios.
 -   Can grow large with many test cases.
 -   Works well with data driven tests.
 -   Suited to [solitary
-    tests](http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
+    tests](https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
     such as integration tests where GWT syntax would be verbose or hard
     to include.
 
@@ -37,7 +37,7 @@ Given-When-Then scenarios.
 -   Easy to see why a test failed due to naming convention - assertion
     message is optional.
 -   Suited to [sociable
-    tests](http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
+    tests](https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html)
     where the focus is on behaviour.
 -   `Given` forms the pre-condition of the test.
 -   `When` performs the action.

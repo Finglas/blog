@@ -102,25 +102,25 @@ no particular order.&lt;/p&gt;
     Services&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.amazon.co.uk/Learning-NServiceBus-David-Boike/dp/1782166343"&gt;Learning
     NServiceBus&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="reading"></category></entry><entry><title>A Unit is Not Always a Method or Class</title><link href="/2014/12/a-unit-is-not-always-method-or-class.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/a-unit-is-not-always-method-or-class.html</id><summary type="html">&lt;p&gt;Part three of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+&lt;/ul&gt;</content><category term="reading"></category></entry><entry><title>A Unit is Not Always a Method or Class</title><link href="/2014/12/a-unit-is-not-always-method-or-class.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/a-unit-is-not-always-method-or-class.html</id><summary type="html">&lt;p&gt;Part three of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
 series&lt;/a&gt;.
 The most important concept when coupled with the previous two points -
 not every unit will relate to a method or class.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
     Public&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
     Use&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Most introductions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part three of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+&lt;p&gt;Most introductions …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part three of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
 series&lt;/a&gt;.
 The most important concept when coupled with the previous two points -
 not every unit will relate to a method or class.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
     Public&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
     Use&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -138,13 +138,13 @@ TDD&lt;/a&gt;
 was that each unit does not need to equate to a single method or class.
 For a long time I followed what others did. Each collaborator would be
 injected and replaced with a test double. Each class would have a
-corresponding test file. However as I have &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;stated in the introduction,
+corresponding test file. However as I have &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;stated in the introduction,
 this leads to
 problems&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We should test units of behaviour, not units of implementation. Given we
-know we should be using as &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;few dependencies as
+know we should be using as &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;few dependencies as
 possible&lt;/a&gt;,
-and we know we should &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;limit
+and we know we should &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;limit
 visibility&lt;/a&gt;,
 each test should be simple to write. As part of the refactor step if we
 choose to introduce a new class that is fine. There is no need in most
@@ -155,7 +155,7 @@ Every class having a corresponding test file is wrong.&lt;/p&gt;
 the system under test without breaking anything. This allows the
 merciless refactoring automated testing advertises as a benefit.&lt;/p&gt;
 &lt;h5&gt;Aren't you describing integration testing?&lt;/h5&gt;
-&lt;p&gt;No. &lt;a href="http://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html"&gt;Tests should be isolated as I've documented
+&lt;p&gt;No. &lt;a href="https://blog.shaunfinglas.co.uk/2012/05/achieving-more-isolated-unit-testing.html"&gt;Tests should be isolated as I've documented
 before&lt;/a&gt;,
 but there is nothing stating they should be isolated from the components
 they work with. If we isolate at the method or class level we make
@@ -236,25 +236,25 @@ design retains its flexibility.&lt;/p&gt;
 should be introduced as part of the refactor step in most cases. Hiding
 the new keyword is not a goal. The fact that mocking frameworks default
 to reference equality shouldn't force you to make a more complicated or
-coupled solution to a problem.&lt;/p&gt;</content><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Limit the Amount of Dependencies you Use</title><link href="/2014/12/limit-amount-of-dependencies-you-use.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/limit-amount-of-dependencies-you-use.html</id><summary type="html">&lt;p&gt;Part two of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
+coupled solution to a problem.&lt;/p&gt;</content><category term="unit-testing"></category><category term="tutorial"></category></entry><entry><title>Limit the Amount of Dependencies you Use</title><link href="/2014/12/limit-amount-of-dependencies-you-use.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/limit-amount-of-dependencies-you-use.html</id><summary type="html">&lt;p&gt;Part two of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
 TDD&lt;/a&gt;
 series and ties very closely into step one, limiting the visibility of
 your classes.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
     Public&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
     Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;The more dependencies you use the more your …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part two of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
+&lt;p&gt;The more dependencies you use the more your …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part two of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via
 TDD&lt;/a&gt;
 series and ties very closely into step one, limiting the visibility of
 your classes.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 1 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+&lt;li&gt;Part 1 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
     Public&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
     Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -316,22 +316,22 @@ have two developers working on the same part of a task at all times.
 &lt;strong&gt;Pair programming and pairing are two very distinct concepts&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;The key takeaway here is to know when to use pairing over pair
 programming and vice versa. Both have their merits and should be applied
-in the correct context.&lt;/p&gt;</content><category term="developers"></category><category term="retro"></category></entry><entry><title>Stop Making Everything Public</title><link href="/2014/12/stop-making-everything-public.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/stop-making-everything-public.html</id><summary type="html">&lt;p&gt;Part one of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+in the correct context.&lt;/p&gt;</content><category term="developers"></category><category term="retro"></category></entry><entry><title>Stop Making Everything Public</title><link href="/2014/12/stop-making-everything-public.html" rel="alternate"></link><published>2014-12-01T00:00:00+01:00</published><updated>2014-12-01T00:00:00+01:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-12-01:/2014/12/stop-making-everything-public.html</id><summary type="html">&lt;p&gt;Part one of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
 series&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
     Use&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
     Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;We always default to public class when creating a new class. Why? The
-concept of visibility in OO …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part one of my &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
+concept of visibility in OO …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Part one of my &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/three-steps-to-code-quality-via-tdd.html"&gt;Three Steps to Code Quality via TDD
 series&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Part 2 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+&lt;li&gt;Part 2 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
     Use&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 3 - &lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+&lt;li&gt;Part 3 - &lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
     Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -400,11 +400,11 @@ one of the benefits that TDD promises - the ability to refactor your
 code mercifully in order to improve code quality.&lt;/p&gt;
 &lt;h4&gt;Steps&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/12/stop-making-everything-public.html"&gt;Stop Making Everything
     Public&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/12/limit-amount-of-dependencies-you-use.html"&gt;Limit the Amount of Dependencies you
     Use&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/12/a-unit-is-not-always-method-or-class.html"&gt;A Unit is Not Always a Method or
     Class&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Code quality is a tricky subject and highly subjective, however if you
@@ -573,12 +573,12 @@ also document the current behaviour of the system - bugs included.&lt;/p&gt;
     a must read book for anyone working with legacy code.&lt;/li&gt;
 &lt;/ul&gt;</content><category term="testing"></category><category term="programming"></category></entry><entry><title>Do it right - violate YAGNI</title><link href="/2014/10/do-it-right-violate-yagni.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/do-it-right-violate-yagni.html</id><summary type="html">&lt;p&gt;You Ain't Gonna Need It or YAGNI is about not writing code that is not
 needed. I've gone on to realise how important this is when it comes to
-&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
+&lt;a href="https://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
 change&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One of my biggest pet peeves that I have experienced working on agile
 teams is the excuse of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You Ain't Gonna Need It or YAGNI is about not writing code that is not
 needed. I've gone on to realise how important this is when it comes to
-&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
+&lt;a href="https://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;programming for
 change&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One of my biggest pet peeves that I have experienced working on agile
 teams is the excuse of YAGNI.&lt;/p&gt;
@@ -590,9 +590,9 @@ dead procedural statements one after the next, the whole benefit of
 using TDD or writing automated tests is gone. You'd be more than capable
 of doing this yourself.&lt;/p&gt;
 &lt;p&gt;My discover here was simple. Don't skip the refactor part of TDD. Don't
-allow someone to play the YAGNI card. Do it right.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Practice, Practice, Practice</title><link href="/2014/10/practice-practice-practice.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/practice-practice-practice.html</id><summary type="html">&lt;p&gt;The final part of my "&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
+allow someone to play the YAGNI card. Do it right.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Practice, Practice, Practice</title><link href="/2014/10/practice-practice-practice.html" rel="alternate"></link><published>2014-10-01T00:00:00+02:00</published><updated>2014-10-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2014-10-01:/2014/10/practice-practice-practice.html</id><summary type="html">&lt;p&gt;The final part of my "&lt;a href="https://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
 series&lt;/a&gt;"
-has the same conclusion as the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
+has the same conclusion as the &lt;a href="https://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
 posts&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Continuous learning, practice and improvement is required.&lt;/p&gt;
 &lt;ul&gt;
@@ -603,9 +603,9 @@ posts&lt;/a&gt;.&lt;/p&gt;
 &lt;li&gt;Conferences&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;All of these mediums help, but as I've said before, practice, practice,
-practice.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The final part of my "&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
+practice.&lt;/p&gt;</summary><content type="html">&lt;p&gt;The final part of my "&lt;a href="https://blog.shaunfinglas.co.uk/2013/04/3-years-at-codeweavers.html"&gt;4 years as a Dev
 series&lt;/a&gt;"
-has the same conclusion as the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
+has the same conclusion as the &lt;a href="https://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;last set of retrospective
 posts&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Continuous learning, practice and improvement is required.&lt;/p&gt;
 &lt;ul&gt;
@@ -692,7 +692,7 @@ context in which validation is being performed. For example, if you are
 saving a customer you will most likely want to perform different
 validation to what you would perform when loading up an aggregate.&lt;/p&gt;
 &lt;p&gt;An additional point to consider is that most validation is not business
-logic. In other words, &lt;a href="http://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html"&gt;checking for null references is not a business
+logic. In other words, &lt;a href="https://blog.shaunfinglas.co.uk/2016/01/application-validation-and-domain.html"&gt;checking for null references is not a business
 concern. Therefore separating this from your domain objects makes a lot
 of
 sense.&lt;/a&gt;
@@ -729,7 +729,7 @@ is no complex system to this in order to keep in aligned with GTD, new
 points are simply appended at the bottom of the file. At the end of each
 week I simply group up related notes. For example, if I've got a few
 bullet points about databases, I move these to fit under a "Database"
-heading. &lt;a href="http://blog.shaunfinglas.co.uk/2016/02/why-you-need-developer-diary.html"&gt;This system works for now, though I might have to re-asses
+heading. &lt;a href="https://blog.shaunfinglas.co.uk/2016/02/why-you-need-developer-diary.html"&gt;This system works for now, though I might have to re-asses
 this in the
 future&lt;/a&gt;.
 An example of the file is below.&lt;/p&gt;
@@ -1229,7 +1229,7 @@ should be short lived. Testing implementation details is often a bad
 idea, but that is the whole point of such style of testing. Therefore if
 you do decided to check these tests in tagging them so they are only run
 as part of CI builds is worthwhile. In other words, just like real world
-scaffholding, they are temporary. &lt;a href="http://blog.shaunfinglas.co.uk/2012/01/write-unit-tests-start-deleting-them.html"&gt;Don't feel bad about writing some
+scaffholding, they are temporary. &lt;a href="https://blog.shaunfinglas.co.uk/2012/01/write-unit-tests-start-deleting-them.html"&gt;Don't feel bad about writing some
 tests, only to delete them minutes
 later&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Learning tests have another nice side effect. They give static languages
@@ -1376,7 +1376,7 @@ journey for the last five years I've changed my style, learned how not …&lt;/p
 This is because it had such an &lt;strong&gt;overwhelming change on how I write code
 day to day&lt;/strong&gt;. It was incredibly alien, difficult, yet rewarding. On this
 journey for the last five years I've changed my style, learned how not
-to do it and finally found &lt;a href="http://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html"&gt;my "sweet spot" when it comes to pragmatic
+to do it and finally found &lt;a href="https://blog.shaunfinglas.co.uk/2014/02/top-down-vs-bottom-up.html"&gt;my "sweet spot" when it comes to pragmatic
 TDD&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Deliver Value&lt;/h3&gt;
 &lt;p&gt;Writing code is fun. Developing an application or system is fun. Using

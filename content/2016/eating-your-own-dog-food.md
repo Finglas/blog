@@ -34,7 +34,7 @@ users raise issues that need resolving, often late in the day.
 
 It is often tempting to extract a library for a common task. As always
 [try to fight this urge until at least the third
-time](http://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html).
+time](https://blog.shaunfinglas.co.uk/2015/03/reused-abstraction-principle.html).
 As well as this try to use the library yourself before releasing. If you
 can use this library in at least three places you very well may have a
 successful piece of software. If the answer to this question is no, the

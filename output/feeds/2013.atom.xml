@@ -51,39 +51,39 @@ retrieval of new quotes, I can easily debug and fix the issue. Likewise
 if we wish to extend the lookup of existing quotes, I can confidently
 change the code without the fear of breaking the retrieval of new
 quotes. The other side effect is that I can easily reason about and test
-the code in question.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>3 Years at Codeweavers</title><link href="/2013/04/3-years-at-codeweavers.html" rel="alternate"></link><published>2013-04-01T00:00:00+02:00</published><updated>2013-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-04-01:/2013/04/3-years-at-codeweavers.html</id><summary type="html">&lt;p&gt;Having wrote about the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
+the code in question.&lt;/p&gt;</content><category term="programming"></category></entry><entry><title>3 Years at Codeweavers</title><link href="/2013/04/3-years-at-codeweavers.html" rel="alternate"></link><published>2013-04-01T00:00:00+02:00</published><updated>2013-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-04-01:/2013/04/3-years-at-codeweavers.html</id><summary type="html">&lt;p&gt;Having wrote about the &lt;a href="https://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
 Codeweavers&lt;/a&gt;,
 I figured it would be time for a follow up after the past two years. In
 no particular order, a collection of the biggest lessons I have
 experienced.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
     Contract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Having wrote about the &lt;a href="http://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Having wrote about the &lt;a href="https://blog.shaunfinglas.co.uk/2011/08/ten-things-graduate-will-experience.html"&gt;top ten things I discovered in my first year at
 Codeweavers&lt;/a&gt;,
 I figured it would be time for a follow up after the past two years. In
 no particular order, a collection of the biggest lessons I have
 experienced.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2013/04/why-are-you-not-using-design-by-contract.html"&gt;Design by
     Contract&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD) is a
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/02/tdd-is-tool.html"&gt;Test Driven Development (TDD) is a
     Tool&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/04/design-is-important.html"&gt;Design is
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/04/design-is-important.html"&gt;Design is
     Important&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/07/dont-tie-yourself-to-framework.html"&gt;Don't tie yourself to a
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/07/dont-tie-yourself-to-framework.html"&gt;Don't tie yourself to a
     Framework&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/07/the-importance-of-tools-one-of-most.html"&gt;The Importance of
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/07/the-importance-of-tools-one-of-most.html"&gt;The Importance of
     Tools&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/acceptance-testing-need-not-use-full.html"&gt;Acceptance Testing need not use the Full
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/08/acceptance-testing-need-not-use-full.html"&gt;Acceptance Testing need not use the Full
     Stack&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;Program for Change (Open/Closed
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/08/program-for-change.html"&gt;Program for Change (Open/Closed
     Principle)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/reinvent-wheel-often.html"&gt;Reinvent the Wheel,
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/10/reinvent-wheel-often.html"&gt;Reinvent the Wheel,
     Often&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/do-it-right-violate-yagni.html"&gt;Do it right - violate
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/10/do-it-right-violate-yagni.html"&gt;Do it right - violate
     YAGNI&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://blog.shaunfinglas.co.uk/2014/10/practice-practice-practice.html"&gt;Practice, Practice,
+&lt;li&gt;&lt;a href="https://blog.shaunfinglas.co.uk/2014/10/practice-practice-practice.html"&gt;Practice, Practice,
     Practice&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I'll expand on these topics over time in future posts.&lt;/p&gt;</content><category term="retro"></category></entry><entry><title>Why are you not using Design by Contract?</title><link href="/2013/04/why-are-you-not-using-design-by-contract.html" rel="alternate"></link><published>2013-04-01T00:00:00+02:00</published><updated>2013-04-01T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2013-04-01:/2013/04/why-are-you-not-using-design-by-contract.html</id><summary type="html">&lt;p&gt;When learning to program I distinctly remember coming across the concept
@@ -223,7 +223,7 @@ your classes small.&lt;/p&gt;
 &lt;li&gt;
 &lt;h3&gt;Use first-class collections&lt;/h3&gt;
 &lt;p&gt;My personal favourite of the rules to abide by, and one I have since
-adopted into day to day coding. &lt;a href="http://blog.shaunfinglas.co.uk/2010/12/lists-or-objects.html"&gt;First class collections can
+adopted into day to day coding. &lt;a href="https://blog.shaunfinglas.co.uk/2010/12/lists-or-objects.html"&gt;First class collections can
 simplify, and make code easier to understand as well as
 maintain&lt;/a&gt;
 and optimize. We have numerous examples of this at play at
@@ -237,7 +237,7 @@ For example, quotes is a better object than a array of quote.&lt;/p&gt;
 get past this rule by simply naming their getters/setters slightly
 differently. At the end of the day, there were still exposing state
 unnecessarily. We would never try to enforce such a rule for general
-development, but &lt;a href="http://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;for core business logic this principle actually
+development, but &lt;a href="https://blog.shaunfinglas.co.uk/2011/04/getters-and-setters-are-evil.html"&gt;for core business logic this principle actually
 makes
 sense&lt;/a&gt;.
 The areas where this falls down, is on the boundary of the system,

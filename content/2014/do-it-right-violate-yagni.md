@@ -7,7 +7,7 @@ Slug: 2014/10/do-it-right-violate-yagni
 You Ain't Gonna Need It or YAGNI is about not writing code that is not
 needed. I've gone on to realise how important this is when it comes to
 [programming for
-change](http://blog.shaunfinglas.co.uk/2014/08/program-for-change.html).
+change](https://blog.shaunfinglas.co.uk/2014/08/program-for-change.html).
 
 One of my biggest pet peeves that I have experienced working on agile
 teams is the excuse of YAGNI.

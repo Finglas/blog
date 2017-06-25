@@ -26,10 +26,10 @@ requirements. For example a HTML frontend may differ to a web service,
 so application validation would need to vary also.
 
 This form of validation is best performed using [validation
-services](http://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html).
+services](https://blog.shaunfinglas.co.uk/2014/09/ddd-validation.html).
 The use of attributes/decorators/annotations can also be used though
 [the following post will explain why this is usually a bad
-idea](http://blog.shaunfinglas.co.uk/2016/01/validation-is-not-cross-cutting-concern.html).
+idea](https://blog.shaunfinglas.co.uk/2016/01/validation-is-not-cross-cutting-concern.html).
 
 #### Domain Validation
 
@@ -44,5 +44,5 @@ understand. Examples include:
 Once inside your domain, validation should live as part of your domain
 model or domain logic. If [value types are utilised you can safely omit
 additional application
-validation](http://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
+validation](https://blog.shaunfinglas.co.uk/2015/02/value-object-refactoring.html)
 as each object would ensure consistency.
