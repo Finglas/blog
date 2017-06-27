@@ -40,3 +40,5 @@ SOCIAL = (('Twitter', 'https://twitter.com/ShaunFinglas'),
           ('Github', 'https://github.com/Finglas'),
           ('LinkedIn', 'https://www.linkedin.com/in/shaunfinglas/'),
           ('StackOverflow', 'https://stackoverflow.com/users/102482/finglas'))
+
+GOOGLE_ANALYTICS = 'UA-68423049-2'
