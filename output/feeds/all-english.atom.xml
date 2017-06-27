@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas</title><link href="/" rel="alternate"></link><link href="/feeds/all-english.atom.xml" rel="self"></link><id>/</id><updated>2017-05-02T00:00:00+02:00</updated><entry><title>Logging vs Auditing</title><link href="/2017/05/logging-vs-auditing.html" rel="alternate"></link><published>2017-05-02T00:00:00+02:00</published><updated>2017-05-02T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-05-02:/2017/05/logging-vs-auditing.html</id><summary type="html">&lt;p&gt;The difference between logging and auditing is a subtle yet important
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas</title><link href="/" rel="alternate"></link><link href="/feeds/all-english.atom.xml" rel="self"></link><id>/</id><updated>2017-06-27T00:00:00+02:00</updated><entry><title>Testing your Composition Root</title><link href="/2017/06/testing-your-composition-root.html" rel="alternate"></link><published>2017-06-27T00:00:00+02:00</published><updated>2017-06-27T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-06-27:/2017/06/testing-your-composition-root.html</id><summary type="html">&lt;p&gt;Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+quite complex in itself. In fact it is fair to say that in many cases the use of
+&lt;a href="/2014/11/dependency-injection-di-containers.html"&gt;DI containers&lt;/a&gt; to achieve this can be overkill
+for a task that should be rather basic.&lt;/p&gt;
+&lt;p&gt;Recently …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+quite complex in itself. In fact it is fair to say that in many cases the use of
+&lt;a href="/2014/11/dependency-injection-di-containers.html"&gt;DI containers&lt;/a&gt; to achieve this can be overkill
+for a task that should be rather basic.&lt;/p&gt;
+&lt;p&gt;Recently a project I've been involved with has struggled with the configuration of dependencies.
+This lead to the dreaded runtime error, even though at compile time everything was seemingly
+normal. This late feedback was compounded by the fact that getting the system up and running
+locally is a chore, so in many cases it was CI that was detecting these issues after a deploy.&lt;/p&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;The general practice states that your tests shouldn't need to use your production configuration.
+However in this case the solution was to invoke the configuration and force it to resolve. This
+test was odd in the sense that it does nothing other than successfully resolve. The fact that no
+unhandled exception is thrown is good enough. Note there is only one new test here, all other unit
+tests remain as-is, they are still separate from the use of the production configuration. All
+this test does is ensure all wiring up and dependencies are satisfied. In cases where config
+from an external file is used, that too will be exercised.&lt;/p&gt;
+&lt;h2&gt;Example&lt;/h2&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="na"&gt;[Test]&lt;/span&gt;
+&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;ConfigurationTest&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;container&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Container&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Resolve&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;container&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Resolve&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;RootType&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
+&lt;p&gt;The actual resolution aspect on line 5 is optional. There may be other ways to force resolution,
+this may vary based on what library you use. In this example only one type is resolved. If your
+project includes multiple entry points such as numerous controllers you may need to include these
+as well.&lt;/p&gt;
+&lt;p&gt;Hopefully the error that is thrown when this resolution fails is useful. Most DI libraries are
+fairly good in this regard. Even so it may be worth documenting this test with the steps that
+a developer would have to go through in order to fix.&lt;/p&gt;
+&lt;h2&gt;Dynamic Languages&lt;/h2&gt;
+&lt;p&gt;Even though DI libraries are a rare thing in dynamic languages, the use of a composition root
+is still needed. Therefore I'd recommend a similar test be applied to dynamic languages to keep
+the feedback loop fast.&lt;/p&gt;
+&lt;h2&gt;Lessons&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Don't test your composition root in your current unit tests.&lt;/li&gt;
+&lt;li&gt;Do include a single test that resolves your root dependencies.&lt;/li&gt;
+&lt;li&gt;Include appropriate messaging to show how to fix the issue.&lt;/li&gt;
+&lt;li&gt;Dynamic languages should aim to test their composition root can resolve also.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="tutorial"></category><category term="testing"></category></entry><entry><title>Logging vs Auditing</title><link href="/2017/05/logging-vs-auditing.html" rel="alternate"></link><published>2017-05-02T00:00:00+02:00</published><updated>2017-05-02T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-05-02:/2017/05/logging-vs-auditing.html</id><summary type="html">&lt;p&gt;The difference between logging and auditing is a subtle yet important
 distinction.&lt;/p&gt;
 &lt;h3&gt;Logging&lt;/h3&gt;
 &lt;ul&gt;

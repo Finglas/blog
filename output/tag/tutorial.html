@@ -21,14 +21,82 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/2017/01/convention-based-tests.html">Convention Based Tests</a></h1>
+                    <h1 class="entry-title"><a href="/2017/06/testing-your-composition-root.html">Testing your Composition Root</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-06-27T00:00:00+02:00">
+                Published: Tue 27 June 2017
+        </abbr>
+
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info --><p>Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+quite complex in itself. In fact it is fair to say that in many cases the use of
+<a href="/2014/11/dependency-injection-di-containers.html">DI containers</a> to achieve this can be overkill
+for a task that should be rather basic.</p>
+<p>Recently a project I've been involved with has struggled with the configuration of dependencies.
+This lead to the dreaded runtime error, even though at compile time everything was seemingly
+normal. This late feedback was compounded by the fact that getting the system up and running
+locally is a chore, so in many cases it was CI that was detecting these issues after a deploy.</p>
+<h2>Solution</h2>
+<p>The general practice states that your tests shouldn't need to use your production configuration.
+However in this case the solution was to invoke the configuration and force it to resolve. This
+test was odd in the sense that it does nothing other than successfully resolve. The fact that no
+unhandled exception is thrown is good enough. Note there is only one new test here, all other unit
+tests remain as-is, they are still separate from the use of the production configuration. All
+this test does is ensure all wiring up and dependencies are satisfied. In cases where config
+from an external file is used, that too will be exercised.</p>
+<h2>Example</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">[Test]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigurationTest</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="n">Container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">();</span>
+    <span class="n">container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">RootType</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The actual resolution aspect on line 5 is optional. There may be other ways to force resolution,
+this may vary based on what library you use. In this example only one type is resolved. If your
+project includes multiple entry points such as numerous controllers you may need to include these
+as well.</p>
+<p>Hopefully the error that is thrown when this resolution fails is useful. Most DI libraries are
+fairly good in this regard. Even so it may be worth documenting this test with the steps that
+a developer would have to go through in order to fix.</p>
+<h2>Dynamic Languages</h2>
+<p>Even though DI libraries are a rare thing in dynamic languages, the use of a composition root
+is still needed. Therefore I'd recommend a similar test be applied to dynamic languages to keep
+the feedback loop fast.</p>
+<h2>Lessons</h2>
+<ul>
+<li>Don't test your composition root in your current unit tests.</li>
+<li>Do include a single test that resolves your root dependencies.</li>
+<li>Include appropriate messaging to show how to fix the issue.</li>
+<li>Dynamic languages should aim to test their composition root can resolve also.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/01/convention-based-tests.html" rel="bookmark"
+                           title="Permalink to Convention Based Tests">Convention Based Tests</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-01-11T00:00:00+01:00">
                 Published: Wed 11 January 2017
         </abbr>
 
 <p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
-</footer><!-- /.post-info --><p>Most projects have some form of convention. Examples would include:</p>
+</footer><!-- /.post-info -->                <p>Most projects have some form of convention. Examples would include:</p>
 <ul>
 <li>Attributes/Properties for REST API's</li>
 <li>Inheritance for third party base types</li>
@@ -36,72 +104,9 @@
 <li>Folder or namespace conventions</li>
 <li>And many other forms of conventions</li>
 </ul>
-<p>In a few of these examples static analysis can detect issues, but the
-majority of these problems would resolve only at runtime.</p>
-<p>A technique I've used in the past to great success is the concept of
-convention based tests (CBT). These are tests that ensure a particular
-convention is followed. As a general practice CBT tend to be written
-after the discovery of a problem as it is preferable to rely upon higher
-level tests initially. The good news is that CBT ensure that such
-problems never return and if a convention is broken you'll be notified
-during your test run.</p>
-<p>In terms of quantity there will be a very small number of these tests,
-and unlike typical tests that focus on behaviour rather than
-implementation, these tests are focused on implementation.</p>
-<h3>Reflection</h3>
-<p>Tests generally should <a href="https://blog.shaunfinglas.co.uk/2015/04/randomly-generated-values-in-tests.html">favour readability and clarity over the removal
-of
-duplication</a>.
-Additionally the use of programming constructs such as loops or
-conditionals within tests are usually a bad idea. Using reflection is
-not recommended in most cases though the opposite is true for CBT.</p>
-<p>Reflection allows the previous examples to have tests written in a
-fairly flexible and dynamic manner. Future changes would automatically
-be tested.</p>
-<ul>
-<li>Tests to ensure particular types within a namespace have the correct
-    attribute/property applied.</li>
-<li>Tests to ensure particular types within a namespace have the correct
-    base class.</li>
-<li>Tests that assemblies/packages required at runtime are present
-    within the bin directory.</li>
-<li>Tests that folders/namespaces match a team/project naming standard.</li>
-<li>And so on.</li>
-</ul>
-<h3>Simpler Tests</h3>
-<p>In some cases reflection is not a suitable tool for convention based
-tools. In this scenarios a simpler style of test is required. These are
-essentially convention based tests that ensure additional tests are
-written. These simple tests act more as a prompt to the developer
-reminding them to add a test for a particular convention.</p>
-<p>This test would first detect how many types exist within the namespace
-and then detect how many tests have been written for those types. While
-this style of test does nothing other than really count the number of
-expected conventions versus the number of tests, the failure of this
-test provides a hint to the developer that they have forgotten
-something.</p>
-<p>The key with these simple detection tests is to provide a good failure
-message that includes details on why the test failed, and more
-importantly why and how a new test should be added.</p>
-<p>These simple CBT work when the use of reflection is difficult. While
-they may seem primitive, they do provide value as simple reminders to
-add future tests. Despite this it's worth remembering they provide no
-guarantee of the quality of the additional tests that are written. Here
-peer review is required.</p>
-<h3>Lessons</h3>
-<ul>
-<li>Add convention based tests if a convention cannot be detected by
-    static analysis or you cannot detect issues with higher level tests.</li>
-<li>Reflection is a valid tool to write a single CBT that covers many
-    areas.</li>
-<li>If a CBT is hard to write, use a test to prompt you to add further
-    tests in the future.</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>In a few of these examples static analysis can …</p>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -740,34 +745,6 @@ assertions are used liberally.</p>
     conditions are met.</li>
 <li>Ensures the code's invariants are not broken.</li>
 <li>Throw exceptions, because …</li></ul>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/2015/01/abstract-data-use-not-data-access.html" rel="bookmark"
-                           title="Permalink to Abstract Data Use Not Data Access">Abstract Data Use Not Data Access</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-01-01T00:00:00+01:00">
-                Published: Thu 01 January 2015
-        </abbr>
-
-<p>tags: <a href="/tag/programming.html">programming</a> <a href="/tag/tutorial.html">tutorial</a> </p>
-</footer><!-- /.post-info -->                <p>Common data access abstractions I've come across and been guilty of
-implementing myself are the likes of:</p>
-<ul>
-<li><code>IDatabase</code></li>
-<li><code>IPersistentStore</code></li>
-<li><code>IConnection</code></li>
-<li><code>IDataStore</code></li>
-<li><code>IRepository</code></li>
-</ul>
-<p>The problem is, these are not really abstractions. If anything they add
-an extra layer of indirection. One such benefit of this level of
-indirection is each concrete …</p>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->

@@ -21,75 +21,88 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/2017/04/the-qa-test-matrix.html">The QA Test Matrix</a></h1>
+                    <h1 class="entry-title"><a href="/2017/06/testing-your-composition-root.html">Testing your Composition Root</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-06-27T00:00:00+02:00">
+                Published: Tue 27 June 2017
+        </abbr>
+
+<p>tags: <a href="/tag/tutorial.html">tutorial</a> <a href="/tag/testing.html">testing</a> </p>
+</footer><!-- /.post-info --><p>Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+quite complex in itself. In fact it is fair to say that in many cases the use of
+<a href="/2014/11/dependency-injection-di-containers.html">DI containers</a> to achieve this can be overkill
+for a task that should be rather basic.</p>
+<p>Recently a project I've been involved with has struggled with the configuration of dependencies.
+This lead to the dreaded runtime error, even though at compile time everything was seemingly
+normal. This late feedback was compounded by the fact that getting the system up and running
+locally is a chore, so in many cases it was CI that was detecting these issues after a deploy.</p>
+<h2>Solution</h2>
+<p>The general practice states that your tests shouldn't need to use your production configuration.
+However in this case the solution was to invoke the configuration and force it to resolve. This
+test was odd in the sense that it does nothing other than successfully resolve. The fact that no
+unhandled exception is thrown is good enough. Note there is only one new test here, all other unit
+tests remain as-is, they are still separate from the use of the production configuration. All
+this test does is ensure all wiring up and dependencies are satisfied. In cases where config
+from an external file is used, that too will be exercised.</p>
+<h2>Example</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="na">[Test]</span>
+<span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigurationTest</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">var</span> <span class="n">container</span> <span class="p">=</span> <span class="n">Container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">();</span>
+    <span class="n">container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">RootType</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The actual resolution aspect on line 5 is optional. There may be other ways to force resolution,
+this may vary based on what library you use. In this example only one type is resolved. If your
+project includes multiple entry points such as numerous controllers you may need to include these
+as well.</p>
+<p>Hopefully the error that is thrown when this resolution fails is useful. Most DI libraries are
+fairly good in this regard. Even so it may be worth documenting this test with the steps that
+a developer would have to go through in order to fix.</p>
+<h2>Dynamic Languages</h2>
+<p>Even though DI libraries are a rare thing in dynamic languages, the use of a composition root
+is still needed. Therefore I'd recommend a similar test be applied to dynamic languages to keep
+the feedback loop fast.</p>
+<h2>Lessons</h2>
+<ul>
+<li>Don't test your composition root in your current unit tests.</li>
+<li>Do include a single test that resolves your root dependencies.</li>
+<li>Include appropriate messaging to show how to fix the issue.</li>
+<li>Dynamic languages should aim to test their composition root can resolve also.</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/2017/04/the-qa-test-matrix.html" rel="bookmark"
+                           title="Permalink to The QA Test Matrix">The QA Test Matrix</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-04-03T00:00:00+02:00">
                 Published: Mon 03 April 2017
         </abbr>
 
 <p>tags: <a href="/tag/testing.html">testing</a> </p>
-</footer><!-- /.post-info --><p>Historically teams I've worked with have taken a few varying approaches
+</footer><!-- /.post-info -->                <p>Historically teams I've worked with have taken a few varying approaches
 when designing tests against acceptance criteria. One is to have the
 business define the feature, while the team help define the acceptance
 criteria. Ultimately the business gets the final say if they agree, and
-further acceptance criteria is either added or removed. The strength of
-this approach is everyone is involved with the process so nothing is
-missed or misunderstood. The biggest flaw with this style is that the
-documentation produced is often verbose, using wordy Given-When-Then
-scenarios. Using this plan a test plan is then created, mapping tests to
-acceptance criteria.</p>
-<p>An alternative approach is have the business define both the feature and
-acceptance criteria while the team come up with a corresponding test
-strategy. This more technical approach allows for a separation of
-testing activities and test categories. Finally the test plan is
-replayed back to the business and correlated against acceptance
-criteria. A negative of this approach is not everyone is involved with
-the task at the same time. This means there can be some disconnect with
-what the business is actually asking for. Both approaches work though
-they can yield mixed results on a case by case basis.</p>
-<h4>The QA Matrix</h4>
-<p>I've recently been introduced to the concept of a testing/QA matrix,
-which is a far more condensed and simplified solution. It has the
-benefit of the whole team being engaged, while producing nothing more
-than a simple table that can fit comfortably on a A4 page. The left hand
-column includes each condition of acceptance, while the other columns
-should have a mark to indicate the type of test that will cover this
-functionality. An example is below.</p>
-<div class="highlight"><pre><span></span>     Unit Integration Acceptance Contract Manual
-COA   X
-COA           X                             X
-COA   X
-...
-</pre></div>
-
-
-<p>The beauty of this matrix is that at a glance you can see where you
-testing efforts lie. If too much occurs on the right of the matrix you
-may need to re-consider and question your approach. Is there a way to
-limit the more expensive style of tests and still gain confidence? Other
-questions can arise around test coverage and whether higher level tests
-are needed.</p>
-<p>When producing this matrix the whole team including the business should
-be involved. By having everyone together, decisions can be made quickly
-with everyone in agreement. Additionally it allows debate and discussion
-around how each feature should be tested.</p>
-<p>For higher level tests these can be directly translated into automated
-tests. While the lower level tests need to confirmed at a later date
-once the code is complete.</p>
-<p>Along side the QA matrix it may be worth while adding a simple diagram
-of the components that will be involved such as web servers, databases
-and so on. This can aid discussion and highlight hot spots for changes
-or tests.</p>
-<p>Finally for demonstration to the business the matrix can be used as a
-form contract for signing off functionality. Once the feature is
-complete it is simply a case of finding the corresponding tests,
-confirming their existence and making a note of the commit that included
-them.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+further acceptance criteria is either …</p>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

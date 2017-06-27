@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Shaun Finglas - Shaun Finglas</title><link>/</link><description>Agile software development &amp;amp; programming - one lesson at a time.</description><lastBuildDate>Tue, 02 May 2017 00:00:00 +0200</lastBuildDate><item><title>Logging vs Auditing</title><link>/2017/05/logging-vs-auditing.html</link><description>&lt;p&gt;The difference between logging and auditing is a subtle yet important
+<rss version="2.0"><channel><title>Shaun Finglas - Shaun Finglas</title><link>/</link><description>Agile software development &amp;amp; programming - one lesson at a time.</description><lastBuildDate>Tue, 27 Jun 2017 00:00:00 +0200</lastBuildDate><item><title>Testing your Composition Root</title><link>/2017/06/testing-your-composition-root.html</link><description>&lt;p&gt;Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+quite complex in itself. In fact it is fair to say that in many cases the use of
+&lt;a href="/2014/11/dependency-injection-di-containers.html"&gt;DI containers&lt;/a&gt; to achieve this can be overkill
+for a task that should be rather basic.&lt;/p&gt;
+&lt;p&gt;Recently …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shaun Finglas</dc:creator><pubDate>Tue, 27 Jun 2017 00:00:00 +0200</pubDate><guid isPermaLink="false">tag:None,2017-06-27:/2017/06/testing-your-composition-root.html</guid><category>tutorial</category><category>testing</category></item><item><title>Logging vs Auditing</title><link>/2017/05/logging-vs-auditing.html</link><description>&lt;p&gt;The difference between logging and auditing is a subtle yet important
 distinction.&lt;/p&gt;
 &lt;h3&gt;Logging&lt;/h3&gt;
 &lt;ul&gt;
