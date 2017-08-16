@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas</title><link href="/" rel="alternate"></link><link href="/feeds/all-english.atom.xml" rel="self"></link><id>/</id><updated>2017-06-27T00:00:00+02:00</updated><entry><title>Testing your Composition Root</title><link href="/2017/06/testing-your-composition-root.html" rel="alternate"></link><published>2017-06-27T00:00:00+02:00</published><updated>2017-06-27T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-06-27:/2017/06/testing-your-composition-root.html</id><summary type="html">&lt;p&gt;Separating configuration from your code itself is a good practice. Unfortunately this can quite be
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Shaun Finglas</title><link href="/" rel="alternate"></link><link href="/feeds/all-english.atom.xml" rel="self"></link><id>/</id><updated>2017-08-08T00:00:00+02:00</updated><entry><title>Code Smell: Time Span Embedded in Variable</title><link href="/2017/01/code-smell-time-span-embedded-in-variable.html" rel="alternate"></link><published>2017-08-08T00:00:00+02:00</published><updated>2017-08-08T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-08-08:/2017/01/code-smell-time-span-embedded-in-variable.html</id><summary type="html">&lt;p&gt;A common code smell that tends to go unnoticed is embedding a time span within a variable name. While developers recognize that embedding types into names is redundant they often fail to see this smell.&lt;/p&gt;
+&lt;p&gt;You often need a variable to trigger on a set period, such as every fifteen …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A common code smell that tends to go unnoticed is embedding a time span within a variable name. While developers recognize that embedding types into names is redundant they often fail to see this smell.&lt;/p&gt;
+&lt;p&gt;You often need a variable to trigger on a set period, such as every fifteen minutes. For example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;BlogPostFeedPollingIntervalInSeconds = 900
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In this example, what is 900? Without the variable name this is hard to reason about. This is even harder when the value is external and replaced on deployment. Often the value will be found with a comment explaining what the figure is relative to other time periods. This is another hint that you have a time span embedded into a variable.&lt;/p&gt;
+&lt;p&gt;This smell also becomes harder for more exotic or unfamiliar intervals. In other words most developers are familiar that 1 second in milliseconds is 1000, but not other common ranges or periods. Most standard libraries or lower level functions have fixed intervals which compound the problem. For example a data access libraries tend to use seconds as their highest unit of time, this may not be appropriate in some cases.&lt;/p&gt;
+&lt;h2&gt;Solution&lt;/h2&gt;
+&lt;p&gt;The fix for this code smell is to use time spans. The previous example can be expressed in the following form.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;BlogPostFeedPollingInterval = &amp;quot;00:15:00&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The value here is expressed in the form HH:MM:SS. Time spans can include days or levels of precision lower than a single second. Different languages may have alternative forms of specifying time spans but the principle is the same. Consult the documentation for more info. When the code reads this value the string time span will be converted. Using C# as an example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var blogPostFeedPollingInterval = TimeSpan.Parse(timeSpan);
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The use of time spans have a variety of benefits. Notice that the variable name has had the time component removed. This allows the value to increase or decrease without needing to change the variable name.&lt;/p&gt;
+&lt;p&gt;Additionally time spans are human readably without the need to convert or do maths in your head.&lt;/p&gt;
+&lt;p&gt;Time spans also offer type safety if the underlying code is doing further work with the value. This is in stark
+contrast to doing numerical work with simple integers. Another example would include the ability to use higher time periods for clarity and then simply convert to the total number of minutes/seconds when required.&lt;/p&gt;
+&lt;p&gt;It is worth bearing in mind that for time periods such as "12 months" or "every 3 weeks on Friday" an alternative is required. Some languages may offer this by default, others may require a third party library. This is due to the fact that a time span does not respect the calendar system. For example, over several months the number of days in each month can vary. For days, hours, minutes or seconds your standard libraries time span should be more than capable.&lt;/p&gt;
+&lt;h4&gt;Lessons&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Don't embed time spans in variables.&lt;/li&gt;
+&lt;li&gt;Whenever you include a time span in a variable name consider using a time span.&lt;/li&gt;
+&lt;li&gt;Check the documentation for your language as time span formats can differ or be tricky to remember.&lt;/li&gt;
+&lt;li&gt;For periods of time (every 3 months on the 1st) time spans are not appropriate by default.&lt;/li&gt;
+&lt;li&gt;For business rules that must trigger on on particular dates as previously use the calendar to work this out.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="code"></category><category term="tutorial"></category></entry><entry><title>Testing your Composition Root</title><link href="/2017/06/testing-your-composition-root.html" rel="alternate"></link><published>2017-06-27T00:00:00+02:00</published><updated>2017-06-27T00:00:00+02:00</updated><author><name>Shaun Finglas</name></author><id>tag:None,2017-06-27:/2017/06/testing-your-composition-root.html</id><summary type="html">&lt;p&gt;Separating configuration from your code itself is a good practice. Unfortunately this can quite be
 quite complex in itself. In fact it is fair to say that in many cases the use of
 &lt;a href="/2014/11/dependency-injection-di-containers.html"&gt;DI containers&lt;/a&gt; to achieve this can be overkill
 for a task that should be rather basic.&lt;/p&gt;
