@@ -25,5 +25,5 @@ For all posts check out the [archive](/archives.html).
 ## Recommended Reading
 
 - [2012](/2012/10/recommended-reading-2012.html)
-- [2014](2015/01/recommended-reading-list-2014.html)
-- [2015](2015/12/recommended-reading-list-2015.html)
+- [2014](/2015/01/recommended-reading-list-2014.html)
+- [2015](/2015/12/recommended-reading-list-2015.html)
