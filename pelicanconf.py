@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Shaun Finglas'
 SITENAME = 'Shaun Finglas'
-SITESUBTITLE = 'Programming & Software Development Blog'
+SITESUBTITLE = 'Tech Blog'
 SITEURL = 'https://blog.shaunfinglas.co.uk'
 
 YEAR = '2019'
@@ -15,7 +15,7 @@ PATH = 'content'
 
 TIMEZONE = 'Europe/Paris'
 
-DEFAULT_LANG = 'English'
+DEFAULT_LANG = 'en'
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
@@ -34,10 +34,7 @@ FEED_ALL_ATOM = 'feeds/posts/default.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Themes
-THEME = 'simple'
-
-# Style
-CSS_FILE = 'main.css'
+THEME = 'theme/blog-theme'
 
 # Blogroll
 LINKS = ()
