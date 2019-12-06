@@ -4,8 +4,12 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Shaun Finglas'
 SITENAME = 'Shaun Finglas'
-SITESUBTITLE = 'Agile software development &amp; programming - one lesson at a time.'
-SITEURL = ''
+SITESUBTITLE = 'Programming & Software Development Blog'
+SITEURL = 'https://blog.shaunfinglas.co.uk'
+
+YEAR = '2019'
+
+RELATIVE_URLS = True
 
 PATH = 'content'
 
@@ -17,7 +21,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 USE_FOLDER_AS_CATEGORY = True
 
-DEFAULT_PAGINATION = 30
+DEFAULT_PAGINATION = 12
 
 # Single author, do not generate author pages.
 AUTHOR_SAVE_AS = ''
@@ -30,7 +34,10 @@ FEED_ALL_ATOM = 'feeds/posts/default.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Themes
-THEME = 'themes/notmyidea'
+THEME = 'simple'
+
+# Style
+CSS_FILE = 'main.css'
 
 # Blogroll
 LINKS = ()
