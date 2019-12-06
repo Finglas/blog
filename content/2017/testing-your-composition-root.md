@@ -26,7 +26,6 @@ from an external file is used, that too will be exercised.
 
 ## Example
 
-    #!c#
     [Test]
     public void ConfigurationTest()
     {
