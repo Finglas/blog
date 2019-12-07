@@ -1,5 +1,5 @@
 body {
-    max-width: 1024px;
+    max-width: 720px;
     line-height: 1.5;
 }
 
@@ -7,6 +7,10 @@ pre {
     margin-left: 4em;
     background-color: #f2f2f2;
     padding: 0.5em;
+}
+
+.post-info {
+    font-size: small;
 }
 
 #contentinfo {
