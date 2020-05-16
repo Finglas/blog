@@ -9,12 +9,13 @@ New machine setup
 
 Clone repos
 
-    $ git clone https://github.com/Finglas/blog.git
+    $ mkdir blog && cd blog
+    $ git clone https://github.com/Finglas/blog.git content
     $ git clone https://github.com/Finglas/finglas.github.io.git
 
 Write content in markup
 
-    $/home cd blog
+    $/home cd blog/content
     pelican content/ -o ../finglas.github.io
 
 Commit and push to `finglas.github.io`.
